@@ -225,6 +225,22 @@ function ZurichFlag() {
   );
 }
 
+// Floating text-size control (bottom-right) — smaller / larger, like reader apps.
+function ZoomControl({ textSize, setTextSize }) {
+  const order = ["s", "m", "l", "xl"];
+  const i = order.indexOf(textSize);
+  const set = (j) => setTextSize(order[Math.min(order.length - 1, Math.max(0, j))]);
+  const btn = (size, disabled) => ({ background:"none", border:"none", lineHeight:1, padding:"6px 12px", fontWeight:600, fontSize:size, color:"var(--color-text-secondary)", opacity: disabled ? 0.35 : 1, cursor: disabled ? "default" : "pointer" });
+  return (
+    <div role="group" aria-label="Text size" style={{ position:"fixed", bottom:12, right:12, zIndex:50, display:"flex", alignItems:"center",
+      background:"var(--color-background-primary)", border:"1px solid var(--color-border-secondary)", borderRadius:99, boxShadow:"0 2px 10px rgba(0,0,0,0.28)" }}>
+      <button onClick={() => set(i - 1)} disabled={i <= 0} aria-label="Smaller text" title="Smaller text" style={btn(12, i <= 0)}>A</button>
+      <div style={{ width:1, height:18, background:"var(--color-border-tertiary)" }}/>
+      <button onClick={() => set(i + 1)} disabled={i >= order.length - 1} aria-label="Larger text" title="Larger text" style={btn(19, i >= order.length - 1)}>A</button>
+    </div>
+  );
+}
+
 // A single illustrative image shown above the options (for "what is this?" picture questions)
 function QImage({ src, maxHeight = 200 }) {
   if (!src) return null;
@@ -319,7 +335,7 @@ function EnToggle({ enMode, setEnMode, prefix = "EN" }) {
 }
 
 // ── Home screen ───────────────────────────────────────────────────────────────
-function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, textSize, setTextSize, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onResetRatings, onSmartReview }) {
+function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview }) {
   const counts = countByDiff(difficulties);
   const [qtDiff, setQtDiff]   = useState("random");
   const [qtCount, setQtCount] = useState(20);
@@ -349,9 +365,13 @@ function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contra
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ marginBottom:"1.25rem" }}>
-        <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
-        <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} questions · 5 sections</p>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:10, marginBottom:"1.25rem", paddingRight:34 }}>
+        <div>
+          <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
+          <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} questions · 5 sections</p>
+        </div>
+        <button onClick={onSettings} aria-label="Settings" title="Settings & display options"
+          style={{ ...S.btn, flexShrink:0, fontSize:18, lineHeight:1, padding:"5px 9px" }}>⚙</button>
       </div>
 
       {/* Resume an unfinished session */}
@@ -363,60 +383,6 @@ function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contra
           <button style={S.btnPrim} onClick={onResume}>Resume →</button>
         </div>
       )}
-
-      {/* Display & language settings (apply everywhere) */}
-      <div style={{ ...S.card, padding:"0.85rem 1.25rem", display:"flex", flexDirection:"column", gap:12 }}>
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>
-            English translations
-            <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>shown in every test</span>
-          </div>
-          <EnToggle enMode={enMode} setEnMode={setEnMode} />
-        </div>
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>
-            High contrast
-            <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>stronger colours & borders</span>
-          </div>
-          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
-            {[["normal","Off"],["high","On"]].map(([v,l]) => (
-              <button key={v} onClick={() => setContrast(v)}
-                style={{ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
-                  background: contrast===v ? "var(--color-background-info)" : "var(--color-background-secondary)",
-                  color: contrast===v ? "var(--color-text-info)" : "var(--color-text-secondary)",
-                  border: contrast===v ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
-                  fontWeight: contrast===v ? 500 : 400 }}>
-                {l}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>
-            Explanations
-            <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>off during tests · always in Browse &amp; review</span>
-          </div>
-          <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? "On in quiz" : "Off in quiz"} />
-        </div>
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>
-            Text size
-            <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>scales the whole app</span>
-          </div>
-          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
-            {[["s","A",11],["m","A",13],["l","A",15],["xl","A",18]].map(([k,l,sz]) => (
-              <button key={k} onClick={() => setTextSize(k)} aria-label={`Text size ${k}`} aria-pressed={textSize===k}
-                style={{ fontSize:sz, lineHeight:1, padding:"3px 11px", borderRadius:99, cursor:"pointer", minWidth:34,
-                  background: textSize===k ? "var(--color-background-info)" : "var(--color-background-secondary)",
-                  color: textSize===k ? "var(--color-text-info)" : "var(--color-text-secondary)",
-                  border: textSize===k ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
-                  fontWeight: textSize===k ? 600 : 400 }}>
-                {l}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Mock exam — the real-test simulation */}
       <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
@@ -1522,9 +1488,47 @@ const HELP_SECTIONS = [
     "Avenches amphitheatre photo: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
     "Canton maps: adapted (recoloured) from “Suisse cantons.svg” by Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
     "Flag and coat-of-arms options (Swiss-flag and Zürich-arms questions) are simple SVGs drawn for this app to match the images in the official catalogue.",
+    "Federal-Councillor portraits (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
     "Flag graphics are simplified illustrations made for this app.",
   ] },
 ];
+
+// Settings & display options, reached from the gear icon on the home screen.
+function SettingsScreen({ enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, onHome }) {
+  const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
+  const hint = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 };
+  return (
+    <div style={{ padding:"1rem" }}>
+      <NavBar onHome={onHome} title="Settings" />
+      <div style={{ ...S.card, padding:"0.85rem 1.25rem", display:"flex", flexDirection:"column", gap:16 }}>
+        <div style={row}>
+          <div style={{ fontSize:13, fontWeight:500 }}>English translations<span style={hint}>shown in every test</span></div>
+          <EnToggle enMode={enMode} setEnMode={setEnMode} />
+        </div>
+        <div style={row}>
+          <div style={{ fontSize:13, fontWeight:500 }}>High contrast<span style={hint}>stronger colours &amp; borders</span></div>
+          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
+            {[["normal","Off"],["high","On"]].map(([v,l]) => (
+              <button key={v} onClick={() => setContrast(v)}
+                style={{ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
+                  background: contrast===v ? "var(--color-background-info)" : "var(--color-background-secondary)",
+                  color: contrast===v ? "var(--color-text-info)" : "var(--color-text-secondary)",
+                  border: contrast===v ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
+                  fontWeight: contrast===v ? 500 : 400 }}>{l}</button>
+            ))}
+          </div>
+        </div>
+        <div style={row}>
+          <div style={{ fontSize:13, fontWeight:500 }}>Explanations<span style={hint}>off during tests · always in Browse &amp; review</span></div>
+          <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? "On in quiz" : "Off in quiz"} />
+        </div>
+      </div>
+      <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
+        Text size: use the <b style={{ fontWeight:500 }}>A / A</b> buttons in the bottom-right corner — it scales the whole app and applies on every screen.
+      </div>
+    </div>
+  );
+}
 
 function HelpScreen({ onHome }) {
   return (
@@ -1698,20 +1702,16 @@ export default function App() {
   if (screen === "help") {
     return <HelpScreen onHome={goHome} />;
   }
+  if (screen === "settings") {
+    return <SettingsScreen enMode={enMode} setEnMode={setEnMode} contrast={contrast} setContrast={setContrast}
+      showExpl={showExpl} setShowExpl={setShowExpl} onHome={goHome} />;
+  }
 
   return (
     <HomeScreen
       difficulties={difficulties}
       history={history}
       progress={progress}
-      enMode={enMode}
-      setEnMode={setEnMode}
-      contrast={contrast}
-      setContrast={setContrast}
-      showExpl={showExpl}
-      setShowExpl={setShowExpl}
-      textSize={textSize}
-      setTextSize={setTextSize}
       dueCount={dueIds.length}
       resume={resume}
       onResume={resumeSession}
@@ -1721,10 +1721,11 @@ export default function App() {
       onHistory={() => setScreen("history")}
       onBrowser={() => setScreen("browser")}
       onHelp={() => setScreen("help")}
+      onSettings={() => setScreen("settings")}
       onResetRatings={resetDifficulties}
       onSmartReview={() => startQuizFromIds(dueIds, `Smart review · ${dueIds.length} questions`)}
     />
   );
   })();
-  return <>{view}<ZurichFlag /></>;
+  return <>{view}<ZurichFlag /><ZoomControl textSize={textSize} setTextSize={setTextSize} /></>;
 }

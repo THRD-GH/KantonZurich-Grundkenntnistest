@@ -94,6 +94,7 @@ Picture-question images in `public/img/` come from Wikimedia Commons:
 - **Avenches amphitheatre photo** — Nursangaion via Wikimedia Commons, licensed **CC BY-SA 4.0**.
 - **Canton maps** — adapted (recoloured) from "Suisse cantons.svg" by **Pymouss44**, **CC BY-SA 4.0**.
 - **Flag & coat-of-arms options** (Swiss-flag question Q55 and Zürich-arms question Q110) — simple SVGs drawn for this app to match the images shown in the official catalogue (Q55: Danish flag, Red Cross flag, Swiss flag, Schwyz arms; Q110: blue/white and red/blue shield variations plus the Zürich diagonal).
+- **Federal-Councillor portraits** (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House (**CC BY 2.0**); Elisabeth Kopp — Coralie Wenger (**CC BY 3.0**); Ruth Metzler-Arnold — Manuel Stettler (**CC BY-SA 4.0**); Micheline Calmy-Rey — IAEA Imagebank (**CC BY-SA 2.0**).
 - The Swiss-flag option graphics are simplified SVGs created for this app.
 
 Full per-file author details are on each file's page on Wikimedia Commons. If you distribute this app publicly, verify and include the full CC BY-SA attribution for each photo/map.
