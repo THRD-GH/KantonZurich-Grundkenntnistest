@@ -1586,8 +1586,9 @@ function HelpScreen({ onHome }) {
           ))}
         </div>
       ))}
-      <div style={{ fontSize:11, color:"var(--color-text-tertiary)", textAlign:"center", margin:"4px 0 8px" }}>
-        Questions sourced from the official Kanton Zürich Grundkenntnistest catalogue.
+      <div style={{ fontSize:11, color:"var(--color-text-tertiary)", textAlign:"center", margin:"4px 0 8px", lineHeight:1.6 }}>
+        Questions sourced from the official Kanton Zürich Grundkenntnistest catalogue.<br/>
+        Free software (AGPL-3.0) — <a href="https://github.com/THRD-GH/KantonZurich-Grundkenntnistest" target="_blank" rel="noopener noreferrer" style={{ color:"var(--color-text-info)", textDecoration:"underline" }}>source code on GitHub</a>.
       </div>
     </div>
   );

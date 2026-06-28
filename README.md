@@ -100,3 +100,18 @@ Picture-question images in `public/img/` come from Wikimedia Commons:
 - The Swiss-flag option graphics are simplified SVGs created for this app.
 
 Full per-file author details are on each file's page on Wikimedia Commons. If you distribute this app publicly, verify and include the full CC BY-SA attribution for each photo/map.
+
+## Licence
+
+Copyright © 2026 THRD-GH.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the **GNU Affero General Public License v3.0** (AGPL-3.0) as published by the Free Software Foundation. It is distributed WITHOUT ANY WARRANTY. See the [`LICENSE`](LICENSE) file for the full text, or <https://www.gnu.org/licenses/agpl-3.0.html>.
+
+The AGPL is a strong copyleft licence: anyone who distributes a modified version **or runs one as a network service (e.g. a hosted website)** must make their corresponding source code available to its users under the same licence.
+
+### Content & data (not covered by the code licence)
+
+The AGPL covers the **application code** only. The bundled content has separate terms:
+
+- **Questions** come from the official Canton of Zürich *Grundkenntnistest* catalogue. This is an **unofficial** study aid; rights to the question content remain with the Canton of Zürich. See the [official source](https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html).
+- **Images** are under the individual licences listed in *Image credits* above (mostly **CC BY-SA**, which requires attribution and share-alike for those images and any adaptations of them).
