@@ -540,6 +540,19 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         </button>
       </div>
 
+      {/* Smart review — only when there are due questions */}
+      {dueCount > 0 && (
+        <div style={{ ...S.card, border:"1px solid var(--color-border-info)", display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
+          <div>
+            <div style={{ fontSize:14, fontWeight:600 }}>🔁 Smart review</div>
+            <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3 }}>
+              {dueCount} question{dueCount !== 1 ? "s" : ""} due — spaced repetition resurfaces what you're about to forget.
+            </div>
+          </div>
+          <button style={S.btnPrim} onClick={onSmartReview}>Review {dueCount} →</button>
+        </div>
+      )}
+
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
@@ -578,11 +591,6 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         <button style={{ ...S.btn, display:"flex", alignItems:"center", gap:6 }} onClick={onHistory}>
           📊 History & progress {history.length > 0 && <span style={{ ...S.badge, fontSize:10 }}>{history.length}</span>}
         </button>
-        {dueCount > 0 && (
-          <button style={{ ...S.btn, display:"flex", alignItems:"center", gap:6 }} onClick={onSmartReview}>
-            🔁 Smart review <span style={{ ...S.badge, fontSize:10 }}>{dueCount}</span>
-          </button>
-        )}
         <button style={S.btn} onClick={onHelp}>❓ Help</button>
       </div>
       {weakest && (
