@@ -216,7 +216,7 @@ const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.
 // Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
 function ZurichFlag() {
   return (
-    <div aria-hidden="true" title="Kanton Zürich" style={{ position:"fixed", top:8, right:8, width:22, height:22, zIndex:50, pointerEvents:"none", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
+    <div aria-hidden="true" title="Kanton Zürich" style={{ position:"fixed", top:20, right:14, width:22, height:22, zIndex:50, pointerEvents:"none", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
       <svg viewBox="0 0 32 32" width="22" height="22" style={{ display:"block" }}>
         <rect width="32" height="32" fill="#ffffff"/>
         <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
