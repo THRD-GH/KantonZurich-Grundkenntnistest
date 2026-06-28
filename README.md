@@ -58,7 +58,7 @@ Validates the question bank (every question has 4 options, a valid answer index,
 - **History & progress** — past sessions plus accuracy broken down by section and by level.
 - **Browse** — read the full catalogue; filter by difficulty / section / level; search; reveal answers.
 - **Explanations** — every question has a short why-the-answer-is-correct note (German + English) with an external source link. Off by default during quizzes (toggle **💡 Explain**); always shown in Browse and review screens.
-- **Accessibility** — keyboard-operable, focus rings, ARIA on options, and an in-app **high-contrast** mode (dark mode follows the device).
+- **Accessibility** — keyboard-operable, focus rings, ARIA on options, adjustable **text size** (scales the whole app for mobile), and an in-app **high-contrast** mode (dark mode follows the device).
 
 ## Keyboard shortcuts
 

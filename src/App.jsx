@@ -15,6 +15,8 @@ const PROGRESS_KEY = "gkt_progress_v2";     // { [id]: { seen, correct, box } } 
 const RESUME_KEY   = "gkt_resume_v2";       // in-progress quiz/exam snapshot
 const CONTRAST_KEY = "gkt_contrast_v1";     // "normal" | "high"
 const EXPL_KEY     = "gkt_expl_v1";          // "on" | "off" — show explanations during quiz (off by default)
+const SIZE_KEY     = "gkt_textsize_v1";      // "s" | "m" | "l" | "xl" — global text/zoom size
+const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
 const SRS_MAX_BOX  = 5;                     // Leitner boxes: 1 = struggling … 5 = mastered
 const DAY_MS = 86400000;
 const SRS_DUE_DAYS = { 1: 0, 2: 1, 3: 3, 4: 7, 5: 30 }; // days until a box becomes due for review again
@@ -55,6 +57,7 @@ function saveResume(r) { writeJSON(RESUME_KEY, r); }
 function clearResume() { try { localStorage.removeItem(RESUME_KEY); } catch {} }
 function loadContrast() { try { return localStorage.getItem(CONTRAST_KEY) || "normal"; } catch { return "normal"; } }
 function loadExpl()     { try { return localStorage.getItem(EXPL_KEY) === "on"; } catch { return false; } }
+function loadTextSize() { try { return TEXT_SIZES[localStorage.getItem(SIZE_KEY)] ? localStorage.getItem(SIZE_KEY) : "m"; } catch { return "m"; } }
 
 // Build a pool from explicit question ids (retry-wrong / smart review / resume)
 function poolFromIds(ids, doShuffle = true) {
@@ -209,6 +212,19 @@ const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opt
 
 // Resolve an absolute "/img/..." asset path under Vite's base (so it works on GitHub Pages sub-paths)
 const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.env.BASE_URL + p.slice(1) : p;
+// Small decorative Canton-Zürich flag pinned to the top-right corner of every page.
+// Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
+function ZurichFlag() {
+  return (
+    <div aria-hidden="true" title="Kanton Zürich" style={{ position:"fixed", top:8, right:8, width:22, height:22, zIndex:50, pointerEvents:"none", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
+      <svg viewBox="0 0 32 32" width="22" height="22" style={{ display:"block" }}>
+        <rect width="32" height="32" fill="#ffffff"/>
+        <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
+      </svg>
+    </div>
+  );
+}
+
 // A single illustrative image shown above the options (for "what is this?" picture questions)
 function QImage({ src, maxHeight = 200 }) {
   if (!src) return null;
@@ -303,7 +319,7 @@ function EnToggle({ enMode, setEnMode, prefix = "EN" }) {
 }
 
 // ── Home screen ───────────────────────────────────────────────────────────────
-function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onResetRatings, onSmartReview }) {
+function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, textSize, setTextSize, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onResetRatings, onSmartReview }) {
   const counts = countByDiff(difficulties);
   const [qtDiff, setQtDiff]   = useState("random");
   const [qtCount, setQtCount] = useState(20);
@@ -381,6 +397,24 @@ function HomeScreen({ difficulties, history, progress, enMode, setEnMode, contra
             <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>off during tests · always in Browse &amp; review</span>
           </div>
           <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? "On in quiz" : "Off in quiz"} />
+        </div>
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
+          <div style={{ fontSize:13, fontWeight:500 }}>
+            Text size
+            <span style={{ fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 }}>scales the whole app</span>
+          </div>
+          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
+            {[["s","A",11],["m","A",13],["l","A",15],["xl","A",18]].map(([k,l,sz]) => (
+              <button key={k} onClick={() => setTextSize(k)} aria-label={`Text size ${k}`} aria-pressed={textSize===k}
+                style={{ fontSize:sz, lineHeight:1, padding:"3px 11px", borderRadius:99, cursor:"pointer", minWidth:34,
+                  background: textSize===k ? "var(--color-background-info)" : "var(--color-background-secondary)",
+                  color: textSize===k ? "var(--color-text-info)" : "var(--color-text-secondary)",
+                  border: textSize===k ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
+                  fontWeight: textSize===k ? 600 : 400 }}>
+                {l}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -797,7 +831,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6 }}>
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
         <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>← Home</button>
         <div style={{ display:"flex", gap:5, flexWrap:"wrap", alignItems:"center" }}>
           <span style={S.badge}>{idx+1}/{pool.length}</span>
@@ -972,7 +1006,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6 }}>
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
         <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>← Home</button>
         <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
           <span style={{ ...S.badge, fontVariantNumeric:"tabular-nums", fontWeight:500,
@@ -1480,7 +1514,7 @@ const HELP_SECTIONS = [
   { t: "History & progress", b: ["Your past sessions plus accuracy broken down by section and by level, so you can see exactly where to focus."] },
   { t: "Browse questions", b: ["Read the whole catalogue, filter by difficulty / section / level, search the text, and reveal the correct answer for any question."] },
   { t: "Explanations", b: ["Every question has a short explanation (German + English) of why the answer is correct, with a link to an external source for more depth. Explanations are off by default during quizzes (so they don't spoil the test) — flip the “💡 Explain” switch to show them — and are always available in Browse and in review screens."] },
-  { t: "Display & language", b: ["English translations can be shown for the question only, or for the question and every option. High-contrast mode boosts legibility; dark mode follows your device setting. The five question classes (sections) are colour-coded throughout — Democracy & Federalism (blue), Welfare State & Civil Society (teal), History (orange), Geography (green), Culture & Everyday Life (violet)."] },
+  { t: "Display & language", b: ["English translations can be shown for the question only, or for the question and every option. Text size (A / A / A / A) scales the whole app for easier reading on phones. High-contrast mode boosts legibility; dark mode follows your device setting. The five question classes (sections) are colour-coded throughout — Democracy & Federalism (blue), Welfare State & Civil Society (teal), History (orange), Geography (green), Culture & Everyday Life (violet)."] },
   { t: "Keyboard shortcuts", b: [["1 – 4", "choose an option"], ["Enter / Space / →", "submit, then go to next"], ["←", "previous question"]] },
   { t: "Your data", b: ["Difficulty ratings, history and progress are stored only in this browser — nothing is uploaded. Clearing your browser data resets them."] },
   { t: "Image credits", b: [
@@ -1496,6 +1530,22 @@ function HelpScreen({ onHome }) {
   return (
     <div style={{ padding:"1rem" }}>
       <NavBar onHome={onHome} title="Help & about" />
+      <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
+        <div style={{ fontSize:13, fontWeight:600, marginBottom:".5rem" }}>Official information (Kanton Zürich)</div>
+        <p style={{ fontSize:13, color:"var(--color-text-secondary)", lineHeight:1.5, margin:"0 0 8px" }}>
+          This is an unofficial study aid. The authoritative questions, the canton's own digital practice test and the current rules are published by the Canton of Zürich — always check there for the latest version:
+        </p>
+        <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
+          {[
+            ["Grundkenntnistest — official info, catalogue & practice test", "https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html"],
+            ["Einbürgerung (naturalisation) — overview", "https://www.zh.ch/de/migration-integration/einbuergerung.html"],
+            ["Information brochure (PDF)", "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf"],
+          ].map(([label, url]) => (
+            <a key={url} href={url} target="_blank" rel="noopener noreferrer"
+              style={{ fontSize:13, color:"var(--color-text-info)", textDecoration:"underline", lineHeight:1.4 }}>↗ {label}</a>
+          ))}
+        </div>
+      </div>
       {HELP_SECTIONS.map(sec => (
         <div key={sec.t} style={S.card}>
           <div style={{ fontSize:13, fontWeight:600, marginBottom:".5rem" }}>{sec.t}</div>
@@ -1528,8 +1578,14 @@ export default function App() {
   const [enMode,       setEnMode]       = useState("question"); // 'none' | 'question' | 'full' — set on Home, used in Quiz
   const [contrast,     setContrast]     = useState(loadContrast); // "normal" | "high"
   const [showExpl,     setShowExpl]     = useState(loadExpl);    // show explanations during quiz (off by default; always on in browse/review)
+  const [textSize,     setTextSize]     = useState(loadTextSize); // "s" | "m" | "l" | "xl" — global zoom for readability
 
   useEffect(() => { try { localStorage.setItem(EXPL_KEY, showExpl ? "on" : "off"); } catch {} }, [showExpl]);
+  // Apply (and persist) the text size by zooming the whole app — scales text and layout proportionally
+  useEffect(() => {
+    document.documentElement.style.zoom = String(TEXT_SIZES[textSize] || 1);
+    try { localStorage.setItem(SIZE_KEY, textSize); } catch {}
+  }, [textSize]);
 
   // Apply (and persist) the high-contrast theme via a document attribute that index.css overrides
   useEffect(() => {
@@ -1616,6 +1672,7 @@ export default function App() {
 
   const dueIds = useMemo(() => dueForReview(progress, Date.now()), [progress]);
 
+  const view = (() => {
   if (screen === "quiz" && pool) {
     return <QuizScreen pool={pool} difficulties={difficulties} label={quizLabel}
       enMode={enMode} setEnMode={setEnMode} showExpl={showExpl} setShowExpl={setShowExpl}
@@ -1653,6 +1710,8 @@ export default function App() {
       setContrast={setContrast}
       showExpl={showExpl}
       setShowExpl={setShowExpl}
+      textSize={textSize}
+      setTextSize={setTextSize}
       dueCount={dueIds.length}
       resume={resume}
       onResume={resumeSession}
@@ -1666,4 +1725,6 @@ export default function App() {
       onSmartReview={() => startQuizFromIds(dueIds, `Smart review · ${dueIds.length} questions`)}
     />
   );
+  })();
+  return <>{view}<ZurichFlag /></>;
 }
