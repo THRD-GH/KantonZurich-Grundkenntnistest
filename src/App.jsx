@@ -519,7 +519,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>How many?</div>
         <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".75rem" }}>
-          {["all",10,20,30].map(n => (
+          {["all",10,20,30,50].map(n => (
             <button key={n} onClick={() => setSecCount(n)} style={pill(secCount===n)}>{n === "all" ? "All" : n}</button>
           ))}
         </div>
