@@ -397,36 +397,6 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         </div>
       </div>
 
-      {/* Ratings summary */}
-      <div style={S.card}>
-        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>Difficulty ratings</div>
-          {counts.unrated < ALL_QUESTIONS.length && (
-            confirmReset
-              ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
-                  <span style={{ fontSize:11, color:"var(--color-text-danger)", fontWeight:500 }}>Reset all {ALL_QUESTIONS.length - counts.unrated} ratings? This can’t be undone.</span>
-                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }}
-                    onClick={() => { onResetRatings(); setConfirmReset(false); }}>Yes, reset</button>
-                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px" }} onClick={() => setConfirmReset(false)}>Cancel</button>
-                </div>
-              : <button style={{ ...S.btn, fontSize:11, padding:"3px 10px" }} onClick={() => setConfirmReset(true)}>Reset ratings</button>
-          )}
-        </div>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", gap:8, marginBottom:".75rem" }}>
-          {[["easy","Easy",counts.easy],["medium","Medium",counts.medium],["hard","Hard",counts.hard],["unrated","Unrated",counts.unrated]].map(([k,l,n]) => {
-            const c = k==="unrated" ? null : DIFF_COLORS[k];
-            return (
-              <div key={k} style={{ padding:".6rem .75rem", borderRadius:"var(--border-radius-md)", background: c ? c.bg : "var(--color-background-secondary)", border:`0.5px solid ${c ? c.border : "var(--color-border-tertiary)"}` }}>
-                <div style={{ fontSize:20, fontWeight:500, color: c ? c.text : "var(--color-text-secondary)" }}>{n}</div>
-                <div style={{ fontSize:11, color: c ? c.text : "var(--color-text-tertiary)", marginTop:2 }}>{l}</div>
-              </div>
-            );
-          })}
-        </div>
-        <PctBar pct={pct} />
-        <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:4 }}>{pct}% rated · {counts.unrated} unrated</div>
-      </div>
-
       {/* Quick test */}
       <div style={S.card}>
         <div style={{ fontSize:13, fontWeight:500, marginBottom:".75rem" }}>Quick test</div>
@@ -560,6 +530,36 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           onClick={() => onStart(fqSection, fqLevel, fqOrder, secCount === "all" ? null : secCount)}>
           Start quiz →
         </button>
+      </div>
+
+      {/* Difficulty ratings — below the tests */}
+      <div style={S.card}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
+          <div style={{ fontSize:13, fontWeight:500 }}>Difficulty ratings</div>
+          {counts.unrated < ALL_QUESTIONS.length && (
+            confirmReset
+              ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
+                  <span style={{ fontSize:11, color:"var(--color-text-danger)", fontWeight:500 }}>Reset all {ALL_QUESTIONS.length - counts.unrated} ratings? This can’t be undone.</span>
+                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }}
+                    onClick={() => { onResetRatings(); setConfirmReset(false); }}>Yes, reset</button>
+                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px" }} onClick={() => setConfirmReset(false)}>Cancel</button>
+                </div>
+              : <button style={{ ...S.btn, fontSize:11, padding:"3px 10px" }} onClick={() => setConfirmReset(true)}>Reset ratings</button>
+          )}
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", gap:8, marginBottom:".75rem" }}>
+          {[["easy","Easy",counts.easy],["medium","Medium",counts.medium],["hard","Hard",counts.hard],["unrated","Unrated",counts.unrated]].map(([k,l,n]) => {
+            const c = k==="unrated" ? null : DIFF_COLORS[k];
+            return (
+              <div key={k} style={{ padding:".6rem .75rem", borderRadius:"var(--border-radius-md)", background: c ? c.bg : "var(--color-background-secondary)", border:`0.5px solid ${c ? c.border : "var(--color-border-tertiary)"}` }}>
+                <div style={{ fontSize:20, fontWeight:500, color: c ? c.text : "var(--color-text-secondary)" }}>{n}</div>
+                <div style={{ fontSize:11, color: c ? c.text : "var(--color-text-tertiary)", marginTop:2 }}>{l}</div>
+              </div>
+            );
+          })}
+        </div>
+        <PctBar pct={pct} />
+        <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:4 }}>{pct}% rated · {counts.unrated} unrated</div>
       </div>
 
       {/* Bottom nav */}
@@ -1486,6 +1486,7 @@ const HELP_SECTIONS = [
   { t: "Image credits", b: [
     "Matterhorn photo: “Zermatt photos” via Wikimedia Commons, CC BY-SA 3.0.",
     "Avenches amphitheatre photo: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
+    "Technorama photo (Q346): MaddaMom via Wikimedia Commons, CC BY-SA 4.0.",
     "Canton maps: adapted (recoloured) from “Suisse cantons.svg” by Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
     "Flag and coat-of-arms options (Swiss-flag and Zürich-arms questions) are simple SVGs drawn for this app to match the images in the official catalogue.",
     "Federal-Councillor portraits (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
