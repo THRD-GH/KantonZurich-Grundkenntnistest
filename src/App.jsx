@@ -217,14 +217,15 @@ const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opt
 const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.env.BASE_URL + p.slice(1) : p;
 // Small decorative Canton-Zürich flag pinned to the top-right corner of every page.
 // Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
-function ZurichFlag() {
+function ZurichFlag({ onClick }) {
   return (
-    <div aria-hidden="true" title="Kanton Zürich" style={{ position:"fixed", top:20, right:14, width:22, height:22, zIndex:50, pointerEvents:"none", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
+    <button type="button" onClick={onClick} aria-label="Help & about" title="Kanton Zürich — Help & about"
+      style={{ position:"fixed", top:20, right:14, width:22, height:22, zIndex:50, padding:0, border:"none", background:"none", cursor:"pointer", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
       <svg viewBox="0 0 32 32" width="22" height="22" style={{ display:"block" }}>
         <rect width="32" height="32" fill="#ffffff"/>
         <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
       </svg>
-    </div>
+    </button>
   );
 }
 
@@ -340,7 +341,7 @@ function EnToggle({ enMode, setEnMode, prefix = "EN" }) {
 // ── Home screen ───────────────────────────────────────────────────────────────
 function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview }) {
   const counts = countByDiff(difficulties);
-  const [qtDiff, setQtDiff]   = useState("random");
+  const [qtDiff, setQtDiff]   = useState("exam");
   const [qtCount, setQtCount] = useState(20);
   const [secCount, setSecCount] = useState(20);
   // Full-quiz filters combine: section AND level, with a count and order
@@ -412,14 +413,6 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           <div>
             <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>Focus on</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
-              <button onClick={() => setQtDiff("random")}
-                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
-                  background: qtDiff==="random" ? "var(--color-background-info)" : "var(--color-background-secondary)",
-                  color: qtDiff==="random" ? "var(--color-text-info)" : "var(--color-text-secondary)",
-                  border: qtDiff==="random" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
-                  fontWeight: qtDiff==="random" ? 500 : 400 }}>
-                Random mix
-              </button>
               <button onClick={() => setQtDiff("exam")}
                 style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
                   background: qtDiff==="exam" ? "var(--color-background-info)" : "var(--color-background-secondary)",
@@ -427,6 +420,14 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                   border: qtDiff==="exam" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
                   fontWeight: qtDiff==="exam" ? 500 : 400 }}>
                 Exam mix
+              </button>
+              <button onClick={() => setQtDiff("random")}
+                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                  background: qtDiff==="random" ? "var(--color-background-info)" : "var(--color-background-secondary)",
+                  color: qtDiff==="random" ? "var(--color-text-info)" : "var(--color-text-secondary)",
+                  border: qtDiff==="random" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
+                  fontWeight: qtDiff==="random" ? 500 : 400 }}>
+                Random mix
               </button>
               {["easy","medium","hard"].map(d => {
                 const c = DIFF_COLORS[d];
@@ -1500,6 +1501,7 @@ const HELP_SECTIONS = [
   { t: "History & progress", b: ["Your past sessions plus accuracy broken down by section and by level, so you can see exactly where to focus."] },
   { t: "Browse questions", b: ["Read the whole catalogue, filter by difficulty / section / level, search the text, and reveal the correct answer for any question."] },
   { t: "Explanations", b: ["Every question has a short explanation (German + English) of why the answer is correct, with a link to an external source for more depth. Explanations are off by default during quizzes (so they don't spoil the test) — flip the “💡 Explain” switch to show them — and are always available in Browse and in review screens."] },
+  { t: "Audio (read aloud)", b: ["Tap the 🔊 speaker on any question to hear it read aloud in German — the question followed by the options, in the same order they appear on screen. It's a built-in accessibility aid (uses your device's German voice) and also helps with pronunciation. Tap again (⏹) to stop; audio also stops automatically when you move to another question or leave the page."] },
   { t: "Display & language", b: ["English translations can be shown for the question only, or for the question and every option. Text size (A / A / A / A) scales the whole app for easier reading on phones. High-contrast mode boosts legibility; dark mode follows your device setting. The five question classes (sections) are colour-coded throughout — Democracy & Federalism (blue), Welfare State & Civil Society (teal), History (orange), Geography (green), Culture & Everyday Life (violet)."] },
   { t: "Keyboard shortcuts", b: [["1 – 4", "choose an option"], ["Enter / Space / →", "submit, then go to next"], ["←", "previous question"]] },
   { t: "Your data", b: ["Difficulty ratings, history and progress are stored only in this browser — nothing is uploaded. Clearing your browser data resets them."] },
@@ -1748,5 +1750,5 @@ export default function App() {
     />
   );
   })();
-  return <>{view}<ZurichFlag /><ZoomControl textSize={textSize} setTextSize={setTextSize} /></>;
+  return <>{view}<ZurichFlag onClick={() => setScreen("help")} /><ZoomControl textSize={textSize} setTextSize={setTextSize} /></>;
 }

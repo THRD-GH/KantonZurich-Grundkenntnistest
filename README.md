@@ -58,7 +58,8 @@ Validates the question bank (every question has 4 options, a valid answer index,
 - **History & progress** — past sessions plus accuracy broken down by section and by level.
 - **Browse** — read the full catalogue; filter by difficulty / section / level; search; reveal answers.
 - **Explanations** — every question has a short why-the-answer-is-correct note (German + English) with an external source link. Off by default during quizzes (toggle **💡 Explain**); always shown in Browse and review screens.
-- **Accessibility** — keyboard-operable, focus rings, ARIA on options, adjustable **text size** (scales the whole app for mobile), and an in-app **high-contrast** mode (dark mode follows the device).
+- **Audio (read aloud)** — tap the 🔊 speaker on any question to hear it read aloud in German (question then options, in on-screen order), using your device's German voice. A built-in accessibility aid that also helps pronunciation; tap again to stop, and it stops automatically on navigation.
+- **Accessibility** — read-aloud audio, keyboard-operable, focus rings, ARIA on options, adjustable **text size** (scales the whole app for mobile), and an in-app **high-contrast** mode (dark mode follows the device).
 
 ## Keyboard shortcuts
 
