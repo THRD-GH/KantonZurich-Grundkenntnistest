@@ -1,8 +1,22 @@
 # Zürich Grundkenntnistest — Quiz App
 
-A study app for the **Zürich Grundkenntnistest**, the basic-knowledge test required for naturalisation in the Canton of Zürich. All **350 questions** come from the canton's official question catalogue, grouped into 5 sections and tagged by level (Federal / Cantonal / Municipal).
+**▶ Live app: <https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/>** — runs in any browser, works on phones, and can be installed to your home screen (offline-capable after the first visit).
 
-> There's also an in-app **Help** screen (the ❓ Help button on the home screen) that covers everything below in short form.
+## What this is
+
+A free study app for the **Grundkenntnistest** ("basic-knowledge test") of the **Canton of Zürich** — the test on Switzerland, the canton and the municipality that applicants must pass for ordinary naturalisation. It tests knowledge of geographic, historical, political and social matters at the **federal**, **cantonal** and **municipal** levels.
+
+The app lets you practise all **350 questions** from the canton's official question catalogue with: instant per-question feedback, a short **explanation + source link** for every answer, English translations, difficulty rating, spaced-repetition review, a timed **mock exam** (50 questions / 60 min / 60% to pass, in the real ~70/20/10 federal/cantonal/municipal mix), and audio read-out. Questions are grouped into 5 sections and tagged by level.
+
+> ⚠️ **This is an unofficial, community study aid — not an official Canton of Zürich tool.** The authoritative questions, the official digital practice test, and the current rules are published by the canton and can change. Always check the official site below for the latest version.
+
+## Official Kanton Zürich resources (authoritative — latest information)
+
+- **Grundkenntnistest** — official information, the question catalogue, and the canton's own digital practice test: <https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html>
+- **Naturalisation (Einbürgerung) — overview**: <https://www.zh.ch/de/migration-integration/einbuergerung.html>
+- **Information brochure (PDF)**: <https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf>
+
+> There's also an in-app **Help** screen (the ❓ Help button on the home screen) that covers the rest of this README in short form.
 
 ## About the real test
 
