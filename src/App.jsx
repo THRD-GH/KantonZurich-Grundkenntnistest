@@ -189,7 +189,10 @@ function speakDE(text, onEnd) {
 function stopSpeak() { try { window.speechSynthesis.cancel(); } catch {} }
 function SpeakButton({ text, small }) {
   const [speaking, setSpeaking] = useState(false);
-  useEffect(() => () => stopSpeak(), []); // stop audio if this button unmounts (e.g. navigating questions)
+  // Stop any audio and reset the toggle whenever the spoken text changes (navigating questions)
+  // or the button unmounts (leaving the page). The component persists across Back/Next, so a
+  // text-keyed effect — not just an unmount cleanup — is needed to catch in-quiz navigation.
+  useEffect(() => { setSpeaking(false); return () => stopSpeak(); }, [text]);
   if (!TTS_OK) return null;
   const toggle = (e) => {
     e.stopPropagation();
@@ -677,6 +680,9 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
   const [done,      setDone]      = useState(false);
   const [saved,     setSaved]     = useState(false);
 
+  // Stop any read-aloud audio when the question changes or the quiz screen unmounts
+  useEffect(() => stopSpeak, [idx]);
+
   const q            = pool[idx];
   const pickCur      = picks[idx];               // chosen option index for this question, or undefined
   const hasPick      = pickCur !== undefined;
@@ -721,9 +727,10 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
   }, [done, q, idx, picks, submitted]);
 
   const goPrev = useCallback(() => {
-    if (idx > 0) setIdx(idx - 1);
+    if (idx > 0) { stopSpeak(); setIdx(idx - 1); }
   }, [idx]);
   const goNext = useCallback(() => {
+    stopSpeak();
     if (idx + 1 >= pool.length) { setDone(true); return; }
     setIdx(idx + 1);
   }, [idx, pool.length]);
