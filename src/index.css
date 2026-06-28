@@ -1,0 +1,152 @@
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-background-success: #d3f9d8;
+  --color-background-danger:  #ffe3e3;
+  --color-background-warning: #fff3bf;
+  --color-background-info:    #e7f5ff;
+  --color-text-primary:   #212529;
+  --color-text-secondary: #868e96;
+  --color-text-tertiary:  #adb5bd;
+  --color-text-success: #2f9e44;
+  --color-text-danger:  #c92a2a;
+  --color-text-warning: #e67700;
+  --color-text-info:    #1971c2;
+  --color-border-tertiary:  rgba(0,0,0,0.12);
+  --color-border-secondary: rgba(0,0,0,0.20);
+  --color-border-primary:   rgba(0,0,0,0.30);
+  --color-border-success: #40c057;
+  --color-border-danger:  #fa5252;
+  --color-border-warning: #fab005;
+  --color-border-info:    #339af0;
+  /* Five question-class (section) colours */
+  --sec-1: #3b5bdb; --sec-1-bg: #edf2ff; --sec-1-bd: #4263eb;
+  --sec-2: #0c8599; --sec-2-bg: #e3fafc; --sec-2-bd: #15aabf;
+  --sec-3: #e8590c; --sec-3-bg: #fff4e6; --sec-3-bd: #fd7e14;
+  --sec-4: #2b8a3e; --sec-4-bg: #ebfbee; --sec-4-bd: #40c057;
+  --sec-5: #6741d9; --sec-5-bg: #f3f0ff; --sec-5-bd: #7950f2;
+  /* Three level (Federal / Cantonal / Municipal) colours */
+  --lvl-bund: #e03131; --lvl-bund-bg: #fff5f5; --lvl-bund-bd: #fa5252;
+  --lvl-kanton: #1c7ed6; --lvl-kanton-bg: #e7f5ff; --lvl-kanton-bd: #4dabf7;
+  --lvl-gemeinde: #2f9e44; --lvl-gemeinde-bg: #ebfbee; --lvl-gemeinde-bd: #51cf66;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary:   #1a1a1a;
+    --color-background-secondary: #242424;
+    --color-background-tertiary:  #2e2e2e;
+    --color-background-success: #1a3a1f;
+    --color-background-danger:  #3a1a1a;
+    --color-background-warning: #3a2e00;
+    --color-background-info:    #0a1f3a;
+    --color-text-primary:   #e9ecef;
+    --color-text-secondary: #909296;
+    --color-text-tertiary:  #5c5f66;
+    --color-text-success: #69db7c;
+    --color-text-danger:  #ff6b6b;
+    --color-text-warning: #fcc419;
+    --color-text-info:    #74c0fc;
+    --color-border-tertiary:  rgba(255,255,255,0.10);
+    --color-border-secondary: rgba(255,255,255,0.18);
+    --color-border-primary:   rgba(255,255,255,0.28);
+    --color-border-success: #2f9e44;
+    --color-border-danger:  #c92a2a;
+    --color-border-warning: #e67700;
+    --color-border-info:    #1971c2;
+    --sec-1: #91a7ff; --sec-1-bg: #1b2347; --sec-1-bd: #3b5bdb;
+    --sec-2: #66d9e8; --sec-2-bg: #0b2a30; --sec-2-bd: #0c8599;
+    --sec-3: #ffa94d; --sec-3-bg: #3a2410; --sec-3-bd: #e8590c;
+    --sec-4: #69db7c; --sec-4-bg: #15321c; --sec-4-bd: #2b8a3e;
+    --sec-5: #b197fc; --sec-5-bg: #251c47; --sec-5-bd: #6741d9;
+    --lvl-bund: #ff8787; --lvl-bund-bg: #3a1a1a; --lvl-bund-bd: #e03131;
+    --lvl-kanton: #74c0fc; --lvl-kanton-bg: #0a1f3a; --lvl-kanton-bd: #1c7ed6;
+    --lvl-gemeinde: #69db7c; --lvl-gemeinde-bg: #15321c; --lvl-gemeinde-bd: #2f9e44;
+  }
+}
+
+/* High-contrast theme (toggled in-app) — wins over both light and dark via the extra specificity */
+:root[data-contrast="high"] {
+  --color-background-primary:   #ffffff;
+  --color-background-secondary: #ffffff;
+  --color-background-tertiary:  #ffffff;
+  --color-background-success: #b8f0c0;
+  --color-background-danger:  #ffc9c9;
+  --color-background-warning: #ffec99;
+  --color-background-info:    #cfe4ff;
+  --color-text-primary:   #000000;
+  --color-text-secondary: #161616;
+  --color-text-tertiary:  #2b2b2b;
+  --color-text-success: #00660f;
+  --color-text-danger:  #a10000;
+  --color-text-warning: #6b4500;
+  --color-text-info:    #00308f;
+  --color-border-tertiary:  #000000;
+  --color-border-secondary: #000000;
+  --color-border-primary:   #000000;
+  --color-border-success: #00660f;
+  --color-border-danger:  #a10000;
+  --color-border-warning: #6b4500;
+  --color-border-info:    #00308f;
+  --sec-1: #00308f; --sec-1-bg: #dbe4ff; --sec-1-bd: #00308f;
+  --sec-2: #0b525b; --sec-2-bg: #c5f6fc; --sec-2-bd: #0b525b;
+  --sec-3: #8a3a00; --sec-3-bg: #ffe8cc; --sec-3-bd: #8a3a00;
+  --sec-4: #00660f; --sec-4-bg: #d3f9d8; --sec-4-bd: #00660f;
+  --sec-5: #4a2db0; --sec-5-bg: #ede7ff; --sec-5-bd: #4a2db0;
+  --lvl-bund: #a10000; --lvl-bund-bg: #ffc9c9; --lvl-bund-bd: #a10000;
+  --lvl-kanton: #00308f; --lvl-kanton-bg: #cfe4ff; --lvl-kanton-bd: #00308f;
+  --lvl-gemeinde: #00660f; --lvl-gemeinde-bg: #d3f9d8; --lvl-gemeinde-bd: #00660f;
+}
+/* Make the thin hairline borders clearly visible when high contrast is on */
+:root[data-contrast="high"] button,
+:root[data-contrast="high"] input { border-width: 1.5px; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 720px;
+  background: var(--color-background-tertiary);
+}
+
+button {
+  font-family: var(--font-sans);
+  transition: opacity .1s, transform .1s;
+}
+button:active { transform: scale(0.97); }
+button[disabled] { cursor: default; }
+
+/* Keyboard focus ring (overrides the global outline:none above) — visible only for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-border-info);
+  outline-offset: 2px;
+}
+
+select, input {
+  font-family: var(--font-sans);
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 5px 8px;
+  font-size: 13px;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-text-info);
+  width: 14px;
+  height: 14px;
+}

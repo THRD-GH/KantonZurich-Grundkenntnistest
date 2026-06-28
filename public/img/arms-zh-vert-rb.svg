@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 2298" width="1900" height="2298">
+<title>Per pale gules and azure (distractor)</title>
+<defs><clipPath id="lh"><rect x="0" y="0" width="950" height="2298"/></clipPath></defs>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" fill="#248BCC"/>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" fill="#E8423F" clip-path="url(#lh)"/>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" stroke="#000" stroke-width="14.14" fill="none"/>
+</svg>

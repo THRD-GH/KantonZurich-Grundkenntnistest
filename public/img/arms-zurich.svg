@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 2298" width="1900" height="2298">
+<title>Wappen Zürich</title>
+<defs><clipPath id="zb"><polygon points="11,7 1889,1388 1889,2298 0,2298 0,7"/></clipPath></defs>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" fill="#ffffff"/>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" fill="#248BCC" clip-path="url(#zb)"/>
+<path d="m949.4 7.069h939.6v1381c0 497-420 899-939 899-518.7 0-939.1-402-939.1-899l-0.02-1381 938.5 0.069z" stroke="#000" stroke-width="14.14" fill="none"/>
+</svg>
