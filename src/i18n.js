@@ -675,3 +675,21 @@ for (const code of Object.keys(EXTRA)) {
   if (e.official)     HELP_OFFICIAL[code] = e.official;
   if (e.sections)     HELP_SECTIONS_BY_LANG[code] = e.sections;
 }
+
+// Languages & translation note — German is authoritative; every other language is machine-translated.
+// Inserted into every language's Help (after "Display & language"), so it stays consistent.
+const LANG_NOTE = {
+  en: { t: "Languages & translation", b: ["German is always shown and is the authoritative version — it is the language of the official test. The interface and the secondary translations are offered in several languages (English, French, Italian, Portuguese, Albanian, Spanish), but all of these are machine-translated and may contain occasional errors. When in doubt, rely on the German."] },
+  fr: { t: "Langues et traduction", b: ["L'allemand est toujours affiché et constitue la version qui fait foi — c'est la langue du test officiel. L'interface et les traductions secondaires sont proposées en plusieurs langues (anglais, français, italien, portugais, albanais, espagnol), mais toutes sont des traductions automatiques et peuvent contenir des erreurs occasionnelles. En cas de doute, fiez-vous à l'allemand."] },
+  de: { t: "Sprachen & Übersetzung", b: ["Deutsch wird immer angezeigt und ist die massgebende Version — es ist die Sprache der offiziellen Prüfung. Die Oberfläche und die Zweitübersetzungen werden in mehreren Sprachen angeboten (Englisch, Französisch, Italienisch, Portugiesisch, Albanisch, Spanisch), doch alle sind maschinell übersetzt und können vereinzelt Fehler enthalten. Im Zweifelsfall gilt das Deutsche."] },
+  it: { t: "Lingue e traduzione", b: ["Il tedesco è sempre mostrato ed è la versione che fa fede — è la lingua dell'esame ufficiale. L'interfaccia e le traduzioni secondarie sono disponibili in più lingue (inglese, francese, italiano, portoghese, albanese, spagnolo), ma sono tutte traduzioni automatiche e possono contenere errori occasionali. In caso di dubbio, fai riferimento al tedesco."] },
+  pt: { t: "Idiomas e tradução", b: ["O alemão é sempre apresentado e é a versão que faz fé — é a língua do teste oficial. A interface e as traduções secundárias estão disponíveis em vários idiomas (inglês, francês, italiano, português, albanês, espanhol), mas todas são traduções automáticas e podem conter erros ocasionais. Em caso de dúvida, baseie-se no alemão."] },
+  sq: { t: "Gjuhët dhe përkthimi", b: ["Gjermanishtja shfaqet gjithmonë dhe është versioni zyrtar që bën fe — është gjuha e provimit zyrtar. Ndërfaqja dhe përkthimet dytësore ofrohen në disa gjuhë (anglisht, frëngjisht, italisht, portugalisht, shqip, spanjisht), por të gjitha janë përkthime makinerie dhe mund të përmbajnë herë pas here gabime. Në rast dyshimi, mbështetuni te gjermanishtja."] },
+  es: { t: "Idiomas y traducción", b: ["El alemán se muestra siempre y es la versión auténtica — es el idioma del examen oficial. La interfaz y las traducciones secundarias están disponibles en varios idiomas (inglés, francés, italiano, portugués, albanés, español), pero todas son traducciones automáticas y pueden contener errores ocasionales. En caso de duda, guíese por el alemán."] },
+};
+for (const code of Object.keys(HELP_SECTIONS_BY_LANG)) {
+  const note = LANG_NOTE[code] || LANG_NOTE.en;
+  const arr = HELP_SECTIONS_BY_LANG[code];
+  const at = Math.min(12, arr.length); // right after "Display & language"
+  HELP_SECTIONS_BY_LANG[code] = [...arr.slice(0, at), note, ...arr.slice(at)];
+}

@@ -1571,6 +1571,8 @@ function BrowserScreen({ difficulties, onDiffChange, onHome }) {
 // Settings & display options, reached from the gear icon on the home screen.
 function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, onHome }) {
   const T = useT();
+  const isOther = !PRIMARY_LANGS.includes(lang);
+  const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
   const hint = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 };
   const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
@@ -1588,16 +1590,19 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
             {PRIMARY_LANGS.map((v) => (
               <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
             ))}
+            <button onClick={() => setShowMore((s) => !s)} style={segBtn(showMore || isOther)}>{OTHER_LABEL[lang] || OTHER_LABEL.en}</button>
           </div>
         </div>
-        <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{MORE_LANGS_LABEL[lang] || MORE_LANGS_LABEL.en}</div>
-          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
-            {Object.keys(LANGS).filter((v) => !PRIMARY_LANGS.includes(v)).map((v) => (
-              <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
-            ))}
+        {showMore && (
+          <div style={row}>
+            <div style={{ fontSize:13, fontWeight:500 }}>{MORE_LANGS_LABEL[lang] || MORE_LANGS_LABEL.en}</div>
+            <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
+              {Object.keys(LANGS).filter((v) => !PRIMARY_LANGS.includes(v)).map((v) => (
+                <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
         {HAS_TRANSLATION[lang] && (
           <div style={row}>
             <div style={{ fontSize:13, fontWeight:500 }}>{T("Translations")}<span style={hint}>{T("shown in every test")}</span></div>
