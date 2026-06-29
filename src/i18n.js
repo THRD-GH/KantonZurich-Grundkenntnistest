@@ -4,14 +4,16 @@
 import { EXTRA } from "./i18n-extra.js";
 
 export const LANG_KEY = "gkt_lang_v1";
-export const LANGS = { en: "English", fr: "Français", de: "Deutsch", it: "Italiano", pt: "Português", sq: "Shqip", es: "Español" };
+export const LANGS = { en: "English", fr: "Français", de: "Deutsch", it: "Italiano", pt: "Português", sq: "Shqip", es: "Español", hr: "Hrvatski / Srpski / Bosanski", tr: "Türkçe", ta: "தமிழ்", ti: "ትግርኛ", ar: "العربية" };
 // Shown directly in the top-bar dropdown; the rest are reached via Settings ("Other…").
 export const PRIMARY_LANGS = ["en", "fr", "de", "it"];
+// Right-to-left languages (secondary-translation text renders RTL; the interface stays LTR).
+export const RTL_LANGS = ["ar"];
 // Labels for the "Other…" dropdown entry and the Settings drill-down, localised for every language.
-export const OTHER_LABEL = { en: "Other…", fr: "Autre…", de: "Andere…", it: "Altro…", pt: "Outro…", sq: "Tjetër…", es: "Otro…" };
-export const MORE_LANGS_LABEL = { en: "More languages", fr: "Plus de langues", de: "Weitere Sprachen", it: "Altre lingue", pt: "Mais idiomas", sq: "Më shumë gjuhë", es: "Más idiomas" };
+export const OTHER_LABEL = { en: "Other…", fr: "Autre…", de: "Andere…", it: "Altro…", pt: "Outro…", sq: "Tjetër…", es: "Otro…", hr: "Ostalo…", tr: "Diğer…", ta: "மற்றவை…", ti: "ካልእ…", ar: "أخرى…" };
+export const MORE_LANGS_LABEL = { en: "More languages", fr: "Plus de langues", de: "Weitere Sprachen", it: "Altre lingue", pt: "Mais idiomas", sq: "Më shumë gjuhë", es: "Más idiomas", hr: "Više jezika", tr: "Daha fazla dil", ta: "மேலும் மொழிகள்", ti: "ተወሰኽቲ ቋንቋታት", ar: "لغات أخرى" };
 // Languages with a *secondary* translation column (German is the primary test content, so it has none).
-export const HAS_TRANSLATION = { en: true, fr: true, de: false, it: true, pt: true, sq: true, es: true };
+export const HAS_TRANSLATION = { en: true, fr: true, de: false, it: true, pt: true, sq: true, es: true, hr: true, tr: true, ta: true, ti: true, ar: true };
 
 // Section display names per language (keyed by the leading number of q.s, e.g. "1 · Democracy …")
 export const SECTION_NAMES = {
@@ -686,6 +688,11 @@ const LANG_NOTE = {
   pt: { t: "Idiomas e tradução", b: ["O alemão é sempre apresentado e é a versão que faz fé — é a língua do teste oficial. A interface e as traduções secundárias estão disponíveis em vários idiomas (inglês, francês, italiano, português, albanês, espanhol), mas todas são traduções automáticas e podem conter erros ocasionais. Em caso de dúvida, baseie-se no alemão."] },
   sq: { t: "Gjuhët dhe përkthimi", b: ["Gjermanishtja shfaqet gjithmonë dhe është versioni zyrtar që bën fe — është gjuha e provimit zyrtar. Ndërfaqja dhe përkthimet dytësore ofrohen në disa gjuhë (anglisht, frëngjisht, italisht, portugalisht, shqip, spanjisht), por të gjitha janë përkthime makinerie dhe mund të përmbajnë herë pas here gabime. Në rast dyshimi, mbështetuni te gjermanishtja."] },
   es: { t: "Idiomas y traducción", b: ["El alemán se muestra siempre y es la versión auténtica — es el idioma del examen oficial. La interfaz y las traducciones secundarias están disponibles en varios idiomas (inglés, francés, italiano, portugués, albanés, español), pero todas son traducciones automáticas y pueden contener errores ocasionales. En caso de duda, guíese por el alemán."] },
+  hr: { t: "Jezici i prijevod", b: ["Njemački se uvijek prikazuje i mjerodavna je verzija — to je jezik službenog ispita. Sučelje i sekundarni prijevodi dostupni su na više jezika, no svi su strojno prevedeni i mogu sadržavati povremene pogreške. U slučaju nedoumice, oslonite se na njemački."] },
+  tr: { t: "Diller ve çeviri", b: ["Almanca her zaman gösterilir ve geçerli olan sürümdür — resmî sınavın dilidir. Arayüz ve ikincil çeviriler birçok dilde sunulur, ancak hepsi makine çevirisidir ve zaman zaman hatalar içerebilir. Şüphe durumunda Almancayı esas alın."] },
+  ta: { t: "மொழிகளும் மொழிபெயர்ப்பும்", b: ["ஜெர்மன் எப்போதும் காட்டப்படுகிறது, அதுவே அதிகாரப்பூர்வப் பதிப்பு — அதுவே அதிகாரப்பூர்வத் தேர்வின் மொழி. இடைமுகமும் இரண்டாம்நிலை மொழிபெயர்ப்புகளும் பல மொழிகளில் வழங்கப்படுகின்றன, ஆனால் அவை அனைத்தும் இயந்திர மொழிபெயர்ப்புகள், அவ்வப்போது பிழைகள் இருக்கலாம். ஐயம் ஏற்பட்டால், ஜெர்மனையே நம்புங்கள்."] },
+  ti: { t: "ቋንቋታትን ትርጉምን", b: ["ጀርመንኛ ኩሉ ግዜ ይረአ እዩ፣ እቲ መወከሲ ቅዳሕ ድማ እዩ — ቋንቋ እቲ ወግዓዊ ፈተና እዩ። እቲ መተሓላለፊን ካልኣይ ትርጉማትን ብብዙሕ ቋንቋታት ይቐርቡ፣ ኩሎም ግን ብማሽን ዝተተርጐሙ ብምዃኖም ሓደ ሓደ ግዜ ጌጋታት ክህልዎም ይኽእል። ኣብ ጥርጣረ እንተሃሊኻ ኣብ ጀርመንኛ ተኣመን።"] },
+  ar: { t: "اللغات والترجمة", b: ["تُعرض الألمانية دائمًا وهي النسخة المرجعية المعتمدة — فهي لغة الاختبار الرسمي. الواجهة والترجمات الثانوية متوفرة بعدة لغات، لكنها جميعًا ترجمة آلية وقد تحتوي على أخطاء أحيانًا. عند الشك، اعتمد على الألمانية."] },
 };
 for (const code of Object.keys(HELP_SECTIONS_BY_LANG)) {
   const note = LANG_NOTE[code] || LANG_NOTE.en;

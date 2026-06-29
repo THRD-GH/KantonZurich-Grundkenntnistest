@@ -2,12 +2,17 @@ import { useState, useEffect, useCallback, useMemo, createContext, useContext } 
 import { ALL_QUESTIONS } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
-import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
+import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, RTL_LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
 import { FR_CONTENT } from "./fr";
 import { IT_CONTENT } from "./it";
 import { PT_CONTENT } from "./pt";
 import { SQ_CONTENT } from "./sq";
 import { ES_CONTENT } from "./es";
+import { HR_CONTENT } from "./hr";
+import { TR_CONTENT } from "./tr";
+import { TA_CONTENT } from "./ta";
+import { TI_CONTENT } from "./ti";
+import { AR_CONTENT } from "./ar";
 
 const SECTION_NAMES = [...new Set(ALL_QUESTIONS.map(q => q.s))];
 const LETTERS = ["a","b","c","d"];
@@ -47,7 +52,10 @@ function tr(lang, s, vars) {
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
 function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
 // Translated question content per language (English is q.en directly; German has none — see below).
-const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT, pt: PT_CONTENT, sq: SQ_CONTENT, es: ES_CONTENT };
+const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT, pt: PT_CONTENT, sq: SQ_CONTENT, es: ES_CONTENT, hr: HR_CONTENT, tr: TR_CONTENT, ta: TA_CONTENT, ti: TI_CONTENT, ar: AR_CONTENT };
+// Direction props for secondary-translation text (Arabic etc. render right-to-left).
+const isRTL = (lang) => RTL_LANGS.includes(lang);
+const rtlStyle = (lang) => isRTL(lang) ? { direction: "rtl", textAlign: "right" } : null;
 // Secondary-translation lookups. German is the primary test content, so it has no secondary line
 // (returns null → display sites and their toggles hide). Other languages use their translated
 // content, falling back to the English baseline when an entry is missing.
@@ -685,7 +693,7 @@ function Explanation({ id, en }) {
       background:"var(--color-background-info)", border:"0.5px solid var(--color-border-info)" }}>
       <div style={{ fontSize:10, fontWeight:600, letterSpacing:.4, textTransform:"uppercase", color:"var(--color-text-info)", marginBottom:3 }}>ℹ Erklärung{(en && tx) ? " · " + T("Explanation") : ""}</div>
       <div style={{ fontSize:12.5, color:"var(--color-text-primary)", lineHeight:1.45 }}>{ex.de}</div>
-      {en && tx && <div style={{ fontSize:11.5, color:"var(--color-text-secondary)", fontStyle:"italic", lineHeight:1.45, marginTop:3 }}>{tx}</div>}
+      {en && tx && <div style={{ fontSize:11.5, color:"var(--color-text-secondary)", fontStyle:"italic", lineHeight:1.45, marginTop:3, ...rtlStyle(lang) }}>{tx}</div>}
       {ex.src && ex.src.length > 0 && (
         <div style={{ marginTop:6, display:"flex", flexWrap:"wrap", gap:"3px 14px" }}>
           {ex.src.map((s, i) => (
@@ -728,7 +736,7 @@ function OptionList({ q, order, enMode, pickCur, reveal, disabled, onPick }) {
               <div style={{ textAlign:"center", width:"100%" }}>
                 <span style={{ fontSize:12, fontWeight:500, color:keyColor(oi), marginRight:4 }}>{LETTERS[p]})</span>
                 <span style={{ fontSize:12, color:"var(--color-text-primary)" }}>{o.de}</span>
-                {enMode === 'full' && oText(q, oi, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2 }}>{oText(q, oi, lang)}</div>}
+                {enMode === 'full' && oText(q, oi, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2, ...rtlStyle(lang) }}>{oText(q, oi, lang)}</div>}
               </div>
             </button>
           );
@@ -746,7 +754,7 @@ function OptionList({ q, order, enMode, pickCur, reveal, disabled, onPick }) {
             <span style={{ ...S.optKey, color:keyColor(oi) }}>{LETTERS[p]})</span>
             <div>
               <div style={S.optDe}>{o.de}</div>
-              {enMode === 'full' && oText(q, oi, lang) && <div style={{ fontSize:12, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2 }}>{oText(q, oi, lang)}</div>}
+              {enMode === 'full' && oText(q, oi, lang) && <div style={{ fontSize:12, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2, ...rtlStyle(lang) }}>{oText(q, oi, lang)}</div>}
             </div>
           </button>
         );
@@ -916,7 +924,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
         </div>
 
         <div style={S.qDe}>{q.de}</div>
-        {(enMode === 'question' || enMode === 'full') && qText(q, lang) && <div style={S.qEn}>{qText(q, lang)}</div>}
+        {(enMode === 'question' || enMode === 'full') && qText(q, lang) && <div style={{ ...S.qEn, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
 
 
         <QImage src={q.img} />
@@ -1096,7 +1104,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
         </div>
 
         <div style={S.qDe}>{q.de}</div>
-        {(enMode === 'question' || enMode === 'full') && qText(q, lang) && <div style={S.qEn}>{qText(q, lang)}</div>}
+        {(enMode === 'question' || enMode === 'full') && qText(q, lang) && <div style={{ ...S.qEn, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
 
         <QImage src={q.img} />
         <OptionList q={q} order={order} enMode={enMode} pickCur={pickCur} reveal={false} disabled={false} onPick={pick} />
@@ -1162,7 +1170,7 @@ function SessionQuestions({ details }) {
               <span style={{ ...S.badge, fontSize:10, flexShrink:0, marginTop:1 }}>Q{q.n}</span>
               <div style={{ minWidth:0, flex:1 }}>
                 <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-primary)", lineHeight:1.35 }}>{q.de}</div>
-                {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1 }}>{qText(q, lang)}</div>}
+                {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
               </div>
               {qText(q, lang) && (
                 <button type="button" onClick={() => setShown(s => ({ ...s, [di]: !s[di] }))}
@@ -1189,7 +1197,7 @@ function SessionQuestions({ details }) {
                       <div style={{ textAlign:"center" }}>
                         <span style={{ fontSize:11, fontWeight:500, color: tone ? `var(--color-text-${tone})` : "var(--color-text-tertiary)" }}>{LETTERS[i]}) </span>
                         <span style={{ fontSize:11, color: tone ? `var(--color-text-${tone})` : "var(--color-text-primary)" }}>{o.de}</span>
-                        {en && oText(q, i, lang) && <div style={{ fontSize:10, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1 }}>{oText(q, i, lang)}</div>}
+                        {en && oText(q, i, lang) && <div style={{ fontSize:10, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{oText(q, i, lang)}</div>}
                         {(isCorrect || isPicked) && <div style={{ fontSize:10, marginTop:1, color: `var(--color-text-${tone})` }}>{isCorrect ? (isPicked ? T("✓ your answer") : T("✓ correct")) : T("✗ your answer")}</div>}
                       </div>
                     </div>
@@ -1208,7 +1216,7 @@ function SessionQuestions({ details }) {
                       <span style={{ fontSize:11, fontWeight:500, flexShrink:0, color: tone ? `var(--color-text-${tone})` : "var(--color-text-tertiary)" }}>{LETTERS[i]})</span>
                       <div style={{ minWidth:0 }}>
                         <span style={{ fontSize:12, color: tone ? `var(--color-text-${tone})` : "var(--color-text-primary)" }}>{o.de}</span>
-                        {en && oText(q, i, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1 }}>{oText(q, i, lang)}</div>}
+                        {en && oText(q, i, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{oText(q, i, lang)}</div>}
                       </div>
                       <span style={{ marginLeft:"auto", fontSize:10, flexShrink:0, color: tone ? `var(--color-text-${tone})` : "transparent" }}>
                         {isCorrect ? (isPicked ? T("✓ your answer") : T("✓ correct")) : (isPicked ? T("✗ your answer") : "")}
@@ -1378,7 +1386,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
               <span style={{ ...S.badge, flexShrink:0, fontSize:10 }}>Q{q.n}</span>
               <div style={{ flex:1, minWidth:0 }}>
                 <div style={{ fontSize:13, fontWeight:500, color:"var(--color-text-primary)", lineHeight:1.35 }}>{q.de}</div>
-                {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2 }}>{qText(q, lang)}</div>}
+                {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:2, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
               </div>
               <div style={{ display:"flex", gap:6, alignItems:"center", flexShrink:0 }}>
                 {(Q_IMAGES[q.n] || q.img) && <span style={{ ...S.badge, fontSize:11, padding:"1px 5px" }} title={T("Has a picture — expand to view")}>🖼</span>}
@@ -1410,7 +1418,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
                           <div style={{ textAlign:"center" }}>
                             <span style={{ fontSize:11, fontWeight:500, color: isAns ? "var(--color-text-success)" : "var(--color-text-tertiary)" }}>{LETTERS[i]}) </span>
                             <span style={{ fontSize:11, color: isAns ? "var(--color-text-success)" : "var(--color-text-primary)" }}>{o.de}</span>
-                            {en && oText(q, i, lang) && <div style={{ fontSize:10, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1 }}>{oText(q, i, lang)}</div>}
+                            {en && oText(q, i, lang) && <div style={{ fontSize:10, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{oText(q, i, lang)}</div>}
                             {isAns && <div style={{ fontSize:10, color:"var(--color-text-success)", marginTop:1 }}>{T("✓ correct")}</div>}
                           </div>
                         </div>
@@ -1430,7 +1438,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
                           </span>
                           <div style={{ minWidth:0 }}>
                             <span style={{ fontSize:13, color: isAns ? "var(--color-text-success)" : "var(--color-text-primary)", fontWeight: isAns ? 500 : 400 }}>{o.de}</span>
-                            {en && oText(q, i, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1 }}>{oText(q, i, lang)}</div>}
+                            {en && oText(q, i, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{oText(q, i, lang)}</div>}
                           </div>
                           {isAns && <span style={{ fontSize:11, color:"var(--color-text-success)", marginLeft:"auto", flexShrink:0 }}>✓</span>}
                         </div>
