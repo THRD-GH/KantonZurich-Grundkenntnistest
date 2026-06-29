@@ -2,17 +2,21 @@
 // translation column + all UI chrome use the selected language. English is the base/fallback:
 // UI_FR maps the English source string -> French. Missing keys fall back to English.
 export const LANG_KEY = "gkt_lang_v1";
-export const LANGS = { en: "English", fr: "Français" };
+export const LANGS = { en: "English", fr: "Français", de: "Deutsch" };
+// Languages with a *secondary* translation column (German is the primary test content, so it has none).
+export const HAS_TRANSLATION = { en: true, fr: true, de: false };
 
 // Section display names per language (keyed by the leading number of q.s, e.g. "1 · Democracy …")
 export const SECTION_NAMES = {
   en: { 1: "Democracy & Federalism", 2: "Welfare State & Civil Society", 3: "History", 4: "Geography", 5: "Culture & Everyday Life" },
   fr: { 1: "Démocratie et fédéralisme", 2: "État social et société civile", 3: "Histoire", 4: "Géographie", 5: "Culture et vie quotidienne" },
+  de: { 1: "Demokratie & Föderalismus", 2: "Sozialstaat & Zivilgesellschaft", 3: "Geschichte", 4: "Geografie", 5: "Kultur & Alltag" },
 };
 // Level labels per language
 export const LVL_LABELS_I18N = {
   en: { bund: "Federal", kanton: "Cantonal", gemeinde: "Municipal" },
   fr: { bund: "Fédéral", kanton: "Cantonal", gemeinde: "Communal" },
+  de: { bund: "Bund", kanton: "Kanton", gemeinde: "Gemeinde" },
 };
 
 // UI chrome: English source string -> French.
@@ -110,8 +114,8 @@ export const UI_FR = {
   "No": "Non",
   "{n} answered": "{n} répondues",
   "{c}/{t} correct · {p}% (pass mark {x}%)": "{c}/{t} correctes · {p}% (seuil {x}%)",
-  "Passed": "Réussi",
-  "Not passed": "Échoué",
+  "✓ Passed": "✓ Réussi",
+  "✗ Not passed": "✗ Échoué",
   "Time used {u} of {m} · {a}/{t} answered": "Temps utilisé {u} sur {m} · {a}/{t} répondues",
   "↻ Retry wrong ({n})": "↻ Refaire les erreurs ({n})",
   "Review your {n} wrong answer{s}": "Revoyez vos {n} mauvaise{s} réponse{s}",
@@ -188,6 +192,163 @@ export const UI_FR = {
   "Help & about (Kanton Zürich)": "Aide et à propos (canton de Zurich)",
 };
 
+// UI chrome in German (Swiss orthography — "ss", no ß). Same English keys as UI_FR.
+export const UI_DE = {
+  // Home
+  "questions": "Fragen",
+  "sections": "Bereiche",
+  "Resume →": "Fortsetzen →",
+  "question {a} of {b}": "Frage {a} von {b}",
+  "Mock exam": "Probeprüfung",
+  "{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end": "{n} Fragen · {m} Min · bestanden ab {p}% · Prüfungsmix, keine Rückmeldung bis zum Schluss",
+  "Start mock exam →": "Probeprüfung starten →",
+  "Quick test": "Schnelltest",
+  "Focus on": "Fokus",
+  "Exam mix": "Prüfungsmix",
+  "Random mix": "Zufallsmix",
+  "Questions": "Fragen",
+  "Exam mix — drawn ~70% federal / 20% cantonal / 10% municipal, like the real test (50 questions → 35 / 10 / 5).": "Prüfungsmix — ca. 70% Bund / 20% Kanton / 10% Gemeinde, wie die echte Prüfung (50 Fragen → 35 / 10 / 5).",
+  "Random mix — questions drawn from all {n} regardless of difficulty rating.": "Zufallsmix — Fragen aus allen {n}, unabhängig von der Schwierigkeit.",
+  "Start quick test →": "Schnelltest starten →",
+  "Full quiz": "Vollständiges Quiz",
+  "Section": "Bereich",
+  "All sections": "Alle Bereiche",
+  "Level": "Ebene",
+  "All levels": "Alle Ebenen",
+  "How many?": "Wie viele?",
+  "All": "Alle",
+  "Order": "Reihenfolge",
+  "Random": "Zufällig",
+  "Sequential": "Der Reihe nach",
+  "No questions match this section + level combination.": "Keine Fragen passen zu dieser Kombination aus Bereich und Ebene.",
+  "Start quiz →": "Quiz starten →",
+  "🔁 Smart review": "🔁 Intelligente Wiederholung",
+  "{n} question{s} due — spaced repetition resurfaces what you're about to forget.": "{n} Frage(n) fällig — verteiltes Wiederholen bringt zurück, was du gerade vergisst.",
+  "Review {n} →": "{n} wiederholen →",
+  "Difficulty ratings": "Schwierigkeitsbewertungen",
+  "Reset ratings": "Zurücksetzen",
+  "Reset all {n} ratings? This can’t be undone.": "Alle {n} Bewertungen zurücksetzen? Das kann nicht rückgängig gemacht werden.",
+  "Yes, reset": "Ja, zurücksetzen",
+  "Cancel": "Abbrechen",
+  "Easy": "Leicht",
+  "Medium": "Mittel",
+  "Hard": "Schwer",
+  "Unrated": "Unbewertet",
+  "{p}% rated · {n} unrated": "{p}% bewertet · {n} unbewertet",
+  "📋 Browse all questions": "📋 Alle Fragen durchsuchen",
+  "📊 History & progress": "📊 Verlauf & Fortschritt",
+  "❓ Help": "❓ Hilfe",
+  "Weakest area so far: {s} · {p}% correct": "Schwächster Bereich bisher: {s} · {p}% richtig",
+  // Settings
+  "Settings": "Einstellungen",
+  "Settings & display options": "Einstellungen & Anzeige",
+  "Language": "Sprache",
+  "secondary translation shown with German": "Sekundärübersetzung neben dem Deutschen",
+  "Translations": "Übersetzungen",
+  "shown in every test": "in jedem Test angezeigt",
+  "High contrast": "Hoher Kontrast",
+  "stronger colours & borders": "stärkere Farben & Ränder",
+  "Off": "Aus",
+  "On": "Ein",
+  "Explanations": "Erklärungen",
+  "off during tests · always in Browse & review": "aus während Tests · immer beim Durchsuchen & Repetieren",
+  "On in quiz": "Im Quiz ein",
+  "Off in quiz": "Im Quiz aus",
+  "Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.": "Textgrösse: die {a}-Schaltflächen unten rechts — sie skaliert die ganze App und gilt auf jedem Bildschirm.",
+  "Question": "Frage",
+  "Full": "Alles",
+  // Quiz / exam
+  "← Home": "← Start",
+  "← Back": "← Zurück",
+  "Next →": "Weiter →",
+  "Finish ✓": "Beenden ✓",
+  "Submit answer": "Antwort bestätigen",
+  "Submit to confirm · ←/→ to navigate": "Zum Bestätigen absenden · ←/→ navigieren",
+  "Pick 1–4, then Submit · ←/→ to navigate": "1–4 wählen, dann bestätigen · ←/→ navigieren",
+  "Rate:": "Bewerten:",
+  "💡 Explain": "💡 Erklären",
+  "Explanation": "Erklärung",
+  "Read aloud in German": "Auf Deutsch vorlesen",
+  "Stop reading": "Vorlesen stoppen",
+  // Exam
+  "End exam": "Prüfung beenden",
+  "{n} unanswered. End?": "{n} unbeantwortet. Beenden?",
+  "End now?": "Jetzt beenden?",
+  "Yes": "Ja",
+  "No": "Nein",
+  "{n} answered": "{n} beantwortet",
+  "✓ Passed": "✓ Bestanden",
+  "✗ Not passed": "✗ Nicht bestanden",
+  "Time used {u} of {m} · {a}/{t} answered": "Zeit {u} von {m} · {a}/{t} beantwortet",
+  "↻ Retry wrong ({n})": "↻ Falsche wiederholen ({n})",
+  "Review your {n} wrong answer{s}": "Überprüfe deine {n} falschen Antworten",
+  "Result saved to history": "Ergebnis im Verlauf gespeichert",
+  "Correct": "Richtig",
+  "Wrong": "Falsch",
+  "more": "weitere",
+  "Best streak": "Beste Serie",
+  // Browse
+  "Browse questions": "Fragen durchsuchen",
+  "Search questions...": "Fragen suchen…",
+  "{n} question": "{n} Frage",
+  "{n} questions": "{n} Fragen",
+  "Show answer": "Antwort zeigen",
+  "✓ correct": "✓ richtig",
+  "Has a picture — expand to view": "Enthält ein Bild — zum Ansehen aufklappen",
+  // History
+  "History & progress": "Verlauf & Fortschritt",
+  "Sessions": "Sitzungen",
+  "Avg score": "Ø Punktzahl",
+  "Best score": "Beste Punktzahl",
+  "Accuracy by section": "Genauigkeit nach Bereich",
+  "Accuracy by level": "Genauigkeit nach Ebene",
+  "Clear history": "Verlauf löschen",
+  "Not answered": "Nicht beantwortet",
+  "✓ your answer": "✓ deine Antwort",
+  "✗ your answer": "✗ deine Antwort",
+  // Help footer
+  "Questions sourced from the official Kanton Zürich Grundkenntnistest catalogue.": "Fragen aus dem offiziellen Katalog des Grundkenntnistests des Kantons Zürich.",
+  "Free software (AGPL-3.0) —": "Freie Software (AGPL-3.0) —",
+  "source code on GitHub": "Quellcode auf GitHub",
+  "Official information (Kanton Zürich)": "Offizielle Informationen (Kanton Zürich)",
+  // lowercase / template variants
+  "question": "Frage",
+  "random": "zufällig",
+  "sequential": "der Reihe nach",
+  "all sections": "alle Bereiche",
+  "all levels": "alle Ebenen",
+  "mock exam": "Probeprüfung",
+  "quiz": "Quiz",
+  "Selected:": "Auswahl:",
+  "⏸ Unfinished {kind} — question {a} of {b}": "⏸ {kind} unbeendet — Frage {a} von {b}",
+  "Only {n} {d} questions rated — {k} will be filled with unrated questions.": "Nur {n} {d} Fragen bewertet — {k} werden mit unbewerteten Fragen ergänzt.",
+  "Last quiz: {d} · {c}/{t} correct ({p}%)": "Letztes Quiz: {d} · {c}/{t} richtig ({p}%)",
+  "{c} correct out of {t} questions": "{c} von {t} Fragen richtig",
+  "Wrong answers:": "Falsche Antworten:",
+  "{c}/{t} correct · {p}%": "{c}/{t} richtig · {p}%",
+  "pass mark {x}%": "Bestehensgrenze {x}%",
+  "Pick 1–4 · ←/→ to navigate · answers stay changeable": "1–4 wählen · ←/→ navigieren · Antworten bleiben änderbar",
+  "{p}% · {m}/{t} mastered": "{p}% · {m}/{t} gemeistert",
+  "not attempted yet": "noch nicht versucht",
+  "Show/hide translation": "Übersetzung ein-/ausblenden",
+  "No quiz sessions yet. Complete a quiz to see your history and progress here.": "Noch keine Quiz-Sitzungen. Schliesse ein Quiz ab, um hier deinen Verlauf und Fortschritt zu sehen.",
+  "Recent scores (last {n})": "Letzte Ergebnisse (letzte {n})",
+  "Wrong:": "Falsch:",
+  "Clear all?": "Alles löschen?",
+  "🔥 Best streak: {n}": "🔥 Beste Serie: {n}",
+  "Hide questions ▲": "Fragen ausblenden ▲",
+  "View questions & answers ({n}) ▼": "Fragen & Antworten ansehen ({n}) ▼",
+  "No questions here yet. Rate some questions to populate this tab.": "Noch keine Fragen hier. Bewerte einige Fragen, um diesen Tab zu füllen.",
+  "Help & about": "Hilfe & Info",
+  "Text size": "Textgrösse",
+  "Smaller text": "Kleinerer Text",
+  "Larger text": "Grösserer Text",
+  "Help & about (Kanton Zürich)": "Hilfe & Info (Kanton Zürich)",
+};
+
+// Per-language override maps (English is the base/fallback — no map needed).
+export const UI = { fr: UI_FR, de: UI_DE };
+
 // ── Help screen (full French) ───────────────────────────────────────────────────
 // Official-information card (intro + the three zh.ch links). German URLs stay unchanged.
 export const HELP_OFFICIAL = {
@@ -197,6 +358,14 @@ export const HELP_OFFICIAL = {
       "Grundkenntnistest — infos officielles, catalogue et test d’entraînement",
       "Naturalisation (Einbürgerung) — aperçu",
       "Brochure d’information (PDF)",
+    ],
+  },
+  de: {
+    intro: "Dies ist eine inoffizielle Lernhilfe. Die massgebenden Fragen, der digitale Übungstest des Kantons und die geltenden Regeln werden vom Kanton Zürich veröffentlicht — prüfe dort immer die aktuellste Version:",
+    links: [
+      "Grundkenntnistest — offizielle Infos, Katalog & Übungstest",
+      "Einbürgerung — Übersicht",
+      "Informationsbroschüre (PDF)",
     ],
   },
 };
@@ -225,5 +394,32 @@ export const HELP_SECTIONS_FR = [
     "Options de drapeau et d’armoiries (questions sur le drapeau suisse et les armoiries de Zurich) : SVG simples dessinés pour cette application afin de correspondre aux images du catalogue officiel.",
     "Portraits de conseillères fédérales (Q241) via Wikimedia Commons : Ruth Dreifuss — Chatham House, CC BY 2.0 ; Elisabeth Kopp — Coralie Wenger, CC BY 3.0 ; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0 ; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
     "Les graphismes de drapeaux sont des illustrations simplifiées réalisées pour cette application.",
+  ] },
+];
+
+// Help sections in German — mirrors the English HELP_SECTIONS structure ({ t, b:[…] }).
+export const HELP_SECTIONS_DE = [
+  { t: "Über diese App", b: ["Ein Lernwerkzeug für den Zürcher Grundkenntnistest — den Test über das Grundwissen für die Einbürgerung. Alle 350 Fragen stammen aus dem offiziellen Katalog des Kantons, gegliedert in 5 Bereiche und gekennzeichnet als Bund / Kanton / Gemeinde."] },
+  { t: "Die echte Prüfung", b: ["50 Fragen in 60 Minuten; bestanden ab 60% (30 richtig). Der Mix ist rund 70% Bund, 20% Kanton, 10% Gemeinde."] },
+  { t: "Fragen beantworten", b: ["Tippe eine Option an, um sie auszuwählen, und drücke dann Bestätigen — erst dann wird sie als richtig oder falsch markiert. Mit Zurück / Weiter bewegst du dich; deine Antworten bleiben erhalten. Die Optionen werden jedes Mal gemischt, damit du den Inhalt lernst und nicht die Position. Bewerte jede Frage als Leicht / Mittel / Schwer, um dein Lernen zu organisieren."] },
+  { t: "Schnelltest", b: ["Stelle ein kurzes Set zusammen: Zufallsmix, Prüfungsmix (die echte 70/20/10-Aufteilung) oder konzentriere dich auf deine als Leicht / Mittel / Schwer bewerteten Fragen — und wähle, wie viele."] },
+  { t: "Bereichstest", b: ["Übe einen einzelnen Bereich und wähle, wie viele Fragen du daraus möchtest."] },
+  { t: "Probeprüfung", b: ["Eine vollständige Simulation mit Zeitlimit: 50 Fragen, ein 60-Minuten-Countdown, keine Rückmeldung bis zum Schluss — dann ein Bestanden/Nicht-bestanden-Urteil und eine Durchsicht dessen, was du verpasst hast."] },
+  { t: "Intelligente Wiederholung (verteiltes Lernen)", b: ["Jede Frage durchläuft 5 Stufen der Beherrschung mit wachsenden Wiederholungsabständen (1, 3, 7, 30 Tage). Antworte falsch, und sie kommt bald wieder; antworte richtig, und sie wird weiter hinausgeschoben, während sie der Beherrschung näher kommt. Die intelligente Wiederholung übt alles Fällige, das am stärksten Überfällige zuerst."] },
+  { t: "Verlauf & Fortschritt", b: ["Deine vergangenen Sitzungen sowie die Genauigkeit aufgeschlüsselt nach Bereich und Ebene, damit du genau siehst, wo du dich konzentrieren solltest."] },
+  { t: "Fragen durchsuchen", b: ["Lies den ganzen Katalog, filtere nach Schwierigkeit / Bereich / Ebene, durchsuche den Text und decke die richtige Antwort jeder Frage auf."] },
+  { t: "Erklärungen", b: ["Jede Frage hat eine kurze Erklärung (auf Deutsch, mit Übersetzung), warum die Antwort richtig ist, mit einem Link zu einer externen Quelle für mehr Tiefe. Erklärungen sind während der Quizze standardmässig aus (damit sie den Test nicht verraten) — schalte den Schalter «💡 Erklären» um, um sie anzuzeigen — und sind beim Durchsuchen und in den Repetitionsansichten immer verfügbar."] },
+  { t: "Audio (Vorlesen)", b: ["Tippe auf den Lautsprecher 🔊 bei einer beliebigen Frage, um sie auf Deutsch vorlesen zu lassen — die Frage gefolgt von den Optionen, in derselben Reihenfolge wie auf dem Bildschirm. Es ist eine eingebaute Hilfe zur Barrierefreiheit (verwendet die deutsche Stimme deines Geräts) und hilft auch bei der Aussprache. Tippe erneut (⏹), um zu stoppen; das Audio stoppt auch automatisch, wenn du zu einer anderen Frage wechselst oder die Seite verlässt."] },
+  { t: "Anzeige & Sprache", b: ["Die Übersetzung (Englisch oder Französisch) kann nur für die Frage oder für die Frage und jede Option angezeigt werden; die Sprache wählst du in den Einstellungen. Wählst du Deutsch, wird keine Übersetzung angezeigt. Die Textgrösse (A / A / A / A) skaliert die ganze App für leichteres Lesen auf dem Handy. Der Modus mit hohem Kontrast verbessert die Lesbarkeit; der Dunkelmodus folgt der Einstellung deines Geräts. Die fünf Fragenklassen (Bereiche) sind durchgehend farbcodiert — Demokratie & Föderalismus (blau), Sozialstaat & Zivilgesellschaft (türkis), Geschichte (orange), Geografie (grün), Kultur & Alltag (violett)."] },
+  { t: "Tastaturkürzel", b: [["1 – 4", "eine Option wählen"], ["Enter / Leertaste / →", "bestätigen, dann zur nächsten"], ["←", "vorherige Frage"]] },
+  { t: "Deine Daten", b: ["Schwierigkeitsbewertungen, Verlauf und Fortschritt werden nur in diesem Browser gespeichert — nichts wird hochgeladen. Das Löschen deiner Browserdaten setzt sie zurück."] },
+  { t: "Bildnachweise", b: [
+    "Matterhorn-Foto: «Zermatt photos» via Wikimedia Commons, CC BY-SA 3.0.",
+    "Foto des Amphitheaters von Avenches: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
+    "Technorama-Foto (Q346): MaddaMom via Wikimedia Commons, CC BY-SA 4.0.",
+    "Kantonskarten: angepasst (umgefärbt) von «Suisse cantons.svg» von Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
+    "Fahnen- und Wappenoptionen (Fragen zur Schweizer Fahne und zum Zürcher Wappen): einfache SVGs, für diese App gezeichnet, passend zu den Bildern im offiziellen Katalog.",
+    "Porträts von Bundesrätinnen (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
+    "Fahnengrafiken sind vereinfachte Illustrationen, die für diese App erstellt wurden.",
   ] },
 ];

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo, createContext, useContext } 
 import { ALL_QUESTIONS } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
-import { LANG_KEY, LANGS, UI_FR, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_FR, HELP_OFFICIAL } from "./i18n";
+import { LANG_KEY, LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_FR, HELP_SECTIONS_DE, HELP_OFFICIAL } from "./i18n";
 import { FR_CONTENT } from "./fr";
 
 const SECTION_NAMES = [...new Set(ALL_QUESTIONS.map(q => q.s))];
@@ -10,7 +10,8 @@ const LETTERS = ["a","b","c","d"];
 // Five question-class (section) colours — keyed by the leading number of q.s ("1 · …")
 const secNum = (s) => { const m = /^(\d)/.exec(s || ""); return m ? +m[1] : 0; };
 const secName = (s, lang) => {
-  if (lang === "fr") { const n = secNum(s); if (SECTION_I18N.fr[n]) return SECTION_I18N.fr[n]; }
+  const map = SECTION_I18N[lang];
+  if (map) { const n = secNum(s); if (map[n]) return map[n]; }
   return s ? (s.split("·")[1] || s).trim() : s;
 };
 // Keyed by stable question id (v2) so a future renumber can't desync saved progress
@@ -34,17 +35,19 @@ const LVL_LABELS  = { bund:"Federal", kanton:"Cantonal", gemeinde:"Municipal" };
 const LangContext = createContext("en");
 const useLang = () => useContext(LangContext);
 function tr(lang, s, vars) {
-  let out = (lang === "fr" && UI_FR[s] != null) ? UI_FR[s] : s;
+  const map = UI[lang];
+  let out = (map && map[s] != null) ? map[s] : s;
   if (vars) for (const k in vars) out = out.split("{" + k + "}").join(vars[k]);
   return out;
 }
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
 function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
-// Secondary-translation lookups — FR content with English fallback (German shown separately).
-const qText  = (q, lang)     => (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].q) || q.en;
-const oText  = (q, oi, lang) => (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].o && FR_CONTENT.q[q.id].o[oi]) || (q.opts[oi] && q.opts[oi].en);
-const xText  = (id, lang)    => (lang === "fr" && FR_CONTENT.expl[id]) || (EXPLANATIONS[id] && EXPLANATIONS[id].en);
-const lvlLabel = (k, lang)   => (lang === "fr" && LVL_LABELS_I18N.fr[k]) || LVL_LABELS[k];
+// Secondary-translation lookups. German is the primary test content, so it has no secondary line
+// (returns null → display sites and their toggles hide). FR uses translated content, falling back to EN.
+const qText  = (q, lang)     => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].q) || q.en; };
+const oText  = (q, oi, lang) => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].o && FR_CONTENT.q[q.id].o[oi]) || (q.opts[oi] && q.opts[oi].en); };
+const xText  = (id, lang)    => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.expl[id]) || (EXPLANATIONS[id] && EXPLANATIONS[id].en); };
+const lvlLabel = (k, lang)   => (LVL_LABELS_I18N[lang] && LVL_LABELS_I18N[lang][k]) || LVL_LABELS[k];
 // Real GKT exam parameters: 50 questions, 60 minutes, 60% to pass
 const EXAM_COUNT    = 50;
 const EXAM_MINUTES  = 60;
@@ -243,16 +246,38 @@ const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opt
 const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.env.BASE_URL + p.slice(1) : p;
 // Small decorative Canton-Zürich flag pinned to the top-right corner of every page.
 // Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
-function ZurichFlag({ onClick }) {
+// Persistent top bar (in-flow, at the top of the column on every screen): a language dropdown,
+// the settings gear, and the Canton-Zürich flag (opens Help). Always visible, so language can be
+// switched from anywhere.
+function TopBar({ lang, setLang, onSettings, onHelp }) {
   const T = useT();
+  const iconBtn = { display:"flex", alignItems:"center", justifyContent:"center", width:34, height:32, padding:0,
+    background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-secondary)",
+    borderRadius:"var(--border-radius-md)", color:"var(--color-text-secondary)", cursor:"pointer" };
   return (
-    <button type="button" onClick={onClick} aria-label={T("Help & about")} title={T("Help & about (Kanton Zürich)")}
-      style={{ position:"fixed", top:20, right:14, width:22, height:22, zIndex:50, padding:0, border:"none", background:"none", cursor:"pointer", borderRadius:4, overflow:"hidden", boxShadow:"0 1px 3px rgba(0,0,0,0.35)" }}>
-      <svg viewBox="0 0 32 32" width="22" height="22" style={{ display:"block" }}>
-        <rect width="32" height="32" fill="#ffffff"/>
-        <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
-      </svg>
-    </button>
+    <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end", gap:8, padding:"10px 1rem 0" }}>
+      <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label={T("Language")} title={T("Language")}
+        style={{ height:32, padding:"0 28px 0 10px", fontSize:13, borderRadius:"var(--border-radius-md)",
+          border:"0.5px solid var(--color-border-secondary)", background:"var(--color-background-secondary)",
+          color:"var(--color-text-primary)", cursor:"pointer", font:"inherit", appearance:"none", WebkitAppearance:"none",
+          backgroundImage:"url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E\")",
+          backgroundRepeat:"no-repeat", backgroundPosition:"right 10px center" }}>
+        {Object.entries(LANGS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+      </select>
+      <button type="button" onClick={onSettings} aria-label={T("Settings")} title={T("Settings & display options")} style={iconBtn}>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      </button>
+      <button type="button" onClick={onHelp} aria-label={T("Help & about")} title={T("Help & about (Kanton Zürich)")}
+        style={{ ...iconBtn, overflow:"hidden" }}>
+        <svg viewBox="0 0 32 32" width="20" height="20" style={{ display:"block", borderRadius:3 }} aria-hidden="true">
+          <rect width="32" height="32" fill="#ffffff"/>
+          <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
+        </svg>
+      </button>
+    </div>
   );
 }
 
@@ -404,18 +429,9 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:10, marginBottom:"1.25rem", paddingRight:34 }}>
-        <div>
-          <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
-          <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
-        </div>
-        <button onClick={onSettings} aria-label={T("Settings")} title={T("Settings & display options")}
-          style={{ ...S.btn, flexShrink:0, display:"flex", alignItems:"center", justifyContent:"center", padding:"6px 8px" }}>
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-          </svg>
-        </button>
+      <div style={{ marginBottom:"1.25rem" }}>
+        <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
+        <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
       </div>
 
       {/* Resume an unfinished session */}
@@ -653,7 +669,7 @@ function Explanation({ id, en }) {
   return (
     <div style={{ marginTop:8, padding:"9px 11px", borderRadius:"var(--border-radius-md)",
       background:"var(--color-background-info)", border:"0.5px solid var(--color-border-info)" }}>
-      <div style={{ fontSize:10, fontWeight:600, letterSpacing:.4, textTransform:"uppercase", color:"var(--color-text-info)", marginBottom:3 }}>ℹ Erklärung{en ? " · " + T("Explanation") : ""}</div>
+      <div style={{ fontSize:10, fontWeight:600, letterSpacing:.4, textTransform:"uppercase", color:"var(--color-text-info)", marginBottom:3 }}>ℹ Erklärung{(en && tx) ? " · " + T("Explanation") : ""}</div>
       <div style={{ fontSize:12.5, color:"var(--color-text-primary)", lineHeight:1.45 }}>{ex.de}</div>
       {en && tx && <div style={{ fontSize:11.5, color:"var(--color-text-secondary)", fontStyle:"italic", lineHeight:1.45, marginTop:3 }}>{tx}</div>}
       {ex.src && ex.src.length > 0 && (
@@ -918,7 +934,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
         {!submittedCur && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{hasPick ? T("Submit to confirm · ←/→ to navigate") : T("Pick 1–4, then Submit · ←/→ to navigate")}</span>}
         <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:14, flexWrap:"wrap" }}>
           <Switch on={showExpl} onChange={setShowExpl} label={T("💡 Explain")} />
-          <EnToggle enMode={enMode} setEnMode={setEnMode} />
+          {HAS_TRANSLATION[lang] && <EnToggle enMode={enMode} setEnMode={setEnMode} />}
         </div>
       </div>
     </div>
@@ -1077,9 +1093,11 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
           style={{ ...S.btn, opacity: idx === 0 ? .4 : 1, cursor: idx === 0 ? "default" : "pointer" }}>{T("← Back")}</button>
         <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : T("Next →")}</button>
         {pickCur === undefined && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{T("Pick 1–4 · ←/→ to navigate · answers stay changeable")}</span>}
-        <div style={{ marginLeft:"auto" }}>
-          <EnToggle enMode={enMode} setEnMode={setEnMode} />
-        </div>
+        {HAS_TRANSLATION[lang] && (
+          <div style={{ marginLeft:"auto" }}>
+            <EnToggle enMode={enMode} setEnMode={setEnMode} />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -1584,10 +1602,12 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
             ))}
           </div>
         </div>
-        <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("Translations")}<span style={hint}>{T("shown in every test")}</span></div>
-          <EnToggle enMode={enMode} setEnMode={setEnMode} />
-        </div>
+        {HAS_TRANSLATION[lang] && (
+          <div style={row}>
+            <div style={{ fontSize:13, fontWeight:500 }}>{T("Translations")}<span style={hint}>{T("shown in every test")}</span></div>
+            <EnToggle enMode={enMode} setEnMode={setEnMode} />
+          </div>
+        )}
         <div style={row}>
           <div style={{ fontSize:13, fontWeight:500 }}>{T("High contrast")}<span style={hint}>{T("stronger colours & borders")}</span></div>
           <div style={{ display:"flex", gap:4, alignItems:"center" }}>
@@ -1610,8 +1630,8 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
 
 function HelpScreen({ onHome }) {
   const T = useT(); const lang = useLang();
-  const sections = lang === "fr" ? HELP_SECTIONS_FR : HELP_SECTIONS;
-  const official = lang === "fr" ? HELP_OFFICIAL.fr : null;
+  const sections = lang === "fr" ? HELP_SECTIONS_FR : lang === "de" ? HELP_SECTIONS_DE : HELP_SECTIONS;
+  const official = lang === "fr" ? HELP_OFFICIAL.fr : lang === "de" ? HELP_OFFICIAL.de : null;
   const officialUrls = [
     "https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html",
     "https://www.zh.ch/de/migration-integration/einbuergerung.html",
@@ -1819,8 +1839,8 @@ export default function App() {
   })();
   return (
     <LangContext.Provider value={lang}>
+      <TopBar lang={lang} setLang={setLang} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
       {view}
-      <ZurichFlag onClick={() => setScreen("help")} />
       <ZoomControl textSize={textSize} setTextSize={setTextSize} />
     </LangContext.Provider>
   );
