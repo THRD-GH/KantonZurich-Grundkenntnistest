@@ -2,21 +2,23 @@
 // translation column + all UI chrome use the selected language. English is the base/fallback:
 // UI_FR maps the English source string -> French. Missing keys fall back to English.
 export const LANG_KEY = "gkt_lang_v1";
-export const LANGS = { en: "English", fr: "Français", de: "Deutsch" };
+export const LANGS = { en: "English", fr: "Français", de: "Deutsch", it: "Italiano" };
 // Languages with a *secondary* translation column (German is the primary test content, so it has none).
-export const HAS_TRANSLATION = { en: true, fr: true, de: false };
+export const HAS_TRANSLATION = { en: true, fr: true, de: false, it: true };
 
 // Section display names per language (keyed by the leading number of q.s, e.g. "1 · Democracy …")
 export const SECTION_NAMES = {
   en: { 1: "Democracy & Federalism", 2: "Welfare State & Civil Society", 3: "History", 4: "Geography", 5: "Culture & Everyday Life" },
   fr: { 1: "Démocratie et fédéralisme", 2: "État social et société civile", 3: "Histoire", 4: "Géographie", 5: "Culture et vie quotidienne" },
   de: { 1: "Demokratie & Föderalismus", 2: "Sozialstaat & Zivilgesellschaft", 3: "Geschichte", 4: "Geografie", 5: "Kultur & Alltag" },
+  it: { 1: "Democrazia e federalismo", 2: "Stato sociale e società civile", 3: "Storia", 4: "Geografia", 5: "Cultura e vita quotidiana" },
 };
 // Level labels per language
 export const LVL_LABELS_I18N = {
   en: { bund: "Federal", kanton: "Cantonal", gemeinde: "Municipal" },
   fr: { bund: "Fédéral", kanton: "Cantonal", gemeinde: "Communal" },
   de: { bund: "Bund", kanton: "Kanton", gemeinde: "Gemeinde" },
+  it: { bund: "Federale", kanton: "Cantonale", gemeinde: "Comunale" },
 };
 
 // UI chrome: English source string -> French.
@@ -346,8 +348,162 @@ export const UI_DE = {
   "Help & about (Kanton Zürich)": "Hilfe & Info (Kanton Zürich)",
 };
 
+// UI chrome in Italian (Swiss Italian register). Same English keys as UI_FR.
+export const UI_IT = {
+  // Home
+  "questions": "domande",
+  "sections": "ambiti",
+  "Resume →": "Riprendi →",
+  "question {a} of {b}": "domanda {a} di {b}",
+  "Mock exam": "Esame simulato",
+  "{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end": "{n} domande · {m} min · superato dal {p}% · mix d'esame, nessun riscontro fino alla fine",
+  "Start mock exam →": "Avvia esame simulato →",
+  "Quick test": "Test rapido",
+  "Focus on": "Focus",
+  "Exam mix": "Mix d'esame",
+  "Random mix": "Mix casuale",
+  "Questions": "Domande",
+  "Exam mix — drawn ~70% federal / 20% cantonal / 10% municipal, like the real test (50 questions → 35 / 10 / 5).": "Mix d'esame — circa 70% federale / 20% cantonale / 10% comunale, come l'esame reale (50 domande → 35 / 10 / 5).",
+  "Random mix — questions drawn from all {n} regardless of difficulty rating.": "Mix casuale — domande estratte da tutte le {n}, indipendentemente dalla difficoltà.",
+  "Start quick test →": "Avvia test rapido →",
+  "Full quiz": "Quiz completo",
+  "Section": "Ambito",
+  "All sections": "Tutti gli ambiti",
+  "Level": "Livello",
+  "All levels": "Tutti i livelli",
+  "How many?": "Quante?",
+  "All": "Tutte",
+  "Order": "Ordine",
+  "Random": "Casuale",
+  "Sequential": "In sequenza",
+  "No questions match this section + level combination.": "Nessuna domanda corrisponde a questa combinazione di ambito e livello.",
+  "Start quiz →": "Avvia quiz →",
+  "🔁 Smart review": "🔁 Ripasso intelligente",
+  "{n} question{s} due — spaced repetition resurfaces what you're about to forget.": "{n} domanda(e) da ripassare — la ripetizione dilazionata riporta a galla ciò che stai per dimenticare.",
+  "Review {n} →": "Ripassa {n} →",
+  "Difficulty ratings": "Valutazioni di difficoltà",
+  "Reset ratings": "Reimposta",
+  "Reset all {n} ratings? This can’t be undone.": "Reimpostare tutte le {n} valutazioni? L'operazione è irreversibile.",
+  "Yes, reset": "Sì, reimposta",
+  "Cancel": "Annulla",
+  "Easy": "Facile",
+  "Medium": "Media",
+  "Hard": "Difficile",
+  "Unrated": "Non valutate",
+  "{p}% rated · {n} unrated": "{p}% valutate · {n} non valutate",
+  "📋 Browse all questions": "📋 Sfoglia tutte le domande",
+  "📊 History & progress": "📊 Cronologia e progressi",
+  "❓ Help": "❓ Aiuto",
+  "Weakest area so far: {s} · {p}% correct": "Ambito più debole finora: {s} · {p}% corrette",
+  // Settings
+  "Settings": "Impostazioni",
+  "Settings & display options": "Impostazioni e visualizzazione",
+  "Language": "Lingua",
+  "secondary translation shown with German": "traduzione secondaria mostrata accanto al tedesco",
+  "Translations": "Traduzioni",
+  "shown in every test": "mostrate in ogni test",
+  "High contrast": "Contrasto elevato",
+  "stronger colours & borders": "colori e bordi più marcati",
+  "Off": "Off",
+  "On": "On",
+  "Explanations": "Spiegazioni",
+  "off during tests · always in Browse & review": "disattivate durante i test · sempre in Sfoglia e ripasso",
+  "On in quiz": "Attive",
+  "Off in quiz": "Disattive",
+  "Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.": "Dimensione del testo: usa i pulsanti {a} in basso a destra — ridimensiona l'intera app e vale su ogni schermata.",
+  "Question": "Domanda",
+  "Full": "Tutto",
+  // Quiz / exam
+  "← Home": "← Inizio",
+  "← Back": "← Indietro",
+  "Next →": "Avanti →",
+  "Finish ✓": "Termina ✓",
+  "Submit answer": "Conferma risposta",
+  "Submit to confirm · ←/→ to navigate": "Conferma per validare · ←/→ per navigare",
+  "Pick 1–4, then Submit · ←/→ to navigate": "Scegli 1–4, poi Conferma · ←/→ per navigare",
+  "Rate:": "Valuta:",
+  "💡 Explain": "💡 Spiega",
+  "Explanation": "Spiegazione",
+  "Read aloud in German": "Leggi ad alta voce in tedesco",
+  "Stop reading": "Ferma la lettura",
+  // Exam
+  "End exam": "Termina esame",
+  "{n} unanswered. End?": "{n} senza risposta. Terminare?",
+  "End now?": "Terminare ora?",
+  "Yes": "Sì",
+  "No": "No",
+  "{n} answered": "{n} con risposta",
+  "✓ Passed": "✓ Superato",
+  "✗ Not passed": "✗ Non superato",
+  "Time used {u} of {m} · {a}/{t} answered": "Tempo usato {u} di {m} · {a}/{t} con risposta",
+  "↻ Retry wrong ({n})": "↻ Riprova le errate ({n})",
+  "Review your {n} wrong answer{s}": "Rivedi le tue {n} risposte errate",
+  "Result saved to history": "Risultato salvato nella cronologia",
+  "Correct": "Corrette",
+  "Wrong": "Errate",
+  "more": "in più",
+  "Best streak": "Serie migliore",
+  // Browse
+  "Browse questions": "Sfoglia le domande",
+  "Search questions...": "Cerca domande…",
+  "{n} question": "{n} domanda",
+  "{n} questions": "{n} domande",
+  "Show answer": "Mostra risposta",
+  "✓ correct": "✓ corretta",
+  "Has a picture — expand to view": "Contiene un'immagine — espandi per vederla",
+  // History
+  "History & progress": "Cronologia e progressi",
+  "Sessions": "Sessioni",
+  "Avg score": "Punteggio medio",
+  "Best score": "Punteggio migliore",
+  "Accuracy by section": "Precisione per ambito",
+  "Accuracy by level": "Precisione per livello",
+  "Clear history": "Cancella cronologia",
+  "Not answered": "Senza risposta",
+  "✓ your answer": "✓ la tua risposta",
+  "✗ your answer": "✗ la tua risposta",
+  // Help footer
+  "Questions sourced from the official Kanton Zürich Grundkenntnistest catalogue.": "Domande tratte dal catalogo ufficiale del Grundkenntnistest del Cantone di Zurigo.",
+  "Free software (AGPL-3.0) —": "Software libero (AGPL-3.0) —",
+  "source code on GitHub": "codice sorgente su GitHub",
+  "Official information (Kanton Zürich)": "Informazioni ufficiali (Cantone di Zurigo)",
+  // lowercase / template variants
+  "question": "domanda",
+  "random": "casuale",
+  "sequential": "in sequenza",
+  "all sections": "tutti gli ambiti",
+  "all levels": "tutti i livelli",
+  "mock exam": "esame simulato",
+  "quiz": "quiz",
+  "Selected:": "Selezione:",
+  "⏸ Unfinished {kind} — question {a} of {b}": "⏸ {kind} non terminato — domanda {a} di {b}",
+  "Only {n} {d} questions rated — {k} will be filled with unrated questions.": "Solo {n} domande {d} valutate — {k} saranno completate con domande non valutate.",
+  "Last quiz: {d} · {c}/{t} correct ({p}%)": "Ultimo quiz: {d} · {c}/{t} corrette ({p}%)",
+  "{c} correct out of {t} questions": "{c} corrette su {t} domande",
+  "Wrong answers:": "Risposte errate:",
+  "{c}/{t} correct · {p}%": "{c}/{t} corrette · {p}%",
+  "pass mark {x}%": "soglia {x}%",
+  "Pick 1–4 · ←/→ to navigate · answers stay changeable": "Scegli 1–4 · ←/→ per navigare · le risposte restano modificabili",
+  "{p}% · {m}/{t} mastered": "{p}% · {m}/{t} padroneggiate",
+  "not attempted yet": "non ancora tentato",
+  "Show/hide translation": "Mostra/nascondi traduzione",
+  "No quiz sessions yet. Complete a quiz to see your history and progress here.": "Ancora nessuna sessione di quiz. Completa un quiz per vedere qui la tua cronologia e i tuoi progressi.",
+  "Recent scores (last {n})": "Punteggi recenti (ultimi {n})",
+  "Wrong:": "Errate:",
+  "Clear all?": "Cancellare tutto?",
+  "🔥 Best streak: {n}": "🔥 Serie migliore: {n}",
+  "Hide questions ▲": "Nascondi domande ▲",
+  "View questions & answers ({n}) ▼": "Vedi domande e risposte ({n}) ▼",
+  "No questions here yet. Rate some questions to populate this tab.": "Ancora nessuna domanda qui. Valuta alcune domande per riempire questa scheda.",
+  "Help & about": "Aiuto e informazioni",
+  "Text size": "Dimensione del testo",
+  "Smaller text": "Testo più piccolo",
+  "Larger text": "Testo più grande",
+  "Help & about (Kanton Zürich)": "Aiuto e informazioni (Cantone di Zurigo)",
+};
+
 // Per-language override maps (English is the base/fallback — no map needed).
-export const UI = { fr: UI_FR, de: UI_DE };
+export const UI = { fr: UI_FR, de: UI_DE, it: UI_IT };
 
 // ── Help screen (full French) ───────────────────────────────────────────────────
 // Official-information card (intro + the three zh.ch links). German URLs stay unchanged.
@@ -366,6 +522,14 @@ export const HELP_OFFICIAL = {
       "Grundkenntnistest — offizielle Infos, Katalog & Übungstest",
       "Einbürgerung — Übersicht",
       "Informationsbroschüre (PDF)",
+    ],
+  },
+  it: {
+    intro: "Questo è uno strumento di studio non ufficiale. Le domande facenti fede, il test di pratica digitale del Cantone e le regole vigenti sono pubblicati dal Cantone di Zurigo — verifica sempre lì la versione più recente:",
+    links: [
+      "Grundkenntnistest — informazioni ufficiali, catalogo e test di pratica",
+      "Naturalizzazione (Einbürgerung) — panoramica",
+      "Opuscolo informativo (PDF)",
     ],
   },
 };
@@ -421,5 +585,32 @@ export const HELP_SECTIONS_DE = [
     "Fahnen- und Wappenoptionen (Fragen zur Schweizer Fahne und zum Zürcher Wappen): einfache SVGs, für diese App gezeichnet, passend zu den Bildern im offiziellen Katalog.",
     "Porträts von Bundesrätinnen (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
     "Fahnengrafiken sind vereinfachte Illustrationen, die für diese App erstellt wurden.",
+  ] },
+];
+
+// Help sections in Italian — mirrors the English HELP_SECTIONS structure ({ t, b:[…] }).
+export const HELP_SECTIONS_IT = [
+  { t: "Informazioni su questa app", b: ["Uno strumento di studio per il Grundkenntnistest di Zurigo — il test sulle conoscenze di base per la naturalizzazione. Tutte le 350 domande provengono dal catalogo ufficiale del Cantone, suddivise in 5 ambiti e contrassegnate come Federale / Cantonale / Comunale."] },
+  { t: "L'esame reale", b: ["50 domande in 60 minuti; si supera dal 60% (30 corrette). Il mix è circa 70% federale, 20% cantonale, 10% comunale."] },
+  { t: "Rispondere alle domande", b: ["Tocca un'opzione per selezionarla, poi premi Conferma per validarla — solo allora viene contrassegnata come giusta o sbagliata. Usa Indietro / Avanti per spostarti; le tue risposte vengono conservate. Le opzioni sono mescolate ogni volta, così impari il contenuto e non la posizione. Valuta ogni domanda come Facile / Media / Difficile per organizzare lo studio."] },
+  { t: "Test rapido", b: ["Componi un set breve: mix casuale, mix d'esame (la vera ripartizione 70/20/10) o concentrati sulle tue domande valutate Facile / Media / Difficile — e scegli quante."] },
+  { t: "Test per ambito", b: ["Esercitati su un singolo ambito e scegli quante domande vuoi da esso."] },
+  { t: "Esame simulato", b: ["Una simulazione cronometrata completa: 50 domande, un conto alla rovescia di 60 minuti, nessun riscontro fino alla fine — poi un verdetto superato/non superato e una rassegna di ciò che hai sbagliato."] },
+  { t: "Ripasso intelligente (ripetizione dilazionata)", b: ["Ogni domanda attraversa 5 livelli di padronanza con intervalli di ripasso crescenti (1, 3, 7, 30 giorni). Rispondi in modo errato e ritorna presto; rispondi correttamente e viene programmata più avanti man mano che avanza verso la padronanza. Il ripasso intelligente esercita tutto ciò che è in scadenza, prima il più arretrato."] },
+  { t: "Cronologia e progressi", b: ["Le tue sessioni passate più la precisione suddivisa per ambito e per livello, così vedi esattamente dove concentrarti."] },
+  { t: "Sfoglia le domande", b: ["Leggi l'intero catalogo, filtra per difficoltà / ambito / livello, cerca nel testo e rivela la risposta corretta di qualsiasi domanda."] },
+  { t: "Spiegazioni", b: ["Ogni domanda ha una breve spiegazione (in tedesco, con traduzione) del perché la risposta è corretta, con un link a una fonte esterna per approfondire. Le spiegazioni sono disattivate per impostazione predefinita durante i quiz (per non rovinare il test) — attiva l'interruttore «💡 Spiega» per mostrarle — e sono sempre disponibili in Sfoglia e nelle schermate di ripasso."] },
+  { t: "Audio (lettura ad alta voce)", b: ["Tocca l'altoparlante 🔊 su una domanda qualsiasi per sentirla letta ad alta voce in tedesco — la domanda seguita dalle opzioni, nello stesso ordine in cui appaiono sullo schermo. È un aiuto all'accessibilità integrato (usa la voce tedesca del tuo dispositivo) e aiuta anche con la pronuncia. Tocca di nuovo (⏹) per fermare; l'audio si ferma anche automaticamente quando passi a un'altra domanda o lasci la pagina."] },
+  { t: "Visualizzazione e lingua", b: ["La traduzione (inglese o francese) può essere mostrata solo per la domanda, oppure per la domanda e ogni opzione; la lingua si sceglie nelle Impostazioni. Se scegli il tedesco, non viene mostrata alcuna traduzione. La dimensione del testo (A / A / A / A) ridimensiona l'intera app per una lettura più facile sul telefono. La modalità ad alto contrasto migliora la leggibilità; la modalità scura segue l'impostazione del tuo dispositivo. Le cinque classi di domande (ambiti) sono codificate a colori ovunque — Democrazia e federalismo (blu), Stato sociale e società civile (turchese), Storia (arancione), Geografia (verde), Cultura e vita quotidiana (viola)."] },
+  { t: "Scorciatoie da tastiera", b: [["1 – 4", "scegliere un'opzione"], ["Invio / Spazio / →", "confermare, poi passare alla successiva"], ["←", "domanda precedente"]] },
+  { t: "I tuoi dati", b: ["Le valutazioni di difficoltà, la cronologia e i progressi sono memorizzati solo in questo browser — nulla viene caricato online. Cancellare i dati del browser li reimposta."] },
+  { t: "Crediti immagini", b: [
+    "Foto del Cervino: «Zermatt photos» via Wikimedia Commons, CC BY-SA 3.0.",
+    "Foto dell'anfiteatro di Avenches: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
+    "Foto del Technorama (Q346): MaddaMom via Wikimedia Commons, CC BY-SA 4.0.",
+    "Carte dei cantoni: adattate (ricolorate) da «Suisse cantons.svg» di Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
+    "Opzioni di bandiera e stemma (domande sulla bandiera svizzera e sullo stemma di Zurigo): semplici SVG disegnati per questa app per corrispondere alle immagini del catalogo ufficiale.",
+    "Ritratti di consigliere federali (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
+    "Le grafiche delle bandiere sono illustrazioni semplificate realizzate per questa app.",
   ] },
 ];

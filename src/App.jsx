@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback, useMemo, createContext, useContext } 
 import { ALL_QUESTIONS } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
-import { LANG_KEY, LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_FR, HELP_SECTIONS_DE, HELP_OFFICIAL } from "./i18n";
+import { LANG_KEY, LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_FR, HELP_SECTIONS_DE, HELP_SECTIONS_IT, HELP_OFFICIAL } from "./i18n";
 import { FR_CONTENT } from "./fr";
+import { IT_CONTENT } from "./it";
 
 const SECTION_NAMES = [...new Set(ALL_QUESTIONS.map(q => q.s))];
 const LETTERS = ["a","b","c","d"];
@@ -42,11 +43,14 @@ function tr(lang, s, vars) {
 }
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
 function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
+// Translated question content per language (English is q.en directly; German has none — see below).
+const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT };
 // Secondary-translation lookups. German is the primary test content, so it has no secondary line
-// (returns null → display sites and their toggles hide). FR uses translated content, falling back to EN.
-const qText  = (q, lang)     => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].q) || q.en; };
-const oText  = (q, oi, lang) => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].o && FR_CONTENT.q[q.id].o[oi]) || (q.opts[oi] && q.opts[oi].en); };
-const xText  = (id, lang)    => { if (!HAS_TRANSLATION[lang]) return null; return (lang === "fr" && FR_CONTENT.expl[id]) || (EXPLANATIONS[id] && EXPLANATIONS[id].en); };
+// (returns null → display sites and their toggles hide). Other languages use their translated
+// content, falling back to the English baseline when an entry is missing.
+const qText  = (q, lang)     => { if (!HAS_TRANSLATION[lang]) return null; const c = CONTENT[lang]; return (c && c.q[q.id] && c.q[q.id].q) || q.en; };
+const oText  = (q, oi, lang) => { if (!HAS_TRANSLATION[lang]) return null; const c = CONTENT[lang]; return (c && c.q[q.id] && c.q[q.id].o && c.q[q.id].o[oi]) || (q.opts[oi] && q.opts[oi].en); };
+const xText  = (id, lang)    => { if (!HAS_TRANSLATION[lang]) return null; const c = CONTENT[lang]; return (c && c.expl[id]) || (EXPLANATIONS[id] && EXPLANATIONS[id].en); };
 const lvlLabel = (k, lang)   => (LVL_LABELS_I18N[lang] && LVL_LABELS_I18N[lang][k]) || LVL_LABELS[k];
 // Real GKT exam parameters: 50 questions, 60 minutes, 60% to pass
 const EXAM_COUNT    = 50;
@@ -1468,8 +1472,8 @@ function BrowserScreen({ difficulties, onDiffChange, onHome }) {
     if (filterLvl !== "all" && q.lvl !== filterLvl) return false;
     if (search) {
       const s = search.toLowerCase();
-      const fr = (FR_CONTENT.q[q.id] && FR_CONTENT.q[q.id].q) || "";
-      return q.de.toLowerCase().includes(s) || q.en.toLowerCase().includes(s) || fr.toLowerCase().includes(s);
+      const tr = [FR_CONTENT, IT_CONTENT].map(c => (c.q[q.id] && c.q[q.id].q) || "").join(" ").toLowerCase();
+      return q.de.toLowerCase().includes(s) || q.en.toLowerCase().includes(s) || tr.includes(s);
     }
     return true;
   });
@@ -1630,8 +1634,8 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
 
 function HelpScreen({ onHome }) {
   const T = useT(); const lang = useLang();
-  const sections = lang === "fr" ? HELP_SECTIONS_FR : lang === "de" ? HELP_SECTIONS_DE : HELP_SECTIONS;
-  const official = lang === "fr" ? HELP_OFFICIAL.fr : lang === "de" ? HELP_OFFICIAL.de : null;
+  const sections = { fr: HELP_SECTIONS_FR, de: HELP_SECTIONS_DE, it: HELP_SECTIONS_IT }[lang] || HELP_SECTIONS;
+  const official = HELP_OFFICIAL[lang] || null;
   const officialUrls = [
     "https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html",
     "https://www.zh.ch/de/migration-integration/einbuergerung.html",
