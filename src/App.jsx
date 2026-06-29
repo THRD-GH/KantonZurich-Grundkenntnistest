@@ -2,9 +2,12 @@ import { useState, useEffect, useCallback, useMemo, createContext, useContext } 
 import { ALL_QUESTIONS } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
-import { LANG_KEY, LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_FR, HELP_SECTIONS_DE, HELP_SECTIONS_IT, HELP_OFFICIAL } from "./i18n";
+import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
 import { FR_CONTENT } from "./fr";
 import { IT_CONTENT } from "./it";
+import { PT_CONTENT } from "./pt";
+import { SQ_CONTENT } from "./sq";
+import { ES_CONTENT } from "./es";
 
 const SECTION_NAMES = [...new Set(ALL_QUESTIONS.map(q => q.s))];
 const LETTERS = ["a","b","c","d"];
@@ -44,7 +47,7 @@ function tr(lang, s, vars) {
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
 function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
 // Translated question content per language (English is q.en directly; German has none — see below).
-const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT };
+const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT, pt: PT_CONTENT, sq: SQ_CONTENT, es: ES_CONTENT };
 // Secondary-translation lookups. German is the primary test content, so it has no secondary line
 // (returns null → display sites and their toggles hide). Other languages use their translated
 // content, falling back to the English baseline when an entry is missing.
@@ -260,13 +263,16 @@ function TopBar({ lang, setLang, onSettings, onHelp }) {
     borderRadius:"var(--border-radius-md)", color:"var(--color-text-secondary)", cursor:"pointer" };
   return (
     <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end", gap:8, padding:"10px 1rem 0" }}>
-      <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label={T("Language")} title={T("Language")}
+      <select value={lang} onChange={(e) => { const v = e.target.value; if (v === "__other__") onSettings(); else setLang(v); }}
+        aria-label={T("Language")} title={T("Language")}
         style={{ height:32, padding:"0 28px 0 10px", fontSize:13, borderRadius:"var(--border-radius-md)",
           border:"0.5px solid var(--color-border-secondary)", background:"var(--color-background-secondary)",
           color:"var(--color-text-primary)", cursor:"pointer", font:"inherit", appearance:"none", WebkitAppearance:"none",
           backgroundImage:"url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E\")",
           backgroundRepeat:"no-repeat", backgroundPosition:"right 10px center" }}>
-        {Object.keys(LANGS).map((v) => <option key={v} value={v}>{v.toUpperCase()}</option>)}
+        {!PRIMARY_LANGS.includes(lang) && <option value={lang}>{lang.toUpperCase()}</option>}
+        {PRIMARY_LANGS.map((v) => <option key={v} value={v}>{v.toUpperCase()}</option>)}
+        <option value="__other__">{OTHER_LABEL[lang] || OTHER_LABEL.en}</option>
       </select>
       <button type="button" onClick={onSettings} aria-label={T("Settings")} title={T("Settings & display options")} style={iconBtn}>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -1476,7 +1482,7 @@ function BrowserScreen({ difficulties, onDiffChange, onHome }) {
     if (filterLvl !== "all" && q.lvl !== filterLvl) return false;
     if (search) {
       const s = search.toLowerCase();
-      const tr = [FR_CONTENT, IT_CONTENT].map(c => (c.q[q.id] && c.q[q.id].q) || "").join(" ").toLowerCase();
+      const tr = Object.values(CONTENT).map(c => (c.q[q.id] && c.q[q.id].q) || "").join(" ").toLowerCase();
       return q.de.toLowerCase().includes(s) || q.en.toLowerCase().includes(s) || tr.includes(s);
     }
     return true;
@@ -1562,32 +1568,6 @@ function BrowserScreen({ difficulties, onDiffChange, onHome }) {
 }
 
 // ── Help & about screen ───────────────────────────────────────────────────────
-const HELP_SECTIONS = [
-  { t: "About this app", b: ["A study tool for the Zürich Grundkenntnistest — the basic-knowledge test for naturalisation. All " + ALL_QUESTIONS.length + " questions come from the canton's official catalogue, grouped into 5 sections and tagged Federal / Cantonal / Municipal."] },
-  { t: "The real test", b: ["50 questions in 60 minutes; you pass at 60% (30 correct). The mix is roughly 70% federal, 20% cantonal, 10% municipal."] },
-  { t: "Answering questions", b: ["Tap an option to select it, then press Submit to confirm — only then is it marked right or wrong. Use Back / Next to move around; your answers are kept. Options are shuffled each time, so you learn the content rather than the position. Rate each question Easy / Medium / Hard to organise your study."] },
-  { t: "Quick test", b: ["Build a short set: Random mix, Exam mix (the real 70/20/10 split), or focus on your Easy / Medium / Hard rated questions — and choose how many."] },
-  { t: "Section test", b: ["Practise a single section, and pick how many questions you want from it."] },
-  { t: "Mock exam", b: ["A full timed simulation: 50 questions, a 60-minute countdown, no feedback until the end — then a pass/fail verdict and a review of what you missed."] },
-  { t: "Smart review (spaced repetition)", b: ["Each question moves through 5 mastery boxes with growing review intervals (1, 3, 7, 30 days). Answer wrong and it comes back soon; answer right and it's scheduled further out as it climbs toward mastered. Smart review drills whatever is due, most overdue first."] },
-  { t: "History & progress", b: ["Your past sessions plus accuracy broken down by section and by level, so you can see exactly where to focus."] },
-  { t: "Browse questions", b: ["Read the whole catalogue, filter by difficulty / section / level, search the text, and reveal the correct answer for any question."] },
-  { t: "Explanations", b: ["Every question has a short explanation (German + English) of why the answer is correct, with a link to an external source for more depth. Explanations are off by default during quizzes (so they don't spoil the test) — flip the “💡 Explain” switch to show them — and are always available in Browse and in review screens."] },
-  { t: "Audio (read aloud)", b: ["Tap the 🔊 speaker on any question to hear it read aloud in German — the question followed by the options, in the same order they appear on screen. It's a built-in accessibility aid (uses your device's German voice) and also helps with pronunciation. Tap again (⏹) to stop; audio also stops automatically when you move to another question or leave the page."] },
-  { t: "Display & language", b: ["English translations can be shown for the question only, or for the question and every option. Text size (A / A / A / A) scales the whole app for easier reading on phones. High-contrast mode boosts legibility; dark mode follows your device setting. The five question classes (sections) are colour-coded throughout — Democracy & Federalism (blue), Welfare State & Civil Society (teal), History (orange), Geography (green), Culture & Everyday Life (violet)."] },
-  { t: "Keyboard shortcuts", b: [["1 – 4", "choose an option"], ["Enter / Space / →", "submit, then go to next"], ["←", "previous question"]] },
-  { t: "Your data", b: ["Difficulty ratings, history and progress are stored only in this browser — nothing is uploaded. Clearing your browser data resets them."] },
-  { t: "Image credits", b: [
-    "Matterhorn photo: “Zermatt photos” via Wikimedia Commons, CC BY-SA 3.0.",
-    "Avenches amphitheatre photo: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
-    "Technorama photo (Q346): MaddaMom via Wikimedia Commons, CC BY-SA 4.0.",
-    "Canton maps: adapted (recoloured) from “Suisse cantons.svg” by Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
-    "Flag and coat-of-arms options (Swiss-flag and Zürich-arms questions) are simple SVGs drawn for this app to match the images in the official catalogue.",
-    "Federal-Councillor portraits (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
-    "Flag graphics are simplified illustrations made for this app.",
-  ] },
-];
-
 // Settings & display options, reached from the gear icon on the home screen.
 function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, onHome }) {
   const T = useT();
@@ -1604,9 +1584,17 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
       <div style={{ ...S.card, padding:"0.85rem 1.25rem", display:"flex", flexDirection:"column", gap:16 }}>
         <div style={row}>
           <div style={{ fontSize:13, fontWeight:500 }}>{T("Language")}<span style={hint}>{T("secondary translation shown with German")}</span></div>
-          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
-            {Object.entries(LANGS).map(([v,l]) => (
-              <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{l}</button>
+          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
+            {PRIMARY_LANGS.map((v) => (
+              <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
+            ))}
+          </div>
+        </div>
+        <div style={row}>
+          <div style={{ fontSize:13, fontWeight:500 }}>{MORE_LANGS_LABEL[lang] || MORE_LANGS_LABEL.en}</div>
+          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
+            {Object.keys(LANGS).filter((v) => !PRIMARY_LANGS.includes(v)).map((v) => (
+              <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
             ))}
           </div>
         </div>
@@ -1638,17 +1626,12 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
 
 function HelpScreen({ onHome }) {
   const T = useT(); const lang = useLang();
-  const sections = { fr: HELP_SECTIONS_FR, de: HELP_SECTIONS_DE, it: HELP_SECTIONS_IT }[lang] || HELP_SECTIONS;
-  const official = HELP_OFFICIAL[lang] || null;
+  const sections = HELP_SECTIONS_BY_LANG[lang] || HELP_SECTIONS_BY_LANG.en;
+  const official = HELP_OFFICIAL[lang] || HELP_OFFICIAL.en;
   const officialUrls = [
     "https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html",
     "https://www.zh.ch/de/migration-integration/einbuergerung.html",
     "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf",
-  ];
-  const officialLinksEn = [
-    "Grundkenntnistest — official info, catalogue & practice test",
-    "Einbürgerung (naturalisation) — overview",
-    "Information brochure (PDF)",
   ];
   return (
     <div style={{ padding:"1rem" }}>
@@ -1656,12 +1639,12 @@ function HelpScreen({ onHome }) {
       <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
         <div style={{ fontSize:13, fontWeight:600, marginBottom:".5rem" }}>{T("Official information (Kanton Zürich)")}</div>
         <p style={{ fontSize:13, color:"var(--color-text-secondary)", lineHeight:1.5, margin:"0 0 8px" }}>
-          {official ? official.intro : "This is an unofficial study aid. The authoritative questions, the canton's own digital practice test and the current rules are published by the Canton of Zürich — always check there for the latest version:"}
+          {official.intro}
         </p>
         <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
           {officialUrls.map((url, i) => (
             <a key={url} href={url} target="_blank" rel="noopener noreferrer"
-              style={{ fontSize:13, color:"var(--color-text-info)", textDecoration:"underline", lineHeight:1.4 }}>↗ {official ? official.links[i] : officialLinksEn[i]}</a>
+              style={{ fontSize:13, color:"var(--color-text-info)", textDecoration:"underline", lineHeight:1.4 }}>↗ {official.links[i]}</a>
           ))}
         </div>
       </div>

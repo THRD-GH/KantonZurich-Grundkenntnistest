@@ -1,10 +1,17 @@
 // Internationalisation. German is always shown (it's the test content); the *secondary*
 // translation column + all UI chrome use the selected language. English is the base/fallback:
 // UI_FR maps the English source string -> French. Missing keys fall back to English.
+import { EXTRA } from "./i18n-extra.js";
+
 export const LANG_KEY = "gkt_lang_v1";
-export const LANGS = { en: "English", fr: "Français", de: "Deutsch", it: "Italiano" };
+export const LANGS = { en: "English", fr: "Français", de: "Deutsch", it: "Italiano", pt: "Português", sq: "Shqip", es: "Español" };
+// Shown directly in the top-bar dropdown; the rest are reached via Settings ("Other…").
+export const PRIMARY_LANGS = ["en", "fr", "de", "it"];
+// Labels for the "Other…" dropdown entry and the Settings drill-down, localised for every language.
+export const OTHER_LABEL = { en: "Other…", fr: "Autre…", de: "Andere…", it: "Altro…", pt: "Outro…", sq: "Tjetër…", es: "Otro…" };
+export const MORE_LANGS_LABEL = { en: "More languages", fr: "Plus de langues", de: "Weitere Sprachen", it: "Altre lingue", pt: "Mais idiomas", sq: "Më shumë gjuhë", es: "Más idiomas" };
 // Languages with a *secondary* translation column (German is the primary test content, so it has none).
-export const HAS_TRANSLATION = { en: true, fr: true, de: false, it: true };
+export const HAS_TRANSLATION = { en: true, fr: true, de: false, it: true, pt: true, sq: true, es: true };
 
 // Section display names per language (keyed by the leading number of q.s, e.g. "1 · Democracy …")
 export const SECTION_NAMES = {
@@ -514,6 +521,14 @@ export const UI = { fr: UI_FR, de: UI_DE, it: UI_IT };
 // ── Help screen (full French) ───────────────────────────────────────────────────
 // Official-information card (intro + the three zh.ch links). German URLs stay unchanged.
 export const HELP_OFFICIAL = {
+  en: {
+    intro: "This is an unofficial study aid. The authoritative questions, the canton's own digital practice test and the current rules are published by the Canton of Zürich — always check there for the latest version:",
+    links: [
+      "Grundkenntnistest — official info, catalogue & practice test",
+      "Einbürgerung (naturalisation) — overview",
+      "Information brochure (PDF)",
+    ],
+  },
   fr: {
     intro: "Ceci est une aide à l’étude non officielle. Les questions faisant foi, le test d’entraînement numérique du canton et les règles en vigueur sont publiés par le canton de Zurich — vérifiez toujours là-bas pour la version la plus récente :",
     links: [
@@ -620,3 +635,43 @@ export const HELP_SECTIONS_IT = [
     "Le grafiche delle bandiere sono illustrazioni semplificate realizzate per questa app.",
   ] },
 ];
+
+// English help — source of truth and the base/fallback for the Help screen.
+export const HELP_SECTIONS_EN = [
+  { t: "About this app", b: ["A study tool for the Zürich Grundkenntnistest — the basic-knowledge test for naturalisation. All 350 questions come from the canton's official catalogue, grouped into 5 sections and tagged Federal / Cantonal / Municipal."] },
+  { t: "The real test", b: ["50 questions in 60 minutes; you pass at 60% (30 correct). The mix is roughly 70% federal, 20% cantonal, 10% municipal."] },
+  { t: "Answering questions", b: ["Tap an option to select it, then press Submit to confirm — only then is it marked right or wrong. Use Back / Next to move around; your answers are kept. Options are shuffled each time, so you learn the content rather than the position. Rate each question Easy / Medium / Hard to organise your study."] },
+  { t: "Quick test", b: ["Build a short set: Random mix, Exam mix (the real 70/20/10 split), or focus on your Easy / Medium / Hard rated questions — and choose how many."] },
+  { t: "Section test", b: ["Practise a single section, and pick how many questions you want from it."] },
+  { t: "Mock exam", b: ["A full timed simulation: 50 questions, a 60-minute countdown, no feedback until the end — then a pass/fail verdict and a review of what you missed."] },
+  { t: "Smart review (spaced repetition)", b: ["Each question moves through 5 mastery boxes with growing review intervals (1, 3, 7, 30 days). Answer wrong and it comes back soon; answer right and it's scheduled further out as it climbs toward mastered. Smart review drills whatever is due, most overdue first."] },
+  { t: "History & progress", b: ["Your past sessions plus accuracy broken down by section and by level, so you can see exactly where to focus."] },
+  { t: "Browse questions", b: ["Read the whole catalogue, filter by difficulty / section / level, search the text, and reveal the correct answer for any question."] },
+  { t: "Explanations", b: ["Every question has a short explanation (German + translation) of why the answer is correct, with a link to an external source for more depth. Explanations are off by default during quizzes (so they don't spoil the test) — flip the “💡 Explain” switch to show them — and are always available in Browse and in review screens."] },
+  { t: "Audio (read aloud)", b: ["Tap the 🔊 speaker on any question to hear it read aloud in German — the question followed by the options, in the same order they appear on screen. It's a built-in accessibility aid (uses your device's German voice) and also helps with pronunciation. Tap again (⏹) to stop; audio also stops automatically when you move to another question or leave the page."] },
+  { t: "Display & language", b: ["A translation can be shown for the question only, or for the question and every option; choose the language in Settings. Pick German and no translation is shown. Text size (A / A / A / A) scales the whole app for easier reading on phones. High-contrast mode boosts legibility; dark mode follows your device setting. The five question classes (sections) are colour-coded throughout — Democracy & Federalism (blue), Welfare State & Civil Society (teal), History (orange), Geography (green), Culture & Everyday Life (violet)."] },
+  { t: "Keyboard shortcuts", b: [["1 – 4", "choose an option"], ["Enter / Space / →", "submit, then go to next"], ["←", "previous question"]] },
+  { t: "Your data", b: ["Difficulty ratings, history and progress are stored only in this browser — nothing is uploaded. Clearing your browser data resets them."] },
+  { t: "Image credits", b: [
+    "Matterhorn photo: “Zermatt photos” via Wikimedia Commons, CC BY-SA 3.0.",
+    "Avenches amphitheatre photo: Nursangaion via Wikimedia Commons, CC BY-SA 4.0.",
+    "Technorama photo (Q346): MaddaMom via Wikimedia Commons, CC BY-SA 4.0.",
+    "Canton maps: adapted (recoloured) from “Suisse cantons.svg” by Pymouss44, Wikimedia Commons, CC BY-SA 4.0.",
+    "Flag and coat-of-arms options (Swiss-flag and Zürich-arms questions) are simple SVGs drawn for this app to match the images in the official catalogue.",
+    "Federal-Councillor portraits (Q241) via Wikimedia Commons: Ruth Dreifuss — Chatham House, CC BY 2.0; Elisabeth Kopp — Coralie Wenger, CC BY 3.0; Ruth Metzler-Arnold — Manuel Stettler, CC BY-SA 4.0; Micheline Calmy-Rey — IAEA Imagebank, CC BY-SA 2.0.",
+    "Flag graphics are simplified illustrations made for this app.",
+  ] },
+];
+
+// Registry: Help sections by language. EXTRA languages fold in below.
+export const HELP_SECTIONS_BY_LANG = { en: HELP_SECTIONS_EN, fr: HELP_SECTIONS_FR, de: HELP_SECTIONS_DE, it: HELP_SECTIONS_IT };
+
+// Fold in additional languages (Portuguese / Albanian / Spanish) from the translation workflow.
+for (const code of Object.keys(EXTRA)) {
+  const e = EXTRA[code] || {};
+  if (e.ui)           UI[code] = e.ui;
+  if (e.sectionNames) SECTION_NAMES[code] = e.sectionNames;
+  if (e.levelLabels)  LVL_LABELS_I18N[code] = e.levelLabels;
+  if (e.official)     HELP_OFFICIAL[code] = e.official;
+  if (e.sections)     HELP_SECTIONS_BY_LANG[code] = e.sections;
+}
