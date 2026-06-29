@@ -382,11 +382,30 @@ function PctBar({ pct, color }) {
   );
 }
 
+// Crisp arrow icon for call-to-action / navigation buttons (replaces the small "→"/"←" glyphs).
+function ArrowIcon({ dir = "right" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="1.15em" height="1.15em" fill="none" stroke="currentColor" strokeWidth="2.5"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+      style={{ verticalAlign:"-0.22em", flexShrink:0, margin: dir === "left" ? "0 5px 0 -2px" : "0 -2px 0 5px",
+        transform: dir === "left" ? "scaleX(-1)" : "none" }}>
+      <path d="M4 12h15M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+// Render a button label, swapping a leading "← " / trailing " →" for the crisp ArrowIcon.
+function lbl(s) {
+  if (typeof s !== "string") return s;
+  if (s.endsWith(" →"))  return <>{s.slice(0, -2)}<ArrowIcon dir="right" /></>;
+  if (s.startsWith("← ")) return <><ArrowIcon dir="left" />{s.slice(2)}</>;
+  return s;
+}
+
 function NavBar({ onHome, title, right }) {
   const T = useT();
   return (
     <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:"1rem", flexWrap:"wrap" }}>
-      <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{T("← Home")}</button>
+      <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
       <span style={{ fontSize:15, fontWeight:500, flex:1 }}>{title}</span>
       {right}
     </div>
@@ -461,7 +480,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           <div style={{ display:"flex", gap:6, alignItems:"center" }}>
             <button style={{ ...S.btn, color:"var(--color-text-warning)", borderColor:"var(--color-border-warning)" }}
               onClick={onDiscardResume} title={T("Discard unfinished test")}>{T("Discard")}</button>
-            <button style={S.btnPrim} onClick={onResume}>{T("Resume →")}</button>
+            <button style={S.btnPrim} onClick={onResume}>{lbl(T("Resume →"))}</button>
           </div>
         </div>
       )}
@@ -475,7 +494,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
               {T("{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end", { n: EXAM_COUNT, m: EXAM_MINUTES, p: EXAM_PASS_PCT })}
             </div>
           </div>
-          <button style={S.btnPrim} onClick={onMockExam}>{T("Start mock exam →")}</button>
+          <button style={S.btnPrim} onClick={onMockExam}>{lbl(T("Start mock exam →"))}</button>
         </div>
       </div>
 
@@ -548,7 +567,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
             {T("Exam mix — drawn ~70% federal / 20% cantonal / 10% municipal, like the real test (50 questions → 35 / 10 / 5).")}
           </div>
         )}
-        <button style={S.btnPrim} onClick={() => onQuickTest(qtDiff, qtCount)}>{T("Start quick test →")}</button>
+        <button style={S.btnPrim} onClick={() => onQuickTest(qtDiff, qtCount)}>{lbl(T("Start quick test →"))}</button>
       </div>
 
       {/* Full quiz — combine Section + Level + count + order, then press Start */}
@@ -610,7 +629,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         <button disabled={!fqCount}
           style={{ ...S.btnPrim, opacity: fqCount ? 1 : .45, cursor: fqCount ? "pointer" : "default" }}
           onClick={() => onStart(fqSection, fqLevel, fqOrder, secCount === "all" ? null : secCount)}>
-          {T("Start quiz →")}
+          {lbl(T("Start quiz →"))}
         </button>
       </div>
 
@@ -623,7 +642,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
               {T("{n} question{s} due — spaced repetition resurfaces what you're about to forget.", { n: dueCount, s: dueCount !== 1 ? "s" : "" })}
             </div>
           </div>
-          <button style={S.btnPrim} onClick={onSmartReview}>{T("Review {n} →", { n: dueCount })}</button>
+          <button style={S.btnPrim} onClick={onSmartReview}>{lbl(T("Review {n} →", { n: dueCount }))}</button>
         </div>
       )}
 
@@ -883,7 +902,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
           )}
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap" }}>
             {sessionWrong.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(sessionWrong)}>{T("↻ Retry wrong ({n})", { n: sessionWrong.length })}</button>}
-            <button style={S.btnPrim} onClick={onHome}>{T("← Home")}</button>
+            <button style={S.btnPrim} onClick={onHome}>{lbl(T("← Home"))}</button>
           </div>
           <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:12 }}>{T("Result saved to history")}</div>
         </div>
@@ -896,7 +915,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
   return (
     <div style={{ padding:"1rem" }}>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
-        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{T("← Home")}</button>
+        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
         <div style={{ display:"flex", gap:5, flexWrap:"wrap", alignItems:"center" }}>
           <span style={S.badge}>{idx+1}/{pool.length}</span>
           <span style={{ ...S.badge, background:"var(--color-background-success)", color:"var(--color-text-success)", border:"0.5px solid var(--color-border-success)" }}>✓ {correct}</span>
@@ -947,10 +966,10 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
       <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
         <button onClick={goPrev} disabled={idx === 0}
           style={{ ...S.btn, opacity: idx === 0 ? .4 : 1, cursor: idx === 0 ? "default" : "pointer" }}>
-          {T("← Back")}
+          {lbl(T("← Back"))}
         </button>
         {submittedCur
-          ? <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : T("Next →")}</button>
+          ? <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : lbl(T("Next →"))}</button>
           : <button onClick={submit} disabled={!hasPick}
               style={{ ...S.btnPrim, opacity: hasPick ? 1 : .45, cursor: hasPick ? "pointer" : "default" }}>{T("Submit answer")}</button>}
         {!submittedCur && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{hasPick ? T("Submit to confirm · ←/→ to navigate") : T("Pick 1–4, then Submit · ←/→ to navigate")}</span>}
@@ -1051,7 +1070,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
         </div>
         <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginBottom:"1rem" }}>
           {wrongNums.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(wrongNums)}>{T("↻ Retry wrong ({n})", { n: wrongNums.length })}</button>}
-          <button style={S.btnPrim} onClick={onHome}>{T("← Home")}</button>
+          <button style={S.btnPrim} onClick={onHome}>{lbl(T("← Home"))}</button>
         </div>
         {wrongQs.length > 0 && (
           <>
@@ -1072,7 +1091,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
   return (
     <div style={{ padding:"1rem" }}>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
-        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{T("← Home")}</button>
+        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
         <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
           <span style={{ ...S.badge, fontVariantNumeric:"tabular-nums", fontWeight:500,
             background: lowTime ? "var(--color-background-danger)" : "var(--color-background-secondary)",
@@ -1112,8 +1131,8 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
 
       <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
         <button onClick={goPrev} disabled={idx === 0}
-          style={{ ...S.btn, opacity: idx === 0 ? .4 : 1, cursor: idx === 0 ? "default" : "pointer" }}>{T("← Back")}</button>
-        <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : T("Next →")}</button>
+          style={{ ...S.btn, opacity: idx === 0 ? .4 : 1, cursor: idx === 0 ? "default" : "pointer" }}>{lbl(T("← Back"))}</button>
+        <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : lbl(T("Next →"))}</button>
         {pickCur === undefined && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{T("Pick 1–4 · ←/→ to navigate · answers stay changeable")}</span>}
         {HAS_TRANSLATION[lang] && (
           <div style={{ marginLeft:"auto" }}>
