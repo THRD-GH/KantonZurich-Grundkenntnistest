@@ -393,11 +393,33 @@ function ArrowIcon({ dir = "right" }) {
     </svg>
   );
 }
-// Render a button label, swapping a leading "← " / trailing " →" for the crisp ArrowIcon.
+// Circular "retry" arrow and a check mark, matching ArrowIcon's weight, for the same buttons.
+function RefreshIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="none" stroke="currentColor" strokeWidth="2.4"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+      style={{ verticalAlign:"-0.22em", flexShrink:0, margin:"0 5px 0 -2px" }}>
+      <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+      <path d="M21 3v5h-5" />
+    </svg>
+  );
+}
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="1.15em" height="1.15em" fill="none" stroke="currentColor" strokeWidth="2.6"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+      style={{ verticalAlign:"-0.22em", flexShrink:0, margin:"0 -2px 0 5px" }}>
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+// Render a button label, swapping a leading "← "/"↻ " or trailing " →"/" ✓" for a crisp icon.
 function lbl(s) {
   if (typeof s !== "string") return s;
-  if (s.endsWith(" →"))  return <>{s.slice(0, -2)}<ArrowIcon dir="right" /></>;
-  if (s.startsWith("← ")) return <><ArrowIcon dir="left" />{s.slice(2)}</>;
+  if (s.endsWith(" →"))   return <>{s.slice(0, -2)}<ArrowIcon dir="right" /></>;
+  if (s.startsWith("← "))  return <><ArrowIcon dir="left" />{s.slice(2)}</>;
+  if (s.startsWith("↻ "))  return <><RefreshIcon />{s.slice(2)}</>;
+  if (s.endsWith(" ✓"))   return <>{s.slice(0, -2)}<CheckIcon /></>;
   return s;
 }
 
@@ -901,7 +923,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
             </div>
           )}
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap" }}>
-            {sessionWrong.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(sessionWrong)}>{T("↻ Retry wrong ({n})", { n: sessionWrong.length })}</button>}
+            {sessionWrong.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(sessionWrong)}>{lbl(T("↻ Retry wrong ({n})", { n: sessionWrong.length }))}</button>}
             <button style={S.btnPrim} onClick={onHome}>{lbl(T("← Home"))}</button>
           </div>
           <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:12 }}>{T("Result saved to history")}</div>
@@ -969,7 +991,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
           {lbl(T("← Back"))}
         </button>
         {submittedCur
-          ? <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : lbl(T("Next →"))}</button>
+          ? <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? lbl(T("Finish ✓")) : lbl(T("Next →"))}</button>
           : <button onClick={submit} disabled={!hasPick}
               style={{ ...S.btnPrim, opacity: hasPick ? 1 : .45, cursor: hasPick ? "pointer" : "default" }}>{T("Submit answer")}</button>}
         {!submittedCur && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{hasPick ? T("Submit to confirm · ←/→ to navigate") : T("Pick 1–4, then Submit · ←/→ to navigate")}</span>}
@@ -1069,7 +1091,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
           </div>
         </div>
         <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginBottom:"1rem" }}>
-          {wrongNums.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(wrongNums)}>{T("↻ Retry wrong ({n})", { n: wrongNums.length })}</button>}
+          {wrongNums.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(wrongNums)}>{lbl(T("↻ Retry wrong ({n})", { n: wrongNums.length }))}</button>}
           <button style={S.btnPrim} onClick={onHome}>{lbl(T("← Home"))}</button>
         </div>
         {wrongQs.length > 0 && (
@@ -1132,7 +1154,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
       <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
         <button onClick={goPrev} disabled={idx === 0}
           style={{ ...S.btn, opacity: idx === 0 ? .4 : 1, cursor: idx === 0 ? "default" : "pointer" }}>{lbl(T("← Back"))}</button>
-        <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? T("Finish ✓") : lbl(T("Next →"))}</button>
+        <button style={S.btnPrim} onClick={goNext}>{idx + 1 >= pool.length ? lbl(T("Finish ✓")) : lbl(T("Next →"))}</button>
         {pickCur === undefined && <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{T("Pick 1–4 · ←/→ to navigate · answers stay changeable")}</span>}
         {HAS_TRANSLATION[lang] && (
           <div style={{ marginLeft:"auto" }}>
