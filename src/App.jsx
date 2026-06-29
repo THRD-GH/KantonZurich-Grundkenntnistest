@@ -266,7 +266,7 @@ function TopBar({ lang, setLang, onSettings, onHelp }) {
           color:"var(--color-text-primary)", cursor:"pointer", font:"inherit", appearance:"none", WebkitAppearance:"none",
           backgroundImage:"url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E\")",
           backgroundRepeat:"no-repeat", backgroundPosition:"right 10px center" }}>
-        {Object.entries(LANGS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+        {Object.keys(LANGS).map((v) => <option key={v} value={v}>{v.toUpperCase()}</option>)}
       </select>
       <button type="button" onClick={onSettings} aria-label={T("Settings")} title={T("Settings & display options")} style={iconBtn}>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -402,7 +402,7 @@ function EnToggle({ enMode, setEnMode, prefix }) {
 }
 
 // ── Home screen ───────────────────────────────────────────────────────────────
-function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview }) {
+function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onDiscardResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview }) {
   const T = useT(); const lang = useLang();
   const counts = countByDiff(difficulties);
   const [qtDiff, setQtDiff]   = useState("exam");
@@ -444,7 +444,11 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           <div style={{ fontSize:13, color:"var(--color-text-warning)" }}>
             {T("⏸ Unfinished {kind} — question {a} of {b}", { kind: resume.kind === "exam" ? T("mock exam") : T("quiz"), a: (resume.idx ?? 0) + 1, b: resume.ids.length })}
           </div>
-          <button style={S.btnPrim} onClick={onResume}>{T("Resume →")}</button>
+          <div style={{ display:"flex", gap:6, alignItems:"center" }}>
+            <button style={{ ...S.btn, color:"var(--color-text-warning)", borderColor:"var(--color-border-warning)" }}
+              onClick={onDiscardResume} title={T("Discard unfinished test")}>{T("Discard")}</button>
+            <button style={S.btnPrim} onClick={onResume}>{T("Resume →")}</button>
+          </div>
         </div>
       )}
 
@@ -1829,6 +1833,7 @@ export default function App() {
       dueCount={dueIds.length}
       resume={resume}
       onResume={resumeSession}
+      onDiscardResume={() => persistResume(null)}
       onStart={startQuiz}
       onQuickTest={startQuickTest}
       onMockExam={startMockExam}
