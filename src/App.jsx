@@ -1588,7 +1588,7 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
           <div style={{ fontSize:13, fontWeight:500 }}>{T("Language")}<span style={hint}>{T("secondary translation shown with German")}</span></div>
           <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
             {PRIMARY_LANGS.map((v) => (
-              <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
+              <button key={v} onClick={() => { setLang(v); setShowMore(false); }} style={segBtn(lang===v)}>{LANGS[v]}</button>
             ))}
             <button onClick={() => setShowMore((s) => !s)} style={segBtn(showMore || isOther)}>{OTHER_LABEL[lang] || OTHER_LABEL.en}</button>
           </div>
