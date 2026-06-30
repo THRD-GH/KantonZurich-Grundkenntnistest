@@ -70,6 +70,8 @@ export const UI_FR = {
   "Difficulty ratings": "Évaluations de difficulté",
   "Reset ratings": "Réinitialiser",
   "Reset all {n} ratings? This can’t be undone.": "Réinitialiser les {n} évaluations ? Action irréversible.",
+  "Reset progress": "Réinitialiser la progression",
+  "Reset all progress? This can’t be undone.": "Réinitialiser toute la progression ? Action irréversible.",
   "Yes, reset": "Oui, réinitialiser",
   "Cancel": "Annuler",
   "Easy": "Facile",
@@ -248,6 +250,8 @@ export const UI_DE = {
   "Difficulty ratings": "Schwierigkeitsbewertungen",
   "Reset ratings": "Zurücksetzen",
   "Reset all {n} ratings? This can’t be undone.": "Alle {n} Bewertungen zurücksetzen? Das kann nicht rückgängig gemacht werden.",
+  "Reset progress": "Fortschritt zurücksetzen",
+  "Reset all progress? This can’t be undone.": "Den gesamten Fortschritt zurücksetzen? Das kann nicht rückgängig gemacht werden.",
   "Yes, reset": "Ja, zurücksetzen",
   "Cancel": "Abbrechen",
   "Easy": "Leicht",
@@ -409,6 +413,8 @@ export const UI_IT = {
   "Difficulty ratings": "Valutazioni di difficoltà",
   "Reset ratings": "Reimposta",
   "Reset all {n} ratings? This can’t be undone.": "Reimpostare tutte le {n} valutazioni? L'operazione è irreversibile.",
+  "Reset progress": "Reimposta progressi",
+  "Reset all progress? This can’t be undone.": "Reimpostare tutti i progressi? L'operazione è irreversibile.",
   "Yes, reset": "Sì, reimposta",
   "Cancel": "Annulla",
   "Easy": "Facile",
@@ -696,14 +702,14 @@ for (const code of Object.keys(EXTRA)) {
 // UI keys added after the workflow translation (e.g. the Appearance/theme picker) for the
 // additional languages. Folded into the per-language maps so they don't fall back to English.
 const EXTRA_UI_PATCH = {
-  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema" },
-  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema" },
-  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi" },
-  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav" },
-  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem" },
-  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்" },
-  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም" },
-  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام" },
+  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema", "Reset progress": "Repor progresso", "Reset all progress? This can’t be undone.": "Repor todo o progresso? Esta ação não pode ser anulada." },
+  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema", "Reset progress": "Restablecer progreso", "Reset all progress? This can’t be undone.": "¿Restablecer todo el progreso? No se puede deshacer." },
+  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi", "Reset progress": "Rivendos përparimin", "Reset all progress? This can’t be undone.": "Të rivendoset i gjithë përparimi? Nuk mund të zhbëhet." },
+  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav", "Reset progress": "Poništi napredak", "Reset all progress? This can’t be undone.": "Poništiti sav napredak? To se ne može poništiti." },
+  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem", "Reset progress": "İlerlemeyi sıfırla", "Reset all progress? This can’t be undone.": "Tüm ilerleme sıfırlansın mı? Bu geri alınamaz." },
+  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்", "Reset progress": "முன்னேற்றத்தை மீட்டமை", "Reset all progress? This can’t be undone.": "எல்லா முன்னேற்றத்தையும் மீட்டமைக்கவா? இதை மீட்டமைக்க முடியாது." },
+  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም", "Reset progress": "ምዕባለ ዳግም ኣጀምር", "Reset all progress? This can’t be undone.": "ኩሉ ምዕባለ ዳግም ይጀመር? ክምለስ ኣይክእልን።" },
+  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام", "Reset progress": "إعادة تعيين التقدّم", "Reset all progress? This can’t be undone.": "إعادة تعيين كل التقدّم؟ لا يمكن التراجع." },
 };
 for (const code in EXTRA_UI_PATCH) { if (UI[code]) Object.assign(UI[code], EXTRA_UI_PATCH[code]); }
 

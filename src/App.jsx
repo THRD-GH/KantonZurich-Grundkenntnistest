@@ -929,6 +929,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
 
   if (done) {
     const emoji = pct>=90?"🏆":pct>=70?"👍":pct>=50?"📚":"💪";
+    const wrongQs = sessionWrong.map(id => BY_ID.get(id)).filter(Boolean);
     return (
       <div style={{ padding:"1rem" }}>
         <div style={{ ...S.card, textAlign:"center", padding:"2rem 1.5rem" }}>
@@ -942,18 +943,18 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
               </div>
             ))}
           </div>
-          {sessionWrong.length > 0 && (
-            <div style={{ fontSize:12, color:"var(--color-text-tertiary)", marginBottom:"1rem", textAlign:"left", background:"var(--color-background-secondary)", padding:"8px 12px", borderRadius:"var(--border-radius-md)" }}>
-              <div style={{ fontWeight:500, marginBottom:4 }}>{T("Wrong answers:")}</div>
-              Q{sessionWrong.join(", Q")}
-            </div>
-          )}
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap" }}>
             {sessionWrong.length > 0 && <button style={S.btn} onClick={() => onRetryWrong(sessionWrong)}>{lbl(T("↻ Retry wrong ({n})", { n: sessionWrong.length }))}</button>}
             <button style={S.btnPrim} onClick={onHome}>{lbl(T("← Home"))}</button>
           </div>
           <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:12 }}>{T("Result saved to history")}</div>
         </div>
+        {wrongQs.length > 0 && (
+          <>
+            <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-tertiary)", margin:"4px 0 8px" }}>{T("Review your {n} wrong answer{s}", { n: wrongQs.length, s: wrongQs.length !== 1 ? "s" : "" })}</div>
+            <QuestionList questions={wrongQs} difficulties={difficulties} onDiffChange={onDiffChange} />
+          </>
+        )}
       </div>
     );
   }
@@ -1167,7 +1168,10 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
             <span style={S.badge}>Q{q.n}</span>
             <SecBadge s={q.s} />
           </div>
-          <LvlBadge lvl={q.lvl} />
+          <div style={{ display:"flex", gap:5, alignItems:"center" }}>
+            <SpeakButton text={sayText(q, order)} />
+            <LvlBadge lvl={q.lvl} />
+          </div>
         </div>
 
         <div style={S.qDe}>{q.de}</div>
@@ -1222,7 +1226,7 @@ function AccuracyBreakdown({ title, agg, labelFn }) {
 
 // Full per-question breakdown of one past session: every question with the chosen and correct answer.
 // Each question has its own EN toggle to reveal the English translation on demand.
-function SessionQuestions({ details }) {
+function SessionQuestions({ details, difficulties, onDiffChange }) {
   const T = useT(); const lang = useLang();
   const [shown, setShown] = useState({}); // { [index]: true } — which questions currently show the translation
   return (
@@ -1298,6 +1302,11 @@ function SessionQuestions({ details }) {
             )}
             {picked == null && <div style={{ fontSize:11, color:"var(--color-text-warning)", marginTop:4 }}>{T("Not answered")}</div>}
             <Explanation id={q.id} en={en} />
+            {onDiffChange && (
+              <div style={{ marginTop:8, paddingTop:8, borderTop:"0.5px solid var(--color-border-tertiary)" }}>
+                <DiffPicker current={difficulties && difficulties[q.id]} onChange={(d) => onDiffChange(q.id, d)} />
+              </div>
+            )}
           </div>
         );
       })}
@@ -1306,10 +1315,11 @@ function SessionQuestions({ details }) {
 }
 
 // ── History & progress screen ─────────────────────────────────────────────────
-function HistoryScreen({ history, progress, onHome, onClear }) {
+function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, onClear, onResetProgress }) {
   const T = useT(); const lang = useLang();
   const [openDetail, setOpenDetail] = useState(null);
   const [confirm, setConfirm] = useState(false);
+  const [confirmReset, setConfirmReset] = useState(false);
 
   if (history.length === 0) {
     return (
@@ -1384,6 +1394,15 @@ function HistoryScreen({ history, progress, onHome, onClear }) {
               <span style={{ width:8, height:8, borderRadius:"50%", background:`var(--lvl-${l}-bd)`, flexShrink:0 }}/>{lvlLabel(l, lang) || l}
             </span>
           )} />
+          <div style={{ display:"flex", justifyContent:"flex-end", alignItems:"center", gap:6, marginTop:-4, marginBottom:"1rem", flexWrap:"wrap" }}>
+            {confirmReset
+              ? <>
+                  <span style={{ fontSize:11, color:"var(--color-text-danger)" }}>{T("Reset all progress? This can’t be undone.")}</span>
+                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }} onClick={() => { onResetProgress(); setConfirmReset(false); }}>{T("Yes, reset")}</button>
+                  <button style={{ ...S.btn, fontSize:11, padding:"2px 8px" }} onClick={() => setConfirmReset(false)}>{T("Cancel")}</button>
+                </>
+              : <button style={{ ...S.btn, fontSize:11, padding:"3px 10px" }} onClick={() => setConfirmReset(true)}>{T("Reset progress")}</button>}
+          </div>
         </>
       )}
 
@@ -1420,7 +1439,7 @@ function HistoryScreen({ history, progress, onHome, onClear }) {
                   {openDetail === i ? T("Hide questions ▲") : T("View questions & answers ({n}) ▼", { n: h.details.length })}
                 </button>
               )}
-              {openDetail === i && h.details && <SessionQuestions details={h.details} />}
+              {openDetail === i && h.details && <SessionQuestions details={h.details} difficulties={difficulties} onDiffChange={onDiffChange} />}
             </div>
           );
         })}
@@ -1803,6 +1822,12 @@ export default function App() {
     try { localStorage.removeItem(DIFF_KEY); } catch {}
   }, []);
 
+  // Reset the spaced-repetition / dashboard progress (review schedule + accuracy stats)
+  const resetProgress = useCallback(() => {
+    setProgress({});
+    try { localStorage.removeItem(PROGRESS_KEY); } catch {}
+  }, []);
+
   // Persist (snap) or clear (null) the in-progress quiz/exam snapshot
   const persistResume = useCallback((snap) => {
     if (snap) { saveResume(snap); setResume(snap); }
@@ -1883,8 +1908,8 @@ export default function App() {
       onRecordResults={recordResults} onPersist={persistResume} />;
   }
   if (screen === "history") {
-    return <HistoryScreen history={history} progress={progress} onHome={goHome}
-      onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }} />;
+    return <HistoryScreen history={history} progress={progress} difficulties={difficulties} onDiffChange={setDiff} onHome={goHome}
+      onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }} onResetProgress={resetProgress} />;
   }
   if (screen === "browser") {
     return <BrowserScreen difficulties={difficulties} onDiffChange={setDiff} onHome={goHome} />;
