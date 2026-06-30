@@ -475,7 +475,11 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const [fqSection, setFqSection] = useState("all"); // "all" | section string
   const [fqLevel,   setFqLevel]   = useState("all"); // "all" | "bund" | "kanton" | "gemeinde"
   const [fqOrder,   setFqOrder]   = useState("random"); // "random" | "sequential"
-  const [srCount,   setSrCount]   = useState("all"); // smart-review batch size: number or "all"
+  // Smart-review batch size — default to the smallest available number, for a quick review
+  const [srCount,   setSrCount]   = useState(() => {
+    const opts = [10, 20, 30, 50].filter(n => n < dueCount);
+    return opts.length ? opts[0] : "all";
+  });
   const [confirmReset, setConfirmReset] = useState(false);
   const pill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
     background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
