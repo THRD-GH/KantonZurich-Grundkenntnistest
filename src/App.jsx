@@ -28,7 +28,8 @@ const DIFF_KEY     = "gkt_difficulty_v2";  // { [id]: "easy"|"medium"|"hard" }
 const HISTORY_KEY  = "gkt_history_v2";      // [ { ts, label, correct, total, wrong:[id], bestStreak } ]
 const PROGRESS_KEY = "gkt_progress_v2";     // { [id]: { seen, correct, box } }  — powers dashboard + spaced repetition
 const RESUME_KEY   = "gkt_resume_v2";       // in-progress quiz/exam snapshot
-const CONTRAST_KEY = "gkt_contrast_v1";     // "normal" | "high"
+const CONTRAST_KEY = "gkt_contrast_v1";     // legacy "normal" | "high" — migrated to THEME_KEY
+const THEME_KEY    = "gkt_theme_v1";        // "light" | "dark" | "system" | "contrast"
 const EXPL_KEY     = "gkt_expl_v1";          // "on" | "off" — show explanations during quiz (off by default)
 const SIZE_KEY     = "gkt_textsize_v1";      // "s" | "m" | "l" | "xl" — global text/zoom size
 const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
@@ -96,7 +97,14 @@ function saveProgress(p) { writeJSON(PROGRESS_KEY, p); }
 function loadResume() { return readJSON(RESUME_KEY, null); }
 function saveResume(r) { writeJSON(RESUME_KEY, r); }
 function clearResume() { try { localStorage.removeItem(RESUME_KEY); } catch {} }
-function loadContrast() { try { return localStorage.getItem(CONTRAST_KEY) || "normal"; } catch { return "normal"; } }
+function loadTheme() {
+  try {
+    const t = localStorage.getItem(THEME_KEY);
+    if (t === "light" || t === "dark" || t === "system" || t === "contrast") return t;
+    if (localStorage.getItem(CONTRAST_KEY) === "high") return "contrast"; // migrate legacy setting
+    return "system";
+  } catch { return "system"; }
+}
 function loadExpl()     { try { return localStorage.getItem(EXPL_KEY) === "on"; } catch { return false; } }
 function loadTextSize() { try { return TEXT_SIZES[localStorage.getItem(SIZE_KEY)] ? localStorage.getItem(SIZE_KEY) : "m"; } catch { return "m"; } }
 
@@ -467,6 +475,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const [fqSection, setFqSection] = useState("all"); // "all" | section string
   const [fqLevel,   setFqLevel]   = useState("all"); // "all" | "bund" | "kanton" | "gemeinde"
   const [fqOrder,   setFqOrder]   = useState("random"); // "random" | "sequential"
+  const [srCount,   setSrCount]   = useState("all"); // smart-review batch size: number or "all"
   const [confirmReset, setConfirmReset] = useState(false);
   const pill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
     background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
@@ -655,18 +664,31 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         </button>
       </div>
 
-      {/* Smart review — only when there are due questions */}
-      {dueCount > 0 && (
-        <div style={{ ...S.card, border:"1px solid var(--color-border-info)", display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
-          <div>
+      {/* Smart review — only when there are due questions; pick how many (capped at what's due) */}
+      {dueCount > 0 && (() => {
+        const srOpts = [10, 20, 30, 50].filter(n => n < dueCount);
+        const srN = srCount === "all" ? dueCount : Math.min(srCount, dueCount);
+        return (
+          <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
             <div style={{ fontSize:14, fontWeight:600 }}>{T("🔁 Smart review")}</div>
-            <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3 }}>
+            <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3, marginBottom:".85rem" }}>
               {T("{n} question{s} due — spaced repetition resurfaces what you're about to forget.", { n: dueCount, s: dueCount !== 1 ? "s" : "" })}
             </div>
+            {srOpts.length > 0 && (
+              <>
+                <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("How many?")}</div>
+                <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".85rem" }}>
+                  {srOpts.map(n => (
+                    <button key={n} onClick={() => setSrCount(n)} style={pill(srCount === n)}>{n}</button>
+                  ))}
+                  <button onClick={() => setSrCount("all")} style={pill(srCount === "all")}>{T("All")} ({dueCount})</button>
+                </div>
+              </>
+            )}
+            <button style={S.btnPrim} onClick={() => onSmartReview(srN)}>{lbl(T("Review {n} →", { n: srN }))}</button>
           </div>
-          <button style={S.btnPrim} onClick={onSmartReview}>{lbl(T("Review {n} →", { n: dueCount }))}</button>
-        </div>
-      )}
+        );
+      })()}
 
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
@@ -1618,7 +1640,7 @@ function BrowserScreen({ difficulties, onDiffChange, onHome }) {
 
 // ── Help & about screen ───────────────────────────────────────────────────────
 // Settings & display options, reached from the gear icon on the home screen.
-function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContrast, showExpl, setShowExpl, onHome }) {
+function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, showExpl, setShowExpl, onHome }) {
   const T = useT();
   const isOther = !PRIMARY_LANGS.includes(lang);
   const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
@@ -1659,10 +1681,10 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, contrast, setContras
           </div>
         )}
         <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("High contrast")}<span style={hint}>{T("stronger colours & borders")}</span></div>
-          <div style={{ display:"flex", gap:4, alignItems:"center" }}>
-            {[["normal","Off"],["high","On"]].map(([v,l]) => (
-              <button key={v} onClick={() => setContrast(v)} style={segBtn(contrast===v)}>{T(l)}</button>
+          <div style={{ fontSize:13, fontWeight:500 }}>{T("Appearance")}<span style={hint}>{T("colour theme")}</span></div>
+          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
+            {[["light","Light"],["dark","Dark"],["system","System"],["contrast","High contrast"]].map(([v,l]) => (
+              <button key={v} onClick={() => setTheme(v)} style={segBtn(theme===v)}>{T(l)}</button>
             ))}
           </div>
         </div>
@@ -1733,7 +1755,7 @@ export default function App() {
   const [pool,         setPool]         = useState(null);
   const [quizLabel,    setQuizLabel]    = useState("");
   const [enMode,       setEnMode]       = useState("question"); // 'none' | 'question' | 'full' — set on Home, used in Quiz
-  const [contrast,     setContrast]     = useState(loadContrast); // "normal" | "high"
+  const [theme,        setTheme]        = useState(loadTheme);   // "light" | "dark" | "system" | "contrast"
   const [showExpl,     setShowExpl]     = useState(loadExpl);    // show explanations during quiz (off by default; always on in browse/review)
   const [textSize,     setTextSize]     = useState(loadTextSize); // "s" | "m" | "l" | "xl" — global zoom for readability
   const [lang,         setLang]         = useState(loadLang);    // "en" | "fr" — secondary translation + UI chrome language
@@ -1746,13 +1768,24 @@ export default function App() {
     try { localStorage.setItem(SIZE_KEY, textSize); } catch {}
   }, [textSize]);
 
-  // Apply (and persist) the high-contrast theme via a document attribute that index.css overrides
+  // Apply (and persist) the colour theme. "system" follows the device and updates live; index.css
+  // styles light/dark via data-theme and high contrast via data-contrast.
   useEffect(() => {
     const root = document.documentElement;
-    if (contrast === "high") root.setAttribute("data-contrast", "high");
-    else root.removeAttribute("data-contrast");
-    try { localStorage.setItem(CONTRAST_KEY, contrast); } catch {}
-  }, [contrast]);
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const apply = () => {
+      if (theme === "contrast") { root.setAttribute("data-contrast", "high"); root.setAttribute("data-theme", "light"); return; }
+      root.removeAttribute("data-contrast");
+      const dark = theme === "dark" || (theme === "system" && mq.matches);
+      root.setAttribute("data-theme", dark ? "dark" : "light");
+    };
+    apply();
+    try { localStorage.setItem(THEME_KEY, theme); } catch {}
+    if (theme === "system") {
+      mq.addEventListener("change", apply);
+      return () => mq.removeEventListener("change", apply);
+    }
+  }, [theme]);
 
   const setDiff = useCallback((id, diff) => {
     setDifficulties(prev => {
@@ -1858,7 +1891,7 @@ export default function App() {
     return <HelpScreen onHome={goHome} />;
   }
   if (screen === "settings") {
-    return <SettingsScreen lang={lang} setLang={setLang} enMode={enMode} setEnMode={setEnMode} contrast={contrast} setContrast={setContrast}
+    return <SettingsScreen lang={lang} setLang={setLang} enMode={enMode} setEnMode={setEnMode} theme={theme} setTheme={setTheme}
       showExpl={showExpl} setShowExpl={setShowExpl} onHome={goHome} />;
   }
 
@@ -1879,7 +1912,7 @@ export default function App() {
       onHelp={() => setScreen("help")}
       onSettings={() => setScreen("settings")}
       onResetRatings={resetDifficulties}
-      onSmartReview={() => startQuizFromIds(dueIds, `Smart review · ${dueIds.length} questions`)}
+      onSmartReview={(count) => startQuizFromIds(dueIds.slice(0, count || dueIds.length), `Smart review · ${count || dueIds.length} questions`)}
     />
   );
   })();

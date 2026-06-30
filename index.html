@@ -10,6 +10,23 @@
     <link rel="icon" href="./pwa-192.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      // Apply the saved colour theme before first paint (no flash). React keeps it in sync afterwards.
+      (function () {
+        try {
+          var t = localStorage.getItem('gkt_theme_v1');
+          if (t !== 'light' && t !== 'dark' && t !== 'system' && t !== 'contrast') {
+            t = localStorage.getItem('gkt_contrast_v1') === 'high' ? 'contrast' : 'system';
+          }
+          var de = document.documentElement;
+          if (t === 'contrast') { de.setAttribute('data-contrast', 'high'); de.setAttribute('data-theme', 'light'); }
+          else {
+            var dark = t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            de.setAttribute('data-theme', dark ? 'dark' : 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
