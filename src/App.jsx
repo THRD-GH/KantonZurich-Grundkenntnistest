@@ -1649,53 +1649,48 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, sho
   const isOther = !PRIMARY_LANGS.includes(lang);
   const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
-  const hint = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginLeft:6 };
+  const descStyle = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginTop:3, lineHeight:1.4 };
   const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
     background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
     color: active ? "var(--color-text-info)" : "var(--color-text-secondary)",
     border: active ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
     fontWeight: active ? 500 : 400 });
+  // One setting: label + controls on a line, with the description on its own line below.
+  const setting = (label, hintText, controls) => (
+    <div>
+      <div style={row}>
+        <div style={{ fontSize:13, fontWeight:500 }}>{label}</div>
+        <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>{controls}</div>
+      </div>
+      {hintText && <div style={descStyle}>{hintText}</div>}
+    </div>
+  );
   return (
     <div style={{ padding:"1rem" }}>
       <NavBar onHome={onHome} title={T("Settings")} />
       <div style={{ ...S.card, padding:"0.85rem 1.25rem", display:"flex", flexDirection:"column", gap:16 }}>
-        <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("Language")}<span style={hint}>{T("secondary translation shown with German")}</span></div>
-          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
-            {PRIMARY_LANGS.map((v) => (
-              <button key={v} onClick={() => { setLang(v); setShowMore(false); }} style={segBtn(lang===v)}>{LANGS[v]}</button>
-            ))}
-            <button onClick={() => setShowMore((s) => !s)} style={segBtn(showMore || isOther)}>{OTHER_LABEL[lang] || OTHER_LABEL.en}</button>
-          </div>
-        </div>
-        {showMore && (
-          <div style={row}>
-            <div style={{ fontSize:13, fontWeight:500 }}>{MORE_LANGS_LABEL[lang] || MORE_LANGS_LABEL.en}</div>
-            <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
-              {Object.keys(LANGS).filter((v) => !PRIMARY_LANGS.includes(v)).map((v) => (
-                <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
-              ))}
-            </div>
-          </div>
+        {setting(T("Language"), T("secondary translation shown with German"), <>
+          {PRIMARY_LANGS.map((v) => (
+            <button key={v} onClick={() => { setLang(v); setShowMore(false); }} style={segBtn(lang===v)}>{LANGS[v]}</button>
+          ))}
+          <button onClick={() => setShowMore((s) => !s)} style={segBtn(showMore || isOther)}>{OTHER_LABEL[lang] || OTHER_LABEL.en}</button>
+        </>)}
+        {showMore && setting(MORE_LANGS_LABEL[lang] || MORE_LANGS_LABEL.en, null,
+          Object.keys(LANGS).filter((v) => !PRIMARY_LANGS.includes(v)).map((v) => (
+            <button key={v} onClick={() => setLang(v)} style={segBtn(lang===v)}>{LANGS[v]}</button>
+          ))
         )}
-        {HAS_TRANSLATION[lang] && (
-          <div style={row}>
-            <div style={{ fontSize:13, fontWeight:500 }}>{T("Translations")}<span style={hint}>{T("shown in every test")}</span></div>
-            <EnToggle enMode={enMode} setEnMode={setEnMode} />
-          </div>
+        {HAS_TRANSLATION[lang] && setting(T("Translations"), T("shown in every test"),
+          <EnToggle enMode={enMode} setEnMode={setEnMode} />
         )}
-        <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("Appearance")}<span style={hint}>{T("colour theme")}</span></div>
-          <div style={{ display:"flex", gap:4, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
-            {[["light","Light"],["dark","Dark"],["system","System"],["contrast","High contrast"]].map(([v,l]) => (
-              <button key={v} onClick={() => setTheme(v)} style={segBtn(theme===v)}>{T(l)}</button>
-            ))}
-          </div>
-        </div>
-        <div style={row}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("Explanations")}<span style={hint}>{T("off during tests · always in Browse & review")}</span></div>
+        {setting(T("Appearance"), T("colour theme"),
+          [["light","Light"],["dark","Dark"],["system","System"],["contrast","High contrast"]].map(([v,l]) => (
+            <button key={v} onClick={() => setTheme(v)} style={segBtn(theme===v)}>{T(l)}</button>
+          ))
+        )}
+        {setting(T("Explanations"), T("off during tests · always in Browse & review"),
           <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? T("On in quiz") : T("Off in quiz")} />
-        </div>
+        )}
       </div>
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
         {T("Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.", { a: "A / A" })}
