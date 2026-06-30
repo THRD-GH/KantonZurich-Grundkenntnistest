@@ -693,6 +693,20 @@ for (const code of Object.keys(EXTRA)) {
   if (e.sections)     HELP_SECTIONS_BY_LANG[code] = e.sections;
 }
 
+// UI keys added after the workflow translation (e.g. the Appearance/theme picker) for the
+// additional languages. Folded into the per-language maps so they don't fall back to English.
+const EXTRA_UI_PATCH = {
+  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema" },
+  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema" },
+  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi" },
+  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav" },
+  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem" },
+  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்" },
+  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም" },
+  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام" },
+};
+for (const code in EXTRA_UI_PATCH) { if (UI[code]) Object.assign(UI[code], EXTRA_UI_PATCH[code]); }
+
 // Languages & translation note — German is authoritative; every other language is machine-translated.
 // Inserted into every language's Help (after "Display & language"), so it stays consistent.
 const LANG_NOTE = {
