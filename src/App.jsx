@@ -1239,16 +1239,19 @@ function SessionQuestions({ details }) {
                 <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-primary)", lineHeight:1.35 }}>{q.de}</div>
                 {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
               </div>
-              {qText(q, lang) && (
-                <button type="button" onClick={() => setShown(s => ({ ...s, [di]: !s[di] }))}
-                  aria-pressed={en} title={T("Show/hide translation")}
-                  style={{ ...S.badge, cursor:"pointer", flexShrink:0, fontSize:10, padding:"2px 7px",
-                    background: en ? "var(--color-background-info)" : "var(--color-background-secondary)",
-                    color: en ? "var(--color-text-info)" : "var(--color-text-tertiary)",
-                    border: `0.5px solid ${en ? "var(--color-border-info)" : "var(--color-border-tertiary)"}` }}>
-                  {lang.toUpperCase()}
-                </button>
-              )}
+              <div style={{ display:"flex", gap:5, alignItems:"center", flexShrink:0 }}>
+                <SpeakButton text={sayText(q)} small />
+                {qText(q, lang) && (
+                  <button type="button" onClick={() => setShown(s => ({ ...s, [di]: !s[di] }))}
+                    aria-pressed={en} title={T("Show/hide translation")}
+                    style={{ ...S.badge, cursor:"pointer", flexShrink:0, fontSize:10, padding:"2px 7px",
+                      background: en ? "var(--color-background-info)" : "var(--color-background-secondary)",
+                      color: en ? "var(--color-text-info)" : "var(--color-text-tertiary)",
+                      border: `0.5px solid ${en ? "var(--color-border-info)" : "var(--color-border-tertiary)"}` }}>
+                    {lang.toUpperCase()}
+                  </button>
+                )}
+              </div>
             </div>
             <QImage src={q.img} maxHeight={140} />
             {Q_IMAGES[q.n] ? (
