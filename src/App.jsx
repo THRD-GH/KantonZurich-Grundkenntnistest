@@ -726,10 +726,13 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           {[["easy","Easy",counts.easy],["medium","Medium",counts.medium],["hard","Hard",counts.hard],["unrated","Unrated",counts.unrated]].map(([k,l,n]) => {
             const c = k==="unrated" ? null : DIFF_COLORS[k];
             return (
-              <div key={k} style={{ padding:".6rem .75rem", borderRadius:"var(--border-radius-md)", background: c ? c.bg : "var(--color-background-secondary)", border:`0.5px solid ${c ? c.border : "var(--color-border-tertiary)"}` }}>
+              <button key={k} type="button" onClick={() => onBrowser(k)} disabled={n === 0}
+                aria-label={`${T(l)} · ${n}`} title={T("Browse questions")}
+                style={{ textAlign:"left", font:"inherit", cursor: n === 0 ? "default" : "pointer", opacity: n === 0 ? 0.6 : 1,
+                  padding:".6rem .75rem", borderRadius:"var(--border-radius-md)", background: c ? c.bg : "var(--color-background-secondary)", border:`0.5px solid ${c ? c.border : "var(--color-border-tertiary)"}` }}>
                 <div style={{ fontSize:20, fontWeight:500, color: c ? c.text : "var(--color-text-secondary)" }}>{n}</div>
                 <div style={{ fontSize:11, color: c ? c.text : "var(--color-text-tertiary)", marginTop:2 }}>{T(l)}</div>
-              </div>
+              </button>
             );
           })}
         </div>
@@ -739,7 +742,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Bottom nav */}
       <div style={{ display:"flex", gap:8, flexWrap:"wrap", paddingTop:"1rem", borderTop:"0.5px solid var(--color-border-tertiary)" }}>
-        <button style={S.btn} onClick={onBrowser}>
+        <button style={S.btn} onClick={() => onBrowser("all")}>
           {T("📋 Browse all questions")}
         </button>
         <button style={{ ...S.btn, display:"flex", alignItems:"center", gap:6 }} onClick={onHistory}>
@@ -1566,9 +1569,9 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
 }
 
 // ── Question browser ──────────────────────────────────────────────────────────
-function BrowserScreen({ difficulties, onDiffChange, onHome }) {
+function BrowserScreen({ difficulties, onDiffChange, onHome, initialTab }) {
   const T = useT(); const lang = useLang();
-  const [tab,           setTab]           = useState("all");
+  const [tab,           setTab]           = useState(initialTab || "all");
   const [filterSection, setFilterSection] = useState("all");
   const [filterLvl,     setFilterLvl]     = useState("all");
   const [search,        setSearch]        = useState("");
@@ -1784,6 +1787,7 @@ export default function App() {
   const [progress,     setProgress]     = useState(loadProgress);  // { [id]: {seen,correct,box} } — dashboard + spaced repetition
   const [resume,       setResume]       = useState(loadResume);     // in-progress quiz/exam snapshot, or null
   const [screen,       setScreen]       = useState("home"); // home | quiz | exam | history | browser
+  const [browseTab,    setBrowseTab]    = useState("all");  // difficulty filter to open Browse with
   const [pool,         setPool]         = useState(null);
   const [quizLabel,    setQuizLabel]    = useState("");
   const [enMode,       setEnMode]       = useState("question"); // 'none' | 'question' | 'full' — set on Home, used in Quiz
@@ -1923,7 +1927,7 @@ export default function App() {
       onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }} onResetProgress={resetProgress} />;
   }
   if (screen === "browser") {
-    return <BrowserScreen difficulties={difficulties} onDiffChange={setDiff} onHome={goHome} />;
+    return <BrowserScreen difficulties={difficulties} onDiffChange={setDiff} onHome={goHome} initialTab={browseTab} />;
   }
   if (screen === "help") {
     return <HelpScreen onHome={goHome} />;
@@ -1946,7 +1950,7 @@ export default function App() {
       onQuickTest={startQuickTest}
       onMockExam={startMockExam}
       onHistory={() => setScreen("history")}
-      onBrowser={() => setScreen("browser")}
+      onBrowser={(tab) => { setBrowseTab(typeof tab === "string" ? tab : "all"); setScreen("browser"); }}
       onHelp={() => setScreen("help")}
       onSettings={() => setScreen("settings")}
       onResetRatings={resetDifficulties}
