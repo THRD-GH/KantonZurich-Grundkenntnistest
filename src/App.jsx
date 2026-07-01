@@ -33,6 +33,8 @@ const THEME_KEY    = "gkt_theme_v1";        // "light" | "dark" | "system" | "co
 const EXPL_KEY     = "gkt_expl_v1";          // "on" | "off" — show explanations during quiz (off by default)
 const SIZE_KEY     = "gkt_textsize_v1";      // "s" | "m" | "l" | "xl" — global text/zoom size
 const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
+const SPEED_KEY    = "gkt_speed_v1";         // read-aloud playback rate
+const SPEECH_RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
 const SRS_MAX_BOX  = 5;                     // Leitner boxes: 1 = struggling … 5 = mastered
 const DAY_MS = 86400000;
 const SRS_DUE_DAYS = { 1: 0, 2: 1, 3: 3, 4: 7, 5: 30 }; // days until a box becomes due for review again
@@ -107,6 +109,9 @@ function loadTheme() {
 }
 function loadExpl()     { try { return localStorage.getItem(EXPL_KEY) === "on"; } catch { return false; } }
 function loadTextSize() { try { return TEXT_SIZES[localStorage.getItem(SIZE_KEY)] ? localStorage.getItem(SIZE_KEY) : "m"; } catch { return "m"; } }
+function loadSpeed() { try { const v = parseFloat(localStorage.getItem(SPEED_KEY)); return SPEECH_RATES.includes(v) ? v : 1; } catch { return 1; } }
+// Read-aloud rate, read live by speakDE(); kept in sync with the Settings control by App.
+let speechRate = loadSpeed();
 
 // Build a pool from explicit question ids (retry-wrong / smart review / resume)
 function poolFromIds(ids, doShuffle = true) {
@@ -232,7 +237,7 @@ function speakDE(text, onEnd) {
     u.lang = "de-DE";
     const v = synth.getVoices().find(voice => /^de/i.test(voice.lang));
     if (v) u.voice = v;
-    u.rate = 0.95;
+    u.rate = speechRate;
     if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
     synth.speak(u);
   } catch { onEnd && onEnd(); }
@@ -1680,7 +1685,7 @@ function BrowserScreen({ difficulties, onDiffChange, onHome, initialTab }) {
 
 // ── Help & about screen ───────────────────────────────────────────────────────
 // Settings & display options, reached from the gear icon on the home screen.
-function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, showExpl, setShowExpl, onHome }) {
+function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, speed, setSpeed, showExpl, setShowExpl, onHome }) {
   const T = useT();
   const isOther = !PRIMARY_LANGS.includes(lang);
   const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
@@ -1726,6 +1731,11 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, sho
         )}
         {setting(T("Explanations"), T("off during tests · always in Browse & review"),
           <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? T("On in quiz") : T("Off in quiz")} />
+        )}
+        {TTS_OK && setting(T("Speech speed"), T("read-aloud speed"),
+          SPEECH_RATES.map((r) => (
+            <button key={r} onClick={() => setSpeed(r)} style={segBtn(speed===r)}>{r}×</button>
+          ))
         )}
       </div>
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
@@ -1794,9 +1804,12 @@ export default function App() {
   const [theme,        setTheme]        = useState(loadTheme);   // "light" | "dark" | "system" | "contrast"
   const [showExpl,     setShowExpl]     = useState(loadExpl);    // show explanations during quiz (off by default; always on in browse/review)
   const [textSize,     setTextSize]     = useState(loadTextSize); // "s" | "m" | "l" | "xl" — global zoom for readability
+  const [speed,        setSpeed]        = useState(loadSpeed);   // read-aloud playback rate
   const [lang,         setLang]         = useState(loadLang);    // "en" | "fr" — secondary translation + UI chrome language
 
   useEffect(() => { try { localStorage.setItem(LANG_KEY, lang); } catch {} }, [lang]);
+  // Keep the module-level rate (read by speakDE) in sync with the setting, and persist it
+  useEffect(() => { speechRate = speed; try { localStorage.setItem(SPEED_KEY, String(speed)); } catch {} }, [speed]);
   useEffect(() => { try { localStorage.setItem(EXPL_KEY, showExpl ? "on" : "off"); } catch {} }, [showExpl]);
   // Apply (and persist) the text size by zooming the whole app — scales text and layout proportionally
   useEffect(() => {
@@ -1937,7 +1950,7 @@ export default function App() {
   }
   if (screen === "settings") {
     return <SettingsScreen lang={lang} setLang={setLang} enMode={enMode} setEnMode={setEnMode} theme={theme} setTheme={setTheme}
-      showExpl={showExpl} setShowExpl={setShowExpl} onHome={goHome} />;
+      speed={speed} setSpeed={setSpeed} showExpl={showExpl} setShowExpl={setShowExpl} onHome={goHome} />;
   }
 
   return (

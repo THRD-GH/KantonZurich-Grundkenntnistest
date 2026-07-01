@@ -126,6 +126,8 @@ export const UI_FR = {
   "Explanation": "Explication",
   "Read aloud in German": "Lire à voix haute en allemand",
   "Stop reading": "Arrêter la lecture",
+  "Speech speed": "Vitesse de lecture",
+  "read-aloud speed": "vitesse de la lecture audio",
   // Exam
   "End exam": "Terminer l’examen",
   "{n} unanswered. End?": "{n} sans réponse. Terminer ?",
@@ -299,6 +301,8 @@ export const UI_DE = {
   "Explanation": "Erklärung",
   "Read aloud in German": "Auf Deutsch vorlesen",
   "Stop reading": "Vorlesen stoppen",
+  "Speech speed": "Sprechgeschwindigkeit",
+  "read-aloud speed": "Tempo der Vorlesefunktion",
   // Exam
   "End exam": "Prüfung beenden",
   "{n} unanswered. End?": "{n} unbeantwortet. Beenden?",
@@ -462,6 +466,8 @@ export const UI_IT = {
   "Explanation": "Spiegazione",
   "Read aloud in German": "Leggi ad alta voce in tedesco",
   "Stop reading": "Ferma la lettura",
+  "Speech speed": "Velocità di lettura",
+  "read-aloud speed": "velocità della lettura ad alta voce",
   // Exam
   "End exam": "Termina esame",
   "{n} unanswered. End?": "{n} senza risposta. Terminare?",
@@ -702,14 +708,14 @@ for (const code of Object.keys(EXTRA)) {
 // UI keys added after the workflow translation (e.g. the Appearance/theme picker) for the
 // additional languages. Folded into the per-language maps so they don't fall back to English.
 const EXTRA_UI_PATCH = {
-  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema", "Reset progress": "Repor progresso", "Reset all progress? This can’t be undone.": "Repor todo o progresso? Esta ação não pode ser anulada." },
-  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema", "Reset progress": "Restablecer progreso", "Reset all progress? This can’t be undone.": "¿Restablecer todo el progreso? No se puede deshacer." },
-  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi", "Reset progress": "Rivendos përparimin", "Reset all progress? This can’t be undone.": "Të rivendoset i gjithë përparimi? Nuk mund të zhbëhet." },
-  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav", "Reset progress": "Poništi napredak", "Reset all progress? This can’t be undone.": "Poništiti sav napredak? To se ne može poništiti." },
-  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem", "Reset progress": "İlerlemeyi sıfırla", "Reset all progress? This can’t be undone.": "Tüm ilerleme sıfırlansın mı? Bu geri alınamaz." },
-  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்", "Reset progress": "முன்னேற்றத்தை மீட்டமை", "Reset all progress? This can’t be undone.": "எல்லா முன்னேற்றத்தையும் மீட்டமைக்கவா? இதை மீட்டமைக்க முடியாது." },
-  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም", "Reset progress": "ምዕባለ ዳግም ኣጀምር", "Reset all progress? This can’t be undone.": "ኩሉ ምዕባለ ዳግም ይጀመር? ክምለስ ኣይክእልን።" },
-  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام", "Reset progress": "إعادة تعيين التقدّم", "Reset all progress? This can’t be undone.": "إعادة تعيين كل التقدّم؟ لا يمكن التراجع." },
+  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema", "Reset progress": "Repor progresso", "Reset all progress? This can’t be undone.": "Repor todo o progresso? Esta ação não pode ser anulada.", "Speech speed": "Velocidade da fala", "read-aloud speed": "velocidade da leitura em voz alta" },
+  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema", "Reset progress": "Restablecer progreso", "Reset all progress? This can’t be undone.": "¿Restablecer todo el progreso? No se puede deshacer.", "Speech speed": "Velocidad de voz", "read-aloud speed": "velocidad de la lectura en voz alta" },
+  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi", "Reset progress": "Rivendos përparimin", "Reset all progress? This can’t be undone.": "Të rivendoset i gjithë përparimi? Nuk mund të zhbëhet.", "Speech speed": "Shpejtësia e leximit", "read-aloud speed": "shpejtësia e leximit me zë" },
+  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav", "Reset progress": "Poništi napredak", "Reset all progress? This can’t be undone.": "Poništiti sav napredak? To se ne može poništiti.", "Speech speed": "Brzina govora", "read-aloud speed": "brzina čitanja naglas" },
+  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem", "Reset progress": "İlerlemeyi sıfırla", "Reset all progress? This can’t be undone.": "Tüm ilerleme sıfırlansın mı? Bu geri alınamaz.", "Speech speed": "Konuşma hızı", "read-aloud speed": "sesli okuma hızı" },
+  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்", "Reset progress": "முன்னேற்றத்தை மீட்டமை", "Reset all progress? This can’t be undone.": "எல்லா முன்னேற்றத்தையும் மீட்டமைக்கவா? இதை மீட்டமைக்க முடியாது.", "Speech speed": "பேச்சு வேகம்", "read-aloud speed": "உரக்கப் படிக்கும் வேகம்" },
+  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም", "Reset progress": "ምዕባለ ዳግም ኣጀምር", "Reset all progress? This can’t be undone.": "ኩሉ ምዕባለ ዳግም ይጀመር? ክምለስ ኣይክእልን።", "Speech speed": "ቅልጣፈ ንባብ", "read-aloud speed": "ቅልጣፈ ናይ ድምጺ ንባብ" },
+  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام", "Reset progress": "إعادة تعيين التقدّم", "Reset all progress? This can’t be undone.": "إعادة تعيين كل التقدّم؟ لا يمكن التراجع.", "Speech speed": "سرعة النطق", "read-aloud speed": "سرعة القراءة الصوتية" },
 };
 for (const code in EXTRA_UI_PATCH) { if (UI[code]) Object.assign(UI[code], EXTRA_UI_PATCH[code]); }
 
