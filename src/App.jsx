@@ -950,7 +950,8 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
 
   if (done) {
     const emoji = pct>=90?"🏆":pct>=70?"👍":pct>=50?"📚":"💪";
-    const wrongQs = sessionWrong.map(id => BY_ID.get(id)).filter(Boolean);
+    const wrongDetails = gradedIdx.filter(i => picks[i] !== pool[i].a).sort((a, b) => a - b)
+      .map(i => ({ id: pool[i].id, picked: picks[i] ?? null }));
     return (
       <div style={{ padding:"1rem" }}>
         <div style={{ ...S.card, textAlign:"center", padding:"2rem 1.5rem" }}>
@@ -970,10 +971,10 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
           </div>
           <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:12 }}>{T("Result saved to history")}</div>
         </div>
-        {wrongQs.length > 0 && (
+        {wrongDetails.length > 0 && (
           <>
-            <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-tertiary)", margin:"4px 0 8px" }}>{T("Review your {n} wrong answer{s}", { n: wrongQs.length, s: wrongQs.length !== 1 ? "s" : "" })}</div>
-            <QuestionList questions={wrongQs} difficulties={difficulties} onDiffChange={onDiffChange} />
+            <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-tertiary)", margin:"4px 0 8px" }}>{T("Review your {n} wrong answer{s}", { n: wrongDetails.length, s: wrongDetails.length !== 1 ? "s" : "" })}</div>
+            <SessionQuestions details={wrongDetails} difficulties={difficulties} onDiffChange={onDiffChange} />
           </>
         )}
       </div>
@@ -1075,6 +1076,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
   const passed    = pct >= EXAM_PASS_PCT;
   const wrongQs   = pool.filter((qq, i) => picks[i] !== qq.a);
   const wrongNums = wrongQs.map(qq => qq.id);
+  const wrongDetails = pool.map((qq, i) => ({ id: qq.id, picked: picks[i] ?? null })).filter((_, i) => picks[i] !== pool[i].a);
   const results   = pool.map((qq, i) => ({ id: qq.id, correct: picks[i] === qq.a }));
 
   const pick   = useCallback((oi) => { if (!done) setPicks(p => ({ ...p, [idx]: oi })); }, [done, idx]);
@@ -1144,7 +1146,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
         {wrongQs.length > 0 && (
           <>
             <div style={{ fontSize:12, fontWeight:500, color:"var(--color-text-tertiary)", marginBottom:8 }}>{T("Review your {n} wrong answer{s}", { n: wrongQs.length, s: wrongQs.length!==1?"s":"" })}</div>
-            <QuestionList questions={wrongQs} difficulties={difficulties} onDiffChange={onDiffChange} />
+            <SessionQuestions details={wrongDetails} difficulties={difficulties} onDiffChange={onDiffChange} />
           </>
         )}
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:12, textAlign:"center" }}>{T("Result saved to history")}</div>
@@ -1732,11 +1734,16 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
         {setting(T("Explanations"), T("off during tests · always in Browse & review"),
           <Switch on={showExpl} onChange={setShowExpl} label={showExpl ? T("On in quiz") : T("Off in quiz")} />
         )}
-        {TTS_OK && setting(T("Speech speed"), T("read-aloud speed"),
-          SPEECH_RATES.map((r) => (
-            <button key={r} onClick={() => setSpeed(r)} style={segBtn(speed===r)}>{r}×</button>
-          ))
-        )}
+        {TTS_OK && setting(T("Speech speed"), T("read-aloud speed"), (
+          <div style={{ display:"flex", alignItems:"center", gap:10, width:200, maxWidth:"55vw" }}>
+            <input type="range" min={0} max={SPEECH_RATES.length - 1} step={1}
+              value={Math.max(0, SPEECH_RATES.indexOf(speed))}
+              onChange={(e) => setSpeed(SPEECH_RATES[+e.target.value])}
+              aria-label={T("Speech speed")}
+              style={{ flex:1, minWidth:0, accentColor:"var(--color-text-info)", cursor:"pointer", background:"transparent", border:"none", padding:0 }} />
+            <span style={{ fontSize:13, fontWeight:500, minWidth:38, textAlign:"right", fontVariantNumeric:"tabular-nums" }}>{speed}×</span>
+          </div>
+        ))}
       </div>
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
         {T("Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.", { a: "A / A" })}
