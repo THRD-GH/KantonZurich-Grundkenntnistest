@@ -269,16 +269,30 @@ const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opt
 const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.env.BASE_URL + p.slice(1) : p;
 // Small decorative Canton-Zürich flag pinned to the top-right corner of every page.
 // Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
-// Persistent top bar (in-flow, at the top of the column on every screen): a language dropdown,
-// the settings gear, and the Canton-Zürich flag (opens Help). Always visible, so language can be
-// switched from anywhere.
-function TopBar({ lang, setLang, onSettings, onHelp }) {
+function HomeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink:0 }}>
+      <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H4a1 1 0 0 1-1-1z" />
+    </svg>
+  );
+}
+// Persistent top bar (in-flow, at the top of the column on every screen): a prominent Home button
+// (off the home screen), a language dropdown, the settings gear, and the Canton-Zürich flag (Help).
+function TopBar({ lang, setLang, onHome, onSettings, onHelp }) {
   const T = useT();
   const iconBtn = { display:"flex", alignItems:"center", justifyContent:"center", width:34, height:32, padding:0,
     background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-secondary)",
     borderRadius:"var(--border-radius-md)", color:"var(--color-text-secondary)", cursor:"pointer" };
   return (
-    <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end", gap:8, padding:"10px 1rem 0" }}>
+    <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:8, padding:"10px 1rem 0" }}>
+      <div>{onHome && (
+        <button type="button" onClick={onHome}
+          style={{ ...S.btn, display:"flex", alignItems:"center", gap:6, fontWeight:500, fontSize:13, padding:"6px 14px" }}>
+          <HomeIcon /> {T("← Home").replace(/^← /, "")}
+        </button>
+      )}</div>
+      <div style={{ display:"flex", alignItems:"center", gap:8 }}>
       <select value={lang} onChange={(e) => { const v = e.target.value; if (v === "__other__") onSettings(); else setLang(v); }}
         aria-label={T("Language")} title={T("Language")}
         style={{ height:32, padding:"0 28px 0 10px", fontSize:13, borderRadius:"var(--border-radius-md)",
@@ -303,6 +317,7 @@ function TopBar({ lang, setLang, onSettings, onHelp }) {
           <path d="M0,0 L0,32 L32,32 Z" fill="#1668b3"/>
         </svg>
       </button>
+      </div>
     </div>
   );
 }
@@ -431,12 +446,10 @@ function lbl(s) {
   return s;
 }
 
-function NavBar({ onHome, title, right }) {
-  const T = useT();
+function NavBar({ title, right }) {
   return (
     <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:"1rem", flexWrap:"wrap" }}>
-      <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
-      <span style={{ fontSize:15, fontWeight:500, flex:1 }}>{title}</span>
+      <span style={{ fontSize:16, fontWeight:600, flex:1 }}>{title}</span>
       {right}
     </div>
   );
@@ -963,8 +976,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
-        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
+      <div style={{ display:"flex", alignItems:"center", marginBottom:".6rem", flexWrap:"wrap", gap:6 }}>
         <div style={{ display:"flex", gap:5, flexWrap:"wrap", alignItems:"center" }}>
           <span style={S.badge}>{idx+1}/{pool.length}</span>
           <span style={{ ...S.badge, background:"var(--color-background-success)", color:"var(--color-text-success)", border:"0.5px solid var(--color-border-success)" }}>✓ {correct}</span>
@@ -1139,8 +1151,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".6rem", flexWrap:"wrap", gap:6, paddingRight:28 }}>
-        <button style={{ ...S.btn, fontSize:12, padding:"4px 10px" }} onClick={onHome}>{lbl(T("← Home"))}</button>
+      <div style={{ display:"flex", alignItems:"center", marginBottom:".6rem", flexWrap:"wrap", gap:6 }}>
         <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
           <span style={{ ...S.badge, fontVariantNumeric:"tabular-nums", fontWeight:500,
             background: lowTime ? "var(--color-background-danger)" : "var(--color-background-secondary)",
@@ -1945,7 +1956,7 @@ export default function App() {
   })();
   return (
     <LangContext.Provider value={lang}>
-      <TopBar lang={lang} setLang={setLang} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
+      <TopBar lang={lang} setLang={setLang} onHome={screen !== "home" ? goHome : null} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
       {view}
       <ZoomControl textSize={textSize} setTextSize={setTextSize} />
     </LangContext.Provider>
