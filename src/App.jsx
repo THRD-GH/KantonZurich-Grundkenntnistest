@@ -936,6 +936,9 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
     onPersist({ kind: "quiz", ids: pool.map(p => p.id), idx, picks, submitted, label, savedAt: Date.now() });
   }, [idx, picks, submitted, done, pool, label, onPersist]);
 
+  // Jump back to the top when moving to a new question or reaching the results
+  useEffect(() => { window.scrollTo(0, 0); }, [idx, done]);
+
   // On completion: save history, feed the spaced-repetition progress, clear the resume snapshot
   useEffect(() => {
     if (done && !saved) {
@@ -1108,6 +1111,9 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
     onPersist({ kind: "exam", ids: pool.map(p => p.id), idx, picks, label, secondsLeft, savedAt: Date.now() });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, picks, done, pool, label, onPersist]);
+
+  // Jump back to the top when moving to a new question or reaching the results
+  useEffect(() => { window.scrollTo(0, 0); }, [idx, done]);
 
   useEffect(() => {
     if (done && !saved) {
