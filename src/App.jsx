@@ -1823,6 +1823,9 @@ export default function App() {
     }
   }, [theme]);
 
+  // Land at the top when navigating to a different screen or starting a new quiz/exam session
+  useEffect(() => { window.scrollTo(0, 0); }, [screen, pool]);
+
   const setDiff = useCallback((id, diff) => {
     setDifficulties(prev => {
       const next = { ...prev };
