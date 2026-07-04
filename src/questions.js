@@ -1,3 +1,10 @@
+// Question-set version. Progress, difficulty ratings and history are keyed by question `id`,
+// so a backup is only meaningful against the exact set it was made with. BUMP THIS whenever the
+// list changes in a way that reassigns/renumbers ids or adds/removes questions — it makes older
+// backups refuse to import (see buildBackup/restore in App.jsx). Pure typo fixes that keep every
+// id pointing at the same question do NOT require a bump.
+export const QUESTIONS_VERSION = 1;
+
 export const ALL_QUESTIONS = [
   {id:1,n:1,s:"1 · Democracy & Federalism",de:"Die Schweiz ist neutral. Was heisst das?",en:"Switzerland is neutral. What does this mean?",opts:[{de:"Sie unterzeichnet keine internationalen Verträge.",en:"It does not sign international treaties."}, {de:"Sie schliesst nur mit Staaten Verträge, die nicht in Kriege verwickelt sind.",en:"It only concludes treaties with states not involved in wars."}, {de:"Sie mischt sich nicht in bewaffnete Konflikte anderer Staaten ein.",en:"It does not interfere in the armed conflicts of other states."}, {de:"Sie will als Transitland wirtschaftlich unabhängig sein.",en:"It wants to be economically independent as a transit country."}],a:2,lvl:"bund"},
   {id:2,n:2,s:"1 · Democracy & Federalism",de:"Was ist eine Grenzgängerin oder ein Grenzgänger?",en:"What is a cross-border commuter (Grenzgänger)?",opts:[{de:"eine Person, die in der Schweiz arbeitet und im Ausland wohnt",en:"a person who works in Switzerland and lives abroad"}, {de:"eine Person, die nicht im gleichen Kanton wohnt und arbeitet",en:"a person who does not live and work in the same canton"}, {de:"Schweizer Handelsware, die ins Ausland exportiert wird",en:"Swiss goods exported abroad"}, {de:"Schweizer Handelsware, die vom Ausland in die Schweiz importiert wird",en:"Swiss goods imported from abroad into Switzerland"}],a:0,lvl:"bund"},

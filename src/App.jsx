@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef, createContext, useContext } from "react";
-import { ALL_QUESTIONS } from "./questions";
+import { ALL_QUESTIONS, QUESTIONS_VERSION } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
 import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, RTL_LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
@@ -120,10 +120,19 @@ function buildBackup() {
       if (k && k.startsWith("gkt_")) data[k] = localStorage.getItem(k);
     }
   } catch {}
-  return { app: "gkt-quiz", version: 1, exportedAt: new Date().toISOString(), data };
+  return { app: "gkt-quiz", version: 1, questionsVersion: QUESTIONS_VERSION, questionCount: ALL_QUESTIONS.length, exportedAt: new Date().toISOString(), data };
+}
+// A backup only carries meaning against the question set it was made with (ratings/progress/history
+// are keyed by question id). Reject one from a different set. Legacy backups with no questionsVersion
+// are accepted only if the question count still matches.
+function backupFromDifferentSet(payload) {
+  if (payload && payload.questionsVersion !== undefined) return payload.questionsVersion !== QUESTIONS_VERSION;
+  if (payload && typeof payload.questionCount === "number") return payload.questionCount !== ALL_QUESTIONS.length;
+  return false;
 }
 function applyBackup(payload) {
   if (!payload || typeof payload !== "object" || !payload.data || typeof payload.data !== "object") return false;
+  if (backupFromDifferentSet(payload)) return false;
   const keys = Object.keys(payload.data).filter(k => k.startsWith("gkt_") && typeof payload.data[k] === "string");
   if (!keys.length) return false;
   try { keys.forEach(k => localStorage.setItem(k, payload.data[k])); return true; } catch { return false; }
@@ -1765,7 +1774,7 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
   const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
   const fileRef = useRef(null);
   const [pendingRestore, setPendingRestore] = useState(null); // parsed backup awaiting confirm
-  const [restoreError, setRestoreError] = useState(false);
+  const [restoreError, setRestoreError] = useState("");        // "" | "read" | "version"
   const doExport = () => {
     try {
       const blob = new Blob([JSON.stringify(buildBackup(), null, 2)], { type: "application/json" });
@@ -1777,7 +1786,7 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
     } catch {}
   };
   const onFile = (e) => {
-    setRestoreError(false); setPendingRestore(null);
+    setRestoreError(""); setPendingRestore(null);
     const file = e.target.files && e.target.files[0];
     e.target.value = ""; // let the same file be picked again later
     if (!file) return;
@@ -1786,13 +1795,14 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
       try {
         const p = JSON.parse(reader.result);
         if (!p || !p.data || typeof p.data !== "object" || !Object.keys(p.data).some(k => k.startsWith("gkt_"))) throw new Error("bad");
+        if (backupFromDifferentSet(p)) { setRestoreError("version"); return; }
         setPendingRestore(p);
-      } catch { setRestoreError(true); }
+      } catch { setRestoreError("read"); }
     };
-    reader.onerror = () => setRestoreError(true);
+    reader.onerror = () => setRestoreError("read");
     reader.readAsText(file);
   };
-  const doRestore = () => { if (applyBackup(pendingRestore)) window.location.reload(); else { setRestoreError(true); setPendingRestore(null); } };
+  const doRestore = () => { if (applyBackup(pendingRestore)) window.location.reload(); else { setRestoreError("read"); setPendingRestore(null); } };
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
   const descStyle = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginTop:3, lineHeight:1.4 };
   const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
@@ -1861,7 +1871,9 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
         </div>
       )}
       {restoreError && (
-        <div role="alert" style={{ fontSize:12, color:"var(--color-text-danger)", margin:"8px 2px" }}>{T("Couldn’t read that backup file.")}</div>
+        <div role="alert" style={{ fontSize:12, color:"var(--color-text-danger)", margin:"8px 2px" }}>
+          {restoreError === "version" ? T("This backup is from a different version of the question set, so it can’t be imported.") : T("Couldn’t read that backup file.")}
+        </div>
       )}
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
         {T("Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.", { a: "A / A" })}
