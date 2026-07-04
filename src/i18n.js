@@ -189,6 +189,7 @@ export const UI_FR = {
   "Selected:": "Sélection :",
   "⏸ Unfinished {kind} — question {a} of {b}": "⏸ {kind} inachevé — question {a} sur {b}",
   "Only {n} {d} questions rated — {k} will be filled with unrated questions.": "Seulement {n} questions {d} évaluées — {k} seront complétées par des questions non évaluées.",
+  "Only {n} unrated questions left — {k} will be filled with rated questions.": "Seulement {n} questions non évaluées restantes — {k} seront complétées par des questions évaluées.",
   "Last quiz: {d} · {c}/{t} correct ({p}%)": "Dernier quiz : {d} · {c}/{t} correctes ({p}%)",
   "{c} correct out of {t} questions": "{c} correctes sur {t} questions",
   "Wrong answers:": "Mauvaises réponses :",
@@ -355,6 +356,7 @@ export const UI_DE = {
   "Selected:": "Auswahl:",
   "⏸ Unfinished {kind} — question {a} of {b}": "⏸ {kind} unbeendet — Frage {a} von {b}",
   "Only {n} {d} questions rated — {k} will be filled with unrated questions.": "Nur {n} {d} Fragen bewertet — {k} werden mit unbewerteten Fragen ergänzt.",
+  "Only {n} unrated questions left — {k} will be filled with rated questions.": "Nur {n} unbewertete Fragen übrig — {k} werden mit bewerteten Fragen ergänzt.",
   "Last quiz: {d} · {c}/{t} correct ({p}%)": "Letztes Quiz: {d} · {c}/{t} richtig ({p}%)",
   "{c} correct out of {t} questions": "{c} von {t} Fragen richtig",
   "Wrong answers:": "Falsche Antworten:",
@@ -520,6 +522,7 @@ export const UI_IT = {
   "Selected:": "Selezione:",
   "⏸ Unfinished {kind} — question {a} of {b}": "⏸ {kind} non terminato — domanda {a} di {b}",
   "Only {n} {d} questions rated — {k} will be filled with unrated questions.": "Solo {n} domande {d} valutate — {k} saranno completate con domande non valutate.",
+  "Only {n} unrated questions left — {k} will be filled with rated questions.": "Solo {n} domande non valutate rimaste — {k} saranno completate con domande valutate.",
   "Last quiz: {d} · {c}/{t} correct ({p}%)": "Ultimo quiz: {d} · {c}/{t} corrette ({p}%)",
   "{c} correct out of {t} questions": "{c} corrette su {t} domande",
   "Wrong answers:": "Risposte errate:",
@@ -708,14 +711,14 @@ for (const code of Object.keys(EXTRA)) {
 // UI keys added after the workflow translation (e.g. the Appearance/theme picker) for the
 // additional languages. Folded into the per-language maps so they don't fall back to English.
 const EXTRA_UI_PATCH = {
-  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema", "Reset progress": "Repor progresso", "Reset all progress? This can’t be undone.": "Repor todo o progresso? Esta ação não pode ser anulada.", "Speech speed": "Velocidade da fala", "read-aloud speed": "velocidade da leitura em voz alta" },
-  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema", "Reset progress": "Restablecer progreso", "Reset all progress? This can’t be undone.": "¿Restablecer todo el progreso? No se puede deshacer.", "Speech speed": "Velocidad de voz", "read-aloud speed": "velocidad de la lectura en voz alta" },
-  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi", "Reset progress": "Rivendos përparimin", "Reset all progress? This can’t be undone.": "Të rivendoset i gjithë përparimi? Nuk mund të zhbëhet.", "Speech speed": "Shpejtësia e leximit", "read-aloud speed": "shpejtësia e leximit me zë" },
-  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav", "Reset progress": "Poništi napredak", "Reset all progress? This can’t be undone.": "Poništiti sav napredak? To se ne može poništiti.", "Speech speed": "Brzina govora", "read-aloud speed": "brzina čitanja naglas" },
-  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem", "Reset progress": "İlerlemeyi sıfırla", "Reset all progress? This can’t be undone.": "Tüm ilerleme sıfırlansın mı? Bu geri alınamaz.", "Speech speed": "Konuşma hızı", "read-aloud speed": "sesli okuma hızı" },
-  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்", "Reset progress": "முன்னேற்றத்தை மீட்டமை", "Reset all progress? This can’t be undone.": "எல்லா முன்னேற்றத்தையும் மீட்டமைக்கவா? இதை மீட்டமைக்க முடியாது.", "Speech speed": "பேச்சு வேகம்", "read-aloud speed": "உரக்கப் படிக்கும் வேகம்" },
-  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም", "Reset progress": "ምዕባለ ዳግም ኣጀምር", "Reset all progress? This can’t be undone.": "ኩሉ ምዕባለ ዳግም ይጀመር? ክምለስ ኣይክእልን።", "Speech speed": "ቅልጣፈ ንባብ", "read-aloud speed": "ቅልጣፈ ናይ ድምጺ ንባብ" },
-  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام", "Reset progress": "إعادة تعيين التقدّم", "Reset all progress? This can’t be undone.": "إعادة تعيين كل التقدّم؟ لا يمكن التراجع.", "Speech speed": "سرعة النطق", "read-aloud speed": "سرعة القراءة الصوتية" },
+  pt: { "Appearance": "Aparência", "colour theme": "tema de cores", "Light": "Claro", "Dark": "Escuro", "System": "Sistema", "Reset progress": "Repor progresso", "Reset all progress? This can’t be undone.": "Repor todo o progresso? Esta ação não pode ser anulada.", "Speech speed": "Velocidade da fala", "read-aloud speed": "velocidade da leitura em voz alta", "Only {n} unrated questions left — {k} will be filled with rated questions.": "Restam apenas {n} perguntas não avaliadas — {k} serão preenchidas com perguntas avaliadas." },
+  es: { "Appearance": "Apariencia", "colour theme": "tema de color", "Light": "Claro", "Dark": "Oscuro", "System": "Sistema", "Reset progress": "Restablecer progreso", "Reset all progress? This can’t be undone.": "¿Restablecer todo el progreso? No se puede deshacer.", "Speech speed": "Velocidad de voz", "read-aloud speed": "velocidad de la lectura en voz alta", "Only {n} unrated questions left — {k} will be filled with rated questions.": "Solo quedan {n} preguntas sin calificar — {k} se completarán con preguntas calificadas." },
+  sq: { "Appearance": "Pamja", "colour theme": "tema e ngjyrave", "Light": "E çelët", "Dark": "E errët", "System": "Sistemi", "Reset progress": "Rivendos përparimin", "Reset all progress? This can’t be undone.": "Të rivendoset i gjithë përparimi? Nuk mund të zhbëhet.", "Speech speed": "Shpejtësia e leximit", "read-aloud speed": "shpejtësia e leximit me zë", "Only {n} unrated questions left — {k} will be filled with rated questions.": "Kanë mbetur vetëm {n} pyetje të pavlerësuara — {k} do të plotësohen me pyetje të vlerësuara." },
+  hr: { "Appearance": "Izgled", "colour theme": "tema boja", "Light": "Svijetlo", "Dark": "Tamno", "System": "Sustav", "Reset progress": "Poništi napredak", "Reset all progress? This can’t be undone.": "Poništiti sav napredak? To se ne može poništiti.", "Speech speed": "Brzina govora", "read-aloud speed": "brzina čitanja naglas", "Only {n} unrated questions left — {k} will be filled with rated questions.": "Preostalo je samo {n} neocijenjenih pitanja — {k} će se popuniti ocijenjenim pitanjima." },
+  tr: { "Appearance": "Görünüm", "colour theme": "renk teması", "Light": "Açık", "Dark": "Koyu", "System": "Sistem", "Reset progress": "İlerlemeyi sıfırla", "Reset all progress? This can’t be undone.": "Tüm ilerleme sıfırlansın mı? Bu geri alınamaz.", "Speech speed": "Konuşma hızı", "read-aloud speed": "sesli okuma hızı", "Only {n} unrated questions left — {k} will be filled with rated questions.": "Yalnızca {n} derecelendirilmemiş soru kaldı — {k} tanesi derecelendirilmiş sorularla doldurulacak." },
+  ta: { "Appearance": "தோற்றம்", "colour theme": "வண்ணத் தீம்", "Light": "வெளிர்", "Dark": "இருண்ட", "System": "சிஸ்டம்", "Reset progress": "முன்னேற்றத்தை மீட்டமை", "Reset all progress? This can’t be undone.": "எல்லா முன்னேற்றத்தையும் மீட்டமைக்கவா? இதை மீட்டமைக்க முடியாது.", "Speech speed": "பேச்சு வேகம்", "read-aloud speed": "உரக்கப் படிக்கும் வேகம்", "Only {n} unrated questions left — {k} will be filled with rated questions.": "மதிப்பிடப்படாத {n} கேள்விகள் மட்டுமே உள்ளன — {k} கேள்விகள் மதிப்பிடப்பட்ட கேள்விகளால் நிரப்பப்படும்." },
+  ti: { "Appearance": "ትርኢት", "colour theme": "ሕብራዊ ቴማ", "Light": "ብሩህ", "Dark": "ጸልማት", "System": "ሲስተም", "Reset progress": "ምዕባለ ዳግም ኣጀምር", "Reset all progress? This can’t be undone.": "ኩሉ ምዕባለ ዳግም ይጀመር? ክምለስ ኣይክእልን።", "Speech speed": "ቅልጣፈ ንባብ", "read-aloud speed": "ቅልጣፈ ናይ ድምጺ ንባብ", "Only {n} unrated questions left — {k} will be filled with rated questions.": "{n} ዘይተገምገሙ ሕቶታት ጥራይ ተሪፎም — {k} ብዝተገምገሙ ሕቶታት ክማልኡ እዮም።" },
+  ar: { "Appearance": "المظهر", "colour theme": "سمة الألوان", "Light": "فاتح", "Dark": "داكن", "System": "النظام", "Reset progress": "إعادة تعيين التقدّم", "Reset all progress? This can’t be undone.": "إعادة تعيين كل التقدّم؟ لا يمكن التراجع.", "Speech speed": "سرعة النطق", "read-aloud speed": "سرعة القراءة الصوتية", "Only {n} unrated questions left — {k} will be filled with rated questions.": "لم يتبقَّ سوى {n} من الأسئلة غير المُقيَّمة — سيتم إكمال {k} بأسئلة مُقيَّمة." },
 };
 for (const code in EXTRA_UI_PATCH) { if (UI[code]) Object.assign(UI[code], EXTRA_UI_PATCH[code]); }
 

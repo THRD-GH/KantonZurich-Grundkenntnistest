@@ -175,6 +175,15 @@ function buildQuickTestPool(difficulties, targetDiff, count) {
   if (targetDiff === "random") {
     return shuffle(ALL_QUESTIONS).slice(0, count);
   }
+  if (targetDiff === "unrated") {
+    // Draw from questions the user hasn't rated yet; top up with rated ones if short
+    const unrated = shuffle(ALL_QUESTIONS.filter(q => !difficulties[q.id]));
+    if (unrated.length < count) {
+      const rated = ALL_QUESTIONS.filter(q => difficulties[q.id]);
+      return shuffle([...unrated, ...shuffle(rated).slice(0, count - unrated.length)]);
+    }
+    return unrated.slice(0, count);
+  }
   const tagged   = ALL_QUESTIONS.filter(q => difficulties[q.id] === targetDiff);
   const untagged = ALL_QUESTIONS.filter(q => !difficulties[q.id]);
   const pool = shuffle(tagged);
@@ -587,6 +596,14 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                   </button>
                 );
               })}
+              <button onClick={() => setQtDiff("unrated")}
+                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                  background: qtDiff==="unrated" ? "var(--color-background-info)" : "var(--color-background-secondary)",
+                  color: qtDiff==="unrated" ? "var(--color-text-info)" : "var(--color-text-secondary)",
+                  border: qtDiff==="unrated" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
+                  fontWeight: qtDiff==="unrated" ? 500 : 400 }}>
+                {T("Unrated")} ({counts.unrated})
+              </button>
             </div>
           </div>
           <div>
@@ -608,6 +625,11 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         {["easy","medium","hard"].includes(qtDiff) && counts[qtDiff] < qtCount && (
           <div style={{ fontSize:12, color:"var(--color-text-warning)", marginBottom:".5rem", background:"var(--color-background-warning)", padding:"6px 10px", borderRadius:"var(--border-radius-md)" }}>
             {T("Only {n} {d} questions rated — {k} will be filled with unrated questions.", { n: counts[qtDiff], d: T(DIFF_LABELS[qtDiff]), k: qtCount - counts[qtDiff] })}
+          </div>
+        )}
+        {qtDiff === "unrated" && counts.unrated < qtCount && (
+          <div style={{ fontSize:12, color:"var(--color-text-warning)", marginBottom:".5rem", background:"var(--color-background-warning)", padding:"6px 10px", borderRadius:"var(--border-radius-md)" }}>
+            {T("Only {n} unrated questions left — {k} will be filled with rated questions.", { n: counts.unrated, k: qtCount - counts.unrated })}
           </div>
         )}
         {qtDiff === "random" && (
@@ -1905,6 +1927,7 @@ export default function App() {
     const p = diff === 'exam' ? buildExamMixPool(count) : buildQuickTestPool(difficulties, diff, count);
     const label = diff === 'random' ? `Quick test · Random mix · ${count} questions`
       : diff === 'exam' ? `Exam mix · ${count} questions`
+      : diff === 'unrated' ? `Quick test · Unrated · ${count} questions`
       : `Quick test · ${DIFF_LABELS[diff]} · ${count} questions`;
     startNew(p, label, "quiz");
   }, [difficulties, startNew]);
