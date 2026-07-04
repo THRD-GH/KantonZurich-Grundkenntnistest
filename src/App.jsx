@@ -1835,6 +1835,7 @@ export default function App() {
   const [browseTab,    setBrowseTab]    = useState("all");  // difficulty filter to open Browse with
   const [pool,         setPool]         = useState(null);
   const [quizLabel,    setQuizLabel]    = useState("");
+  const [sessionId,    setSessionId]    = useState(0);     // bumped on each new/resumed session so QuizScreen/ExamScreen remount fresh (no stale done/idx)
   const [enMode,       setEnMode]       = useState("question"); // 'none' | 'question' | 'full' — set on Home, used in Quiz
   const [theme,        setTheme]        = useState(loadTheme);   // "light" | "dark" | "system" | "contrast"
   const [showExpl,     setShowExpl]     = useState(loadExpl);    // show explanations during quiz (off by default; always on in browse/review)
@@ -1910,6 +1911,7 @@ export default function App() {
   const startNew = useCallback((newPool, label, scr) => {
     clearResume(); setResume(null);
     setPool(newPool); setQuizLabel(label); setScreen(scr);
+    setSessionId(n => n + 1); // force a fresh QuizScreen/ExamScreen mount (resets done/idx/picks)
   }, []);
 
   const startQuiz = useCallback((sectionSel, levelSel, order, count) => {
@@ -1954,13 +1956,14 @@ export default function App() {
     setPool(poolFromIds(resume.ids, false));
     setQuizLabel(resume.label || "Resumed session");
     setScreen(resume.kind === "exam" ? "exam" : "quiz");
+    setSessionId(n => n + 1); // fresh mount so the resumed session starts clean
   }, [resume]);
 
   const dueIds = useMemo(() => dueForReview(progress, Date.now()), [progress]);
 
   const view = (() => {
   if (screen === "quiz" && pool) {
-    return <QuizScreen pool={pool} difficulties={difficulties} label={quizLabel}
+    return <QuizScreen key={sessionId} pool={pool} difficulties={difficulties} label={quizLabel}
       enMode={enMode} setEnMode={setEnMode} showExpl={showExpl} setShowExpl={setShowExpl}
       resume={resume && resume.kind === "quiz" ? resume : null}
       onDiffChange={setDiff} onHome={goHome} onSaveHistory={handleSaveHistory}
@@ -1968,7 +1971,7 @@ export default function App() {
       onRecordResults={recordResults} onPersist={persistResume} />;
   }
   if (screen === "exam" && pool) {
-    return <ExamScreen pool={pool} difficulties={difficulties} label={quizLabel}
+    return <ExamScreen key={sessionId} pool={pool} difficulties={difficulties} label={quizLabel}
       enMode={enMode} setEnMode={setEnMode} resume={resume && resume.kind === "exam" ? resume : null}
       onDiffChange={setDiff} onHome={goHome} onSaveHistory={handleSaveHistory}
       onRetryWrong={(ids) => startQuizFromIds(ids, `Retry wrong · ${ids.length} questions`)}
