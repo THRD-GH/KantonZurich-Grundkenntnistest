@@ -688,7 +688,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Quick test */}
       <div style={S.card}>
-        <div style={{ fontSize:13, fontWeight:500, marginBottom:".75rem" }}>{T("Quick test")}</div>
+        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>⚡ {T("Quick test")}</div>
         <div style={{ display:"flex", gap:12, flexWrap:"wrap", alignItems:"flex-start", marginBottom:".75rem" }}>
           <div>
             <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Focus on")}</div>
@@ -773,7 +773,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Full quiz — combine Section + Level + count + order, then press Start */}
       <div style={S.card}>
-        <div style={{ fontSize:13, fontWeight:500, marginBottom:".75rem" }}>{T("Full quiz")}</div>
+        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {T("Full quiz")}</div>
 
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Section")}</div>
         <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".75rem" }}>
