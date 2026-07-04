@@ -385,11 +385,13 @@ const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opt
 const asset = (p) => (typeof p === "string" && p.startsWith("/")) ? import.meta.env.BASE_URL + p.slice(1) : p;
 // Small decorative Canton-Zürich flag pinned to the top-right corner of every page.
 // Diagonal (per bend): white upper-right, blue lower-left — matching the canton arms.
+// Colourful filled house — orange roof, blue walls (both theme-adaptive) and a warm door.
 function HomeIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2"
-      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink:0 }}>
-      <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H4a1 1 0 0 1-1-1z" />
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style={{ flexShrink:0, display:"block" }}>
+      <path d="M12 2.6 1.4 11.4h21.2z" fill="var(--sec-3-bd)" />
+      <path d="M5 11h14v8.4q0 1.6-1.6 1.6H6.6Q5 21 5 19.4z" fill="var(--sec-1-bd)" />
+      <rect x="10.1" y="14.4" width="3.8" height="6.6" rx="0.6" fill="#ffd43b" />
     </svg>
   );
 }
