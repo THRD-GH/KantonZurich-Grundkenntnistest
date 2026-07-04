@@ -628,10 +628,13 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const streak = studyStreak(history, now);
   const answeredToday = questionsToday(history, now);
   const readiness = examReadiness(progress, history);
-  const stat = (big, label, title) => (
-    <div title={title} style={{ flex:"1 1 90px", minWidth:88, padding:".55rem .7rem", borderRadius:"var(--border-radius-md)", background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-tertiary)", textAlign:"center" }}>
-      <div style={{ fontSize:18, fontWeight:600 }}>{big}</div>
-      <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:2 }}>{label}</div>
+  const stat = (icon, big, label, title) => (
+    <div title={title} style={{ flex:"1 1 110px", minWidth:104, display:"flex", alignItems:"center", gap:10, padding:".6rem .8rem", borderRadius:"var(--border-radius-md)", background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-secondary)" }}>
+      <span style={{ fontSize:22, lineHeight:1, flexShrink:0 }} aria-hidden="true">{icon}</span>
+      <div style={{ minWidth:0 }}>
+        <div style={{ fontSize:18, fontWeight:600, color:"var(--color-text-primary)", lineHeight:1.1 }}>{big}</div>
+        <div style={{ fontSize:11, fontWeight:500, color:"var(--color-text-secondary)", marginTop:1 }}>{label}</div>
+      </div>
     </div>
   );
   // Weakest attempted section, for a quick study nudge (needs a few answers to be meaningful)
@@ -650,9 +653,9 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* At-a-glance progress: study streak, questions answered today, and a rough exam-readiness estimate */}
       {(streak > 0 || readiness != null) && (
         <div style={{ display:"flex", gap:8, marginBottom:"1.25rem", flexWrap:"wrap" }}>
-          {streak > 0 && stat(`🔥 ${streak}`, T("day streak"))}
-          {answeredToday > 0 && stat(answeredToday, T("answered today"))}
-          {readiness != null && stat(`${readiness}%`, T("exam readiness"), T("Rough estimate from your accuracy and recent mock exams"))}
+          {streak > 0 && stat("🔥", streak, T("day streak"))}
+          {answeredToday > 0 && stat("✅", answeredToday, T("answered today"))}
+          {readiness != null && stat("🎯", `${readiness}%`, T("exam readiness"), T("Rough estimate from your accuracy and recent mock exams"))}
         </div>
       )}
 
