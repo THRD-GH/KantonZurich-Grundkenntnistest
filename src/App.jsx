@@ -873,7 +873,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
-          <div style={{ fontSize:14, fontWeight:600 }}>📊 {T("Difficulty ratings")}</div>
+          <div style={{ fontSize:14, fontWeight:600 }}>🏷️ {T("Difficulty ratings")}</div>
           {counts.unrated < ALL_QUESTIONS.length && (
             confirmReset
               ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
@@ -905,13 +905,13 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Bottom nav */}
       <div style={{ display:"flex", gap:8, flexWrap:"wrap", paddingTop:"1rem", borderTop:"0.5px solid var(--color-border-tertiary)" }}>
-        <button style={S.btn} onClick={() => onBrowser("all")}>
+        <button style={{ ...S.btn, fontWeight:500 }} onClick={() => onBrowser("all")}>
           {T("📋 Browse all questions")}
         </button>
-        <button style={{ ...S.btn, display:"flex", alignItems:"center", gap:6 }} onClick={onHistory}>
+        <button style={{ ...S.btn, fontWeight:500, display:"inline-flex", alignItems:"center", gap:6 }} onClick={onHistory}>
           {T("📊 History & progress")} {history.length > 0 && <span style={{ ...S.badge, fontSize:10 }}>{history.length}</span>}
         </button>
-        <button style={S.btn} onClick={onHelp}>{T("❓ Help")}</button>
+        <button style={{ ...S.btn, fontWeight:500 }} onClick={onHelp}>{T("❓ Help")}</button>
       </div>
       {weakest && (
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:8 }}>

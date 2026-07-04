@@ -6,7 +6,7 @@
 
 A free study app for the **Grundkenntnistest** ("basic-knowledge test") of the **Canton of Zürich** — the test on Switzerland, the canton and the municipality that applicants must pass for ordinary naturalisation. It tests knowledge of geographic, historical, political and social matters at the **federal**, **cantonal** and **municipal** levels.
 
-The app lets you practise all **350 questions** from the canton's official question catalogue with: instant per-question feedback, a short **explanation + source link** for every answer, English translations, difficulty rating, spaced-repetition review, a timed **mock exam** (50 questions / 60 min / 60% to pass, in the real ~70/20/10 federal/cantonal/municipal mix), and audio read-out. Questions are grouped into 5 sections and tagged by level.
+The app lets you practise all **350 questions** from the canton's official question catalogue with: instant per-question feedback, a short **explanation + source link** for every answer, **translations in 12 languages**, difficulty rating, spaced-repetition review, a timed **mock exam** (50 questions / 60 min / 60% to pass, in the real ~70/20/10 federal/cantonal/municipal mix), audio read-out, saveable **bookmarks**, and **backup/restore** of your progress. Questions are grouped into 5 sections and tagged by level.
 
 > ⚠️ **This is an unofficial, community study aid — not an official Canton of Zürich tool.** The authoritative questions, the official digital practice test, and the current rules are published by the canton and can change. Always check the official site below for the latest version.
 
@@ -50,16 +50,19 @@ Validates the question bank (every question has 4 options, a valid answer index,
 
 - **Quiz flow** — select an option, then **Submit** to confirm; only then is it graded. Move with **Back / Next**; answers are kept. Options are **shuffled** each time so you learn the content, not the position.
 - **Difficulty ratings** — rate each question Easy / Medium / Hard to organise study and to build focused quick tests.
-- **English translations** — show the question only, or the question and all options (set on the home screen, changeable mid-quiz).
-- **Quick test** — Random mix, **Exam mix** (the real 70/20/10 split), or your Easy/Medium/Hard questions, at a chosen length.
+- **Translations (12 languages)** — English, French, German, Italian, Portuguese, Albanian, Spanish, Croatian, Turkish, Tamil, Tigrinya, Arabic; switch from the dropdown at the top of every screen. German is the authoritative test content; the rest are machine-translated. Show the secondary translation for the question only, or the question and all options.
+- **Quick test** — Random mix, **Exam mix** (the real 70/20/10 split), your Easy/Medium/Hard questions, or **Unrated** ones, at a chosen length.
 - **Section test** — practise one section, choosing how many questions.
 - **Mock exam** — timed 50Q / 60min / 60% simulation with a pass/fail result and a review of misses.
-- **Smart review (spaced repetition)** — Leitner boxes resurface questions you miss and retire ones you master.
-- **History & progress** — past sessions plus accuracy broken down by section and by level.
+- **Smart review (spaced repetition)** — Leitner boxes resurface questions you miss and retire ones you master; reviews the most-overdue first.
+- **History & progress** — past sessions plus accuracy by section and level, a one-tap **weakest-section drill**, and per-session delete. The home screen also shows a **study streak**, questions answered today, and a rough **exam-readiness** estimate.
 - **Browse** — read the full catalogue; filter by difficulty / section / level; search; reveal answers.
-- **Explanations** — every question has a short why-the-answer-is-correct note (German + English) with an external source link. Off by default during quizzes (toggle **💡 Explain**); always shown in Browse and review screens.
-- **Audio (read aloud)** — tap the 🔊 speaker on any question to hear it read aloud in German (question then options, in on-screen order), using your device's German voice. A built-in accessibility aid that also helps pronunciation; tap again to stop, and it stops automatically on navigation.
-- **Accessibility** — read-aloud audio, keyboard-operable, focus rings, ARIA on options, adjustable **text size** (scales the whole app for mobile), and an in-app **high-contrast** mode (dark mode follows the device).
+- **Saved questions** — star (☆/★) any question to bookmark it; a **★ Saved** browse tab and a **Review saved** home shortcut turn them into a practice set.
+- **Backup & restore** — export all your data (ratings, saved, history, progress, settings) to a JSON file and import it back. Version-gated so a backup from an older question set can't corrupt current data — its settings can still be restored.
+- **Explanations** — every question has a short why-the-answer-is-correct note (German + translation) with an external source link. Off by default during quizzes (toggle **💡 Explain**); always shown in Browse and review screens.
+- **Audio (read aloud)** — tap the 🔊 speaker on any question to hear it read aloud in German (question then options, in on-screen order), using your device's German voice, at an adjustable **speed** (0.5×–2×). A built-in accessibility aid that also helps pronunciation; tap again to stop, and it stops automatically on navigation.
+- **Accessibility** — read-aloud audio, keyboard-operable with focus management on navigation, ARIA live feedback, honours **prefers-reduced-motion**, adjustable **text size** (scales the whole app for mobile), and a theme picker: **Light / Dark / System / High contrast**.
+- **Installable & offline** — a PWA (service worker) that works offline after the first visit and can be added to the home screen.
 
 ## Keyboard shortcuts
 
@@ -71,21 +74,24 @@ Validates the question bank (every question has 4 options, a valid answer index,
 
 ## Your data
 
-Difficulty ratings, history and progress are stored only in your browser (`localStorage`) — nothing is uploaded. Clearing browser data resets them. Saved data is keyed by a stable question `id`, so re-ordering questions won't desync it.
+Difficulty ratings, saved questions, history and progress are stored only in your browser (`localStorage`) — nothing is uploaded. Clearing browser data resets them, so use **Settings → Back up** to export everything to a JSON file and **Restore** to load it back (handy when switching devices). Id-keyed data is stamped with `QUESTIONS_VERSION` (in `questions.js`): a backup from a different question-set version won't overwrite current progress, though its device-independent settings can still be restored. Bump `QUESTIONS_VERSION` whenever the question list is reordered or ids are reassigned/added/removed.
 
 ## Project structure
 
 ```
 src/
-  App.jsx        — all UI and logic (home, quiz, exam, history/progress, browser, help)
-  questions.js   — 350 questions (id, n, section, level, German + English, options, answer)
+  App.jsx        — all UI and logic (home, quiz, exam, history/progress, browser, settings, help)
+  questions.js   — 350 questions (id, n, section, level, German + English, options, answer) + QUESTIONS_VERSION
   images.js      — SVGs for the picture questions (flag, coat of arms, mountain, map)
-  index.css      — CSS variables: light, dark (auto), and high-contrast themes
-  main.jsx       — React entry point
+  i18n.js        — UI-string translations (fr/de/it inline), Help sections, and the language registries
+  i18n-extra.js  — UI + Help for the 8 additional languages (generated by the translation workflow)
+  fr.js … ar.js  — per-language question/explanation translations, lazy-loaded on demand (code-split)
+  index.css      — CSS variables: light, dark (auto), and high-contrast themes; reduced-motion rules
+  main.jsx       — React entry point (also registers the service worker for offline use)
 validate-data.mjs — data-integrity check (npm test)
 ```
 
-Stack: React 18 + Vite 8, no external UI libraries (inline styles driven by CSS variables).
+Stack: React 18 + Vite 8, no external UI libraries (inline styles driven by CSS variables). The 10 per-language translation files are lazy `import()`s, so only the active language is fetched.
 
 ## Image credits
 
