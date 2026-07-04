@@ -3,16 +3,8 @@ import { ALL_QUESTIONS, QUESTIONS_VERSION } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
 import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, RTL_LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
-import { FR_CONTENT } from "./fr";
-import { IT_CONTENT } from "./it";
-import { PT_CONTENT } from "./pt";
-import { SQ_CONTENT } from "./sq";
-import { ES_CONTENT } from "./es";
-import { HR_CONTENT } from "./hr";
-import { TR_CONTENT } from "./tr";
-import { TA_CONTENT } from "./ta";
-import { TI_CONTENT } from "./ti";
-import { AR_CONTENT } from "./ar";
+// Per-language question translations are lazy-loaded (each is 150–420 KB) so the initial bundle
+// stays small — only the active language's file is fetched, on demand. See CONTENT_LOADERS below.
 
 const SECTION_NAMES = [...new Set(ALL_QUESTIONS.map(q => q.s))];
 const LETTERS = ["a","b","c","d"];
@@ -59,7 +51,29 @@ function tr(lang, s, vars) {
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
 function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
 // Translated question content per language (English is q.en directly; German has none — see below).
-const CONTENT = { fr: FR_CONTENT, it: IT_CONTENT, pt: PT_CONTENT, sq: SQ_CONTENT, es: ES_CONTENT, hr: HR_CONTENT, tr: TR_CONTENT, ta: TA_CONTENT, ti: TI_CONTENT, ar: AR_CONTENT };
+// Loaded translation content, filled on demand. qText/oText fall back to English until the file arrives.
+const CONTENT = {};
+const CONTENT_LOADERS = {
+  fr: () => import("./fr").then(m => m.FR_CONTENT),
+  it: () => import("./it").then(m => m.IT_CONTENT),
+  pt: () => import("./pt").then(m => m.PT_CONTENT),
+  sq: () => import("./sq").then(m => m.SQ_CONTENT),
+  es: () => import("./es").then(m => m.ES_CONTENT),
+  hr: () => import("./hr").then(m => m.HR_CONTENT),
+  tr: () => import("./tr").then(m => m.TR_CONTENT),
+  ta: () => import("./ta").then(m => m.TA_CONTENT),
+  ti: () => import("./ti").then(m => m.TI_CONTENT),
+  ar: () => import("./ar").then(m => m.AR_CONTENT),
+};
+const loadingLangs = new Set();
+// Fetch a language's translation file once; calls onLoaded after it's stored so React can re-render.
+function ensureContent(lang, onLoaded) {
+  if (!CONTENT_LOADERS[lang] || CONTENT[lang] || loadingLangs.has(lang)) return;
+  loadingLangs.add(lang);
+  CONTENT_LOADERS[lang]()
+    .then(data => { CONTENT[lang] = data; loadingLangs.delete(lang); onLoaded && onLoaded(); })
+    .catch(() => { loadingLangs.delete(lang); });
+}
 // Direction props for secondary-translation text (Arabic etc. render right-to-left).
 const isRTL = (lang) => RTL_LANGS.includes(lang);
 const rtlStyle = (lang) => isRTL(lang) ? { direction: "rtl", textAlign: "right" } : null;
@@ -2059,6 +2073,9 @@ export default function App() {
   useEffect(() => { try { localStorage.setItem(LANG_KEY, lang); } catch {} }, [lang]);
   // Keep the module-level rate (read by speakDE) in sync with the setting, and persist it
   useEffect(() => { speechRate = speed; try { localStorage.setItem(SPEED_KEY, String(speed)); } catch {} }, [speed]);
+  // Lazy-load the active language's translation file; re-render once it's in so secondary text appears
+  const [, setContentTick] = useState(0);
+  useEffect(() => { ensureContent(lang, () => setContentTick(t => t + 1)); }, [lang]);
   useEffect(() => { try { localStorage.setItem(EXPL_KEY, showExpl ? "on" : "off"); } catch {} }, [showExpl]);
   // Apply (and persist) the text size by zooming the whole app — scales text and layout proportionally
   useEffect(() => {
