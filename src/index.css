@@ -119,6 +119,9 @@ body {
   width: 100%;
   max-width: 720px;
   background: var(--color-background-tertiary);
+  /* Reserve space at the bottom so the fixed text-size control (ZoomControl,
+     bottom-right) never overlaps page content — scales with the zoom setting. */
+  padding-bottom: 84px;
 }
 
 button {
