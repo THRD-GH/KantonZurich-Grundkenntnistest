@@ -1048,7 +1048,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
           <div style={{ marginTop:".75rem", padding:"10px 12px", borderRadius:"var(--border-radius-md)", fontSize:13, fontWeight:500,
             background: pickCur===q.a?"var(--color-background-success)":"var(--color-background-danger)",
             color:       pickCur===q.a?"var(--color-text-success)":"var(--color-text-danger)" }}>
-            {pickCur===q.a ? <>✓ &nbsp;Richtig! — {q.opts[q.a].de}</> : <>✗ &nbsp;Antwort: {LETTERS[q.a]}) {q.opts[q.a].de}</>}
+            {pickCur===q.a ? T("✓ Correct! — {a}", { a: q.opts[q.a].de }) : T("✗ Answer: {a}) {b}", { a: LETTERS[q.a], b: q.opts[q.a].de })}
           </div>
         )}
         {submittedCur && showExpl && <Explanation id={q.id} en={enMode === 'question' || enMode === 'full'} />}
@@ -1102,7 +1102,9 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
   const wrongQs   = pool.filter((qq, i) => picks[i] !== qq.a);
   const wrongNums = wrongQs.map(qq => qq.id);
   const wrongDetails = pool.map((qq, i) => ({ id: qq.id, picked: picks[i] ?? null })).filter((_, i) => picks[i] !== pool[i].a);
-  const results   = pool.map((qq, i) => ({ id: qq.id, correct: picks[i] === qq.a }));
+  // Feed spaced-repetition only the questions the user actually answered — unanswered exam
+  // questions count as wrong for scoring, but must NOT reset their Leitner box (they weren't attempted).
+  const results   = pool.map((qq, i) => ({ id: qq.id, correct: picks[i] === qq.a })).filter((_, i) => i in picks);
 
   const pick   = useCallback((oi) => { if (!done) setPicks(p => ({ ...p, [idx]: oi })); }, [done, idx]);
   const goPrev = useCallback(() => { if (idx > 0) setIdx(idx - 1); }, [idx]);
