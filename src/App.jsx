@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo, createContext, useContext } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, createContext, useContext } from "react";
 import { ALL_QUESTIONS } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
@@ -110,6 +110,24 @@ function loadTheme() {
 function loadExpl()     { try { return localStorage.getItem(EXPL_KEY) === "on"; } catch { return false; } }
 function loadTextSize() { try { return TEXT_SIZES[localStorage.getItem(SIZE_KEY)] ? localStorage.getItem(SIZE_KEY) : "m"; } catch { return "m"; } }
 function loadSpeed() { try { const v = parseFloat(localStorage.getItem(SPEED_KEY)); return SPEECH_RATES.includes(v) ? v : 1; } catch { return 1; } }
+
+// Backup / restore — bundle every app localStorage key (gkt_*) into a portable object and back.
+function buildBackup() {
+  const data = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith("gkt_")) data[k] = localStorage.getItem(k);
+    }
+  } catch {}
+  return { app: "gkt-quiz", version: 1, exportedAt: new Date().toISOString(), data };
+}
+function applyBackup(payload) {
+  if (!payload || typeof payload !== "object" || !payload.data || typeof payload.data !== "object") return false;
+  const keys = Object.keys(payload.data).filter(k => k.startsWith("gkt_") && typeof payload.data[k] === "string");
+  if (!keys.length) return false;
+  try { keys.forEach(k => localStorage.setItem(k, payload.data[k])); return true; } catch { return false; }
+}
 // Read-aloud rate, read live by speakDE(); kept in sync with the Settings control by App.
 let speechRate = loadSpeed();
 
@@ -1045,7 +1063,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
         <OptionList q={q} order={order} enMode={enMode} pickCur={pickCur} reveal={submittedCur} disabled={submittedCur} onPick={pick} />
 
         {submittedCur && (
-          <div style={{ marginTop:".75rem", padding:"10px 12px", borderRadius:"var(--border-radius-md)", fontSize:13, fontWeight:500,
+          <div role="status" aria-live="polite" style={{ marginTop:".75rem", padding:"10px 12px", borderRadius:"var(--border-radius-md)", fontSize:13, fontWeight:500,
             background: pickCur===q.a?"var(--color-background-success)":"var(--color-background-danger)",
             color:       pickCur===q.a?"var(--color-text-success)":"var(--color-text-danger)" }}>
             {pickCur===q.a ? T("✓ Correct! — {a}", { a: q.opts[q.a].de }) : T("✗ Answer: {a}) {b}", { a: LETTERS[q.a], b: q.opts[q.a].de })}
@@ -1366,7 +1384,7 @@ function SessionQuestions({ details, difficulties, onDiffChange }) {
 }
 
 // ── History & progress screen ─────────────────────────────────────────────────
-function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, onClear, onDelete, onResetProgress }) {
+function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, onClear, onDelete, onDrillSection, onResetProgress }) {
   const T = useT(); const lang = useLang();
   const [openDetail, setOpenDetail] = useState(null);       // keyed by session ts
   const [confirm, setConfirm] = useState(false);
@@ -1391,6 +1409,11 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
   const avgPct        = Math.round(totalCorrect / totalQs * 100);
   const bestPct       = Math.max(...history.map(h => Math.round(h.correct/h.total*100)));
   const trend         = history.slice(0, 5).map(h => Math.round(h.correct/h.total*100));
+  // Weakest section = lowest accuracy among sections with enough answered questions to be meaningful
+  const weakest = Object.entries(statsBy(progress, q => q.s))
+    .filter(([, a]) => a.seen >= 5)
+    .map(([s, a]) => ({ s, acc: a.correct / a.seen }))
+    .sort((x, y) => x.acc - y.acc)[0];
 
   return (
     <div style={{ padding:"1rem" }}>
@@ -1446,6 +1469,13 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
               <span style={{ width:8, height:8, borderRadius:"50%", background:`var(--lvl-${l}-bd)`, flexShrink:0 }}/>{lvlLabel(l, lang) || l}
             </span>
           )} />
+          {weakest && onDrillSection && (
+            <button onClick={() => onDrillSection(weakest.s)}
+              style={{ ...S.btn, width:"100%", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:8, padding:"9px 12px", marginBottom:"0.75rem", fontSize:13, fontWeight:500 }}>
+              🎯 {T("Practice your weakest section")}
+              <span style={{ fontSize:11, fontWeight:400, color:"var(--color-text-tertiary)" }}>{secName(weakest.s, lang)} · {Math.round(weakest.acc*100)}%</span>
+            </button>
+          )}
           <div style={{ display:"flex", justifyContent:"flex-end", alignItems:"center", gap:6, marginTop:-4, marginBottom:"1rem", flexWrap:"wrap" }}>
             {confirmReset
               ? <>
@@ -1733,6 +1763,36 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
   const T = useT();
   const isOther = !PRIMARY_LANGS.includes(lang);
   const [showMore, setShowMore] = useState(isOther); // reveal the additional-language list
+  const fileRef = useRef(null);
+  const [pendingRestore, setPendingRestore] = useState(null); // parsed backup awaiting confirm
+  const [restoreError, setRestoreError] = useState(false);
+  const doExport = () => {
+    try {
+      const blob = new Blob([JSON.stringify(buildBackup(), null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = `gkt-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch {}
+  };
+  const onFile = (e) => {
+    setRestoreError(false); setPendingRestore(null);
+    const file = e.target.files && e.target.files[0];
+    e.target.value = ""; // let the same file be picked again later
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const p = JSON.parse(reader.result);
+        if (!p || !p.data || typeof p.data !== "object" || !Object.keys(p.data).some(k => k.startsWith("gkt_"))) throw new Error("bad");
+        setPendingRestore(p);
+      } catch { setRestoreError(true); }
+    };
+    reader.onerror = () => setRestoreError(true);
+    reader.readAsText(file);
+  };
+  const doRestore = () => { if (applyBackup(pendingRestore)) window.location.reload(); else { setRestoreError(true); setPendingRestore(null); } };
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
   const descStyle = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginTop:3, lineHeight:1.4 };
   const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
@@ -1786,7 +1846,23 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
             <span style={{ fontSize:13, fontWeight:500, minWidth:38, textAlign:"right", fontVariantNumeric:"tabular-nums" }}>{speed}×</span>
           </div>
         ))}
+        {setting(T("Back up & restore"), T("Save your history, ratings and progress to a file, or restore from a backup."), <>
+          <button onClick={doExport} style={segBtn(false)}>{T("Back up")}</button>
+          <button onClick={() => fileRef.current && fileRef.current.click()} style={segBtn(false)}>{T("Restore")}</button>
+          <input ref={fileRef} type="file" accept="application/json,.json" onChange={onFile} style={{ display:"none" }} aria-hidden="true" tabIndex={-1} />
+        </>)}
       </div>
+      {pendingRestore && (
+        <div role="alertdialog" aria-label={T("Replace all current data with this backup? This can’t be undone.")}
+          style={{ ...S.card, marginTop:8, background:"var(--color-background-danger)", borderColor:"var(--color-border-danger)", padding:"0.75rem 1rem", display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+          <span style={{ fontSize:12, color:"var(--color-text-danger)", flex:1, minWidth:160 }}>{T("Replace all current data with this backup? This can’t be undone.")}</span>
+          <button style={{ ...S.btn, fontSize:12, padding:"3px 10px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }} onClick={doRestore}>{T("Restore")}</button>
+          <button style={{ ...S.btn, fontSize:12, padding:"3px 10px" }} onClick={() => setPendingRestore(null)}>{T("Cancel")}</button>
+        </div>
+      )}
+      {restoreError && (
+        <div role="alert" style={{ fontSize:12, color:"var(--color-text-danger)", margin:"8px 2px" }}>{T("Couldn’t read that backup file.")}</div>
+      )}
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
         {T("Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.", { a: "A / A" })}
       </div>
@@ -1887,7 +1963,10 @@ export default function App() {
   }, [theme]);
 
   // Land at the top when navigating to a different screen or starting a new quiz/exam session
+  const mainRef = useRef(null);
   useEffect(() => { window.scrollTo(0, 0); }, [screen, pool]);
+  // Move keyboard/screen-reader focus to the top of each new screen (screen changes only — not in-quiz question navigation)
+  useEffect(() => { if (mainRef.current) { try { mainRef.current.focus({ preventScroll: true }); } catch { mainRef.current.focus(); } } }, [screen]);
 
   const setDiff = useCallback((id, diff) => {
     setDifficulties(prev => {
@@ -1995,6 +2074,7 @@ export default function App() {
     return <HistoryScreen history={history} progress={progress} difficulties={difficulties} onDiffChange={setDiff} onHome={goHome}
       onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }}
       onDelete={(ts) => setHistory(prev => { const next = prev.filter(h => h.ts !== ts); saveHistory(next); return next; })}
+      onDrillSection={(s) => startQuiz(s, "all", "random", 20)}
       onResetProgress={resetProgress} />;
   }
   if (screen === "browser") {
@@ -2032,7 +2112,7 @@ export default function App() {
   return (
     <LangContext.Provider value={lang}>
       <TopBar lang={lang} setLang={setLang} onHome={screen !== "home" ? goHome : null} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
-      {view}
+      <div ref={mainRef} tabIndex={-1} style={{ outline:"none" }}>{view}</div>
       <ZoomControl textSize={textSize} setTextSize={setTextSize} />
     </LangContext.Provider>
   );

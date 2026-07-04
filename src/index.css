@@ -131,6 +131,17 @@ button {
 button:active { transform: scale(0.97); }
 button[disabled] { cursor: default; }
 
+/* Respect users who prefer reduced motion — drop the press-scale and near-instant transitions/animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  button:active { transform: none; }
+}
+
 /* Keyboard focus ring (overrides the global outline:none above) — visible only for keyboard users */
 :focus-visible {
   outline: 2px solid var(--color-border-info);
