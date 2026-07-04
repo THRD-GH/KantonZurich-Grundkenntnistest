@@ -35,6 +35,7 @@ const SIZE_KEY     = "gkt_textsize_v1";      // "s" | "m" | "l" | "xl" — globa
 const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
 const SPEED_KEY    = "gkt_speed_v1";         // read-aloud playback rate
 const SPEECH_RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
+const BOOKMARKS_KEY = "gkt_bookmarks_v1";    // [id, …] — questions the user saved to revisit
 const SRS_MAX_BOX  = 5;                     // Leitner boxes: 1 = struggling … 5 = mastered
 const DAY_MS = 86400000;
 const SRS_DUE_DAYS = { 1: 0, 2: 1, 3: 3, 4: 7, 5: 30 }; // days until a box becomes due for review again
@@ -46,6 +47,9 @@ const LVL_LABELS  = { bund:"Federal", kanton:"Cantonal", gemeinde:"Municipal" };
 // follow the selected language; English is the base/fallback. UI_FR maps English→French.
 const LangContext = createContext("en");
 const useLang = () => useContext(LangContext);
+// Saved-questions ("bookmark") state, shared without prop-threading through every screen
+const BookmarkContext = createContext({ set: new Set(), toggle: () => {} });
+const useBookmarks = () => useContext(BookmarkContext);
 function tr(lang, s, vars) {
   const map = UI[lang];
   let out = (map && map[s] != null) ? map[s] : s;
@@ -92,6 +96,8 @@ const writeJSON = (k, v)  => { try { localStorage.setItem(k, JSON.stringify(v));
 
 function loadDifficulties() { return readJSON(DIFF_KEY, {}); }
 function saveDifficulties(d) { writeJSON(DIFF_KEY, d); }
+function loadBookmarks() { const a = readJSON(BOOKMARKS_KEY, []); return Array.isArray(a) ? a.filter(id => BY_ID.has(id)) : []; }
+function saveBookmarks(a) { writeJSON(BOOKMARKS_KEY, a); }
 function loadHistory() { return readJSON(HISTORY_KEY, []); }
 function saveHistory(h) { writeJSON(HISTORY_KEY, h.slice(0, 50)); } // keep last 50
 function loadProgress() { return readJSON(PROGRESS_KEY, {}); }
@@ -343,6 +349,20 @@ function SpeakButton({ text, small }) {
     </button>
   );
 }
+// Star toggle to save/unsave a question for later review. Reads the shared bookmark context.
+function BookmarkButton({ id, small }) {
+  const T = useT(); const { set, toggle } = useBookmarks();
+  const saved = set.has(id);
+  return (
+    <button type="button" aria-pressed={saved}
+      aria-label={saved ? T("Remove from saved") : T("Save this question")} title={saved ? T("Remove from saved") : T("Save this question")}
+      onClick={(e) => { e.stopPropagation(); toggle(id); }}
+      style={{ ...S.badge, cursor:"pointer", lineHeight:1, padding: small ? "1px 6px" : "3px 8px", fontSize: small ? 12 : 13,
+        ...(saved ? { background:"var(--color-background-warning)", color:"var(--color-text-warning)", border:"0.5px solid var(--color-border-warning)" } : {}) }}>
+      {saved ? "★" : "☆"}
+    </button>
+  );
+}
 // Compose the German text read aloud for a question (prompt + all options)
 // Read the question, then the options in the order they appear on screen (the quiz shuffles them).
 const sayText = (q, order = [0, 1, 2, 3]) => q.de + ". " + order.map(oi => q.opts[oi]?.de).filter(Boolean).join(". ");
@@ -560,8 +580,10 @@ function EnToggle({ enMode, setEnMode, prefix }) {
 }
 
 // ── Home screen ───────────────────────────────────────────────────────────────
-function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onDiscardResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview }) {
+function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onDiscardResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview, onReviewSaved }) {
   const T = useT(); const lang = useLang();
+  const { set: savedSet } = useBookmarks();
+  const savedCount = savedSet.size;
   const counts = countByDiff(difficulties);
   const [qtDiff, setQtDiff]   = useState("exam");
   const [qtCount, setQtCount] = useState(20);
@@ -820,6 +842,16 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
           </div>
         );
       })()}
+
+      {/* Saved questions — practice the ones you starred */}
+      {savedCount > 0 && (
+        <div style={{ ...S.card, display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
+          <div style={{ fontSize:13, fontWeight:500, display:"inline-flex", alignItems:"center", gap:6 }}>
+            ★ {T("Saved questions")} <span style={{ ...S.badge, fontSize:10 }}>{savedCount}</span>
+          </div>
+          <button style={S.btnPrim} onClick={onReviewSaved}>{lbl(T("Review saved →"))}</button>
+        </div>
+      )}
 
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
@@ -1118,6 +1150,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
             <SecBadge s={q.s} />
           </div>
           <div style={{ display:"flex", gap:5, alignItems:"center" }}>
+            <BookmarkButton id={q.id} />
             <SpeakButton text={sayText(q, order)} />
             <LvlBadge lvl={q.lvl} />
             <DiffBadge diff={curDiff} />
@@ -1308,6 +1341,7 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
             <SecBadge s={q.s} />
           </div>
           <div style={{ display:"flex", gap:5, alignItems:"center" }}>
+            <BookmarkButton id={q.id} />
             <SpeakButton text={sayText(q, order)} />
             <LvlBadge lvl={q.lvl} />
           </div>
@@ -1383,6 +1417,7 @@ function SessionQuestions({ details, difficulties, onDiffChange }) {
                 {en && qText(q, lang) && <div style={{ fontSize:11, color:"var(--color-text-secondary)", fontStyle:"italic", marginTop:1, ...rtlStyle(lang) }}>{qText(q, lang)}</div>}
               </div>
               <div style={{ display:"flex", gap:5, alignItems:"center", flexShrink:0 }}>
+                <BookmarkButton id={q.id} small />
                 <SpeakButton text={sayText(q)} small />
                 {qText(q, lang) && (
                   <button type="button" onClick={() => setShown(s => ({ ...s, [di]: !s[di] }))}
@@ -1612,7 +1647,7 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
 }
 
 // ── Question list (shared) ───────────────────────────────────────────────────
-function QuestionList({ questions, difficulties, onDiffChange, answersHidden = false }) {
+function QuestionList({ questions, difficulties, onDiffChange, answersHidden = false, emptyHint }) {
   const T = useT(); const lang = useLang();
   const [expanded, setExpanded] = useState(null);
   const [shown, setShown] = useState({});       // per-question translation toggle: { [n]: true }
@@ -1620,7 +1655,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
   if (questions.length === 0) {
     return (
       <div style={{ textAlign:"center", padding:"2rem", color:"var(--color-text-tertiary)", fontSize:13 }}>
-        {T("No questions here yet. Rate some questions to populate this tab.")}
+        {emptyHint || T("No questions here yet. Rate some questions to populate this tab.")}
       </div>
     );
   }
@@ -1703,6 +1738,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
                   <SecBadge s={q.s} />
                   <div style={{ display:"flex", alignItems:"center", gap:12 }}>
                     {answersHidden && <Switch on={reveal} onChange={() => setShownAns(s => ({ ...s, [q.n]: !s[q.n] }))} label={T("Show answer")} />}
+                    <BookmarkButton id={q.id} small />
                     <SpeakButton text={sayText(q)} small />
                   </div>
                 </div>
@@ -1720,6 +1756,7 @@ function QuestionList({ questions, difficulties, onDiffChange, answersHidden = f
 // ── Question browser ──────────────────────────────────────────────────────────
 function BrowserScreen({ difficulties, onDiffChange, onHome, initialTab }) {
   const T = useT(); const lang = useLang();
+  const { set: bookmarkSet } = useBookmarks();
   const [tab,           setTab]           = useState(initialTab || "all");
   const [filterSection, setFilterSection] = useState("all");
   const [filterLvl,     setFilterLvl]     = useState("all");
@@ -1733,11 +1770,13 @@ function BrowserScreen({ difficulties, onDiffChange, onHome, initialTab }) {
     { key:"medium",  label:"Medium",  count: counts.medium,  color: DIFF_COLORS.medium },
     { key:"hard",    label:"Hard",    count: counts.hard,    color: DIFF_COLORS.hard   },
     { key:"unrated", label:"Unrated", count: counts.unrated  },
+    { key:"saved",   label:"★ Saved", count: bookmarkSet.size },
   ];
 
   const filtered = ALL_QUESTIONS.filter(q => {
+    if (tab === "saved" && !bookmarkSet.has(q.id)) return false;
     if (tab === "unrated" && difficulties[q.id]) return false;
-    if (tab !== "all" && tab !== "unrated" && difficulties[q.id] !== tab) return false;
+    if (tab !== "all" && tab !== "unrated" && tab !== "saved" && difficulties[q.id] !== tab) return false;
     if (filterSection !== "all" && q.s !== filterSection) return false;
     if (filterLvl !== "all" && q.lvl !== filterLvl) return false;
     if (search) {
@@ -1822,7 +1861,8 @@ function BrowserScreen({ difficulties, onDiffChange, onHome, initialTab }) {
         {search ? ` · "${search}"` : ""}
       </div>
 
-      <QuestionList questions={filtered} difficulties={difficulties} onDiffChange={onDiffChange} answersHidden />
+      <QuestionList questions={filtered} difficulties={difficulties} onDiffChange={onDiffChange} answersHidden
+        emptyHint={tab === "saved" ? T("No saved questions yet — tap the ☆ on any question to save it for later.") : undefined} />
     </div>
   );
 }
@@ -2000,6 +2040,7 @@ function HelpScreen({ onHome }) {
 // ── Root ──────────────────────────────────────────────────────────────────────
 export default function App() {
   const [difficulties, setDifficulties] = useState(loadDifficulties);
+  const [bookmarks,    setBookmarks]    = useState(loadBookmarks);   // [id, …] saved questions
   const [history,      setHistory]      = useState(loadHistory);
   const [progress,     setProgress]     = useState(loadProgress);  // { [id]: {seen,correct,box} } — dashboard + spaced repetition
   const [resume,       setResume]       = useState(loadResume);     // in-progress quiz/exam snapshot, or null
@@ -2063,6 +2104,15 @@ export default function App() {
     setDifficulties({});
     try { localStorage.removeItem(DIFF_KEY); } catch {}
   }, []);
+
+  const toggleBookmark = useCallback((id) => {
+    setBookmarks(prev => {
+      const next = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
+      saveBookmarks(next);
+      return next;
+    });
+  }, []);
+  const bookmarkSet = useMemo(() => new Set(bookmarks), [bookmarks]);
 
   // Reset the spaced-repetition / dashboard progress (review schedule + accuracy stats)
   const resetProgress = useCallback(() => {
@@ -2189,14 +2239,17 @@ export default function App() {
       onSettings={() => setScreen("settings")}
       onResetRatings={resetDifficulties}
       onSmartReview={(count) => startQuizFromIds(dueIds.slice(0, count || dueIds.length), `Smart review · ${count || dueIds.length} questions`, false)}
+      onReviewSaved={() => startQuizFromIds(bookmarks, `Saved questions · ${bookmarks.length} questions`)}
     />
   );
   })();
   return (
     <LangContext.Provider value={lang}>
-      <TopBar lang={lang} setLang={setLang} onHome={screen !== "home" ? goHome : null} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
-      <div ref={mainRef} tabIndex={-1} style={{ outline:"none" }}>{view}</div>
-      <ZoomControl textSize={textSize} setTextSize={setTextSize} />
+      <BookmarkContext.Provider value={{ set: bookmarkSet, toggle: toggleBookmark }}>
+        <TopBar lang={lang} setLang={setLang} onHome={screen !== "home" ? goHome : null} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
+        <div ref={mainRef} tabIndex={-1} style={{ outline:"none" }}>{view}</div>
+        <ZoomControl textSize={textSize} setTextSize={setTextSize} />
+      </BookmarkContext.Provider>
     </LangContext.Provider>
   );
 }
