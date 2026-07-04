@@ -873,7 +873,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
-          <div style={{ fontSize:13, fontWeight:500 }}>{T("Difficulty ratings")}</div>
+          <div style={{ fontSize:14, fontWeight:600 }}>📊 {T("Difficulty ratings")}</div>
           {counts.unrated < ALL_QUESTIONS.length && (
             confirmReset
               ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
