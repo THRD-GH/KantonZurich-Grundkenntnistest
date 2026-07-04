@@ -229,6 +229,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "Perguntas guardadas",
+    "b": [
+     "Toque na estrela ☆ em qualquer pergunta — durante um teste ou exame, em Consultar, ou numa revisão — para a guardar. As perguntas guardadas aparecem no separador ★ Guardadas em Consultar, e um atalho «Rever guardadas» no ecrã inicial transforma-as num conjunto de prática rápido."
+    ]
+   },
+   {
     "t": "Explicações",
     "b": [
      "Cada pergunta tem uma breve explicação (alemão + tradução) do motivo pelo qual a resposta está correta, com uma ligação para uma fonte externa para mais detalhe. As explicações estão desligadas por predefinição durante os questionários (para não revelarem o teste) — acione o interruptor “💡 Explicar” para as mostrar — e estão sempre disponíveis em Consultar e nos ecrãs de revisão."
@@ -243,7 +249,7 @@ export const EXTRA = {
    {
     "t": "Visualização e idioma",
     "b": [
-     "Pode ser apresentada uma tradução apenas para a pergunta, ou para a pergunta e cada opção; escolha o idioma nas Definições. Selecione alemão e não é apresentada qualquer tradução. O tamanho do texto (A / A / A / A) ajusta toda a aplicação para uma leitura mais fácil nos telemóveis. O modo de alto contraste melhora a legibilidade; o modo escuro segue a definição do seu dispositivo. As cinco classes de perguntas (secções) têm cores ao longo de toda a aplicação — Democracia e Federalismo (azul), Estado Social e Sociedade Civil (verde-azulado), História (laranja), Geografia (verde), Cultura e Vida Quotidiana (violeta)."
+     "Mude de idioma a qualquer momento a partir do menu no topo de cada ecrã — estão disponíveis doze. Pode ser apresentada uma tradução apenas para a pergunta, ou para a pergunta e cada opção (escolha nas Definições); com alemão não é apresentada nenhuma tradução secundária. Os temas são Claro, Escuro, Sistema (segue o seu dispositivo) e Alto contraste. O tamanho do texto (A / A) ajusta toda a aplicação. As cinco classes de perguntas (secções) têm cores em toda a aplicação — Democracia e Federalismo (azul), Estado Social e Sociedade Civil (verde-azulado), História (laranja), Geografia (verde), Cultura e Vida Quotidiana (violeta)."
     ]
    },
    {
@@ -266,7 +272,7 @@ export const EXTRA = {
    {
     "t": "Os seus dados",
     "b": [
-     "As classificações de dificuldade, o histórico e o progresso são guardados apenas neste navegador — nada é carregado. Limpar os dados do navegador repõe-nos."
+     "As suas classificações de dificuldade, perguntas guardadas, histórico e progresso são guardados apenas neste navegador — nada é carregado. Nas Definições, «Cópia de segurança» guarda tudo num ficheiro e «Restaurar» volta a carregá-lo — útil ao mudar de dispositivo ou antes de limpar os dados do navegador. Uma cópia feita a partir de uma versão anterior da lista de perguntas não substitui o seu progresso atual, mas as suas definições podem na mesma ser restauradas."
     ]
    },
    {
@@ -523,6 +529,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "Pyetjet e ruajtura",
+    "b": [
+     "Trokit yllin ☆ te çdo pyetje — gjatë një testi ose provimi, te Shfleto, ose në një rishikim — për ta ruajtur. Pyetjet e ruajtura shfaqen te skeda ★ Të ruajtura te Shfleto, dhe një shkurtore «Rishiko të ruajturat» në ekranin kryesor i kthen ato në një grup të shpejtë ushtrimesh."
+    ]
+   },
+   {
     "t": "Shpjegimet",
     "b": [
      "Çdo pyetje ka një shpjegim të shkurtër (gjermanisht + përkthim) se pse përgjigjja është e saktë, me një lidhje drejt një burimi të jashtëm për më shumë thellësi. Shpjegimet janë joaktive si parazgjedhje gjatë kuizeve (që të mos e prishin testin) — kalo çelësin “💡 Shpjego” për t'i shfaqur — dhe janë gjithmonë të disponueshme te Shfleto dhe në ekranet e rishikimit."
@@ -537,7 +549,7 @@ export const EXTRA = {
    {
     "t": "Shfaqja & gjuha",
     "b": [
-     "Një përkthim mund të shfaqet vetëm për pyetjen, ose për pyetjen dhe çdo opsion; zgjidh gjuhën te Cilësimet. Zgjidh gjermanishten dhe nuk shfaqet asnjë përkthim. Madhësia e tekstit (A / A / A / A) shkallëzon të gjithë aplikacionin për lexim më të lehtë në telefon. Modaliteti me kontrast të lartë rrit lexueshmërinë; modaliteti i errët ndjek cilësimin e pajisjes sate. Pesë klasat e pyetjeve (seksionet) janë të koduara me ngjyra kudo — Demokracia & Federalizmi (blu), Shteti social & Shoqëria civile (gurkali), Historia (portokalli), Gjeografia (jeshile), Kultura & Jeta e përditshme (vjollcë)."
+     "Ndryshoni gjuhën në çdo kohë nga menyja në krye të çdo ekrani — janë të disponueshme dymbëdhjetë. Një përkthim mund të shfaqet vetëm për pyetjen, ose për pyetjen dhe çdo opsion (zgjidhni te Cilësimet); me gjermanisht nuk shfaqet asnjë përkthim dytësor. Temat janë E çelët, E errët, Sistemi (ndjek pajisjen tuaj) dhe Kontrast i lartë. Madhësia e tekstit (A / A) rimadhëson gjithë aplikacionin. Pesë klasat e pyetjeve (seksionet) janë të koduara me ngjyra kudo — Demokracia & Federalizmi (blu), Shteti social & Shoqëria civile (bruz), Historia (portokalli), Gjeografia (jeshile), Kultura & Jeta e përditshme (vjollcë)."
     ]
    },
    {
@@ -560,7 +572,7 @@ export const EXTRA = {
    {
     "t": "Të dhënat e tua",
     "b": [
-     "Vlerësimet e vështirësisë, historia dhe progresi ruhen vetëm në këtë shfletues — asgjë nuk ngarkohet. Pastrimi i të dhënave të shfletuesit tënd i rivendos ato."
+     "Vlerësimet e vështirësisë, pyetjet e ruajtura, historia dhe përparimi juaj ruhen vetëm në këtë shfletues — asgjë nuk ngarkohet. Te Cilësimet, «Rezervo» ruan gjithçka në një skedar dhe «Rikthe» e ngarkon sërish — e dobishme kur ndërroni pajisje ose para se të pastroni të dhënat e shfletuesit. Një rezervim i bërë me një version të mëparshëm të listës së pyetjeve nuk e mbishkruan përparimin tuaj aktual, por cilësimet e tij mund të rikthehen prapëseprapë."
     ]
    },
    {
@@ -817,6 +829,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "Preguntas guardadas",
+    "b": [
+     "Toca la estrella ☆ en cualquier pregunta — durante un test o examen, en Explorar, o en un repaso — para guardarla. Las preguntas guardadas aparecen en la pestaña ★ Guardadas en Explorar, y un acceso directo «Repasar guardadas» en la pantalla de inicio las convierte en un conjunto de práctica rápido."
+    ]
+   },
+   {
     "t": "Explicaciones",
     "b": [
      "Cada pregunta tiene una breve explicación (alemán + traducción) de por qué la respuesta es correcta, con un enlace a una fuente externa para profundizar más. Las explicaciones están desactivadas por defecto durante los cuestionarios (para que no estropeen el test) — activa el interruptor “💡 Explicar” para mostrarlas — y están siempre disponibles en Explorar y en las pantallas de repaso."
@@ -831,7 +849,7 @@ export const EXTRA = {
    {
     "t": "Visualización e idioma",
     "b": [
-     "Se puede mostrar una traducción solo de la pregunta, o de la pregunta y de cada opción; elige el idioma en Ajustes. Elige alemán y no se muestra ninguna traducción. El tamaño del texto (A / A / A / A) escala toda la aplicación para facilitar la lectura en el móvil. El modo de alto contraste mejora la legibilidad; el modo oscuro sigue la configuración de tu dispositivo. Las cinco clases de preguntas (secciones) están codificadas por colores en toda la aplicación — Democracia y federalismo (azul), Estado del bienestar y sociedad civil (verde azulado), Historia (naranja), Geografía (verde), Cultura y vida cotidiana (violeta)."
+     "Cambia de idioma en cualquier momento desde el menú en la parte superior de cada pantalla — hay doce disponibles. Se puede mostrar una traducción solo para la pregunta, o para la pregunta y cada opción (elige en Ajustes); con alemán no se muestra ninguna traducción secundaria. Los temas son Claro, Oscuro, Sistema (sigue tu dispositivo) y Alto contraste. El tamaño del texto (A / A) ajusta toda la aplicación. Las cinco clases de preguntas (secciones) están codificadas por color en toda la aplicación — Democracia y federalismo (azul), Estado del bienestar y sociedad civil (verde azulado), Historia (naranja), Geografía (verde), Cultura y vida cotidiana (violeta)."
     ]
    },
    {
@@ -854,7 +872,7 @@ export const EXTRA = {
    {
     "t": "Tus datos",
     "b": [
-     "Las valoraciones de dificultad, el historial y el progreso se almacenan solo en este navegador — no se sube nada. Si borras los datos del navegador, se restablecen."
+     "Tus valoraciones de dificultad, preguntas guardadas, historial y progreso se almacenan solo en este navegador — no se sube nada. En Ajustes, «Copia de seguridad» guarda todo en un archivo y «Restaurar» lo vuelve a cargar — útil al cambiar de dispositivo o antes de borrar los datos del navegador. Una copia hecha con una versión anterior de la lista de preguntas no sobrescribe tu progreso actual, pero sus ajustes sí se pueden restaurar."
     ]
    },
    {
@@ -1111,6 +1129,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "Spremljena pitanja",
+    "b": [
+     "Dodirnite zvjezdicu ☆ na bilo kojem pitanju — tijekom kviza ili ispita, u Pregledaj ili u pregledu — da biste ga spremili. Spremljena pitanja pojavljuju se na kartici ★ Spremljeno u Pregledaj, a prečac «Ponovi spremljena» na početnom zaslonu pretvara ih u brzi skup za vježbu."
+    ]
+   },
+   {
     "t": "Objašnjenja",
     "b": [
      "Svako pitanje ima kratko objašnjenje (njemački + prijevod) zašto je odgovor točan, s poveznicom na vanjski izvor za više detalja. Objašnjenja su prema zadanim postavkama isključena tijekom kvizova (kako ne bi otkrila test) — uključite prekidač „💡 Objasni” da ih prikažete — i uvijek su dostupna u pregledniku i na zaslonima ponavljanja."
@@ -1125,7 +1149,7 @@ export const EXTRA = {
    {
     "t": "Prikaz i jezik",
     "b": [
-     "Prijevod se može prikazati samo za pitanje ili za pitanje i svaku opciju; jezik odaberite u Postavkama. Odaberite njemački i prijevod se neće prikazati. Veličina teksta (A / A / A / A) skalira cijelu aplikaciju radi lakšeg čitanja na telefonima. Način visokog kontrasta poboljšava čitljivost; tamni način prati postavku vašeg uređaja. Pet razreda pitanja (odjeljci) označeno je bojama u cijeloj aplikaciji — Demokracija i federalizam (plavo), Socijalna država i civilno društvo (tirkizno), Povijest (narančasto), Geografija (zeleno), Kultura i svakodnevni život (ljubičasto)."
+     "Promijenite jezik u bilo kojem trenutku iz padajućeg izbornika na vrhu svakog zaslona — dostupno ih je dvanaest. Prijevod se može prikazati samo za pitanje ili za pitanje i svaku opciju (odaberite u Postavkama); s njemačkim se ne prikazuje sekundarni prijevod. Teme su Svijetlo, Tamno, Sustav (prati vaš uređaj) i Visoki kontrast. Veličina teksta (A / A) skalira cijelu aplikaciju. Pet klasa pitanja (odjeljci) obojeni su bojama posvuda — Demokracija i federalizam (plava), Socijalna država i civilno društvo (tirkizna), Povijest (narančasta), Geografija (zelena), Kultura i svakodnevni život (ljubičasta)."
     ]
    },
    {
@@ -1148,7 +1172,7 @@ export const EXTRA = {
    {
     "t": "Vaši podaci",
     "b": [
-     "Ocjene težine, povijest i napredak pohranjuju se samo u ovom pregledniku — ništa se ne učitava na poslužitelj. Brisanjem podataka preglednika oni se poništavaju."
+     "Vaše ocjene težine, spremljena pitanja, povijest i napredak pohranjeni su samo u ovom pregledniku — ništa se ne prenosi. U Postavkama «Sigurnosna kopija» sprema sve u datoteku, a «Vrati» je ponovno učitava — korisno pri promjeni uređaja ili prije brisanja podataka preglednika. Sigurnosna kopija iz starije verzije skupa pitanja neće prebrisati vaš trenutni napredak, ali njezine se postavke ipak mogu vratiti."
     ]
    },
    {
@@ -1405,6 +1429,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "Kayıtlı sorular",
+    "b": [
+     "Herhangi bir soruda ☆ yıldızına dokunun — bir test veya sınav sırasında, Göz at'ta ya da bir incelemede — kaydetmek için. Kayıtlı sorular Göz at'taki ★ Kayıtlı sekmesinde görünür ve ana ekrandaki «Kayıtlıları çalış» kısayolu bunları hızlı bir alıştırma setine dönüştürür."
+    ]
+   },
+   {
     "t": "Açıklamalar",
     "b": [
      "Her sorunun, yanıtın neden doğru olduğuna dair kısa bir açıklaması (Almanca + çeviri) ve daha derin bilgi için harici bir kaynağa bağlantısı vardır. Açıklamalar, testler sırasında varsayılan olarak kapalıdır (testi ele vermemeleri için) — bunları göstermek için “💡 Explain” düğmesini açın — ve Göz at ve gözden geçirme ekranlarında her zaman kullanılabilir."
@@ -1419,7 +1449,7 @@ export const EXTRA = {
    {
     "t": "Görüntü ve dil",
     "b": [
-     "Çeviri yalnızca soru için veya soru ve her seçenek için gösterilebilir; dili Ayarlar'dan seçin. Almanca seçerseniz çeviri gösterilmez. Metin boyutu (A / A / A / A) telefonlarda daha kolay okumak için tüm uygulamayı ölçeklendirir. Yüksek kontrast modu okunabilirliği artırır; karanlık mod cihazınızın ayarını izler. Beş soru sınıfı (bölüm) baştan sona renk kodludur — Demokrasi ve Federalizm (mavi), Refah Devleti ve Sivil Toplum (turkuaz), Tarih (turuncu), Coğrafya (yeşil), Kültür ve Günlük Yaşam (mor)."
+     "Her ekranın üstündeki açılır menüden istediğiniz zaman dil değiştirin — on iki dil mevcuttur. Çeviri yalnızca soru için veya soru ve her seçenek için gösterilebilir (Ayarlar'dan seçin); Almanca'da ikincil çeviri gösterilmez. Temalar Açık, Koyu, Sistem (cihazınızı izler) ve Yüksek kontrasttır. Metin boyutu (A / A) tüm uygulamayı ölçekler. Beş soru sınıfı (bölüm) her yerde renk kodludur — Demokrasi ve Federalizm (mavi), Refah Devleti ve Sivil Toplum (turkuaz), Tarih (turuncu), Coğrafya (yeşil), Kültür ve Günlük Yaşam (mor)."
     ]
    },
    {
@@ -1442,7 +1472,7 @@ export const EXTRA = {
    {
     "t": "Verileriniz",
     "b": [
-     "Zorluk derecelendirmeleri, geçmiş ve ilerleme yalnızca bu tarayıcıda saklanır — hiçbir şey karşıya yüklenmez. Tarayıcı verilerinizi temizlemek bunları sıfırlar."
+     "Zorluk derecelendirmeleriniz, kayıtlı sorularınız, geçmişiniz ve ilerlemeniz yalnızca bu tarayıcıda saklanır — hiçbir şey yüklenmez. Ayarlar'da «Yedekle» her şeyi bir dosyaya kaydeder ve «Geri yükle» tekrar yükler — cihaz değiştirirken veya tarayıcı verilerini temizlemeden önce kullanışlıdır. Soru listesinin eski bir sürümüyle yapılan bir yedek mevcut ilerlemenizin üzerine yazmaz, ancak ayarları yine de geri yüklenebilir."
     ]
    },
    {
@@ -1699,6 +1729,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "الأسئلة المحفوظة",
+    "b": [
+     "انقر النجمة ☆ على أي سؤال — أثناء اختبار أو امتحان، في التصفّح، أو في مراجعة — لحفظه. تظهر الأسئلة المحفوظة في علامة التبويب ★ محفوظة في التصفّح، ويحوّلها اختصار «مراجعة المحفوظة» في الشاشة الرئيسية إلى مجموعة تدريب سريعة."
+    ]
+   },
+   {
     "t": "التفسيرات",
     "b": [
      "لكل سؤال تفسير قصير (بالألمانية + الترجمة) لسبب صحّة الإجابة، مع رابط لمصدر خارجي لمزيد من العمق. تكون التفسيرات معطّلة افتراضياً أثناء الاختبارات (حتى لا تُفسد الاختبار) — بدّل مفتاح “💡 Explain” لإظهارها — وهي متاحة دائماً في التصفّح وفي شاشات المراجعة."
@@ -1713,7 +1749,7 @@ export const EXTRA = {
    {
     "t": "العرض واللغة",
     "b": [
-     "يمكن إظهار ترجمة للسؤال فقط، أو للسؤال وكل خيار؛ اختر اللغة في الإعدادات. اختر الألمانية فلا تُعرض أي ترجمة. يُكبّر حجم النص (A / A / A / A) التطبيق بأكمله لتسهيل القراءة على الهواتف. يعزّز وضع التباين العالي وضوح القراءة؛ يتبع الوضع الداكن إعداد جهازك. فئات الأسئلة الخمس (الأقسام) مُرمّزة بالألوان في كل مكان — الديمقراطية والفيدرالية (أزرق)، دولة الرفاه والمجتمع المدني (سماوي)، التاريخ (برتقالي)، الجغرافيا (أخضر)، الثقافة والحياة اليومية (بنفسجي)."
+     "غيّر اللغة في أي وقت من القائمة المنسدلة أعلى كل شاشة — تتوفّر اثنتا عشرة لغة. يمكن عرض الترجمة للسؤال فقط، أو للسؤال وكل خيار (اختر في الإعدادات)؛ مع الألمانية لا تُعرض ترجمة ثانوية. السمات هي فاتح وداكن والنظام (يتبع جهازك) وتباين عالٍ. حجم النص (A / A) يوسّع التطبيق بالكامل. فئات الأسئلة الخمس (الأقسام) ملوّنة في كل مكان — الديمقراطية والفيدرالية (أزرق)، دولة الرفاه والمجتمع المدني (فيروزي)، التاريخ (برتقالي)، الجغرافيا (أخضر)، الثقافة والحياة اليومية (بنفسجي)."
     ]
    },
    {
@@ -1736,7 +1772,7 @@ export const EXTRA = {
    {
     "t": "بياناتك",
     "b": [
-     "تُخزَّن تصنيفات الصعوبة والسجلّ والتقدّم في هذا المتصفّح فقط — لا يُرفع أي شيء. مسح بيانات متصفّحك يعيد تعيينها."
+     "تُخزَّن تقييمات الصعوبة والأسئلة المحفوظة والسجلّ والتقدّم في هذا المتصفّح فقط — لا يُرفع أي شيء. في الإعدادات، يحفظ «نسخ احتياطي» كل ذلك في ملف، ويعيد «استعادة» تحميله — مفيد عند تغيير الأجهزة أو قبل مسح بيانات المتصفّح. النسخة الاحتياطية المأخوذة من إصدار أقدم من قائمة الأسئلة لن تستبدل تقدّمك الحالي، لكن يمكن استعادة إعداداتها."
     ]
    },
    {
@@ -1993,6 +2029,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "சேமித்த கேள்விகள்",
+    "b": [
+     "எந்தக் கேள்வியிலும் ☆ நட்சத்திரத்தைத் தட்டவும் — ஒரு வினாடி வினா அல்லது தேர்வின்போது, உலாவலில், அல்லது மறுபார்வையில் — அதைச் சேமிக்க. சேமித்த கேள்விகள் உலாவலில் ★ சேமித்தவை தாவலில் தோன்றும், மேலும் முகப்புத் திரையில் உள்ள «சேமித்தவற்றைப் பயிற்சி» குறுக்குவழி அவற்றை ஒரு விரைவுப் பயிற்சித் தொகுப்பாக மாற்றும்."
+    ]
+   },
+   {
     "t": "விளக்கங்கள்",
     "b": [
      "ஒவ்வொரு கேள்விக்கும் பதில் ஏன் சரியானது என்பதற்கான ஒரு குறுகிய விளக்கம் (ஜெர்மன் + மொழிபெயர்ப்பு) உள்ளது, மேலும் ஆழமான தகவலுக்கு ஒரு வெளி மூலத்திற்கான இணைப்பும் உள்ளது. பயிற்சிகளின்போது விளக்கங்கள் இயல்பாகவே அணைக்கப்பட்டிருக்கும் (இதனால் அவை தேர்வைக் கெடுக்காது) — அவற்றைக் காட்ட “💡 Explain” சுவிட்சை மாற்றவும் — மேலும் அவை உலாவுதல் மற்றும் மறுபார்வைத் திரைகளில் எப்போதும் கிடைக்கும்."
@@ -2007,7 +2049,7 @@ export const EXTRA = {
    {
     "t": "காட்சி & மொழி",
     "b": [
-     "கேள்விக்கு மட்டுமாகவோ, அல்லது கேள்வி மற்றும் ஒவ்வொரு விருப்பத்திற்கும் ஒரு மொழிபெயர்ப்பைக் காட்டலாம்; மொழியை Settings-இல் தேர்ந்தெடுக்கவும். ஜெர்மனைத் தேர்ந்தெடுத்தால் எந்த மொழிபெயர்ப்பும் காட்டப்படாது. எழுத்து அளவு (A / A / A / A) தொலைபேசிகளில் எளிதாகப் படிக்க முழுச் செயலியையும் அளவிடுகிறது. அதிக-மாறுபாட்டுப் பயன்முறை தெளிவை மேம்படுத்துகிறது; இருண்ட பயன்முறை உங்கள் சாதன அமைப்பைப் பின்பற்றுகிறது. ஐந்து கேள்வி வகுப்புகள் (பிரிவுகள்) முழுவதும் வண்ணக் குறியீடு செய்யப்பட்டுள்ளன — ஜனநாயகம் & கூட்டாட்சி (நீலம்), நலன்புரி அரசு & சிவில் சமூகம் (டீல்), வரலாறு (ஆரஞ்சு), புவியியல் (பச்சை), பண்பாடு & அன்றாட வாழ்க்கை (வயலட்)."
+     "ஒவ்வொரு திரையின் மேல் உள்ள கீழ்-மெனுவிலிருந்து எந்நேரமும் மொழியை மாற்றலாம் — பன்னிரண்டு கிடைக்கின்றன. மொழிபெயர்ப்பைக் கேள்விக்கு மட்டும், அல்லது கேள்வி மற்றும் ஒவ்வொரு விருப்பத்திற்கும் காட்டலாம் (அமைப்புகளில் தேர்வு செய்க); ஜெர்மனுடன் இரண்டாம்நிலை மொழிபெயர்ப்பு காட்டப்படாது. தீம்கள்: வெளிர், இருள், சிஸ்டம் (உங்கள் சாதனத்தைப் பின்பற்றும்) மற்றும் உயர் மாறுபாடு. உரை அளவு (A / A) முழுச் செயலியையும் அளவிடுகிறது. ஐந்து கேள்வி வகுப்புகள் (பிரிவுகள்) முழுவதும் வண்ணக் குறியீடு செய்யப்பட்டுள்ளன — ஜனநாயகம் & கூட்டாட்சி (நீலம்), நலன்புரி அரசு & சிவில் சமூகம் (நீலப்பச்சை), வரலாறு (ஆரஞ்சு), புவியியல் (பச்சை), பண்பாடு & அன்றாட வாழ்க்கை (ஊதா)."
     ]
    },
    {
@@ -2030,7 +2072,7 @@ export const EXTRA = {
    {
     "t": "உங்கள் தரவு",
     "b": [
-     "சிரம மதிப்பீடுகள், வரலாறு மற்றும் முன்னேற்றம் ஆகியவை இந்த உலாவியில் மட்டுமே சேமிக்கப்படுகின்றன — எதுவும் பதிவேற்றப்படவில்லை. உங்கள் உலாவித் தரவை அழித்தால் அவை மீட்டமைக்கப்படும்."
+     "உங்கள் கடின மதிப்பீடுகள், சேமித்த கேள்விகள், வரலாறு மற்றும் முன்னேற்றம் இந்த உலாவியில் மட்டுமே சேமிக்கப்படுகின்றன — எதுவும் பதிவேற்றப்படுவதில்லை. அமைப்புகளில், «காப்புப்பிரதி» அனைத்தையும் ஒரு கோப்பில் சேமிக்கிறது, «மீட்டமை» அதை மீண்டும் ஏற்றுகிறது — சாதனங்களை மாற்றும்போது அல்லது உலாவித் தரவை அழிப்பதற்கு முன் பயனுள்ளது. கேள்விப் பட்டியலின் பழைய பதிப்பில் செய்யப்பட்ட காப்புப்பிரதி உங்கள் தற்போதைய முன்னேற்றத்தை மேலெழுதாது, ஆனால் அதன் அமைப்புகளை மீட்டமைக்க முடியும்."
     ]
    },
    {
@@ -2287,6 +2329,12 @@ export const EXTRA = {
     ]
    },
    {
+    "t": "ዝተዓቀቡ ሕቶታት",
+    "b": [
+     "ኣብ ዝኾነ ሕቶ ኮኸብ ☆ ጠውቕ — ኣብ እዋን ፈተና ወይ መርመራ፡ ኣብ ምርኣይ፡ ወይ ኣብ ግምገማ — ንምዕቃቡ። ዝተዓቀቡ ሕቶታት ኣብ ★ ዝተዓቀቡ ታብ ኣብ ምርኣይ ይረኣዩ፡ ኣብ መበገሲ ስክሪን ዘሎ «ዝተዓቀቡ ተመልከት» ሓጻር መገዲ ድማ ናብ ቅልጡፍ ናይ ልምምድ ስብስብ ይቕይሮም።"
+    ]
+   },
+   {
     "t": "መግለጺታት",
     "b": [
      "ነፍሲ ወከፍ ሕቶ ስለምንታይ እቲ መልሲ ቅኑዕ ምዃኑ ሓጺር መግለጺ (ጀርመንኛ + ትርጉም) ኣለዎ፣ ምስ መላግቦ ናብ ግዳማዊ ምንጪ ንዝያዳ ዕምቆት። መግለጺታት ኣብ እዋን ሕቶ-መልሲ ብነቓፊ ጠፊኦም እዮም (ነቲ መርመራ ከይብላሹ) — ንምርኣዮም ነቲ «💡 ኣረድእ» መቐየሪ ግልብጦ — ኣብ ምርኣይን ኣብ ናይ ምድጋም ስክሪናትን ግን ኩሉ ግዜ ይርከቡ።"
@@ -2301,7 +2349,7 @@ export const EXTRA = {
    {
     "t": "ኣርኢን ቋንቋን",
     "b": [
-     "ትርጉም ንሕቶ ጥራይ፣ ወይ ንሕቶን ንነፍሲ ወከፍ ኣማራጺን ክርአ ይኽእል፣ ነቲ ቋንቋ ኣብ ቅንብራት ምረጽ። ጀርመንኛ እንተመሪጽካ ትርጉም ኣይርአን። መጠን ጽሑፍ (A / A / A / A) ንምሉእ ኣፕ የዕብዮ ኣብ ተንቀሳቐስቲ ስልክታት ብቐሊሉ ንምንባብ። ናይ ላዕለዋይ ኣፈላላይ ሕብሪ ኩነታት ንጹርነት ይውስኽ፣ ጸልማት ኩነታት ድማ ናይ መሳርሒኻ ቅንብር ይኽተል። እቶም ሓሙሽተ ክፍልታት ሕቶ (ክፍልታት) ኣብ ኩሉ ብሕብሪ ተመዲቦም — ዲሞክራሲን ፈደራሊዝምን (ሰማያዊ)፣ ናይ ድሕነት መንግስትን ሲቪላዊ ሕብረተሰብን (ቴል)፣ ታሪኽ (ብርቱኳናዊ)፣ ጂኦግራፊ (ቀጠልያ)፣ ባህልን ኣታኣታትዋ ህይወትን (ወይንያዊ)።"
+     "ኣብ ላዕሊ ናይ ነፍሲ ወከፍ ስክሪን ካብ ዘሎ ዝወርድ መዘርዝሪ ኣብ ዝኾነ እዋን ቋንቋ ቀይር — ዓሰርተው ክልተ ኣለዉ። ትርጉም ንሕቶ ጥራይ፡ ወይ ንሕቶን ንነፍሲ ወከፍ ኣማራጺን ክርአ ይኽእል (ኣብ ቅጥዕታት ምረጽ)፤ ብጀርመንኛ ካልኣይ ትርጉም ኣይረአን። ቴማታት ብሩህ፡ ጸልማት፡ ሲስተም (ነቲ መሳርሒኻ ይኽተል) ከምኡውን ላዕለዋይ ኮንትራስት እዮም። ዓቐን ጽሑፍ (A / A) ንምሉእ ኣፕ የመዓራርዮ። እተን ሓሙሽተ ክፍልታት ሕቶ (ክፍልታት) ኣብ ኩሉ ብሕብሪ ተመዲበን ኣለዋ — ዲሞክራሲን ፈደራሊዝምን (ሰማያዊ), ናይ ድሕነት መንግስትን ሲቪላዊ ሕብረተሰብን (ቱርኳዝ), ታሪኽ (ብርቱኳናዊ), ጂኦግራፊ (ቀጠልያ), ባህልን ኣታኣታትዋ ህይወትን (ወይናዊ)."
     ]
    },
    {
@@ -2324,7 +2372,7 @@ export const EXTRA = {
    {
     "t": "ዳታኻ",
     "b": [
-     "ናይ ክብደት ደረጃታት፣ ታሪኽን ምዕባለን ኣብዚ ብራውዘር ጥራይ እዮም ዝዕቀቡ — ዝኾነ ኣይተሰቅለን። ናይ ብራውዘርካ ዳታ ምጽራይ ዳግም የቐምጦም።"
+     "ናይ ኣጸጋሚነት ገምጋማትካ፡ ዝተዓቀቡ ሕቶታትካ፡ ታሪኽካን ምዕባለኻን ኣብዚ መርበብ ጥራይ እዮም ዝዕቀቡ — ዝኾነ ነገር ኣይሰቀልን። ኣብ ቅጥዕታት፡ «ሓሉ» ኩሉ ኣብ ፋይል የቐምጦ፡ «መልስ» ድማ ዳግም የጽዕኖ — መሳርሒ ክትቅይር ከለኻ ወይ ናይ መርበብ ዳታ ቅድሚ ምድምሳስካ ጠቓሚ እዩ። ካብ ኣረጊት ስሪት ናይ ሕቶታት ዝርዝር ዝተገብረ ሕዛእቲ ንህሉው ምዕባለኻ ኣይድምስሶን፡ ግን ቅጥዕታቱ ክምለሱ ይኽእሉ።"
     ]
    },
    {

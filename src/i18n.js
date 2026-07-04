@@ -815,6 +815,6 @@ const LANG_NOTE = {
 for (const code of Object.keys(HELP_SECTIONS_BY_LANG)) {
   const note = LANG_NOTE[code] || LANG_NOTE.en;
   const arr = HELP_SECTIONS_BY_LANG[code];
-  const at = Math.min(12, arr.length); // right after "Display & language"
+  const at = Math.min(13, arr.length); // right after "Display & language" (index 12, after the added "Saved questions")
   HELP_SECTIONS_BY_LANG[code] = [...arr.slice(0, at), note, ...arr.slice(at)];
 }
