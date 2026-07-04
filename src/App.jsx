@@ -748,6 +748,11 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
             </div>
           </div>
         </div>
+        {["easy","medium","hard"].includes(qtDiff) && (
+          <div style={{ fontSize:12, color:"var(--color-text-info)", marginBottom:".5rem", background:"var(--color-background-info)", padding:"6px 10px", borderRadius:"var(--border-radius-md)" }}>
+            {T("Drawn from the questions you've rated at this difficulty — {n} so far. Rate more as you study to grow the set.", { n: counts[qtDiff] })}
+          </div>
+        )}
         {["easy","medium","hard"].includes(qtDiff) && counts[qtDiff] < qtCount && (
           <div style={{ fontSize:12, color:"var(--color-text-warning)", marginBottom:".5rem", background:"var(--color-background-warning)", padding:"6px 10px", borderRadius:"var(--border-radius-md)" }}>
             {T("Only {n} {d} questions rated — {k} will be filled with unrated questions.", { n: counts[qtDiff], d: T(DIFF_LABELS[qtDiff]), k: qtCount - counts[qtDiff] })}
