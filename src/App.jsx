@@ -1366,11 +1366,12 @@ function SessionQuestions({ details, difficulties, onDiffChange }) {
 }
 
 // ── History & progress screen ─────────────────────────────────────────────────
-function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, onClear, onResetProgress }) {
+function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, onClear, onDelete, onResetProgress }) {
   const T = useT(); const lang = useLang();
-  const [openDetail, setOpenDetail] = useState(null);
+  const [openDetail, setOpenDetail] = useState(null);       // keyed by session ts
   const [confirm, setConfirm] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(null); // ts of the session pending delete-confirm
 
   if (history.length === 0) {
     return (
@@ -1464,7 +1465,7 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
           const p = Math.round(h.correct / h.total * 100);
           const scoreColor = p>=80?"var(--color-text-success)":p>=60?"var(--color-text-warning)":"var(--color-text-danger)";
           return (
-            <div key={i} style={{ ...S.card, marginBottom:0, padding:"1rem" }}>
+            <div key={h.ts} style={{ ...S.card, marginBottom:0, padding:"1rem" }}>
               <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:6 }}>
                 <div>
                   <div style={{ fontSize:13, fontWeight:500 }}>{h.label}</div>
@@ -1484,13 +1485,24 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
               {h.bestStreak > 1 && (
                 <div style={{ fontSize:11, color:"var(--color-text-warning)", marginTop:3 }}>{T("🔥 Best streak: {n}", { n: h.bestStreak })}</div>
               )}
-              {h.details && h.details.length > 0 && (
-                <button style={{ ...S.btn, fontSize:11, padding:"3px 10px", marginTop:8 }}
-                  onClick={() => setOpenDetail(openDetail === i ? null : i)}>
-                  {openDetail === i ? T("Hide questions ▲") : T("View questions & answers ({n}) ▼", { n: h.details.length })}
-                </button>
-              )}
-              {openDetail === i && h.details && <SessionQuestions details={h.details} difficulties={difficulties} onDiffChange={onDiffChange} />}
+              <div style={{ display:"flex", alignItems:"center", gap:8, marginTop:8, flexWrap:"wrap" }}>
+                {h.details && h.details.length > 0 && (
+                  <button style={{ ...S.btn, fontSize:11, padding:"3px 10px" }}
+                    onClick={() => setOpenDetail(openDetail === h.ts ? null : h.ts)}>
+                    {openDetail === h.ts ? T("Hide questions ▲") : T("View questions & answers ({n}) ▼", { n: h.details.length })}
+                  </button>
+                )}
+                <div style={{ marginLeft:"auto" }}>
+                  {confirmDelete === h.ts
+                    ? <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                        <span style={{ fontSize:11, color:"var(--color-text-danger)" }}>{T("Delete this session?")}</span>
+                        <button style={{ ...S.btn, fontSize:11, padding:"2px 8px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }} onClick={() => { onDelete(h.ts); setConfirmDelete(null); }}>{T("Yes")}</button>
+                        <button style={{ ...S.btn, fontSize:11, padding:"2px 8px" }} onClick={() => setConfirmDelete(null)}>{T("No")}</button>
+                      </span>
+                    : <button aria-label={T("Delete")} title={T("Delete")} style={{ ...S.btn, fontSize:11, padding:"3px 9px", color:"var(--color-text-tertiary)" }} onClick={() => setConfirmDelete(h.ts)}>🗑 {T("Delete")}</button>}
+                </div>
+              </div>
+              {openDetail === h.ts && h.details && <SessionQuestions details={h.details} difficulties={difficulties} onDiffChange={onDiffChange} />}
             </div>
           );
         })}
@@ -1981,7 +1993,9 @@ export default function App() {
   }
   if (screen === "history") {
     return <HistoryScreen history={history} progress={progress} difficulties={difficulties} onDiffChange={setDiff} onHome={goHome}
-      onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }} onResetProgress={resetProgress} />;
+      onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }}
+      onDelete={(ts) => setHistory(prev => { const next = prev.filter(h => h.ts !== ts); saveHistory(next); return next; })}
+      onResetProgress={resetProgress} />;
   }
   if (screen === "browser") {
     return <BrowserScreen difficulties={difficulties} onDiffChange={setDiff} onHome={goHome} initialTab={browseTab} />;
