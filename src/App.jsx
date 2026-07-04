@@ -191,6 +191,39 @@ function statsBy(progress, keyFn) {
   return agg;
 }
 
+// Local calendar-day identifier for grouping sessions by the day they happened
+function dayKey(ts) { const d = new Date(ts); return d.getFullYear() * 10000 + d.getMonth() * 100 + d.getDate(); }
+// Consecutive-day study streak ending today — or yesterday, so it isn't "broken" just because today isn't done yet
+function studyStreak(history, now) {
+  if (!history.length) return 0;
+  const days = new Set(history.map(h => dayKey(h.ts)));
+  const d = new Date(now); d.setHours(12, 0, 0, 0);
+  if (!days.has(dayKey(d.getTime()))) d.setDate(d.getDate() - 1);
+  let streak = 0;
+  while (days.has(dayKey(d.getTime()))) { streak++; d.setDate(d.getDate() - 1); }
+  return streak;
+}
+// Total questions answered in sessions dated today
+function questionsToday(history, now) {
+  const today = dayKey(now);
+  return history.filter(h => dayKey(h.ts) === today).reduce((n, h) => n + (h.total || 0), 0);
+}
+// Rough exam-readiness estimate (0–100): spaced-repetition accuracy tempered by coverage, blended with recent
+// mock-exam scores. Returns null until there's enough data to be meaningful.
+function examReadiness(progress, history) {
+  const seen  = Object.values(progress).filter(r => r && r.seen > 0);
+  const mocks = history.filter(h => h.label && h.label.startsWith("Mock exam")).slice(0, 3);
+  if (seen.length < 30 && !mocks.length) return null;
+  const totalSeen    = seen.reduce((n, r) => n + r.seen, 0);
+  const totalCorrect = seen.reduce((n, r) => n + (r.correct || 0), 0);
+  const accuracy = totalSeen ? totalCorrect / totalSeen : 0;
+  const coverage = seen.length / ALL_QUESTIONS.length;
+  const srs = accuracy * (0.5 + 0.5 * coverage);           // penalise having seen only a slice of the catalogue
+  const mockAvg = mocks.length ? mocks.reduce((n, h) => n + (h.total ? h.correct / h.total : 0), 0) / mocks.length : null;
+  const r = mockAvg != null ? 0.5 * srs + 0.5 * mockAvg : srs;
+  return Math.max(0, Math.min(100, Math.round(r * 100)));
+}
+
 // Exam-realistic mix: 70% federal / 20% cantonal / 10% municipal, mirroring the real GKT composition
 function buildExamMixPool(count) {
   const byLvl = { bund:[], kanton:[], gemeinde:[] };
@@ -555,6 +588,16 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const fqLabel = `${fqCount} ${fqCount === 1 ? T("question") : T("questions")} · ${fqSection === "all" ? T("all sections") : secName(fqSection, lang)} · ${fqLevel === "all" ? T("all levels") : lvlLabel(fqLevel, lang)} · ${T(fqOrder)}`;
   const pct = Math.round(((ALL_QUESTIONS.length - counts.unrated) / ALL_QUESTIONS.length) * 100);
   const lastSession = history[0];
+  const now = Date.now();
+  const streak = studyStreak(history, now);
+  const answeredToday = questionsToday(history, now);
+  const readiness = examReadiness(progress, history);
+  const stat = (big, label, title) => (
+    <div title={title} style={{ flex:"1 1 90px", minWidth:88, padding:".55rem .7rem", borderRadius:"var(--border-radius-md)", background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-tertiary)", textAlign:"center" }}>
+      <div style={{ fontSize:18, fontWeight:600 }}>{big}</div>
+      <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:2 }}>{label}</div>
+    </div>
+  );
   // Weakest attempted section, for a quick study nudge (needs a few answers to be meaningful)
   const weakest = Object.entries(statsBy(progress, q => q.s))
     .filter(([, a]) => a.seen >= 3)
@@ -567,6 +610,15 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
         <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
       </div>
+
+      {/* At-a-glance progress: study streak, questions answered today, and a rough exam-readiness estimate */}
+      {(streak > 0 || readiness != null) && (
+        <div style={{ display:"flex", gap:8, marginBottom:"1.25rem", flexWrap:"wrap" }}>
+          {streak > 0 && stat(`🔥 ${streak}`, T("day streak"))}
+          {answeredToday > 0 && stat(answeredToday, T("answered today"))}
+          {readiness != null && stat(`${readiness}%`, T("exam readiness"), T("Rough estimate from your accuracy and recent mock exams"))}
+        </div>
+      )}
 
       {/* Resume an unfinished session */}
       {resume && (
@@ -1134,9 +1186,10 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
   const total     = pool.length;
   const pct       = total ? Math.round((correct / total) * 100) : 0;
   const passed    = pct >= EXAM_PASS_PCT;
-  const wrongQs   = pool.filter((qq, i) => picks[i] !== qq.a);
+  // "Wrong" for retry/review = questions the user answered incorrectly (skipped ones aren't mistakes to re-drill).
+  const wrongQs   = pool.filter((qq, i) => (i in picks) && picks[i] !== qq.a);
   const wrongNums = wrongQs.map(qq => qq.id);
-  const wrongDetails = pool.map((qq, i) => ({ id: qq.id, picked: picks[i] ?? null })).filter((_, i) => picks[i] !== pool[i].a);
+  const wrongDetails = pool.map((qq, i) => ({ id: qq.id, picked: picks[i] ?? null })).filter((_, i) => (i in picks) && picks[i] !== pool[i].a);
   // Feed spaced-repetition only the questions the user actually answered — unanswered exam
   // questions count as wrong for scoring, but must NOT reset their Leitner box (they weren't attempted).
   const results   = pool.map((qq, i) => ({ id: qq.id, correct: picks[i] === qq.a })).filter((_, i) => i in picks);
@@ -2060,10 +2113,11 @@ export default function App() {
     startNew(buildExamMixPool(EXAM_COUNT), `Mock exam · ${EXAM_COUNT} questions`, "exam");
   }, [startNew]);
 
-  // Start from explicit question ids (retry-wrong / smart review), preserving order
-  const startQuizFromIds = useCallback((ids, label) => {
+  // Start from explicit question ids (retry-wrong / smart review). doShuffle=false keeps the given order
+  // (smart review passes the ids most-overdue-first and wants to preserve that priority).
+  const startQuizFromIds = useCallback((ids, label, doShuffle = true) => {
     if (!ids || !ids.length) return;
-    startNew(poolFromIds(ids), label, "quiz");
+    startNew(poolFromIds(ids, doShuffle), label, "quiz");
   }, [startNew]);
 
   const handleSaveHistory = useCallback((entry) => {
@@ -2134,7 +2188,7 @@ export default function App() {
       onHelp={() => setScreen("help")}
       onSettings={() => setScreen("settings")}
       onResetRatings={resetDifficulties}
-      onSmartReview={(count) => startQuizFromIds(dueIds.slice(0, count || dueIds.length), `Smart review · ${count || dueIds.length} questions`)}
+      onSmartReview={(count) => startQuizFromIds(dueIds.slice(0, count || dueIds.length), `Smart review · ${count || dueIds.length} questions`, false)}
     />
   );
   })();
