@@ -137,6 +137,14 @@ function applyBackup(payload) {
   if (!keys.length) return false;
   try { keys.forEach(k => localStorage.setItem(k, payload.data[k])); return true; } catch { return false; }
 }
+// Preferences that don't reference question ids — safe to restore from any question-set version.
+const SETTINGS_KEYS = ["gkt_theme_v1", "gkt_contrast_v1", "gkt_lang_v1", "gkt_textsize_v1", "gkt_speed_v1", "gkt_expl_v1"];
+function applySettingsBackup(payload) {
+  if (!payload || typeof payload !== "object" || !payload.data || typeof payload.data !== "object") return false;
+  const keys = SETTINGS_KEYS.filter(k => typeof payload.data[k] === "string");
+  if (!keys.length) return false;
+  try { keys.forEach(k => localStorage.setItem(k, payload.data[k])); return true; } catch { return false; }
+}
 // Read-aloud rate, read live by speakDE(); kept in sync with the Settings control by App.
 let speechRate = loadSpeed();
 
@@ -1795,14 +1803,18 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
       try {
         const p = JSON.parse(reader.result);
         if (!p || !p.data || typeof p.data !== "object" || !Object.keys(p.data).some(k => k.startsWith("gkt_"))) throw new Error("bad");
-        if (backupFromDifferentSet(p)) { setRestoreError("version"); return; }
-        setPendingRestore(p);
+        // A backup from a different question set can't restore id-keyed data, but its settings are still safe.
+        setPendingRestore({ payload: p, settingsOnly: backupFromDifferentSet(p) });
       } catch { setRestoreError("read"); }
     };
     reader.onerror = () => setRestoreError("read");
     reader.readAsText(file);
   };
-  const doRestore = () => { if (applyBackup(pendingRestore)) window.location.reload(); else { setRestoreError("read"); setPendingRestore(null); } };
+  const doRestore = () => {
+    if (!pendingRestore) return;
+    const ok = pendingRestore.settingsOnly ? applySettingsBackup(pendingRestore.payload) : applyBackup(pendingRestore.payload);
+    if (ok) window.location.reload(); else { setRestoreError("read"); setPendingRestore(null); }
+  };
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
   const descStyle = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginTop:3, lineHeight:1.4 };
   const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
@@ -1862,18 +1874,23 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
           <input ref={fileRef} type="file" accept="application/json,.json" onChange={onFile} style={{ display:"none" }} aria-hidden="true" tabIndex={-1} />
         </>)}
       </div>
-      {pendingRestore && (
-        <div role="alertdialog" aria-label={T("Replace all current data with this backup? This can’t be undone.")}
-          style={{ ...S.card, marginTop:8, background:"var(--color-background-danger)", borderColor:"var(--color-border-danger)", padding:"0.75rem 1rem", display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
-          <span style={{ fontSize:12, color:"var(--color-text-danger)", flex:1, minWidth:160 }}>{T("Replace all current data with this backup? This can’t be undone.")}</span>
-          <button style={{ ...S.btn, fontSize:12, padding:"3px 10px", color:"var(--color-text-danger)", borderColor:"var(--color-border-danger)", fontWeight:500 }} onClick={doRestore}>{T("Restore")}</button>
-          <button style={{ ...S.btn, fontSize:12, padding:"3px 10px" }} onClick={() => setPendingRestore(null)}>{T("Cancel")}</button>
-        </div>
-      )}
+      {pendingRestore && (() => {
+        const so = pendingRestore.settingsOnly;
+        const msg = so
+          ? T("This backup is from a different version of the question set, so your ratings and progress can’t be imported — but your settings can. Restore settings only?")
+          : T("Replace all current data with this backup? This can’t be undone.");
+        const tone = so ? "info" : "danger";
+        return (
+          <div role="alertdialog" aria-label={msg}
+            style={{ ...S.card, marginTop:8, background:`var(--color-background-${tone})`, borderColor:`var(--color-border-${tone})`, padding:"0.75rem 1rem", display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+            <span style={{ fontSize:12, color:`var(--color-text-${tone})`, flex:1, minWidth:160 }}>{msg}</span>
+            <button style={{ ...S.btn, fontSize:12, padding:"3px 10px", color:`var(--color-text-${tone})`, borderColor:`var(--color-border-${tone})`, fontWeight:500 }} onClick={doRestore}>{so ? T("Restore settings") : T("Restore")}</button>
+            <button style={{ ...S.btn, fontSize:12, padding:"3px 10px" }} onClick={() => setPendingRestore(null)}>{T("Cancel")}</button>
+          </div>
+        );
+      })()}
       {restoreError && (
-        <div role="alert" style={{ fontSize:12, color:"var(--color-text-danger)", margin:"8px 2px" }}>
-          {restoreError === "version" ? T("This backup is from a different version of the question set, so it can’t be imported.") : T("Couldn’t read that backup file.")}
-        </div>
+        <div role="alert" style={{ fontSize:12, color:"var(--color-text-danger)", margin:"8px 2px" }}>{T("Couldn’t read that backup file.")}</div>
       )}
       <div style={{ fontSize:12, color:"var(--color-text-tertiary)", margin:"8px 2px" }}>
         {T("Text size: use the {a} buttons in the bottom-right corner — it scales the whole app and applies on every screen.", { a: "A / A" })}
