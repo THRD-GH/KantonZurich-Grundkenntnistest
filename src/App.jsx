@@ -1192,7 +1192,7 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
           <div role="status" aria-live="polite" style={{ marginTop:".75rem", padding:"10px 12px", borderRadius:"var(--border-radius-md)", fontSize:13, fontWeight:500,
             background: pickCur===q.a?"var(--color-background-success)":"var(--color-background-danger)",
             color:       pickCur===q.a?"var(--color-text-success)":"var(--color-text-danger)" }}>
-            {pickCur===q.a ? T("✓ Correct! — {a}", { a: q.opts[q.a].de }) : T("✗ Answer: {a}) {b}", { a: LETTERS[q.a], b: q.opts[q.a].de })}
+            {pickCur===q.a ? T("✓ Correct! — {a}", { a: q.opts[q.a].de }) : T("✗ Answer: {a}) {b}", { a: LETTERS[order.indexOf(q.a)], b: q.opts[q.a].de })}
           </div>
         )}
         {submittedCur && showExpl && <Explanation id={q.id} en={enMode === 'question' || enMode === 'full'} />}
