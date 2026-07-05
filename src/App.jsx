@@ -1519,6 +1519,7 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
   const [confirm, setConfirm] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(null); // ts of the session pending delete-confirm
+  const [drillCount, setDrillCount] = useState(20);         // how many questions for the weakest-section drill
 
   if (history.length === 0) {
     return (
@@ -1598,13 +1599,32 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
               <span style={{ width:8, height:8, borderRadius:"50%", background:`var(--lvl-${l}-bd)`, flexShrink:0 }}/>{lvlLabel(l, lang) || l}
             </span>
           )} />
-          {weakest && onDrillSection && (
-            <button onClick={() => onDrillSection(weakest.s)}
-              style={{ ...S.btn, width:"100%", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:8, padding:"9px 12px", marginBottom:"0.75rem", fontSize:13, fontWeight:500 }}>
-              🎯 {T("Practice your weakest section")}
-              <span style={{ fontSize:11, fontWeight:400, color:"var(--color-text-tertiary)" }}>{secName(weakest.s, lang)} · {Math.round(weakest.acc*100)}%</span>
-            </button>
-          )}
+          {weakest && onDrillSection && (() => {
+            const avail = ALL_QUESTIONS.filter(q => q.s === weakest.s).length;
+            const opts = [10, 20, 30, 50].filter(n => n < avail);
+            const n = drillCount === "all" ? avail : Math.min(drillCount, avail);
+            const dpill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+              background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
+              color: active ? "var(--color-text-info)" : "var(--color-text-secondary)",
+              border: active ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
+              fontWeight: active ? 500 : 400 });
+            return (
+              <div style={{ ...S.card, padding:"1rem", marginBottom:"1rem", border:"1px solid var(--color-border-info)" }}>
+                <div style={{ fontSize:14, fontWeight:600 }}>🎯 {T("Practice your weakest section")}</div>
+                <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3 }}>
+                  {T("Weakest area so far: {s} · {p}% correct", { s: secName(weakest.s, lang), p: Math.round(weakest.acc*100) })}
+                </div>
+                <div style={{ fontSize:12, color:"var(--color-text-tertiary)", marginTop:6 }}>
+                  {T("A random mix from this section — choose how many:")}
+                </div>
+                <div style={{ display:"flex", gap:6, flexWrap:"wrap", margin:"10px 0" }}>
+                  {opts.map(o => <button key={o} onClick={() => setDrillCount(o)} style={dpill(drillCount===o)}>{o}</button>)}
+                  <button onClick={() => setDrillCount("all")} style={dpill(drillCount==="all")}>{T("All")} ({avail})</button>
+                </div>
+                <button style={S.btnPrim} onClick={() => onDrillSection(weakest.s, n)}>{lbl(T("Review {n} →", { n }))}</button>
+              </div>
+            );
+          })()}
           <div style={{ display:"flex", justifyContent:"flex-end", alignItems:"center", gap:6, marginTop:-4, marginBottom:"1rem", flexWrap:"wrap" }}>
             {confirmReset
               ? <>
@@ -2234,7 +2254,7 @@ export default function App() {
     return <HistoryScreen history={history} progress={progress} difficulties={difficulties} onDiffChange={setDiff} onHome={goHome}
       onClear={() => { setHistory([]); try { localStorage.removeItem(HISTORY_KEY); } catch {} }}
       onDelete={(ts) => setHistory(prev => { const next = prev.filter(h => h.ts !== ts); saveHistory(next); return next; })}
-      onDrillSection={(s) => startQuiz(s, "all", "random", 20)}
+      onDrillSection={(s, count) => startQuiz(s, "all", "random", count)}
       onResetProgress={resetProgress} />;
   }
   if (screen === "browser") {
