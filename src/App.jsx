@@ -778,9 +778,9 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         <button style={S.btnPrim} onClick={() => onQuickTest(qtDiff, qtCount)}>{lbl(T("Start quick test →"))}</button>
       </div>
 
-      {/* Full quiz — combine Section + Level + count + order, then press Start */}
+      {/* Section test — combine Section + Level + count + order, then press Start */}
       <div style={S.card}>
-        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {T("Full quiz")}</div>
+        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {T("Section test")}</div>
 
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Section")}</div>
         <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".75rem" }}>
