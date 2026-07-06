@@ -9,4 +9,5 @@
 //
 // The token is NOT a secret — it is visible in the page source by design, so it is fine to commit.
 // While this is empty, no analytics script is loaded and nothing is sent.
-export const CF_BEACON_TOKEN = "";
+// Loaded in production only (see src/main.jsx), so localhost/dev sends nothing.
+export const CF_BEACON_TOKEN = "d4cf4b21c3d346e3b56666e0ae1385e3";

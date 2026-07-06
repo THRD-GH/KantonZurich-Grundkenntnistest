@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zürich Grundkenntnistest</title>
+    <title>Zürich Grundkenntnistest — Free Practice Quiz (12 languages)</title>
+    <!-- SEO / social -->
+    <meta name="description" content="Free study app for the Canton of Zürich Grundkenntnistest: practise all 350 official naturalisation questions with a timed mock exam, explanations and translations in 12 languages. Works offline." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="THRD-GH" />
+    <link rel="canonical" href="https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zürich Grundkenntnistest" />
+    <meta property="og:title" content="Zürich Grundkenntnistest — free practice quiz" />
+    <meta property="og:description" content="Practise all 350 official questions for the Canton of Zürich basic-knowledge naturalisation test — instant feedback, timed mock exam, spaced-repetition review, audio and 12 languages. Free and works offline." />
+    <meta property="og:url" content="https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/" />
+    <meta property="og:image" content="https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/pwa-512.png" />
+    <meta property="og:locale" content="de_CH" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Zürich Grundkenntnistest — free practice quiz" />
+    <meta name="twitter:description" content="Practise all 350 official questions for the Canton of Zürich naturalisation basic-knowledge test. Free, 12 languages, works offline." />
+    <meta name="twitter:image" content="https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/pwa-512.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Zürich Grundkenntnistest — Practice Quiz",
+      "url": "https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web browser",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": ["de","en","fr","it","pt","es","sq","hr","tr","ta","ti","ar"],
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" },
+      "description": "Free, unofficial study app for the Canton of Zürich Grundkenntnistest (basic-knowledge test for Swiss naturalisation): all 350 official questions with explanations, a timed mock exam, spaced-repetition review, audio read-out and translations in 12 languages."
+    }
+    </script>
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="theme-color" content="#D52B1E" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
@@ -30,6 +61,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="max-width:640px;margin:2rem auto;padding:0 1rem;font-family:system-ui,-apple-system,sans-serif;line-height:1.55;color:#111">
+        <h1>Zürich Grundkenntnistest — free practice quiz</h1>
+        <p>A free, unofficial study app for the Canton of Zürich <strong>Grundkenntnistest</strong> — the basic-knowledge test on Switzerland, the canton and the municipality that applicants must pass for ordinary naturalisation. Practise all 350 official questions with instant feedback, short explanations, a timed mock exam, spaced-repetition review, audio read-out and translations in 12 languages.</p>
+        <p>This app needs JavaScript to run. Please enable it, or see the official Canton of Zürich information here:
+          <a href="https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html">zh.ch — Grundkenntnistest</a>.</p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
