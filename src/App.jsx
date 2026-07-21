@@ -598,6 +598,8 @@ function EnToggle({ enMode, setEnMode, prefix }) {
 // ── Home screen ───────────────────────────────────────────────────────────────
 function HomeScreen({ difficulties, history, progress, dueCount, resume, onResume, onDiscardResume, onStart, onQuickTest, onMockExam, onHistory, onBrowser, onHelp, onSettings, onResetRatings, onSmartReview, onReviewSaved }) {
   const T = useT(); const lang = useLang();
+  // Section-card headings use Title Case in English; other languages keep their own casing conventions.
+  const tc = (s) => lang === "en" ? s.replace(/\b([a-z])/g, (_, c) => c.toUpperCase()) : s;
   const { set: savedSet } = useBookmarks();
   const savedCount = savedSet.size;
   const counts = countByDiff(difficulties);
@@ -679,7 +681,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:10, flexWrap:"wrap" }}>
           <div>
-            <div style={{ fontSize:14, fontWeight:600 }}>🎓 {T("Mock exam")}</div>
+            <div style={{ fontSize:14, fontWeight:600 }}>🎓 {tc(T("Mock exam"))}</div>
             <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3 }}>
               {T("{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end", { n: EXAM_COUNT, m: EXAM_MINUTES, p: EXAM_PASS_PCT })}
             </div>
@@ -690,7 +692,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Quick test */}
       <div style={S.card}>
-        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>⚡ {T("Quick test")}</div>
+        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>⚡ {tc(T("Quick test"))}</div>
         <div style={{ display:"flex", gap:12, flexWrap:"wrap", alignItems:"flex-start", marginBottom:".75rem" }}>
           <div>
             <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Focus on")}</div>
@@ -780,7 +782,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Section test — combine Section + Level + count + order, then press Start */}
       <div style={S.card}>
-        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {T("Section test")}</div>
+        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {tc(T("Section test"))}</div>
 
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Section")}</div>
         <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".75rem" }}>
@@ -847,7 +849,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         const srN = srCount === "all" ? dueCount : Math.min(srCount, dueCount);
         return (
           <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
-            <div style={{ fontSize:14, fontWeight:600 }}>{T("🔁 Smart review")}</div>
+            <div style={{ fontSize:14, fontWeight:600 }}>{tc(T("🔁 Smart review"))}</div>
             <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3, marginBottom:".85rem" }}>
               {T("{n} question{s} due — spaced repetition resurfaces what you're about to forget.", { n: dueCount, s: dueCount !== 1 ? "s" : "" })}
             </div>
@@ -871,7 +873,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {savedCount > 0 && (
         <div style={{ ...S.card, display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
           <div style={{ fontSize:13, fontWeight:500, display:"inline-flex", alignItems:"center", gap:6 }}>
-            ★ {T("Saved questions")} <span style={{ ...S.badge, fontSize:10 }}>{savedCount}</span>
+            ★ {tc(T("Saved questions"))} <span style={{ ...S.badge, fontSize:10 }}>{savedCount}</span>
           </div>
           <button style={S.btnPrim} onClick={onReviewSaved}>{lbl(T("Review saved →"))}</button>
         </div>
@@ -880,7 +882,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
-          <div style={{ fontSize:14, fontWeight:600 }}>🏷️ {T("Difficulty ratings")}</div>
+          <div style={{ fontSize:14, fontWeight:600 }}>🏷️ {tc(T("Difficulty ratings"))}</div>
           {counts.unrated < ALL_QUESTIONS.length && (
             confirmReset
               ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
