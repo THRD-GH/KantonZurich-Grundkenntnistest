@@ -775,7 +775,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
             {T("Exam mix — drawn ~70% federal / 20% cantonal / 10% municipal, like the real test (50 questions → 35 / 10 / 5).")}
           </div>
         )}
-        <button style={S.btnPrim} onClick={() => onQuickTest(qtDiff, qtCount)}>{lbl(T("Start quick test →"))}</button>
+        <button style={S.btnPrim} onClick={() => onQuickTest(qtDiff, qtCount)}>{lbl(`${T("Start Quick Test")} · ${qtCount} →`)}</button>
       </div>
 
       {/* Section test — combine Section + Level + count + order, then press Start */}
@@ -837,7 +837,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         <button disabled={!fqCount}
           style={{ ...S.btnPrim, opacity: fqCount ? 1 : .45, cursor: fqCount ? "pointer" : "default" }}
           onClick={() => onStart(fqSection, fqLevel, fqOrder, secCount === "all" ? null : secCount)}>
-          {lbl(T("Start quiz →"))}
+          {lbl(`${T("Start Section Test")} · ${fqCount} →`)}
         </button>
       </div>
 
@@ -862,7 +862,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                 </div>
               </>
             )}
-            <button style={S.btnPrim} onClick={() => onSmartReview(srN)}>{lbl(T("Review {n} →", { n: srN }))}</button>
+            <button style={S.btnPrim} onClick={() => onSmartReview(srN)}>{lbl(`${T("Smart Review")} · ${srN} →`)}</button>
           </div>
         );
       })()}
