@@ -686,7 +686,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
               {T("{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end", { n: EXAM_COUNT, m: EXAM_MINUTES, p: EXAM_PASS_PCT })}
             </div>
           </div>
-          <button style={S.btnPrim} onClick={onMockExam}>{lbl(T("Start mock exam →"))}</button>
+          <button style={S.btnPrim} onClick={onMockExam}>{lbl(tc(T("Start mock exam →")))}</button>
         </div>
       </div>
 
