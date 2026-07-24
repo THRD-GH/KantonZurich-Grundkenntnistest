@@ -272,7 +272,8 @@ export const EXTRA = {
    {
     "t": "Os seus dados",
     "b": [
-     "As suas classificações de dificuldade, perguntas guardadas, histórico e progresso são guardados apenas neste navegador — nada é carregado. Nas Definições, «Cópia de segurança» guarda tudo num ficheiro e «Restaurar» volta a carregá-lo — útil ao mudar de dispositivo ou antes de limpar os dados do navegador. Uma cópia feita a partir de uma versão anterior da lista de perguntas não substitui o seu progresso atual, mas as suas definições podem na mesma ser restauradas."
+     "As suas classificações de dificuldade, perguntas guardadas, histórico e progresso são guardados apenas neste navegador — nada é carregado. Nas Definições, «Cópia de segurança» guarda tudo num ficheiro e «Restaurar» volta a carregá-lo — útil ao mudar de dispositivo ou antes de limpar os dados do navegador. Uma cópia feita a partir de uma versão anterior da lista de perguntas não substitui o seu progresso atual, mas as suas definições podem na mesma ser restauradas.",
+     "Privacidade: sem cookies de rastreamento, por isso não é necessário nenhum aviso de cookies — tudo o que está acima permanece no seu dispositivo e nunca nos é enviado (não há conta nem servidor). O número de visitantes vem das estatísticas sem cookies da Cloudflare, que não armazena nada no seu dispositivo nem o identifica, e a fonte é servida por este site em vez de uma CDN de terceiros."
     ]
    },
    {
@@ -572,7 +573,8 @@ export const EXTRA = {
    {
     "t": "Të dhënat e tua",
     "b": [
-     "Vlerësimet e vështirësisë, pyetjet e ruajtura, historia dhe përparimi juaj ruhen vetëm në këtë shfletues — asgjë nuk ngarkohet. Te Cilësimet, «Rezervo» ruan gjithçka në një skedar dhe «Rikthe» e ngarkon sërish — e dobishme kur ndërroni pajisje ose para se të pastroni të dhënat e shfletuesit. Një rezervim i bërë me një version të mëparshëm të listës së pyetjeve nuk e mbishkruan përparimin tuaj aktual, por cilësimet e tij mund të rikthehen prapëseprapë."
+     "Vlerësimet e vështirësisë, pyetjet e ruajtura, historia dhe përparimi juaj ruhen vetëm në këtë shfletues — asgjë nuk ngarkohet. Te Cilësimet, «Rezervo» ruan gjithçka në një skedar dhe «Rikthe» e ngarkon sërish — e dobishme kur ndërroni pajisje ose para se të pastroni të dhënat e shfletuesit. Një rezervim i bërë me një version të mëparshëm të listës së pyetjeve nuk e mbishkruan përparimin tuaj aktual, por cilësimet e tij mund të rikthehen prapëseprapë.",
+     "Privatësia: pa cookie gjurmimi, prandaj nuk nevojitet asnjë njoftim për cookie — gjithçka më sipër mbetet në pajisjen tuaj dhe nuk na dërgohet kurrë (nuk ka llogari as server). Numri i vizitorëve vjen nga statistikat pa cookie të Cloudflare, që nuk ruan asgjë në pajisjen tuaj dhe nuk ju identifikon, dhe fonti shërbehet nga kjo faqe në vend të një CDN-je të palëve të treta."
     ]
    },
    {
@@ -872,7 +874,8 @@ export const EXTRA = {
    {
     "t": "Tus datos",
     "b": [
-     "Tus valoraciones de dificultad, preguntas guardadas, historial y progreso se almacenan solo en este navegador — no se sube nada. En Ajustes, «Copia de seguridad» guarda todo en un archivo y «Restaurar» lo vuelve a cargar — útil al cambiar de dispositivo o antes de borrar los datos del navegador. Una copia hecha con una versión anterior de la lista de preguntas no sobrescribe tu progreso actual, pero sus ajustes sí se pueden restaurar."
+     "Tus valoraciones de dificultad, preguntas guardadas, historial y progreso se almacenan solo en este navegador — no se sube nada. En Ajustes, «Copia de seguridad» guarda todo en un archivo y «Restaurar» lo vuelve a cargar — útil al cambiar de dispositivo o antes de borrar los datos del navegador. Una copia hecha con una versión anterior de la lista de preguntas no sobrescribe tu progreso actual, pero sus ajustes sí se pueden restaurar.",
+     "Privacidad: sin cookies de seguimiento, por lo que no se necesita ningún aviso de cookies — todo lo anterior permanece en tu dispositivo y nunca se nos envía (no hay cuenta ni servidor). El número de visitantes proviene de las estadísticas sin cookies de Cloudflare, que no almacena nada en tu dispositivo ni te identifica, y la fuente se sirve desde este sitio en lugar de una CDN de terceros."
     ]
    },
    {
@@ -1172,7 +1175,8 @@ export const EXTRA = {
    {
     "t": "Vaši podaci",
     "b": [
-     "Vaše ocjene težine, spremljena pitanja, povijest i napredak pohranjeni su samo u ovom pregledniku — ništa se ne prenosi. U Postavkama «Sigurnosna kopija» sprema sve u datoteku, a «Vrati» je ponovno učitava — korisno pri promjeni uređaja ili prije brisanja podataka preglednika. Sigurnosna kopija iz starije verzije skupa pitanja neće prebrisati vaš trenutni napredak, ali njezine se postavke ipak mogu vratiti."
+     "Vaše ocjene težine, spremljena pitanja, povijest i napredak pohranjeni su samo u ovom pregledniku — ništa se ne prenosi. U Postavkama «Sigurnosna kopija» sprema sve u datoteku, a «Vrati» je ponovno učitava — korisno pri promjeni uređaja ili prije brisanja podataka preglednika. Sigurnosna kopija iz starije verzije skupa pitanja neće prebrisati vaš trenutni napredak, ali njezine se postavke ipak mogu vratiti.",
+     "Privatnost: nema kolačića za praćenje pa nije potrebna nikakva obavijest o kolačićima — sve navedeno ostaje na vašem uređaju i nikada nam se ne šalje (nema računa ni poslužitelja). Broj posjetitelja dolazi iz Cloudflareove statistike bez kolačića, koja ništa ne pohranjuje na vaš uređaj i ne identificira vas, a font se poslužuje s ove stranice umjesto s CDN-a treće strane."
     ]
    },
    {
@@ -1472,7 +1476,8 @@ export const EXTRA = {
    {
     "t": "Verileriniz",
     "b": [
-     "Zorluk derecelendirmeleriniz, kayıtlı sorularınız, geçmişiniz ve ilerlemeniz yalnızca bu tarayıcıda saklanır — hiçbir şey yüklenmez. Ayarlar'da «Yedekle» her şeyi bir dosyaya kaydeder ve «Geri yükle» tekrar yükler — cihaz değiştirirken veya tarayıcı verilerini temizlemeden önce kullanışlıdır. Soru listesinin eski bir sürümüyle yapılan bir yedek mevcut ilerlemenizin üzerine yazmaz, ancak ayarları yine de geri yüklenebilir."
+     "Zorluk derecelendirmeleriniz, kayıtlı sorularınız, geçmişiniz ve ilerlemeniz yalnızca bu tarayıcıda saklanır — hiçbir şey yüklenmez. Ayarlar'da «Yedekle» her şeyi bir dosyaya kaydeder ve «Geri yükle» tekrar yükler — cihaz değiştirirken veya tarayıcı verilerini temizlemeden önce kullanışlıdır. Soru listesinin eski bir sürümüyle yapılan bir yedek mevcut ilerlemenizin üzerine yazmaz, ancak ayarları yine de geri yüklenebilir.",
+     "Gizlilik: takip çerezi yok, bu yüzden çerez bildirimine gerek yok — yukarıdakilerin tümü cihazınızda kalır ve bize asla gönderilmez (hesap veya sunucu yoktur). Ziyaretçi sayıları, cihazınıza hiçbir şey kaydetmeyen ve sizi tanımlamayan Cloudflare'ın çerezsiz istatistiklerinden gelir; yazı tipi de üçüncü taraf bir CDN yerine bu siteden sunulur."
     ]
    },
    {
@@ -1772,7 +1777,8 @@ export const EXTRA = {
    {
     "t": "بياناتك",
     "b": [
-     "تُخزَّن تقييمات الصعوبة والأسئلة المحفوظة والسجلّ والتقدّم في هذا المتصفّح فقط — لا يُرفع أي شيء. في الإعدادات، يحفظ «نسخ احتياطي» كل ذلك في ملف، ويعيد «استعادة» تحميله — مفيد عند تغيير الأجهزة أو قبل مسح بيانات المتصفّح. النسخة الاحتياطية المأخوذة من إصدار أقدم من قائمة الأسئلة لن تستبدل تقدّمك الحالي، لكن يمكن استعادة إعداداتها."
+     "تُخزَّن تقييمات الصعوبة والأسئلة المحفوظة والسجلّ والتقدّم في هذا المتصفّح فقط — لا يُرفع أي شيء. في الإعدادات، يحفظ «نسخ احتياطي» كل ذلك في ملف، ويعيد «استعادة» تحميله — مفيد عند تغيير الأجهزة أو قبل مسح بيانات المتصفّح. النسخة الاحتياطية المأخوذة من إصدار أقدم من قائمة الأسئلة لن تستبدل تقدّمك الحالي، لكن يمكن استعادة إعداداتها.",
+     "الخصوصية: لا توجد ملفات تعريف ارتباط للتتبع، لذا لا حاجة إلى أي شريط لملفات تعريف الارتباط — كل ما سبق يبقى على جهازك ولا يُرسل إلينا أبدًا (لا يوجد حساب ولا خادم). تأتي أعداد الزوّار من إحصاءات Cloudflare بدون ملفات تعريف ارتباط، التي لا تخزّن شيئًا على جهازك ولا تحدّد هويتك، ويُقدَّم الخط من هذا الموقع بدلاً من شبكة توصيل محتوى تابعة لجهة خارجية."
     ]
    },
    {
@@ -2072,7 +2078,8 @@ export const EXTRA = {
    {
     "t": "உங்கள் தரவு",
     "b": [
-     "உங்கள் கடின மதிப்பீடுகள், சேமித்த கேள்விகள், வரலாறு மற்றும் முன்னேற்றம் இந்த உலாவியில் மட்டுமே சேமிக்கப்படுகின்றன — எதுவும் பதிவேற்றப்படுவதில்லை. அமைப்புகளில், «காப்புப்பிரதி» அனைத்தையும் ஒரு கோப்பில் சேமிக்கிறது, «மீட்டமை» அதை மீண்டும் ஏற்றுகிறது — சாதனங்களை மாற்றும்போது அல்லது உலாவித் தரவை அழிப்பதற்கு முன் பயனுள்ளது. கேள்விப் பட்டியலின் பழைய பதிப்பில் செய்யப்பட்ட காப்புப்பிரதி உங்கள் தற்போதைய முன்னேற்றத்தை மேலெழுதாது, ஆனால் அதன் அமைப்புகளை மீட்டமைக்க முடியும்."
+     "உங்கள் கடின மதிப்பீடுகள், சேமித்த கேள்விகள், வரலாறு மற்றும் முன்னேற்றம் இந்த உலாவியில் மட்டுமே சேமிக்கப்படுகின்றன — எதுவும் பதிவேற்றப்படுவதில்லை. அமைப்புகளில், «காப்புப்பிரதி» அனைத்தையும் ஒரு கோப்பில் சேமிக்கிறது, «மீட்டமை» அதை மீண்டும் ஏற்றுகிறது — சாதனங்களை மாற்றும்போது அல்லது உலாவித் தரவை அழிப்பதற்கு முன் பயனுள்ளது. கேள்விப் பட்டியலின் பழைய பதிப்பில் செய்யப்பட்ட காப்புப்பிரதி உங்கள் தற்போதைய முன்னேற்றத்தை மேலெழுதாது, ஆனால் அதன் அமைப்புகளை மீட்டமைக்க முடியும்.",
+     "தனியுரிமை: கண்காணிப்பு குக்கீகள் இல்லை, எனவே குக்கீ அறிவிப்பு தேவையில்லை — மேலே உள்ள அனைத்தும் உங்கள் சாதனத்தில் இருக்கும், எங்களுக்கு ஒருபோதும் அனுப்பப்படாது (கணக்கோ சேவையகமோ இல்லை). பார்வையாளர் எண்ணிக்கை Cloudflare இன் குக்கீ இல்லாத பகுப்பாய்விலிருந்து வருகிறது; அது உங்கள் சாதனத்தில் எதையும் சேமிக்காது, உங்களை அடையாளம் காணாது; எழுத்துரு மூன்றாம் தரப்பு CDN க்குப் பதிலாக இந்த தளத்திலிருந்தே வழங்கப்படுகிறது."
     ]
    },
    {
@@ -2372,7 +2379,8 @@ export const EXTRA = {
    {
     "t": "ዳታኻ",
     "b": [
-     "ናይ ኣጸጋሚነት ገምጋማትካ፡ ዝተዓቀቡ ሕቶታትካ፡ ታሪኽካን ምዕባለኻን ኣብዚ መርበብ ጥራይ እዮም ዝዕቀቡ — ዝኾነ ነገር ኣይሰቀልን። ኣብ ቅጥዕታት፡ «ሓሉ» ኩሉ ኣብ ፋይል የቐምጦ፡ «መልስ» ድማ ዳግም የጽዕኖ — መሳርሒ ክትቅይር ከለኻ ወይ ናይ መርበብ ዳታ ቅድሚ ምድምሳስካ ጠቓሚ እዩ። ካብ ኣረጊት ስሪት ናይ ሕቶታት ዝርዝር ዝተገብረ ሕዛእቲ ንህሉው ምዕባለኻ ኣይድምስሶን፡ ግን ቅጥዕታቱ ክምለሱ ይኽእሉ።"
+     "ናይ ኣጸጋሚነት ገምጋማትካ፡ ዝተዓቀቡ ሕቶታትካ፡ ታሪኽካን ምዕባለኻን ኣብዚ መርበብ ጥራይ እዮም ዝዕቀቡ — ዝኾነ ነገር ኣይሰቀልን። ኣብ ቅጥዕታት፡ «ሓሉ» ኩሉ ኣብ ፋይል የቐምጦ፡ «መልስ» ድማ ዳግም የጽዕኖ — መሳርሒ ክትቅይር ከለኻ ወይ ናይ መርበብ ዳታ ቅድሚ ምድምሳስካ ጠቓሚ እዩ። ካብ ኣረጊት ስሪት ናይ ሕቶታት ዝርዝር ዝተገብረ ሕዛእቲ ንህሉው ምዕባለኻ ኣይድምስሶን፡ ግን ቅጥዕታቱ ክምለሱ ይኽእሉ።",
+     "ውልቀ-ምስጢር፦ ናይ ምክትታል ኩኪ የለን፡ ስለዚ ናይ ኩኪ ማፍለጢ ኣየድልን — ኩሉ ኣብ ላዕሊ ዘሎ ኣብ መሳርሒኻ ይተርፍ፡ ናባና ፈጺሙ ኣይለኣኽን (account ኮነ server የለን)። ቁጽሪ በጻሕቲ ካብ ናይ Cloudflare ብዘይ ኩኪ ስታቲስቲክስ ይመጽእ፡ ንሱ ኣብ መሳርሒኻ ዝኾነ ነገር ኣይዕቅብን ንዓኻ ኣይልልን። እቲ ፊደል ካብዚ መርበብ እዚ እዩ ዝቐርብ፡ ካብ ናይ ሳልሳይ ወገን CDN ኣይኮነን።"
     ]
    },
    {
