@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zurichtest.ch/sitemap.xml
+Sitemap: https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/sitemap.xml

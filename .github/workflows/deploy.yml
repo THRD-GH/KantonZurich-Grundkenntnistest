@@ -26,8 +26,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      # Served from the root of the custom domain (zurichtest.ch), so build with base "/"
+      # Build under the repository sub-path (e.g. /my-repo/) so assets resolve on Pages
       - run: npm run build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

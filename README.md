@@ -1,6 +1,6 @@
 # Zürich Grundkenntnistest — Quiz App
 
-**▶ Live app: <https://zurichtest.ch/>** — runs in any browser, works on phones, and can be installed to your home screen (offline-capable after the first visit). (The old address <https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/> redirects here.)
+**▶ Live app: <https://thrd-gh.github.io/KantonZurich-Grundkenntnistest/>** — runs in any browser, works on phones, and can be installed to your home screen (offline-capable after the first visit).
 
 ## What this is
 
