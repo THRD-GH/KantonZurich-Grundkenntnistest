@@ -2119,7 +2119,7 @@ function ChallengeModal({ lang, onAccept, onDismiss }) {
             style={{ ...S.btnPrim, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
             {lbl(T("Start mock exam →"))}
           </button>
-          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Maybe later")}</button>
+          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Let's practice first")}</button>
         </div>
         <label style={{ display:"flex", alignItems:"center", gap:8, marginTop:14, fontSize:12.5, color:"var(--color-text-tertiary)", cursor:"pointer" }}>
           <input type="checkbox" checked={dontShow} onChange={e => setDont(e.target.checked)}
