@@ -2086,7 +2086,7 @@ function HelpScreen({ onHome }) {
 
 // ── Root ──────────────────────────────────────────────────────────────────────
 // "Think you'd pass?" challenge shown on each start until the user opts out via the checkbox.
-function ChallengeModal({ lang, onAccept, onDismiss }) {
+function ChallengeModal({ lang, onAccept, onDismiss, onHelp }) {
   const T = useT();
   const primaryRef = useRef(null);
   const [dontShow, setDontShow] = useState(false);
@@ -2112,14 +2112,15 @@ function ChallengeModal({ lang, onAccept, onDismiss }) {
         </svg>
         <div style={{ fontSize:19, fontWeight:600, marginBottom:8 }}>{T("Think you'd pass?")}</div>
         <div style={{ fontSize:14, color:"var(--color-text-secondary)", lineHeight:1.5, marginBottom:"1.25rem" }}>
-          {T("How well do you already know Switzerland and the Canton of Zürich? Take a full mock exam — 50 questions, 60 minutes, 60% to pass — and see if you'd pass the real test today.")}
+          {T("How well do you already know Switzerland and the Canton of Zürich? Take the Zürich citizenship mock exam — 50 questions, 60 minutes, 60% to pass — and see if you'd pass the real test today.")}
         </div>
         <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
           <button ref={primaryRef} onClick={() => onAccept(dontShowRef.current)}
-            style={{ ...S.btnPrim, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
+            style={{ ...S.btnPrim, flex:"1 1 100%", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
             {lbl(T("Start mock exam →"))}
           </button>
-          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Let's practice first")}</button>
+          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"1 1 auto", justifyContent:"center" }}>{T("Let's practice first")}</button>
+          <button onClick={() => onHelp(dontShowRef.current)} style={{ ...S.btn, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:4 }}>{lbl(`${T("Want to know more")} →`)}</button>
         </div>
         <label style={{ display:"flex", alignItems:"center", gap:8, marginTop:14, fontSize:12.5, color:"var(--color-text-tertiary)", cursor:"pointer" }}>
           <input type="checkbox" checked={dontShow} onChange={e => setDont(e.target.checked)}
@@ -2366,7 +2367,8 @@ export default function App() {
         {showChallenge && screen === "home" && (
           <ChallengeModal lang={lang}
             onAccept={(dontShow) => { closeChallenge(dontShow); startMockExam(); }}
-            onDismiss={(dontShow) => closeChallenge(dontShow)} />
+            onDismiss={(dontShow) => closeChallenge(dontShow)}
+            onHelp={(dontShow) => { closeChallenge(dontShow); setScreen("help"); }} />
         )}
       </BookmarkContext.Provider>
     </LangContext.Provider>
