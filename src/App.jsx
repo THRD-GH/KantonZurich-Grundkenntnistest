@@ -50,7 +50,22 @@ function tr(lang, s, vars) {
   return out;
 }
 const useT = () => { const lang = useLang(); return useCallback((s, vars) => tr(lang, s, vars), [lang]); };
-function loadLang() { try { const v = localStorage.getItem(LANG_KEY); return LANGS[v] ? v : "en"; } catch { return "en"; } }
+// Serbian/Bosnian speakers share the Croatian bundle; a few browsers use these base codes.
+const LANG_ALIAS = { sr: "hr", bs: "hr" };
+// First-run only: match the browser's preferred languages to one of our UI languages, else English.
+function detectLang() {
+  try {
+    for (const pref of [navigator.language, ...(navigator.languages || [])]) {
+      if (!pref) continue;
+      const base = pref.toLowerCase().split(/[-_]/)[0];   // "de-CH" → "de", "pt_BR" → "pt"
+      const code = LANGS[base] ? base : LANG_ALIAS[base];
+      if (code && LANGS[code]) return code;
+    }
+  } catch {}
+  return "en";
+}
+// Stored choice wins; otherwise fall back to the detected browser language.
+function loadLang() { try { const v = localStorage.getItem(LANG_KEY); if (LANGS[v]) return v; } catch {} return detectLang(); }
 // Translated question content per language (English is q.en directly; German has none — see below).
 // Loaded translation content, filled on demand. qText/oText fall back to English until the file arrives.
 const CONTENT = {};
