@@ -2105,11 +2105,19 @@ function ChallengeModal({ lang, onAccept, onDismiss, onHelp }) {
       <div onClick={e => e.stopPropagation()}
         style={{ ...S.card, maxWidth:430, width:"100%", margin:0, padding:"1.5rem", maxHeight:"90vh", overflowY:"auto",
           boxShadow:"0 12px 44px rgba(0,0,0,0.35)", ...rtlStyle(lang) }}>
-        <svg viewBox="0 0 32 32" width="36" height="36" style={{ borderRadius:6, marginBottom:12 }} aria-hidden="true">
-          <rect width="32" height="32" fill="#D52B1E"/>
-          <rect x="13" y="7" width="6" height="18" fill="#fff"/>
-          <rect x="7" y="13" width="18" height="6" fill="#fff"/>
-        </svg>
+        <div style={{ display:"flex", direction:"ltr", justifyContent:"space-between", alignItems:"flex-start", marginBottom:12 }}>
+          {/* Swiss flag (top-left) */}
+          <svg viewBox="0 0 32 32" width="36" height="36" style={{ borderRadius:6, border:"0.5px solid var(--color-border-tertiary)" }} aria-hidden="true">
+            <rect width="32" height="32" fill="#D52B1E"/>
+            <rect x="13" y="7" width="6" height="18" fill="#fff"/>
+            <rect x="7" y="13" width="18" height="6" fill="#fff"/>
+          </svg>
+          {/* Canton of Zürich flag (top-right) — per bend argent/azure */}
+          <svg viewBox="0 0 32 32" width="36" height="36" style={{ borderRadius:6, border:"0.5px solid var(--color-border-tertiary)" }} aria-hidden="true">
+            <rect width="32" height="32" fill="#fff"/>
+            <polygon points="0,0 0,32 32,32" fill="#248BCC"/>
+          </svg>
+        </div>
         <div style={{ fontSize:19, fontWeight:600, marginBottom:8 }}>{T("Think you'd pass?")}</div>
         <div style={{ fontSize:14, color:"var(--color-text-secondary)", lineHeight:1.5, marginBottom:"1.25rem" }}>
           {T("How well do you already know Switzerland and the Canton of Zürich? Take the Zürich citizenship mock exam — 50 questions, 60 minutes, 60% to pass — and see if you'd pass the real test today.")}
