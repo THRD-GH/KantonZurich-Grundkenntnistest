@@ -28,6 +28,7 @@ const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
 const SPEED_KEY    = "gkt_speed_v1";         // read-aloud playback rate
 const SPEECH_RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
 const BOOKMARKS_KEY = "gkt_bookmarks_v1";    // [id, …] — questions the user saved to revisit
+const CHALLENGE_KEY = "gkt_challenge_seen_v1"; // "1" once the first-load challenge popup has been shown
 const SRS_MAX_BOX  = 5;                     // Leitner boxes: 1 = struggling … 5 = mastered
 const DAY_MS = 86400000;
 const SRS_DUE_DAYS = { 1: 0, 2: 1, 3: 3, 4: 7, 5: 30 }; // days until a box becomes due for review again
@@ -2084,6 +2085,44 @@ function HelpScreen({ onHome }) {
 }
 
 // ── Root ──────────────────────────────────────────────────────────────────────
+// One-time "think you'd pass?" challenge shown on the very first visit.
+function ChallengeModal({ lang, onAccept, onDismiss }) {
+  const T = useT();
+  const primaryRef = useRef(null);
+  useEffect(() => {
+    primaryRef.current?.focus();
+    const onKey = (e) => { if (e.key === "Escape") onDismiss(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onDismiss]);
+  return (
+    <div role="dialog" aria-modal="true" onClick={onDismiss}
+      style={{ position:"fixed", inset:0, zIndex:1000, background:"rgba(0,0,0,0.55)",
+        display:"flex", alignItems:"center", justifyContent:"center", padding:"1rem" }}>
+      <div onClick={e => e.stopPropagation()}
+        style={{ ...S.card, maxWidth:430, width:"100%", margin:0, padding:"1.5rem",
+          boxShadow:"0 12px 44px rgba(0,0,0,0.35)", ...rtlStyle(lang) }}>
+        <svg viewBox="0 0 32 32" width="36" height="36" style={{ borderRadius:6, marginBottom:12 }} aria-hidden="true">
+          <rect width="32" height="32" fill="#D52B1E"/>
+          <rect x="13" y="7" width="6" height="18" fill="#fff"/>
+          <rect x="7" y="13" width="18" height="6" fill="#fff"/>
+        </svg>
+        <div style={{ fontSize:19, fontWeight:600, marginBottom:8 }}>{T("Think you'd pass?")}</div>
+        <div style={{ fontSize:14, color:"var(--color-text-secondary)", lineHeight:1.5, marginBottom:"1.25rem" }}>
+          {T("How well do you already know Switzerland and the Canton of Zürich? Take a full mock exam — 50 questions, 60 minutes, 60% to pass — and see if you'd pass the real test today.")}
+        </div>
+        <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+          <button ref={primaryRef} onClick={onAccept}
+            style={{ ...S.btnPrim, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
+            {lbl(T("Start mock exam →"))}
+          </button>
+          <button onClick={onDismiss} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Maybe later")}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [difficulties, setDifficulties] = useState(loadDifficulties);
   const [bookmarks,    setBookmarks]    = useState(loadBookmarks);   // [id, …] saved questions
@@ -2225,6 +2264,24 @@ export default function App() {
 
   const goHome = useCallback(() => { setScreen("home"); setPool(null); }, []); // keeps resume snapshot so Home can offer to continue
 
+  // Browser Back during a test → intercept and return Home instead of leaving the site.
+  useEffect(() => {
+    if (screen !== "quiz" && screen !== "exam") return;
+    window.history.pushState({ gktGuard: true }, "");
+    const onPop = () => goHome();
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [screen, goHome]);
+
+  // One-time challenge popup, shown only on the very first visit.
+  const [showChallenge, setShowChallenge] = useState(() => {
+    try { return !localStorage.getItem(CHALLENGE_KEY); } catch { return false; }
+  });
+  const dismissChallenge = useCallback(() => {
+    setShowChallenge(false);
+    try { localStorage.setItem(CHALLENGE_KEY, "1"); } catch {}
+  }, []);
+
   // Resume the saved in-progress session, rebuilding the pool in its original order
   const resumeSession = useCallback(() => {
     if (!resume) return;
@@ -2298,6 +2355,11 @@ export default function App() {
         <TopBar lang={lang} setLang={setLang} onHome={screen !== "home" ? goHome : null} onSettings={() => setScreen("settings")} onHelp={() => setScreen("help")} />
         <div ref={mainRef} tabIndex={-1} style={{ outline:"none" }}>{view}</div>
         <ZoomControl textSize={textSize} setTextSize={setTextSize} />
+        {showChallenge && screen === "home" && (
+          <ChallengeModal lang={lang}
+            onAccept={() => { dismissChallenge(); startMockExam(); }}
+            onDismiss={dismissChallenge} />
+        )}
       </BookmarkContext.Provider>
     </LangContext.Provider>
   );
