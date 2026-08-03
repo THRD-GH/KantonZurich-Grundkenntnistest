@@ -2119,7 +2119,7 @@ function ChallengeModal({ lang, onAccept, onDismiss, onHelp }) {
             style={{ ...S.btnPrim, flex:"1 1 100%", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
             {lbl(T("Start mock exam →"))}
           </button>
-          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"1 1 auto", justifyContent:"center" }}>{T("Let's practice first")}</button>
+          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:4 }}>{lbl(`${T("Let's practice first")} →`)}</button>
           <button onClick={() => onHelp(dontShowRef.current)} style={{ ...S.btn, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:4 }}>{lbl(`${T("Want to know more")} →`)}</button>
         </div>
         <label style={{ display:"flex", alignItems:"center", gap:8, marginTop:14, fontSize:12.5, color:"var(--color-text-tertiary)", cursor:"pointer" }}>
