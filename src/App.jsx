@@ -28,7 +28,7 @@ const TEXT_SIZES   = { s: 0.9, m: 1, l: 1.15, xl: 1.3 };
 const SPEED_KEY    = "gkt_speed_v1";         // read-aloud playback rate
 const SPEECH_RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
 const BOOKMARKS_KEY = "gkt_bookmarks_v1";    // [id, …] — questions the user saved to revisit
-const CHALLENGE_KEY = "gkt_challenge_seen_v1"; // "1" once the first-load challenge popup has been shown
+const CHALLENGE_KEY = "gkt_challenge_optout_v1"; // "1" once the user ticks "don't show again" on the challenge popup
 const SRS_MAX_BOX  = 5;                     // Leitner boxes: 1 = struggling … 5 = mastered
 const DAY_MS = 86400000;
 const SRS_DUE_DAYS = { 1: 0, 2: 1, 3: 3, 4: 7, 5: 30 }; // days until a box becomes due for review again
@@ -2085,22 +2085,25 @@ function HelpScreen({ onHome }) {
 }
 
 // ── Root ──────────────────────────────────────────────────────────────────────
-// One-time "think you'd pass?" challenge shown on the very first visit.
+// "Think you'd pass?" challenge shown on each start until the user opts out via the checkbox.
 function ChallengeModal({ lang, onAccept, onDismiss }) {
   const T = useT();
   const primaryRef = useRef(null);
+  const [dontShow, setDontShow] = useState(false);
+  const dontShowRef = useRef(false);           // read by the once-bound Esc/backdrop handlers
+  const setDont = (v) => { dontShowRef.current = v; setDontShow(v); };
   useEffect(() => {
     primaryRef.current?.focus();
-    const onKey = (e) => { if (e.key === "Escape") onDismiss(); };
+    const onKey = (e) => { if (e.key === "Escape") onDismiss(dontShowRef.current); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onDismiss]);
   return (
-    <div role="dialog" aria-modal="true" onClick={onDismiss}
+    <div role="dialog" aria-modal="true" onClick={() => onDismiss(dontShowRef.current)}
       style={{ position:"fixed", inset:0, zIndex:1000, background:"rgba(0,0,0,0.55)",
         display:"flex", alignItems:"center", justifyContent:"center", padding:"1rem" }}>
       <div onClick={e => e.stopPropagation()}
-        style={{ ...S.card, maxWidth:430, width:"100%", margin:0, padding:"1.5rem",
+        style={{ ...S.card, maxWidth:430, width:"100%", margin:0, padding:"1.5rem", maxHeight:"90vh", overflowY:"auto",
           boxShadow:"0 12px 44px rgba(0,0,0,0.35)", ...rtlStyle(lang) }}>
         <svg viewBox="0 0 32 32" width="36" height="36" style={{ borderRadius:6, marginBottom:12 }} aria-hidden="true">
           <rect width="32" height="32" fill="#D52B1E"/>
@@ -2112,12 +2115,17 @@ function ChallengeModal({ lang, onAccept, onDismiss }) {
           {T("How well do you already know Switzerland and the Canton of Zürich? Take a full mock exam — 50 questions, 60 minutes, 60% to pass — and see if you'd pass the real test today.")}
         </div>
         <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-          <button ref={primaryRef} onClick={onAccept}
+          <button ref={primaryRef} onClick={() => onAccept(dontShowRef.current)}
             style={{ ...S.btnPrim, flex:"1 1 auto", justifyContent:"center", display:"inline-flex", alignItems:"center", gap:6 }}>
             {lbl(T("Start mock exam →"))}
           </button>
-          <button onClick={onDismiss} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Maybe later")}</button>
+          <button onClick={() => onDismiss(dontShowRef.current)} style={{ ...S.btn, flex:"0 0 auto" }}>{T("Maybe later")}</button>
         </div>
+        <label style={{ display:"flex", alignItems:"center", gap:8, marginTop:14, fontSize:12.5, color:"var(--color-text-tertiary)", cursor:"pointer" }}>
+          <input type="checkbox" checked={dontShow} onChange={e => setDont(e.target.checked)}
+            style={{ cursor:"pointer", accentColor:"var(--color-border-info)" }} />
+          {T("Don't show this again")}
+        </label>
       </div>
     </div>
   );
@@ -2273,13 +2281,13 @@ export default function App() {
     return () => window.removeEventListener("popstate", onPop);
   }, [screen, goHome]);
 
-  // One-time challenge popup, shown only on the very first visit.
+  // Challenge popup: shown on each start (this session) unless the user has opted out.
   const [showChallenge, setShowChallenge] = useState(() => {
     try { return !localStorage.getItem(CHALLENGE_KEY); } catch { return false; }
   });
-  const dismissChallenge = useCallback(() => {
-    setShowChallenge(false);
-    try { localStorage.setItem(CHALLENGE_KEY, "1"); } catch {}
+  const closeChallenge = useCallback((dontShowAgain) => {
+    setShowChallenge(false); // hide for the rest of this session
+    if (dontShowAgain) { try { localStorage.setItem(CHALLENGE_KEY, "1"); } catch {} } // and permanently, if opted out
   }, []);
 
   // Resume the saved in-progress session, rebuilding the pool in its original order
@@ -2357,8 +2365,8 @@ export default function App() {
         <ZoomControl textSize={textSize} setTextSize={setTextSize} />
         {showChallenge && screen === "home" && (
           <ChallengeModal lang={lang}
-            onAccept={() => { dismissChallenge(); startMockExam(); }}
-            onDismiss={dismissChallenge} />
+            onAccept={(dontShow) => { closeChallenge(dontShow); startMockExam(); }}
+            onDismiss={(dontShow) => closeChallenge(dontShow)} />
         )}
       </BookmarkContext.Provider>
     </LangContext.Provider>
