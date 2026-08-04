@@ -309,17 +309,22 @@ function formatDate(ts) {
     + " " + d.toLocaleTimeString("en-GB", { hour:"2-digit", minute:"2-digit" });
 }
 
+// Strip a leading emoji/symbol (+ following space) from a translated string, so keys
+// that embed an icon still render clean type. Leaves letters/numbers of any script.
+const deEmoji = (s) => (s || "").replace(/^[^\p{L}\p{N}(]+/u, "");
+
 // ── Shared styles ─────────────────────────────────────────────────────────────
 const S = {
   card:    { background:"var(--color-background-primary)", border:"0.5px solid var(--color-border-tertiary)", borderRadius:"var(--border-radius-lg)", padding:"1.25rem", marginBottom:"1rem" },
-  badge:   { padding:"2px 8px", borderRadius:99, background:"var(--color-background-secondary)", fontSize:11, color:"var(--color-text-tertiary)", border:"0.5px solid var(--color-border-tertiary)" },
+  badge:   { padding:"2px 8px", borderRadius:0, background:"var(--color-background-secondary)", fontSize:11, color:"var(--color-text-tertiary)", border:"0.5px solid var(--color-border-tertiary)" },
   qDe:     { fontSize:16, fontWeight:500, color:"var(--color-text-primary)", lineHeight:1.45, marginBottom:".35rem" },
   qEn:     { fontSize:13, color:"var(--color-text-secondary)", fontStyle:"italic", lineHeight:1.4, marginBottom:".85rem" },
   optBase: { display:"flex", alignItems:"flex-start", gap:10, padding:"9px 12px", borderRadius:"var(--border-radius-md)", border:"0.5px solid var(--color-border-tertiary)", cursor:"pointer", background:"var(--color-background-secondary)", userSelect:"none", font:"inherit", color:"inherit", textAlign:"left", width:"100%", appearance:"none", margin:0 },
   optKey:  { fontSize:12, fontWeight:500, minWidth:18, color:"var(--color-text-tertiary)", paddingTop:1, flexShrink:0 },
   optDe:   { fontSize:14, color:"var(--color-text-primary)", lineHeight:1.35 },
-  btn:     { fontSize:13, padding:"7px 14px", borderRadius:"var(--border-radius-md)", border:"0.5px solid var(--color-border-secondary)", background:"var(--color-background-secondary)", color:"var(--color-text-primary)", cursor:"pointer" },
-  btnPrim: { fontSize:13, padding:"7px 18px", borderRadius:"var(--border-radius-md)", border:"1px solid var(--color-border-info)", background:"var(--color-background-info)", color:"var(--color-text-info)", cursor:"pointer", fontWeight:500 },
+  btn:     { fontSize:13, padding:"7px 14px", borderRadius:"var(--border-radius-md)", border:"1px solid var(--color-border-secondary)", background:"var(--color-background-secondary)", color:"var(--color-text-primary)", cursor:"pointer", fontWeight:500 },
+  btnPrim: { fontSize:13, padding:"8px 18px", borderRadius:"var(--border-radius-md)", border:"none", background:"var(--sw-red)", color:"#fff", cursor:"pointer", fontWeight:600 },
+  secHdr:  { fontSize:15, fontWeight:700, letterSpacing:"-0.01em", borderLeft:"3px solid var(--zh-blue)", paddingLeft:10, lineHeight:1.15 },
   sectionHdr: { fontSize:12, fontWeight:500, color:"var(--color-text-tertiary)", padding:"8px 0 4px", borderBottom:"0.5px solid var(--color-border-tertiary)", marginBottom:6 },
 };
 
@@ -329,13 +334,13 @@ function DiffBadge({ diff, small }) {
   const sz = small ? 10 : 11;
   if (!diff) return <span style={{ ...S.badge, fontSize:sz }}>{T("Unrated")}</span>;
   const c = DIFF_COLORS[diff];
-  return <span style={{ padding: small?"1px 6px":"2px 9px", borderRadius:99, fontSize:sz, background:c.bg, color:c.text, border:`0.5px solid ${c.border}`, fontWeight:500 }}>{T(DIFF_LABELS[diff])}</span>;
+  return <span style={{ padding: small?"1px 6px":"2px 9px", borderRadius:0, fontSize:sz, background:c.bg, color:c.text, border:`0.5px solid ${c.border}`, fontWeight:500 }}>{T(DIFF_LABELS[diff])}</span>;
 }
 
 function LvlBadge({ lvl, small }) {
   const lang = useLang();
   if (!lvl || !LVL_LABELS[lvl]) return null;
-  return <span style={{ fontSize: small ? 10 : 11, fontWeight:500, padding: small ? "1px 7px" : "2px 9px", borderRadius:99, whiteSpace:"nowrap",
+  return <span style={{ fontSize: small ? 10 : 11, fontWeight:500, padding: small ? "1px 7px" : "2px 9px", borderRadius:0, whiteSpace:"nowrap",
     background:`var(--lvl-${lvl}-bg)`, color:`var(--lvl-${lvl})`, border:`0.5px solid var(--lvl-${lvl}-bd)` }}>{lvlLabel(lvl, lang)}</span>;
 }
 
@@ -465,7 +470,7 @@ function ZoomControl({ textSize, setTextSize }) {
   const btn = (size, disabled) => ({ background:"none", border:"none", lineHeight:1, padding:"6px 12px", fontWeight:600, fontSize:size, color:"var(--color-text-secondary)", opacity: disabled ? 0.35 : 1, cursor: disabled ? "default" : "pointer" });
   return (
     <div role="group" aria-label={T("Text size")} style={{ position:"fixed", bottom:12, right:12, zIndex:50, display:"flex", alignItems:"center",
-      background:"var(--color-background-primary)", border:"1px solid var(--color-border-secondary)", borderRadius:99, boxShadow:"0 2px 10px rgba(0,0,0,0.28)" }}>
+      background:"var(--color-background-primary)", border:"1px solid var(--color-border-secondary)", borderRadius:0, boxShadow:"0 2px 10px rgba(0,0,0,0.28)" }}>
       <button onClick={() => set(i - 1)} disabled={i <= 0} aria-label={T("Smaller text")} title={T("Smaller text")} style={btn(12, i <= 0)}>A</button>
       <div style={{ width:1, height:18, background:"var(--color-border-tertiary)" }}/>
       <button onClick={() => set(i + 1)} disabled={i >= order.length - 1} aria-label={T("Larger text")} title={T("Larger text")} style={btn(19, i >= order.length - 1)}>A</button>
@@ -486,7 +491,7 @@ function SecBadge({ s, small }) {
   if (!n) return <span style={{ fontSize:11, color:"var(--color-text-tertiary)" }}>{s}</span>;
   return (
     <span title={s} style={{ display:"inline-flex", alignItems:"center", gap:5, flexShrink:0,
-      fontSize: small ? 10 : 11, fontWeight:500, padding: small ? "1px 7px" : "2px 9px", borderRadius:99,
+      fontSize: small ? 10 : 11, fontWeight:500, padding: small ? "1px 7px" : "2px 9px", borderRadius:0,
       background:`var(--sec-${n}-bg)`, color:`var(--sec-${n})`, border:`0.5px solid var(--sec-${n}-bd)` }}>
       <span style={{ width:6, height:6, borderRadius:"50%", background:`var(--sec-${n}-bd)`, flexShrink:0 }}/>
       {secName(s, lang)}
@@ -517,7 +522,7 @@ function DiffPicker({ current, onChange }) {
         const c = DIFF_COLORS[d]; const active = current === d;
         return (
           <button key={d} onClick={() => onChange(active ? null : d)}
-            style={{ fontSize:12, padding:"3px 12px", borderRadius:99, cursor:"pointer",
+            style={{ fontSize:12, padding:"3px 12px", borderRadius:0, cursor:"pointer",
               background: active ? c.bg : "var(--color-background-secondary)",
               color: active ? c.text : "var(--color-text-secondary)",
               border: active ? `1.5px solid ${c.border}` : "0.5px solid var(--color-border-tertiary)",
@@ -526,15 +531,15 @@ function DiffPicker({ current, onChange }) {
           </button>
         );
       })}
-      {current && <button onClick={() => onChange(null)} style={{ fontSize:11, padding:"3px 8px", borderRadius:99, cursor:"pointer", background:"transparent", color:"var(--color-text-tertiary)", border:"0.5px solid var(--color-border-tertiary)" }}>✕</button>}
+      {current && <button onClick={() => onChange(null)} style={{ fontSize:11, padding:"3px 8px", borderRadius:0, cursor:"pointer", background:"transparent", color:"var(--color-text-tertiary)", border:"0.5px solid var(--color-border-tertiary)" }}>✕</button>}
     </div>
   );
 }
 
 function PctBar({ pct, color }) {
   return (
-    <div style={{ height:4, borderRadius:99, background:"var(--color-background-secondary)", overflow:"hidden" }}>
-      <div style={{ height:"100%", width:`${pct}%`, background: color || "var(--color-border-info)", borderRadius:99 }}/>
+    <div style={{ height:4, borderRadius:0, background:"var(--color-background-secondary)", overflow:"hidden" }}>
+      <div style={{ height:"100%", width:`${pct}%`, background: color || "var(--color-border-info)", borderRadius:0 }}/>
     </div>
   );
 }
@@ -599,7 +604,7 @@ function EnToggle({ enMode, setEnMode, prefix }) {
       {code && <span style={{ fontSize:11, color:"var(--color-text-tertiary)", marginRight:2 }}>{code}:</span>}
       {[["none","Off"],["question","Question"],["full","Full"]].map(([v,l]) => (
         <button key={v} onClick={() => setEnMode(v)}
-          style={{ fontSize:11, padding:"3px 8px", borderRadius:99, cursor:"pointer",
+          style={{ fontSize:11, padding:"3px 8px", borderRadius:0, cursor:"pointer",
             background: enMode===v ? "var(--color-background-info)" : "var(--color-background-secondary)",
             color: enMode===v ? "var(--color-text-info)" : "var(--color-text-secondary)",
             border: enMode===v ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -632,7 +637,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
     return opts.length ? opts[0] : "all";
   });
   const [confirmReset, setConfirmReset] = useState(false);
-  const pill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+  const pill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
     background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
     color: active ? "var(--color-text-info)" : "var(--color-text-secondary)",
     border: active ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -649,12 +654,9 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const answeredToday = questionsToday(history, now);
   const readiness = examReadiness(progress, history);
   const stat = (icon, big, label, title) => (
-    <div title={title} style={{ flex:"1 1 110px", minWidth:104, display:"flex", alignItems:"center", gap:10, padding:".6rem .8rem", borderRadius:"var(--border-radius-md)", background:"var(--color-background-secondary)", border:"0.5px solid var(--color-border-secondary)" }}>
-      <span style={{ fontSize:22, lineHeight:1, flexShrink:0 }} aria-hidden="true">{icon}</span>
-      <div style={{ minWidth:0 }}>
-        <div style={{ fontSize:18, fontWeight:600, color:"var(--color-text-primary)", lineHeight:1.1 }}>{big}</div>
-        <div style={{ fontSize:11, fontWeight:500, color:"var(--color-text-secondary)", marginTop:1 }}>{label}</div>
-      </div>
+    <div title={title} style={{ flex:"1 1 110px", minWidth:104, padding:".5rem .7rem", background:"var(--color-background-secondary)", borderTop:"2px solid var(--zh-blue)", borderRight:"0.5px solid var(--color-border-tertiary)", borderBottom:"0.5px solid var(--color-border-tertiary)", borderLeft:"0.5px solid var(--color-border-tertiary)" }}>
+      <div style={{ fontSize:23, fontWeight:700, color:"var(--color-text-primary)", lineHeight:1.05, letterSpacing:"-0.02em", fontVariantNumeric:"tabular-nums" }}>{big}</div>
+      <div style={{ fontSize:9.5, fontWeight:700, color:"var(--color-text-secondary)", marginTop:2, textTransform:"uppercase", letterSpacing:"0.08em" }}>{label}</div>
     </div>
   );
   // Weakest attempted section, for a quick study nudge (needs a few answers to be meaningful)
@@ -665,9 +667,9 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
   return (
     <div style={{ padding:"1rem" }}>
-      <div style={{ marginBottom:"1.25rem" }}>
-        <h2 style={{ fontSize:18, fontWeight:500, margin:"0 0 4px" }}>Zürich Grundkenntnistest</h2>
-        <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
+      <div style={{ marginBottom:"1.25rem", borderBottom:"2px solid var(--sw-red)", paddingBottom:".6rem" }}>
+        <h2 style={{ fontSize:17, fontWeight:700, margin:"0 0 4px", textTransform:"uppercase", letterSpacing:"0.03em", lineHeight:1.12 }}>Zürich Grundkenntnistest</h2>
+        <p style={{ fontSize:12.5, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
       </div>
 
       {/* At-a-glance progress: study streak, questions answered today, and a rough exam-readiness estimate */}
@@ -683,7 +685,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {resume && (
         <div style={{ ...S.card, display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap", padding:"0.85rem 1.25rem", border:"1px solid var(--color-border-warning)", background:"var(--color-background-warning)" }}>
           <div style={{ fontSize:13, color:"var(--color-text-warning)" }}>
-            {T("⏸ Unfinished {kind} — question {a} of {b}", { kind: resume.kind === "exam" ? T("mock exam") : T("quiz"), a: (resume.idx ?? 0) + 1, b: resume.ids.length })}
+            {deEmoji(T("⏸ Unfinished {kind} — question {a} of {b}", { kind: resume.kind === "exam" ? T("mock exam") : T("quiz"), a: (resume.idx ?? 0) + 1, b: resume.ids.length }))}
           </div>
           <div style={{ display:"flex", gap:6, alignItems:"center" }}>
             <button style={{ ...S.btn, color:"var(--color-text-warning)", borderColor:"var(--color-border-warning)" }}
@@ -697,7 +699,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:10, flexWrap:"wrap" }}>
           <div>
-            <div style={{ fontSize:14, fontWeight:600 }}>🎓 {tc(T("Mock exam"))}</div>
+            <div style={{ ...S.secHdr }}>{tc(T("Mock exam"))}</div>
             <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3 }}>
               {T("{n} questions · {m} min · pass at {p}% · exam mix, no feedback until the end", { n: EXAM_COUNT, m: EXAM_MINUTES, p: EXAM_PASS_PCT })}
             </div>
@@ -708,13 +710,13 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Quick test */}
       <div style={S.card}>
-        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>⚡ {tc(T("Quick test"))}</div>
+        <div style={{ ...S.secHdr, marginBottom:".75rem" }}>{tc(T("Quick test"))}</div>
         <div style={{ display:"flex", gap:12, flexWrap:"wrap", alignItems:"flex-start", marginBottom:".75rem" }}>
           <div>
             <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Focus on")}</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               <button onClick={() => setQtDiff("exam")}
-                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                style={{ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
                   background: qtDiff==="exam" ? "var(--color-background-info)" : "var(--color-background-secondary)",
                   color: qtDiff==="exam" ? "var(--color-text-info)" : "var(--color-text-secondary)",
                   border: qtDiff==="exam" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -722,7 +724,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                 {T("Exam mix")}
               </button>
               <button onClick={() => setQtDiff("random")}
-                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                style={{ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
                   background: qtDiff==="random" ? "var(--color-background-info)" : "var(--color-background-secondary)",
                   color: qtDiff==="random" ? "var(--color-text-info)" : "var(--color-text-secondary)",
                   border: qtDiff==="random" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -733,7 +735,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                 const c = DIFF_COLORS[d];
                 return (
                   <button key={d} onClick={() => setQtDiff(d)}
-                    style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                    style={{ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
                       background: qtDiff===d ? c.bg : "var(--color-background-secondary)",
                       color: qtDiff===d ? c.text : "var(--color-text-secondary)",
                       border: qtDiff===d ? `1.5px solid ${c.border}` : "0.5px solid var(--color-border-tertiary)",
@@ -743,7 +745,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
                 );
               })}
               <button onClick={() => setQtDiff("unrated")}
-                style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                style={{ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
                   background: qtDiff==="unrated" ? "var(--color-background-info)" : "var(--color-background-secondary)",
                   color: qtDiff==="unrated" ? "var(--color-text-info)" : "var(--color-text-secondary)",
                   border: qtDiff==="unrated" ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -757,7 +759,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
             <div style={{ display:"flex", gap:6 }}>
               {[10,20,30,50].map(n => (
                 <button key={n} onClick={() => setQtCount(n)}
-                  style={{ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+                  style={{ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
                     background: qtCount===n ? "var(--color-background-info)" : "var(--color-background-secondary)",
                     color: qtCount===n ? "var(--color-text-info)" : "var(--color-text-secondary)",
                     border: qtCount===n ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -798,7 +800,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
 
       {/* Section test — combine Section + Level + count + order, then press Start */}
       <div style={S.card}>
-        <div style={{ fontSize:14, fontWeight:600, marginBottom:".75rem" }}>📝 {tc(T("Section test"))}</div>
+        <div style={{ ...S.secHdr, marginBottom:".75rem" }}>{tc(T("Section test"))}</div>
 
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginBottom:4 }}>{T("Section")}</div>
         <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:".75rem" }}>
@@ -865,7 +867,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
         const srN = srCount === "all" ? dueCount : Math.min(srCount, dueCount);
         return (
           <div style={{ ...S.card, border:"1px solid var(--color-border-info)" }}>
-            <div style={{ fontSize:14, fontWeight:600 }}>{tc(T("🔁 Smart review"))}</div>
+            <div style={{ ...S.secHdr }}>{deEmoji(T("🔁 Smart review"))}</div>
             <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:3, marginBottom:".85rem" }}>
               {T("{n} question{s} due — spaced repetition resurfaces what you're about to forget.", { n: dueCount, s: dueCount !== 1 ? "s" : "" })}
             </div>
@@ -889,7 +891,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {savedCount > 0 && (
         <div style={{ ...S.card, display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
           <div style={{ fontSize:13, fontWeight:500, display:"inline-flex", alignItems:"center", gap:6 }}>
-            ★ {tc(T("Saved questions"))} <span style={{ ...S.badge, fontSize:10 }}>{savedCount}</span>
+            {tc(T("Saved questions"))} <span style={{ ...S.badge, fontSize:10 }}>{savedCount}</span>
           </div>
           <button style={S.btnPrim} onClick={onReviewSaved}>{lbl(T("Review saved →"))}</button>
         </div>
@@ -898,7 +900,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* Difficulty ratings — below the tests */}
       <div style={S.card}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:".75rem", gap:8 }}>
-          <div style={{ fontSize:14, fontWeight:600 }}>🏷️ {tc(T("Difficulty ratings"))}</div>
+          <div style={{ ...S.secHdr }}>{tc(T("Difficulty ratings"))}</div>
           {counts.unrated < ALL_QUESTIONS.length && (
             confirmReset
               ? <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end" }}>
@@ -931,12 +933,12 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
       {/* Bottom nav */}
       <div style={{ display:"flex", gap:8, flexWrap:"wrap", paddingTop:"1rem", borderTop:"0.5px solid var(--color-border-tertiary)" }}>
         <button style={{ ...S.btn, fontWeight:500 }} onClick={() => onBrowser("all")}>
-          {T("📋 Browse all questions")}
+          {deEmoji(T("📋 Browse all questions"))}
         </button>
         <button style={{ ...S.btn, fontWeight:500, display:"inline-flex", alignItems:"center", gap:6 }} onClick={onHistory}>
-          {T("📊 History & progress")} {history.length > 0 && <span style={{ ...S.badge, fontSize:10 }}>{history.length}</span>}
+          {deEmoji(T("📊 History & progress"))} {history.length > 0 && <span style={{ ...S.badge, fontSize:10 }}>{history.length}</span>}
         </button>
-        <button style={{ ...S.btn, fontWeight:500 }} onClick={onHelp}>{T("❓ Help")}</button>
+        <button style={{ ...S.btn, fontWeight:500 }} onClick={onHelp}>{deEmoji(T("❓ Help"))}</button>
       </div>
       {weakest && (
         <div style={{ fontSize:11, color:"var(--color-text-tertiary)", marginTop:8 }}>
@@ -1181,8 +1183,8 @@ function QuizScreen({ pool, difficulties, label, enMode, setEnMode, showExpl, se
         </div>
       </div>
 
-      <div style={{ height:3, borderRadius:99, background:"var(--color-background-secondary)", marginBottom:".75rem", overflow:"hidden" }}>
-        <div style={{ height:"100%", width:`${progress}%`, background:"var(--color-border-info)", borderRadius:99, transition:"width .3s" }}/>
+      <div style={{ height:3, borderRadius:0, background:"var(--color-background-secondary)", marginBottom:".75rem", overflow:"hidden" }}>
+        <div style={{ height:"100%", width:`${progress}%`, background:"var(--color-border-info)", borderRadius:0, transition:"width .3s" }}/>
       </div>
 
       <div style={S.card}>
@@ -1372,8 +1374,8 @@ function ExamScreen({ pool, difficulties, label, enMode, setEnMode, resume, onDi
         </div>
       </div>
 
-      <div style={{ height:3, borderRadius:99, background:"var(--color-background-secondary)", marginBottom:".75rem", overflow:"hidden" }}>
-        <div style={{ height:"100%", width:`${timeProg}%`, background: lowTime ? "var(--color-border-danger)" : "var(--color-border-info)", borderRadius:99, transition:"width 1s linear" }}/>
+      <div style={{ height:3, borderRadius:0, background:"var(--color-background-secondary)", marginBottom:".75rem", overflow:"hidden" }}>
+        <div style={{ height:"100%", width:`${timeProg}%`, background: lowTime ? "var(--color-border-danger)" : "var(--color-border-info)", borderRadius:0, transition:"width 1s linear" }}/>
       </div>
 
       <div style={S.card}>
@@ -1621,7 +1623,7 @@ function HistoryScreen({ history, progress, difficulties, onDiffChange, onHome, 
             const avail = ALL_QUESTIONS.filter(q => q.s === weakest.s).length;
             const opts = [10, 20, 30, 50].filter(n => n < avail);
             const n = drillCount === "all" ? avail : Math.min(drillCount, avail);
-            const dpill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:99, cursor:"pointer",
+            const dpill = (active) => ({ fontSize:12, padding:"4px 12px", borderRadius:0, cursor:"pointer",
               background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
               color: active ? "var(--color-text-info)" : "var(--color-text-secondary)",
               border: active ? "1.5px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
@@ -1972,7 +1974,7 @@ function SettingsScreen({ lang, setLang, enMode, setEnMode, theme, setTheme, spe
   };
   const row = { display:"flex", alignItems:"center", justifyContent:"space-between", gap:10, flexWrap:"wrap" };
   const descStyle = { fontWeight:400, color:"var(--color-text-tertiary)", fontSize:11, marginTop:3, lineHeight:1.4 };
-  const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:99, cursor:"pointer",
+  const segBtn = (active) => ({ fontSize:11, padding:"3px 12px", borderRadius:0, cursor:"pointer",
     background: active ? "var(--color-background-info)" : "var(--color-background-secondary)",
     color: active ? "var(--color-text-info)" : "var(--color-text-secondary)",
     border: active ? "1px solid var(--color-border-info)" : "0.5px solid var(--color-border-tertiary)",
