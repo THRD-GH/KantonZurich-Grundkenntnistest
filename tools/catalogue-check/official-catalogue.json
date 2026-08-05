@@ -1,0 +1,4702 @@
+{
+ "_meta": {
+  "source_pdf": "webfetch-1785957137813-xuvrk9.pdf",
+  "count": 352,
+  "ticks": 350,
+  "boxes": 1050,
+  "anomalies": [
+   {
+    "n": 10,
+    "options": 1,
+    "answer": -1,
+    "question": "in die Schweiz reisen zu müssen."
+   },
+   {
+    "n": 56,
+    "options": 7,
+    "answer": -1,
+    "question": "Welche ist die Schweizer Nationalfahne?"
+   },
+   {
+    "n": 88,
+    "options": 5,
+    "answer": 0,
+    "question": "Wer muss in der Schweiz Militärdienst oder Zivilschutzdienst leisten?"
+   },
+   {
+    "n": 90,
+    "options": 5,
+    "answer": 0,
+    "question": "Welche Pflicht gilt in der Schweiz nur für Männer?"
+   },
+   {
+    "n": 110,
+    "options": 1,
+    "answer": 0,
+    "question": "Welches ist das Wappen des Kantons Zürich?"
+   },
+   {
+    "n": 123,
+    "options": 4,
+    "answer": 3,
+    "question": "Bürgerinnen und Bürger können auf Gemeindeebene politisch entscheiden,"
+   },
+   {
+    "n": 128,
+    "options": 5,
+    "answer": 1,
+    "question": "Die Steuererklärung ..."
+   },
+   {
+    "n": 129,
+    "options": 5,
+    "answer": 4,
+    "question": "Was ist ein Arbeitszeugnis?"
+   },
+   {
+    "n": 144,
+    "options": 5,
+    "answer": 0,
+    "question": "In der Schweiz sind seit 2002 Abtreibungen mit der Fristenlösung gereg"
+   },
+   {
+    "n": 148,
+    "options": 4,
+    "answer": 3,
+    "question": "Wenn man mit der Steuerrechnung nicht einverstanden ist, . . ."
+   },
+   {
+    "n": 152,
+    "options": 4,
+    "answer": 1,
+    "question": "Was wird Angestellten direkt vom Lohn abgezogen? Der Beitrag für die ."
+   },
+   {
+    "n": 167,
+    "options": 5,
+    "answer": 1,
+    "question": "Für welchen Streitfall ist das Arbeitsgericht zuständig?"
+   },
+   {
+    "n": 181,
+    "options": 4,
+    "answer": -1,
+    "question": "Welche Aussage zum Mutterschaftsurlaub in der Schweiz ist richtig?"
+   },
+   {
+    "n": 182,
+    "options": 1,
+    "answer": 0,
+    "question": "beziehen."
+   },
+   {
+    "n": 201,
+    "options": 5,
+    "answer": 2,
+    "question": "Was ist ein Quartierverein?"
+   },
+   {
+    "n": 202,
+    "options": 1,
+    "answer": -1,
+    "question": "glied sind."
+   },
+   {
+    "n": 240,
+    "options": 5,
+    "answer": 3,
+    "question": "Im Jahr 1877 hat man die Kinderarbeit in der Schweiz verboten. Warum?"
+   },
+   {
+    "n": 254,
+    "options": 4,
+    "answer": 0,
+    "question": "Ulrich Zwingli (1484-1531) war ein bekannter . . ."
+   },
+   {
+    "n": 309,
+    "options": 5,
+    "answer": 2,
+    "question": "Die Basler Fasnacht wird mit dem «Morgestraich» an einem Montag um 4 U"
+   }
+  ]
+ },
+ "questions": [
+  {
+   "n": 1,
+   "section": 1,
+   "level": "bund",
+   "question": "Kanton Zürich Direktion der Justiz und des Innern Gemeindeamt Kantonaler Grundkenntnistest im Einbürgerungsverfahren Die Schweiz ist neutral. Was heisst das?",
+   "options": [
+    "Sie unterzeichnet keine internationalen Verträge.",
+    "Sie schliesst nur mit Staaten Verträge, die nicht in Kriege verwickelt sind.",
+    "Sie mischt sich nicht in bewaffnete Konflikte anderer Staaten ein.",
+    "Sie will als Transitland wirtschaftlich unabhängig sein."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 2,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine Grenzgängerin oder ein Grenzgänger?",
+   "options": [
+    "eine Person, die in der Schweiz arbeitet und im Ausland wohnt",
+    "eine Person, die nicht im gleichen Kanton wohnt und arbeitet",
+    "Schweizer Handelsware, die ins Ausland exportiert wird",
+    "Schweizer Handelsware, die vom Ausland in die Schweiz importiert wird"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 3,
+   "section": 1,
+   "level": "bund",
+   "question": "Confoederatio Helvetica ...",
+   "options": [
+    "ist der Name einer Schweizer Schokolade.",
+    "ist der lateinische Name für die Schweizer Eidgenossenschaft.",
+    "ist der Name des ersten Parlaments der Schweiz.",
+    "ist eine Fraktion des Parlaments."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 4,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist ein Departement der Bundesverwaltung?",
+   "options": [
+    "Ernährungsdepartement",
+    "Natur- und Klimadepartement",
+    "Schul- und Weiterbildungsdepartement",
+    "Justiz- und Polizeidepartement"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 5,
+   "section": 1,
+   "level": "bund",
+   "question": "Zwischen den Mitgliedern des Bundesrats gilt das Kollegialitätsprinzip. Was heisst das?",
+   "options": [
+    "Die Mitglieder des Bundesrates müssen sich gut kennen.",
+    "Jeder Bundesrat vertritt seine eigenen politischen Meinungen.",
+    "Alle Mitglieder müssen Entscheide des Bundesrates nach aussen gleich vertreten.",
+    "Der Bundesrat Entscheidungen mit Abstimmung."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 6,
+   "section": 1,
+   "level": "bund",
+   "question": "Können die Stimmbürgerinnen und Stimmbürger ein neues Gesetz stoppen?",
+   "options": [
+    "Ja - mit einer Initiative",
+    "Nein - nur der Bundesrat kann Gesetze ändern",
+    "Nein - nur der Nationalrat kann Gesetze ändern",
+    "Ja - mit einem Referendum"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 7,
+   "section": 1,
+   "level": "bund",
+   "question": "Was macht der Bundeskanzler oder die Bundeskanzlerin der Schweiz?",
+   "options": [
+    "den Bundesrat unterstützen",
+    "die Schweiz regieren",
+    "den Bundesrat wählen",
+    "Gesetze machen"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 8,
+   "section": 1,
+   "level": "bund",
+   "question": "Was bedeutet bei Abstimmungen \"Ständemehr\"?",
+   "options": [
+    "Mehrheit aller Stimmen",
+    "Mehrheit der Kantone",
+    "Mehrheit der Stimmen nach Sprachregionen der Schweiz",
+    "Mehrheit in den vorausgegangenen Meinungsumfragen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 9,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche politischen Rechte haben Schweizerinnen und Schweizer, die im Ausland leben?",
+   "options": [
+    "Sie dürfen an Abstimmungen und Wahlen teilnehmen, wenn sie in der Schweiz zu",
+    "Besuch sind.",
+    "Sie verlieren alle politischen Rechte in der Schweiz.",
+    "Sie können an nationalen Abstimmungen und Wahlen teilnehmen, ohne deswegen"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 10,
+   "section": 1,
+   "level": "bund",
+   "question": "in die Schweiz reisen zu müssen.",
+   "options": [
+    "Sie dürfen sich im Gastland in keiner Weise politisch engagieren."
+   ],
+   "answer": -1
+  },
+  {
+   "n": 11,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer in der Schweiz wählen und abstimmen will, …",
+   "options": [
+    "muss das Schweizer Bürgerrecht haben.",
+    "muss einen Computer haben.",
+    "muss in der Schweiz geboren sein.",
+    "muss mehr Steuern zahlen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 12,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine Partei?",
+   "options": [
+    "ein Zusammenschluss von Menschen aus der gleichen Stadt oder dem gleichen Dorf",
+    "ein Zusammenschluss von Menschen mit ähnlichen politischen Zielen",
+    "ein Zusammenschluss von Menschen mit unterschiedlichen Weltanschauungen",
+    "ein Zusammenschluss von Nationalräten oder Ständeräten, um die Mehrheit zu er-"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 13,
+   "section": 1,
+   "level": "bund",
+   "question": "reichen Was ist eine Aufgabe des Bundes?",
+   "options": [
+    "Wasserversorgung",
+    "Geldpolitik",
+    "Polizeiwesen",
+    "Organisation der Volksschule"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 14,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine Aufgabe des Bundes?",
+   "options": [
+    "Feuerwehr",
+    "Begrünung von Parks",
+    "Zoll",
+    "Spitäler"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 15,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist ein Grundrecht in der Schweiz?",
+   "options": [
+    "Tierhaltung",
+    "Meinungs- und Informationsfreiheit",
+    "kostenloser Fernsehzugang",
+    "WLAN-Zugang"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 16,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist ein Grundrecht in der Schweiz?",
+   "options": [
+    "Recht auf Waffenbesitz",
+    "Recht auf eine Wohnung",
+    "Recht auf einen Arbeitsplatz",
+    "Glaubens- und Gewissensfreiheit"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 17,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz?",
+   "options": [
+    "Sie müssen Steuern bezahlen.",
+    "Sie müssen eine Lehre machen.",
+    "Sie müssen ein Bankkonto haben.",
+    "Sie müssen den Führerausweis haben."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 18,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz?",
+   "options": [
+    "Sie müssen eine Weiterbildung machen.",
+    "Sie müssen Mitglied einer Kirche sein.",
+    "Sie müssen sich in der Gemeinde anmelden.",
+    "Sie müssen ein Telefon haben."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 19,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz?",
+   "options": [
+    "Sie müssen gegen Diebstahl versichert sein.",
+    "Sie müssen bei einer Krankenkasse versichert sein.",
+    "Sie müssen ein Halbtax der SBB haben.",
+    "Sie müssen ein Haus besitzen."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 20,
+   "section": 1,
+   "level": "bund",
+   "question": "Was bedeutet Rechtsgleichheit?",
+   "options": [
+    "Alle verdienen gleich viel.",
+    "Alle Kantone haben die gleichen Gesetze.",
+    "Alle Menschen sind vor dem Gesetz gleich.",
+    "Alle Menschen haben gleich lange Ferien."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 21,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie heissen die beiden \"Kammern\" des Schweizer Parlaments?",
+   "options": [
+    "Oberhaus und Unterhaus",
+    "Senat und Kongress",
+    "Nationalrat und Ständerat",
+    "Fraktion und Kommission"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 22,
+   "section": 1,
+   "level": "bund",
+   "question": "Die Schweiz ist …",
+   "options": [
+    "eine Diktatur.",
+    "ein absolutistischer Staat.",
+    "eine Demokratie.",
+    "ein Fürstentum."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 23,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist ein wichtiges Merkmal der Demokratie?",
+   "options": [
+    "Das Volk wählt ein Parlament.",
+    "Es regiert ein König.",
+    "Die Menschen können frei reisen.",
+    "Die Menschen haben ein garantiertes Grundeinkommen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 24,
+   "section": 1,
+   "level": "bund",
+   "question": "Warum gibt es in einer Demokratie regelmässig Wahlen?",
+   "options": [
+    "Damit das Interesse für Politik geweckt wird.",
+    "Damit das Volk die Volksvertretung bestimmen kann.",
+    "Damit die Armen mehr Macht bekommen.",
+    "Damit Frauen und Männer gleichmässig vertreten sind."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 25,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie heisst die Verfassung der Schweizerischen Eidgenossenschaft?",
+   "options": [
+    "Grundgesetz",
+    "Verfassungsvertrag",
+    "Bundesbrief",
+    "Bundesverfassung"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 26,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer führt die Regierungsgeschäfte der Schweiz?",
+   "options": [
+    "die Parteien",
+    "die Medien",
+    "der Bundesrat",
+    "die Bundesversammlung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 27,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer beschliesst auf Bundesebene neue Gesetze?",
+   "options": [
+    "das Bundesgericht",
+    "die Präsidentinnen und Präsidenten der Parteien",
+    "der Nationalrat und der Ständerat und das Volk (Referendum)",
+    "die Bundeskanzlei"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 28,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer darf auf Bundesebene wählen und abstimmen?",
+   "options": [
+    "Personen, die in der Schweiz wohnen",
+    "Schweizerinnen und Schweizer ab 18 Jahren",
+    "Schweizerinnen und Schweizer, die nicht vorbestraft sind",
+    "Personen, die in der Schweiz Steuern bezahlen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 29,
+   "section": 1,
+   "level": "bund",
+   "question": "Ab wann sind Schweizerinnen und Schweizer auf Bundesebene stimmund wahlberechtigt?",
+   "options": [
+    "ab 18 Jahren",
+    "ab 21 Jahren",
+    "ab 25 Jahren",
+    "ab 16 Jahren"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 30,
+   "section": 1,
+   "level": "bund",
+   "question": "Was bedeutet das aktive Wahlrecht in der Demokratie?",
+   "options": [
+    "Man darf nur wählen und abstimmen, wenn man in einer politischen Partei aktiv ist.",
+    "Man kann in ein politisches Amt gewählt werden.",
+    "Man darf wählen und abstimmen.",
+    "Man muss beim Auszählen der Stimmen helfen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 31,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer kann auf Bundesebene in ein politisches Amt gewählt werden?",
+   "options": [
+    "wer eine Arbeit hat",
+    "wer in der Schweiz lebt",
+    "wer das Schweizer Bürgerrecht hat und volljährig ist",
+    "wer mindestens zwei Landessprachen spricht"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 32,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie können Schweizer Bürgerinnen und Bürger auf die Gesetzgebung Einfluss nehmen?",
+   "options": [
+    "Sie können über Initiativen und Referenden abstimmen.",
+    "Sie haben keine direkte Einflussmöglichkeit.",
+    "Sie können einer Partei beitreten.",
+    "Sie können den Bundesrat wählen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 33,
+   "section": 1,
+   "level": "bund",
+   "question": "Gegen was kann man das Referendum ergreifen?",
+   "options": [
+    "gegen Beschlüsse des Bundesrats",
+    "gegen Urteile des Bundesgerichts",
+    "gegen Gesetzesvorlagen von Nationalrat und Ständerat",
+    "gegen Massnahmen der Bundesverwaltung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 34,
+   "section": 1,
+   "level": "bund",
+   "question": "Weshalb ist die Volksinitiative ein wichtiges politisches Recht der Stimmbürgerinnen und Stimmbürger? Sie können mit der Volksinitiative …",
+   "options": [
+    "das Parlament ausschalten.",
+    "die Regierung abwählen.",
+    "politische Entscheidungen rückgängig machen.",
+    "wichtige Anliegen aus der Bevölkerung politisch durchsetzen."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 35,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie oft wählen die Stimmbürgerinnen und Stimmbürger das Bundesparlament?",
+   "options": [
+    "alle 6 Jahre",
+    "alle 2 Jahre",
+    "alle 4 Jahre",
+    "alle 7 Jahre"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 36,
+   "section": 1,
+   "level": "bund",
+   "question": "Die Bundesversammlung besteht aus 246 Mitgliedern. Wer wählt diese Mitglieder?",
+   "options": [
+    "die wahlberechtigten Bürgerinnen und Bürger",
+    "die Parteien",
+    "alle Einwohnerinnen und Einwohner der Schweiz",
+    "eine Wahlkommission"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 37,
+   "section": 1,
+   "level": "bund",
+   "question": "Über was können stimmberechtigte Bürgerinnen und Bürger in der Schweiz auf Bundesebene abstimmen?",
+   "options": [
+    "über Parteiprogramme",
+    "über das Radio- und Fernsehprogramm",
+    "über Volksinitiativen und Referenden",
+    "über die Besetzung von Verwaltungsstellen"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 38,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist die zentrale Aufgabe der Bundesversammlung (Bundesparlament)?",
+   "options": [
+    "Sie organisiert Wahlen und Abstimmungen.",
+    "Sie berät und beschliesst Gesetze.",
+    "Sie führt die Regierungsgeschäfte in der Schweiz.",
+    "Sie fällt Gerichtsurteile in letzter Instanz."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 39,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie setzt sich die Vereinigte Bundesversammlung zusammen?",
+   "options": [
+    "aus den Mitgliedern des Nationalrats und Ständerats",
+    "aus den Bundesrichterinnen und Bundesrichtern",
+    "aus den Mitgliedern der kantonalen Regierungen",
+    "aus den Parteipräsidentinnen und Parteipräsidenten"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 40,
+   "section": 1,
+   "level": "bund",
+   "question": "Das Bundeshaus in Bern ist der Sitz …",
+   "options": [
+    "des Nationalmuseums.",
+    "der Bundesversammlung (Schweizer Parlament).",
+    "der Universität.",
+    "des Schweizer Fernsehens."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 41,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie heisst die Exekutive in der Schweiz auf Bundesebene?",
+   "options": [
+    "Grosser Rat",
+    "Generalrat",
+    "Bundesrat",
+    "Landrat"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 42,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer wählt die sieben Mitglieder des Bundesrats?",
+   "options": [
+    "die Parteipräsidentinnen und Parteipräsidenten",
+    "die Stimmbürgerinnen und Stimmbürger in direkter Wahl",
+    "der Rat der Ältesten",
+    "Nationalrat und Ständerat"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 43,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Funktion haben die Parteien in einer Demokratie?",
+   "options": [
+    "Sie vertreten verschiedene Interessen und Anliegen der Bevölkerung.",
+    "Sie wählen die Regierung.",
+    "Sie kontrollieren die Medien.",
+    "Sie vermitteln bei Streit zwischen verschiedenen Ämtern."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 44,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie viele Unterschriften braucht es für eine Volksinitiative auf Bundesebene?",
+   "options": [
+    "30'000",
+    "100'000",
+    "500'000",
+    "800'000"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 45,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist die Aufgabe des Ständerates?",
+   "options": [
+    "Er hat nur eine repräsentative Funktion.",
+    "Er ist die höchste juristische Instanz.",
+    "Er vertritt vor allem die Interessen der Kantone.",
+    "Er koordiniert die Planung der Gemeinden."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 46,
+   "section": 1,
+   "level": "bund",
+   "question": "Was machen Nationalrat und Ständerat gemeinsam?",
+   "options": [
+    "Sie entscheiden über internationale Verträge.",
+    "Sie wählen die Mitglieder des Bundesrats und des Bundesgerichts.",
+    "Sie entwerfen das Bundesbudget.",
+    "Sie fällen im Bundesgericht Urteile."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 47,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie oft pro Jahr stimmt das Stimmvolk normalerweise in Bundesangelegenheiten ab?",
+   "options": [
+    "5",
+    "3",
+    "2",
+    "4"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 48,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer beschliesst ein Grossteil der neuen Gesetze auf Bundesebene?",
+   "options": [
+    "das Bundesgericht",
+    "die Kantone",
+    "der Nationalrat und der Ständerat",
+    "der Bundesrat"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 49,
+   "section": 1,
+   "level": "bund",
+   "question": "Wann ist eine Initiative auf Bundesebene angenommen?",
+   "options": [
+    "Bei Ständemehr",
+    "Bei Volksmehr",
+    "Bei Volksmehr und Ständemehr",
+    "Bei Volksmehr und mindestens einem Drittel der Stände"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 50,
+   "section": 1,
+   "level": "bund",
+   "question": "Durch eine Volksinitiative kann …",
+   "options": [
+    "der National- und Ständerat abgesetzt werden.",
+    "die Bundesverfassung geändert werden.",
+    "das Völkerrecht geändert werden.",
+    "der Bundesrat ausgetauscht werden."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 51,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie stimmen die meisten Stimmberechtigten ab?",
+   "options": [
+    "per Gang an die Urne",
+    "per Internet",
+    "per Telefon",
+    "per Brief"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 52,
+   "section": 1,
+   "level": "bund",
+   "question": "An welchem Wochentag finden nationale Wahlen und Abstimmungen statt?",
+   "options": [
+    "Sonntag",
+    "Mittwoch",
+    "Montag",
+    "Freitag"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 53,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine wichtige Aufgabe des Bundesstaats?",
+   "options": [
+    "Er sorgt für soziale Sicherheit.",
+    "Er organisiert die Arbeit in Fabriken und Betrieben.",
+    "Er garantiert günstigen Wohnraum für alle.",
+    "Er gibt verschiedene Tageszeitungen in allen Landessprachen heraus."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 54,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine wichtige Aufgabe des Bundes?",
+   "options": [
+    "Er fördert die Gründung von Vereinen.",
+    "Er unterstützt die Gründung von Firmen.",
+    "Er sorgt für die innere und äussere Sicherheit.",
+    "Er unterhält eigene Spitäler und Kliniken."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 55,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine wichtige Aufgabe des Bundes?",
+   "options": [
+    "Er finanziert die Herstellung von Autos.",
+    "Er sorgt für den Schutz der Umwelt.",
+    "Er bestimmt die Leitzinsen der Nationalbank.",
+    "Er unterhält eigene Elektrizitätswerke."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 56,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche ist die Schweizer Nationalfahne?",
+   "options": [
+    "a)",
+    " b)                          c)                            d)",
+    "Der Schweizer Bundesstaat besteht aus verschiedenen. . .",
+    "Bundesländern.",
+    "Kantonen.",
+    "Distrikten.",
+    "Provinzen."
+   ],
+   "answer": -1
+  },
+  {
+   "n": 57,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie viele Kantone hat der Schweizer Bundesstaat?",
+   "options": [
+    "12 (10 Kantone und 2 Halbkantone)",
+    "26 (20 Kantone und 6 Halbkantone)",
+    "34 (28 Kantone und 6 Halbkantone)",
+    "16 (12 Kantone und 4 Halbkantone)"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 58,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie viele politische Gemeinden gibt es in der Schweiz (Stand 2021)?",
+   "options": [
+    "Etwa 50",
+    "Etwa 200",
+    "Etwa 2200",
+    "Etwa 8000"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 59,
+   "section": 1,
+   "level": "bund",
+   "question": "Die Schweiz ist ein föderalistischer Staat mit drei Staatsebenen. Was ist die unterste Ebene?",
+   "options": [
+    "der Kanton",
+    "die Gemeinde",
+    "der Bezirk",
+    "der Bund"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 60,
+   "section": 1,
+   "level": "bund",
+   "question": "Die Schweiz ist ein föderalistischer Staat mit drei Staatsebenen. Was ist die oberste Ebene?",
+   "options": [
+    "die Gemeinde",
+    "der Kanton",
+    "der Bund",
+    "die Region"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 61,
+   "section": 1,
+   "level": "bund",
+   "question": "Für was ist der Bund zuständig?",
+   "options": [
+    "für die Organisation der Volksschule",
+    "für die Aussenpolitik",
+    "für den Erlass von Bauordnungen",
+    "für die Wahl der Kantonsrichterinnen und Kantonsrichter"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 62,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Staatsebene ist für das Militär zuständig?",
+   "options": [
+    "Bund",
+    "Kanton",
+    "Bezirk",
+    "Gemeinde"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 63,
+   "section": 1,
+   "level": "bund",
+   "question": "Was sind die Landessprachen der Schweiz?",
+   "options": [
+    "Französisch, Italienisch, Englisch, Deutsch",
+    "Französisch, Italienisch, Rätoromanisch, Deutsch",
+    "Französisch, Italienisch, Dialekte der Kantone und Rätoromanisch",
+    "Deutsch, Französisch, Italienisch"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 64,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine offizielle Landessprache in der Schweiz?",
+   "options": [
+    "Französisch",
+    "Englisch",
+    "Portugiesisch",
+    "Spanisch"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 65,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie viele offizielle Landessprachen gibt es in der Schweiz?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "8"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 66,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist die vierte Landessprache der Schweiz?",
+   "options": [
+    "Elsässisch",
+    "Rätoromanisch",
+    "Englisch",
+    "Portugiesisch"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 67,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer darf in der Schweiz Gewalt gegen Menschen und Sachen ausüben (Gewaltmonopol)?",
+   "options": [
+    "betroffene Bürgerinnen und Bürger",
+    "die Parteien",
+    "die Medien",
+    "der Staat (Polizei, Militär)"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 68,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer hat auf Bundesebene die richterliche Gewalt (Judikative)?",
+   "options": [
+    "die Parlamentarierinnen und Parlamentarier",
+    "das Bundesgericht",
+    "die Regierungen",
+    "das Militär"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 69,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer hat auf Bundesebene die gesetzgebende Gewalt (Legislative)?",
+   "options": [
+    "der Bundesrat",
+    "der Militärrat",
+    "das Bundesparlament (Nationalrat und Ständerat)",
+    "das Bundesgericht"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 70,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer hat auf Bundesebene die ausführende Gewalt (Exekutive)?",
+   "options": [
+    "der Bundesrat",
+    "die Parteien",
+    "das Bundesparlament (Nationalrat und Ständerat)",
+    "das Bundesverwaltungsgericht"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 71,
+   "section": 1,
+   "level": "bund",
+   "question": "Was bezeichnet man häufig als vierte Gewalt im Staat?",
+   "options": [
+    "die Kirche",
+    "die Verbände und Vereine",
+    "die Medien (Zeitungen, Radio, Fernsehen)",
+    "die Werbung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 72,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist die Aufgabe der Richterinnen und Richter?",
+   "options": [
+    "Sie überwachen die Verwaltung.",
+    "Sie fällen Gerichtsurteile.",
+    "Sie verteidigen die Angeklagten.",
+    "Sie verfassen Gesetze."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 73,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist eine Aufgabe der Polizei?",
+   "options": [
+    "Sie hilft bei der Steuererklärung.",
+    "Sie verfolgt Rechtsverletzungen.",
+    "Sie erlässt neue Gesetze.",
+    "Sie fällt Gerichtsurteile."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 74,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer darf Kriminelle verhaften?",
+   "options": [
+    "Zeuginnen und Zeugen eines Verbrechens",
+    "der Gemeinderat",
+    "die Polizei",
+    "die Bürgerwehr"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 75,
+   "section": 1,
+   "level": "bund",
+   "question": "Was bedeutet Gewaltenteilung?",
+   "options": [
+    "Polizei und Militär dürfen beide Gewalt anwenden.",
+    "Die Verteilung der Macht auf Staat und Kirche.",
+    "Die Verteilung der Staatsgewalt auf verschiedene Staatsorgane wie Regierung, Parlament und Gerichte.",
+    "Die Verteilung der Macht auf den Nationalrat und den Ständerat."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 76,
+   "section": 1,
+   "level": "bund",
+   "question": "Die Schweiz ist ein Rechtsstaat. Was bedeutet das?",
+   "options": [
+    "Auch der Staat muss sich an die Gesetze halten.",
+    "Die Gesetze gelten nur für die Personen, die diesen Gesetzen zugestimmt haben.",
+    "Die Gesetze gelten nur für Schweizer Bürgerinnen und Bürger.",
+    "Die Gesetze gelten nicht für Politikerinnen und Politiker."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 77,
+   "section": 1,
+   "level": "bund",
+   "question": "Welches Grundrecht ist in der Bundesverfassung verankert?",
+   "options": [
+    "der Waffenbesitz",
+    "die Glaubens- und Gewissensfreiheit",
+    "die persönliche Rache",
+    "das Recht auf ein eigenes Haus"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 78,
+   "section": 1,
+   "level": "bund",
+   "question": "Welches Grundrecht garantiert die Bundesverfassung?",
+   "options": [
+    "die Meinungsfreiheit",
+    "das Recht auf WLAN",
+    "das Recht auf kostenlose Aus- und Weiterbildung",
+    "das Halten von Haustieren"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 79,
+   "section": 1,
+   "level": "bund",
+   "question": "Was wird durch die Glaubens- und Gewissensfreiheit garantiert?",
+   "options": [
+    "freie Schulwahl",
+    "Freizeit",
+    "Versammlungsfreiheit",
+    "Religionsfreiheit"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 80,
+   "section": 1,
+   "level": "bund",
+   "question": "Frauen und Männer sind laut Verfassung und Gesetz in der Schweiz gleichberechtigt. Was heisst das?",
+   "options": [
+    "Kochen ist Männersache.",
+    "Frauen und Männer haben grundsätzlich die gleichen Rechte.",
+    "In politischen Gremien müssen gleich viele Männer wie Frauen vertreten sein.",
+    "Kindererziehung ist Frauensache."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 81,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist in der Schweiz verboten?",
+   "options": [
+    "Man darf keine falschen Behauptungen über Personen öffentlich verbreiten.",
+    "Man darf die Regierung nicht öffentlich kritisieren.",
+    "Man darf eine geschlossene Ehe nicht auflösen.",
+    "Man darf nicht an Demonstrationen teilnehmen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 82,
+   "section": 1,
+   "level": "bund",
+   "question": "Jemand bekommt wegen seiner Hautfarbe oder seinem Geschlecht eine Arbeitsstelle nicht. Welches Grundrecht wird damit verletzt?",
+   "options": [
+    "das Recht auf freie Meinungsäusserung",
+    "die Niederlassungsfreiheit",
+    "das Recht auf rechtsgleiche Behandlung (Diskriminierungsverbot)",
+    "das Recht auf Bildung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 83,
+   "section": 1,
+   "level": "bund",
+   "question": "Welches Recht bekommen Personen erst mit der Einbürgerung?",
+   "options": [
+    "Sie dürfen einem Verein beitreten.",
+    "Sie dürfen an politischen Wahlen und Abstimmungen auf Bundesebene teilnehmen.",
+    "Sie dürfen eine Wohnung kaufen.",
+    "Sie dürfen den Arbeitsplatz frei wählen."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 84,
+   "section": 1,
+   "level": "bund",
+   "question": "Durch was wird der Persönlichkeits- oder Datenschutz verletzt?",
+   "options": [
+    "Wenn der persönliche Computer nicht genügend geschützt ist.",
+    "Wenn eine Person auf einer öffentlichen Strasse fotografiert wird.",
+    "Wenn eine Zeitung über eine Person berichtet.",
+    "Wenn private Informationen über einzelne Personen ohne gesetzliche Grundlage"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 85,
+   "section": 1,
+   "level": "bund",
+   "question": "oder ohne Zustimmung der Person veröffentlicht werden. Was verbietet die Schweizer Bundesverfassung?",
+   "options": [
+    "Man darf im öffentlichen Raum keine religiösen Zeichen tragen.",
+    "Man darf keine Sammelaktionen für notleidende Menschen durchführen.",
+    "Es darf niemand gefoltert werden.",
+    "Man darf nicht ohne Lohn arbeiten."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 86,
+   "section": 1,
+   "level": "bund",
+   "question": "Welches Recht ist in der Schweizer Bundesverfassung verankert?",
+   "options": [
+    "Alle Menschen haben ein Recht auf gesunde und kostenlose Ernährung.",
+    "Das persönliche Eigentum ist geschützt.",
+    "Man darf Haustiere halten.",
+    "Man darf kostenlos das Internet benutzen."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 87,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist in der Schweiz verboten?",
+   "options": [
+    "die Arbeit des Bundesrats zu kritisieren",
+    "ohne Bewilligung Velo zu fahren",
+    "im öffentlichen Raum ein religiöses Zeichen zu tragen",
+    "andere Menschen wegen ihrer Herkunft oder Religion öffentlich zu beschimpfen"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 88,
+   "section": 1,
+   "level": "bund",
+   "question": "Wer muss in der Schweiz Militärdienst oder Zivilschutzdienst leisten?",
+   "options": [
+    "junge Männer mit Schweizer Bürgerrecht",
+    "Frauen und Männer im Alter von 20 Jahren, die mindestens 10 Jahre in der Schweiz",
+    "gelebt haben",
+    "Militärdienst ist für alle freiwillig",
+    "junge Frauen und Männer mit einem technischen oder medizinischen Beruf"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 89,
+   "section": 1,
+   "level": "bund",
+   "question": "Zwei Jugendliche werden wegen ihrer dunklen Hautfarbe nicht ins Schwimmbad hineingelassen. Gegen welches Grundrecht verstösst das?",
+   "options": [
+    "gegen die freie Sportbetätigung",
+    "gegen das Diskriminierungsverbot",
+    "gegen die Meinungsfreiheit",
+    "gegen die Versammlungsfreiheit"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 90,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Pflicht gilt in der Schweiz nur für Männer?",
+   "options": [
+    "Männer müssen bis zu einem bestimmten Alter Militärdienst oder Zivilschutzdienst",
+    "leisten.",
+    "Männer müssen bei Bedarf ein politisches Amt übernehmen.",
+    "Männer müssen für den Unterhalt der Familie sorgen.",
+    "Männer müssen mehr Steuern und Krankenkassenprämien bezahlen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 91,
+   "section": 1,
+   "level": "bund",
+   "question": "Was ist in einem Rechtsstaat verboten?",
+   "options": [
+    "Gesetze zu kritisieren",
+    "die Arbeit von demokratisch gewählten Behörden in Frage zu stellen",
+    "Personen grundlos zu verhaften und einzusperren",
+    "einer religiösen Gruppierung beizutreten"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 92,
+   "section": 1,
+   "level": "bund",
+   "question": "Was geschieht in der Schweiz, wenn jemand eine Straftat begeht?",
+   "options": [
+    "Wer gegen ein Gesetz verstossen hat, wird bestraft.",
+    "Wer Opfer eines Verbrechens geworden ist, darf sich selber rächen.",
+    "Wer sich selbst anzeigt, bleibt straffrei.",
+    "Die Opfer eines Verbrechens können zwischen verschiedenen Strafen wählen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 93,
+   "section": 1,
+   "level": "bund",
+   "question": "Welche Strafe verbietet die Bundesverfassung?",
+   "options": [
+    "eine Gefängnisstrafe",
+    "eine Geldstrafe",
+    "die Todesstrafe",
+    "gemeinnützige Arbeit"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 94,
+   "section": 1,
+   "level": "bund",
+   "question": "In der Schweiz gibt es verschiedene Gesetze. Welches regelt das Mieten von Wohnungen?",
+   "options": [
+    "Obligationenrecht (OR)",
+    "Mehrwertsteuergesetz (MWSTG)",
+    "Strafgesetzbuch (StGB)",
+    "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 95,
+   "section": 1,
+   "level": "bund",
+   "question": "In der Schweiz gibt es verschiedene Gesetze. Was regelt das Zivilgesetzbuch (ZGB)?",
+   "options": [
+    "Eheschliessungen und Scheidungen",
+    "Firmengründungen",
+    "Strafen bei Mord und Totschlag",
+    "Staatsverträge"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 96,
+   "section": 1,
+   "level": "bund",
+   "question": "In der Schweiz gibt es verschiedene Gesetze. Welches regelt, ob jemand ins Gefängnis muss?",
+   "options": [
+    "Obligationenrecht (OR)",
+    "Zivilgesetzbuch (ZGB)",
+    "Strafgesetzbuch (StGB)",
+    "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG)"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 97,
+   "section": 1,
+   "level": "bund",
+   "question": "Wie werden Richterinnen und Richter am Bundesgericht ernannt?",
+   "options": [
+    "Durch die Kantonsparlamente. Jeder Kanton kann einen Richter stellen.",
+    "Durch ein normales Bewerbungsverfahren mit Vorstellungsgespräch.",
+    "Durch Wahl des Bundesparlaments.",
+    "Der Bundesrat hat das Recht, Richter einzusetzen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 98,
+   "section": 1,
+   "level": "bund",
+   "question": "Dürfen Schweizer Bürgerinnen und Bürger an andere Länder ausgeliefert werden?",
+   "options": [
+    "Nein. Dies ist unter keinen Umständen erlaubt.",
+    "Ja, aber nur an Länder welche demokratisch organisiert sind.",
+    "Ja, aber nur wenn die Straftat auch in der Schweiz strafbar ist.",
+    "Grundsätzlich nicht. Ausgenommen für Prozesse vor internationalen Gerichten."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 99,
+   "section": 1,
+   "level": "kanton",
+   "question": "Von was hängt die individuelle Steuerbelastung ab?",
+   "options": [
+    "vom steuerbaren Einkommen und Vermögen",
+    "von der Mitgliedschaft bei einer Partei",
+    "von der Nationalität",
+    "von der Mitgliedschaft in einer Behörde"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 100,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie viele Regierungsräte hat der Kanton Zürich?",
+   "options": [
+    "3",
+    "250",
+    "7",
+    "180"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 101,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie heisst eine Direktion des Kanton Zürichs?",
+   "options": [
+    "Tourismusdirektion",
+    "Baudirektion",
+    "Ernährungsdirektion",
+    "Militärdirektion"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 102,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie heisst in der Stadt Zürich die Exekutive?",
+   "options": [
+    "Stadtrat",
+    "Nationalrat",
+    "Regierungsrat",
+    "Bundesrat"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 103,
+   "section": 1,
+   "level": "kanton",
+   "question": "Was ist eine Aufgabe des Kantons Zürich?",
+   "options": [
+    "Abschluss von Verträgen mit der Europäischen Union",
+    "Organisation der Universität",
+    "Digitalisierung der Bundesverwaltung",
+    "Organisation der Armee"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 104,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie viele Bezirke gibt es im Kanton Zürich?",
+   "options": [
+    "12",
+    "18",
+    "7",
+    "25"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 105,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie können im Kanton Zürich auch Personen ohne Schweizer Pass politisch aktiv werden?",
+   "options": [
+    "mit einem Referendum.",
+    "mit einer Petition.",
+    "mit einem Einsitz in die Regierung.",
+    "mit einem parlamentarischen Kommissionsantrag."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 106,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie viele Mitglieder hat die Regierung des Kantons Zürich?",
+   "options": [
+    "7",
+    "3",
+    "5",
+    "je nach Aufgaben, die anstehen."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 107,
+   "section": 1,
+   "level": "kanton",
+   "question": "Für was sind die Kantone vor allem zuständig?",
+   "options": [
+    "für die Leitung der kantonalen Verwaltung und für kantonale Gesetze",
+    "für die Innen- und Aussenpolitik auf nationaler Ebene",
+    "für die nationale Verteidigung (Militär)",
+    "für die Geldpolitik und die Zölle"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 108,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie oft werden die Mitglieder des Kantonsrats gewählt?",
+   "options": [
+    "alle 6 Jahre",
+    "alle 2 Jahre",
+    "alle 7 Jahre",
+    "alle 4 Jahre"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 109,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie heisst die Exekutive im Kanton Zürich?",
+   "options": [
+    "Landammann",
+    "Regierungsrat",
+    "Ständerat",
+    "Es gibt keine Exekutive."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 110,
+   "section": 1,
+   "level": "kanton",
+   "question": "Welches ist das Wappen des Kantons Zürich?",
+   "options": [
+    " a)                    b)                   c)                    d)"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 111,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie viele Personen sind für den Kanton Zürich im Ständerat?",
+   "options": [
+    "13",
+    "5",
+    "2",
+    "7"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 112,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie heisst das Parlament im Kanton Zürich?",
+   "options": [
+    "Landtag",
+    "Grosser Rat",
+    "Kantonsrat",
+    "Regierungsrat"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 113,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wie werden die Mitglieder der Zürcher Regierung bestimmt?",
+   "options": [
+    "Sie werden von den Parteien ernannt.",
+    "Sie werden vom Kantonsrat gewählt.",
+    "Sie werden auf Parteiversammlungen gewählt.",
+    "Sie werden von den Zürcher Stimmbürgerinnen und Stimmbürgern gewählt."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 114,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wer stellt im Kanton Zürich die Führerausweise für Autofahrerinnen und Autofahrer aus?",
+   "options": [
+    "die Gemeinde",
+    "das Strassenverkehrsamt",
+    "die Verkehrsverbände",
+    "die Verkehrspolizei"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 115,
+   "section": 1,
+   "level": "kanton",
+   "question": "Wer darf Motorfahrzeuge für den Verkehr zulassen?",
+   "options": [
+    "die Gemeinde",
+    "die grossen Autogaragen",
+    "das Strassenverkehrsamt",
+    "die Verkehrspolizei"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 116,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wie werden die Mitglieder des Kantonsrats bestimmt?",
+   "options": [
+    "durch Wahlen",
+    "durch Ernennung von der Kantonsregierung",
+    "durch das eidgenössische Parlament",
+    "durch die Ständeräte des Kantons"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 117,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Was passiert an einer Gemeindeversammlung?",
+   "options": [
+    "Die Stimmbürgerinnen und Stimmbürger entscheiden über das Budget.",
+    "Die Einwohnerinnen und Einwohner feiern ein Fest.",
+    "Die Stimmbürgerinnen und Stimmbürger wählen den Chef oder die Chefin der Feuerwehr.",
+    "Die Stimmbürgerinnen und Stimmbürger beschliessen neue nationale Gesetze."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 118,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wer wählt den Gemeinderat der Stadt Zürich?",
+   "options": [
+    "der Kantonsrat",
+    "der Regierungsrat",
+    "der Bezirksrat",
+    "das Volk"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 119,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Was ist eine Aufgabe von Zürcher Gemeinden?",
+   "options": [
+    "Sie bauen Autobahnen.",
+    "Sie führen das Militär.",
+    "Sie verkaufen Versicherungen.",
+    "Sie organisieren die Primarschule."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 120,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wer erteilt die Baubewilligung für ein Einfamilienhaus im Kanton Zürich?",
+   "options": [
+    "der Nachbar",
+    "die Gemeinde",
+    "das Quartierkomitee",
+    "die Architektin"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 121,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Für was sind die Gemeinden zuständig?",
+   "options": [
+    "für die Organisation von privaten Geburtstagsfesten",
+    "für die Aussenpolitik",
+    "für die lokale Raumplanung",
+    "für das Militär"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 122,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wer zählt bei politischen Abstimmungen die Stimmzettel?",
+   "options": [
+    "das Militärbüro",
+    "das Wahlbüro",
+    "die Stimmbürgerinnen und Stimmbürger selber",
+    "die Polizei"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 123,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Bürgerinnen und Bürger können auf Gemeindeebene politisch entscheiden, indem sie . . .",
+   "options": [
+    "regelmässig an Volksfesten teilnehmen.",
+    "die Steuern rechtzeitig bezahlen.",
+    "in Vereinen mitwirken.",
+    "an Wahlen und Abstimmungen teilnehmen."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 124,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wer leitet die Verwaltung und plant die Ziele öffentlichen Handelns der Stadt Zürich?",
+   "options": [
+    "die Stadtkanzlei",
+    "der Stadtrat",
+    "die Einwohnerkontrolle",
+    "die Einwohnerinnen und Einwohner der Stadt"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 125,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wofür ist die Gemeinde zuständig?",
+   "options": [
+    "Fachhochschulen",
+    "Geldpolitik",
+    "Zivildienst",
+    "Einwohnerkontrolle"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 126,
+   "section": 1,
+   "level": "gemeinde",
+   "question": "Wie viele Gemeinden gibt es im Kanton Zürich?",
+   "options": [
+    "zwischen 30 und 50",
+    "zwischen 150 und 170",
+    "zwischen 420 und 440",
+    "zwischen 300 und 320"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 127,
+   "section": 2,
+   "level": "bund",
+   "question": "Wie nennt man die oberste Repräsentantin oder den obersten Repräsentanten in kleineren Zürcher Gemeinden?",
+   "options": [
+    "Bürgermeisterin oder Bürgermeister",
+    "Gemeindeammann",
+    "Bezirksamtmann",
+    "Gemeindepräsidentin oder Gemeindepräsident"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 128,
+   "section": 2,
+   "level": "bund",
+   "question": "Die Steuererklärung ...",
+   "options": [
+    "beschreibt das Vorgehen bei Abgabe der Steuer.",
+    "weist die finanzielle Situation des Steuerzahlenden gegenüber der Steuerbehörde",
+    "aus.",
+    "belegt gegenüber der Steuerbehörde die Lotteriegewinne.",
+    "beschreibt, wie man die Formulare für die Steuerbehörde ausfüllen muss."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 129,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist ein Arbeitszeugnis?",
+   "options": [
+    "eine Liste aller bisherigen Arbeitsstellen eines Arbeitsnehmers",
+    "eine vom Arbeitnehmer bewertete Leistung des Arbeitsgebers",
+    "ein Vertrag zwischen Arbeitnehmer-Verbänden und Arbeitgeber-Verbänden über die",
+    "Arbeitsbedingungen in einer bestimmten Branche",
+    "vom Arbeitgeber ausgestellte Urkunde, die Auskunft über die Leistung und das Ver-"
+   ],
+   "answer": 4
+  },
+  {
+   "n": 130,
+   "section": 2,
+   "level": "bund",
+   "question": "halten des Arbeitnehmers macht Welche Versicherung im Gesundheitswesen ist Pflicht?",
+   "options": [
+    "die Versicherung für Alternativmedizin",
+    "die zahnmedizinische Versicherung",
+    "die Zusatzversicherung",
+    "die obligatorische Krankenpflegeversicherung"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 131,
+   "section": 2,
+   "level": "bund",
+   "question": "Arbeitnehmende und Selbständigerwerbende mit Kindern haben Anspruch auf …",
+   "options": [
+    "Kinderbegünstigung.",
+    "Elternentlastung.",
+    "Familienzulage.",
+    "Finanzhilfe."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 132,
+   "section": 2,
+   "level": "bund",
+   "question": "Der Zivildienst in der Schweiz ist ...",
+   "options": [
+    "für alle Männer und Frauen obligatorisch.",
+    "ein freiwilliger Einsatz für die Gesellschaft.",
+    "ein Ersatz zum Militärdienst.",
+    "ein Freifach der obligatorischen Schule."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 133,
+   "section": 2,
+   "level": "bund",
+   "question": "Welche Aussage zur obligatorischen Versicherung in einer Krankenkasse in der Schweiz ist richtig?",
+   "options": [
+    "Jede Krankenkasse bestimmt ihre Leistungen selbst.",
+    "Man kann die Krankenkasse frei wählen.",
+    "Es ist freiwillig, eine Krankenkasse zu haben.",
+    "Der Kanton kann seinen Einwohnerinnen und Einwohnern eine Krankenkasse zuteilen."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 134,
+   "section": 2,
+   "level": "bund",
+   "question": "Wann dürfen Einwohnerinnen und Einwohner ohne Schweizer Pass an nationalen Abstimmungen teilnehmen?",
+   "options": [
+    "nur bei Abstimmungen über Volksinitiativen",
+    "nur bei nationalen Referenden",
+    "Sie dürfen gar nicht abstimmen.",
+    "nur bei den Abstimmungen Ende Jahr"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 135,
+   "section": 2,
+   "level": "bund",
+   "question": "Für was steht in der Schweiz die Nummer 117?",
+   "options": [
+    "für den Polizeinotruf",
+    "für die Auskunft",
+    "für die Abfallentsorgungsstelle",
+    "für den Pannendienst"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 136,
+   "section": 2,
+   "level": "bund",
+   "question": "Was gehört zum Schweizer Sozialversicherungs-Systems?",
+   "options": [
+    "Schutz vor Folgen bei Krankheit und Unfall",
+    "Schutz vor Einbrechern",
+    "Schutz vor Hochwasser und Unwetter",
+    "Schutz vor privatem Kommunikationsmissbrauch"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 137,
+   "section": 2,
+   "level": "bund",
+   "question": "Für was gibt es in der Schweiz eine Sozialversicherung?",
+   "options": [
+    "wenn man einen Zahn verliert",
+    "wenn man die Stelle verliert",
+    "wenn das Velo gestohlen wird",
+    "wenn man sich scheiden lässt"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 138,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist eine Schweizer Sozialversicherung?",
+   "options": [
+    "Schulvorsorge",
+    "Jugend- und Freizeitvorsorge",
+    "Alters-, Hinterlassenen- und Invalidenversicherung (AHV/IV)",
+    "Scheidungsvorsorge"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 139,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist die erste Säule der Altersvorsorge?",
+   "options": [
+    "das bedingungslose Grundeinkommen",
+    "die Pensionskasse",
+    "der Grundpfeiler des Schweizer Parlamentsgebäudes",
+    "die AHV (Alters-, Hinterlassenen- und Invalidenversicherung)"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 140,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist die zweite Säule der Altersvorsorge?",
+   "options": [
+    "ein Denkmal auf dem Bundesplatz",
+    "die Pensionskasse",
+    "die Krankenversicherung",
+    "eine Erbschaft"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 141,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist die dritte Säule der Altersvorsorge?",
+   "options": [
+    "die private Vorsorge",
+    "der Dienstleistungssektor",
+    "die Invalidenversicherung",
+    "der Erwerbsersatz"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 142,
+   "section": 2,
+   "level": "bund",
+   "question": "Für was setzt sich Amnesty International ein?",
+   "options": [
+    "für die Senkung des CO2",
+    "für die Artenvielfalt",
+    "für das Tierwohl",
+    "für die Achtung der Menschenrechte"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 143,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer setzt sich für die Rechte von Arbeitnehmenden ein?",
+   "options": [
+    "Kirchen",
+    "Gewerkschaften",
+    "Spitäler",
+    "Schulen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 144,
+   "section": 2,
+   "level": "bund",
+   "question": "In der Schweiz sind seit 2002 Abtreibungen mit der Fristenlösung geregelt. Was bedeutet das?",
+   "options": [
+    "Eine Frau darf bis zur 12. Woche der Schwangerschaft frei entscheiden, ob sie das",
+    "Kind behalten will.",
+    "Eine Frau braucht die Erlaubnis ihres Ehemannes, um abzutreiben.",
+    "Abtreibung ist in jedem Fall verboten.",
+    "Abtreibung ist nur erlaubt, wenn die Eltern nicht verheiratet sind."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 145,
+   "section": 2,
+   "level": "bund",
+   "question": "Was bedeutet AHV?",
+   "options": [
+    "Alters- und Hinterlassenenversicherung",
+    "Auto- und Heimreiseversicherung",
+    "Arbeits- und Haushaltsversicherung",
+    "Amt für Hausverwaltung"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 146,
+   "section": 2,
+   "level": "bund",
+   "question": "Welche staatliche Unterstützung bekommen alle Familien in der Schweiz?",
+   "options": [
+    "keine Unterstützung",
+    "kostenlose Zugfahrten und Busfahrten",
+    "Stipendien für Jugendliche in Ausbildung",
+    "Kinderzulagen"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 147,
+   "section": 2,
+   "level": "bund",
+   "question": "Welche Versicherung ist in der Schweiz obligatorisch?",
+   "options": [
+    "die Alters- und Hinterlassenenversicherung (AHV)",
+    "die Jugendversicherung (JV)",
+    "die Lebensversicherung (LV)",
+    "die Geburtenversicherung (GV)"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 148,
+   "section": 2,
+   "level": "bund",
+   "question": "Wenn man mit der Steuerrechnung nicht einverstanden ist, . . .",
+   "options": [
+    "bezahlt man vorläufig nur die Hälfte des Betrags.",
+    "muss man sie an die Steuerbehörden zurück schicken.",
+    "muss man sich bei der Polizei melden.",
+    "kann man bei der Steuerbehörde schriftlich seine Einwände dagegen mitteilen."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 149,
+   "section": 2,
+   "level": "bund",
+   "question": "Wie unterstützt der Staat in der Schweiz die Familien?",
+   "options": [
+    "Es gibt keine Unterstützung.",
+    "mit kostenlosem Internet",
+    "mit kostengünstigen Lebensmitteln",
+    "mit Steuerabzügen"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 150,
+   "section": 2,
+   "level": "bund",
+   "question": "Was finanziert der Staat mit Steuergeldern?",
+   "options": [
+    "Arztpraxen",
+    "Kinos",
+    "Schulen",
+    "Hotels"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 151,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist eine Sozialversicherung in der Schweiz?",
+   "options": [
+    "die Auto- und Insassenversicherung (AIV)",
+    "die Invalidenversicherung (IV)",
+    "die Diebstahlversicherung (DV)",
+    "die Bau- und Feuerversicherung (BFV)"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 152,
+   "section": 2,
+   "level": "bund",
+   "question": "Was wird Angestellten direkt vom Lohn abgezogen? Der Beitrag für die . . .",
+   "options": [
+    "Auto- und Unfallversicherung (AUV).",
+    "Arbeitslosenversicherung (ALV).",
+    "Diebstahlversicherung (DV).",
+    "Brandschutzversicherung (BSV)."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 153,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist das RAV?",
+   "options": [
+    "Regionales Arbeitsvermittlungszentrum",
+    "Rechtsstelle für Allgemeine Versicherungen",
+    "Institut für Rechtsfragen",
+    "Rentenanstalt"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 154,
+   "section": 2,
+   "level": "bund",
+   "question": "Was bedeutet die Abkürzung IV?",
+   "options": [
+    "Interessensvertretung",
+    "Internationales Verfahren",
+    "Inakzeptables Vorkommen",
+    "Invalidenversicherung"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 155,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer muss sich bei einer Krankenkasse versichern lassen?",
+   "options": [
+    "niemand",
+    "nur Arbeitnehmerinnen und Arbeitnehmer",
+    "nur Kinder und ältere Menschen",
+    "alle Einwohnerinnen und Einwohner"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 156,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer übernimmt die Spitalkosten bei einem schweren Arbeitsunfall?",
+   "options": [
+    "die betroffene Person selbst",
+    "die Berufsunfallversicherung",
+    "die Gewerkschaft",
+    "die Arbeitgeberin oder der Arbeitgeber"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 157,
+   "section": 2,
+   "level": "bund",
+   "question": "Welche Versicherung ist in der Schweiz obligatorisch?",
+   "options": [
+    "Haftpflichtversicherung",
+    "Krankenversicherung",
+    "Arbeitsversicherung",
+    "Vermögensversicherung"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 158,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist das BAG?",
+   "options": [
+    "die Bereitstellung allgemeiner Gesundheitsleistungen",
+    "das Bundesamt für Gesundheit",
+    "das Bundesamt für allgemeine Grundversorgung",
+    "das Kontrollorgan des Bundes für allgemeine Grundversicherungen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 159,
+   "section": 2,
+   "level": "bund",
+   "question": "Für was steht in der Schweiz die Nummer 144?",
+   "options": [
+    "für den Sanitätsnotruf",
+    "für die Feuerwehrzentrale",
+    "für die Polizeizentrale",
+    "für die Auskunft"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 160,
+   "section": 2,
+   "level": "bund",
+   "question": "Ab wann muss ein Kind in der Schweiz eine Krankenversicherung haben?",
+   "options": [
+    "ab spätestens einem Jahr nach der Geburt",
+    "ab Schuleintritt",
+    "ab spätestens drei Monaten nach der Geburt",
+    "Ein Kind braucht keine eigene Krankenversicherung."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 161,
+   "section": 2,
+   "level": "bund",
+   "question": "Wie viele Jahre dauert in der Schweiz die obligatorische Schulzeit?",
+   "options": [
+    "11 Jahre",
+    "13 Jahre",
+    "8 Jahre",
+    "6 Jahre"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 162,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer entscheidet darüber, in welche Klasse ein Kind in der Primarschule kommt?",
+   "options": [
+    "die Eltern",
+    "die Schulleitung oder die Schulpflege",
+    "die Kinderärztin oder der Kinderarzt",
+    "die Kinder selbst"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 163,
+   "section": 2,
+   "level": "bund",
+   "question": "Die Erziehung der Kinder ist vor allem Aufgabe …",
+   "options": [
+    "des Staats.",
+    "der Grosseltern.",
+    "der Eltern.",
+    "der Schulen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 164,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist im Schweizer Bildungssystem obligatorisch?",
+   "options": [
+    "Weiterbildungskurse nach der Berufslehre",
+    "Kindertagesstätte",
+    "Maturitätsschule",
+    "Primarschule"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 165,
+   "section": 2,
+   "level": "bund",
+   "question": "Eine Angestellte darf nicht entlassen werden, wenn sie ...",
+   "options": [
+    "immer pünktlich war.",
+    "die Kündigung ablehnt.",
+    "schwanger ist.",
+    "schon lange im Betrieb gearbeitet hat."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 166,
+   "section": 2,
+   "level": "bund",
+   "question": "Gewerkschaften vertreten die Interessen von ...",
+   "options": [
+    "Arbeitgeberinnen und Arbeitgebern.",
+    "Arbeitnehmerinnen und Arbeitnehmern.",
+    "Jugendlichen.",
+    "Betrieben."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 167,
+   "section": 2,
+   "level": "bund",
+   "question": "Für welchen Streitfall ist das Arbeitsgericht zuständig?",
+   "options": [
+    "Wenn Arbeitnehmende die Erbschaftssteuer nicht bezahlen.",
+    "Wenn Arbeitnehmenden ohne Grund gekündigt wird",
+    "Wenn Arbeitnehmende ein Problem mit einer Nachbarin oder einem Nachbarn",
+    "haben.",
+    "Wenn Arbeitnehmende finanzielle Schwierigkeiten in der Familie haben, diese"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 168,
+   "section": 2,
+   "level": "bund",
+   "question": "jedoch nichts mit dem Betrieb zu tun hat. An wen können sich Arbeitnehmerinnen und Arbeitnehmer bei arbeitsrechtlichen Fragen wenden?",
+   "options": [
+    "an Anwälte, Gewerkschaften und Arbeitsgerichte",
+    "an die Steuerverwaltung",
+    "an die Polizei und die Einwohnerkontrolle der Gemeinde",
+    "an die Kirchgemeinde und den Zivilschutz"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 169,
+   "section": 2,
+   "level": "bund",
+   "question": "Was muss man machen, wenn man ein Arbeitsverhältnis regulär beenden will?",
+   "options": [
+    "warten, bis die Chefin oder der Chef aus den Ferien zurück ist",
+    "den Arbeitsplatz räumen und dann dem Arbeitsplatz fern bleiben",
+    "den Arbeitsvertrag vernichten",
+    "mit einem eingeschriebenen Brief kündigen oder den Eingang der Kündigung schrift-"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 170,
+   "section": 2,
+   "level": "bund",
+   "question": "lich bestätigen lassen Economiesuisse vertritt die Interessen ...",
+   "options": [
+    "der Angestellten.",
+    "der Unternehmen.",
+    "des Gastgewerbes.",
+    "der Handwerkerinnen und Handwerker."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 171,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist in einem Arbeitsvertrag unter anderem geregelt? Es ist geregelt, ...",
+   "options": [
+    "welche Krankenkasse man wählen muss.",
+    "wie hoch die Altersrente ist.",
+    "wie die Freizeit gestaltet wird.",
+    "wie hoch der Lohn ist."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 172,
+   "section": 2,
+   "level": "bund",
+   "question": "Was kann man tun, wenn die Arbeitgeberin oder der Arbeitgeber ohne Grund zu wenig Lohn ausbezahlt?",
+   "options": [
+    "Es gibt keine rechtlichen Möglichkeiten.",
+    "Man kann bis zum Vertragsende nicht mehr zur Arbeit gehen.",
+    "Man kann an das Arbeitsgericht gelangen.",
+    "Man kann Anzeige bei der Polizei machen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 173,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist ein Berufsbildungszentrum?",
+   "options": [
+    "eine Arbeitsvermittlungsstelle",
+    "ein Standort, an dem unterschiedliche Angebote zur beruflichen Bildung beitragen",
+    "eine Fachhochschule",
+    "ein arbeitstechnisches Forschungszentrum"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 174,
+   "section": 2,
+   "level": "bund",
+   "question": "Welcher Feiertag gilt nach Gesetz für die ganze Schweiz?",
+   "options": [
+    "1. August",
+    "Auffahrt",
+    "Karfreitag",
+    "1. Mai"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 175,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist das ordentliche Rentenalter der Schweiz?",
+   "options": [
+    "64 Jahre bei Frauen und Männern",
+    "65 Jahre bei Frauen und Männern",
+    "64 Jahre bei Frauen und 65 Jahre bei Männern",
+    "63 Jahre bei Frauen und 64 Jahre bei Männern"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 176,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer bezahlt keine Prämien für Arbeitslosenversicherung?",
+   "options": [
+    "Personen in der Berufsausbildung",
+    "Pensionierte",
+    "Arbeitnehmerinnen und Arbeitnehmer",
+    "alle Personen ab 50 Jahren"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 177,
+   "section": 2,
+   "level": "bund",
+   "question": "Wo findet man Informationen über Lehrstellen, Beruf und Arbeit?",
+   "options": [
+    "auf der Steuerverwaltung",
+    "im Bundesarchiv",
+    "im Staatssekretariat für Bildung, Forschung und Innovation",
+    "im Berufsinformationszentrum"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 178,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer ist der wichtigste Handelspartner der Schweiz (Stand 2017)?",
+   "options": [
+    "EU",
+    "USA",
+    "China",
+    "Russland"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 179,
+   "section": 2,
+   "level": "bund",
+   "question": "Wann hat man als Arbeitnehmerin oder Arbeitnehmer Anrecht auf bezahlte freie Stunden oder Tage am Arbeitsplatz?",
+   "options": [
+    "bei Stromausfall",
+    "für die Ausübung eines öffentlichen Amtes",
+    "für die Erledigung von Administration auf der Bank oder Post",
+    "bei der Einschulung der eigenen Kinder"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 180,
+   "section": 2,
+   "level": "bund",
+   "question": "Was bedeutet MWST?",
+   "options": [
+    "Meinungsfreiheit",
+    "mittlerer Wohlstand",
+    "Mehrwertsteuer",
+    "Mass für Wasserstand in Flüssen"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 181,
+   "section": 2,
+   "level": "bund",
+   "question": "Welche Aussage zum Mutterschaftsurlaub in der Schweiz ist richtig?",
+   "options": [
+    "Der Mutterschaftsurlaub beträgt 20 Wochen.",
+    "Die normalen Ferien nach der Geburt des Kindes muss man zuerst aufbrauchen.",
+    "Danach gibt es Mutterschaftsurlaub.",
+    "Den Mutterschaftsurlaub dürfen Frauen im Alter von 20 bis 50 Jahren nur einmal"
+   ],
+   "answer": -1
+  },
+  {
+   "n": 182,
+   "section": 2,
+   "level": "bund",
+   "question": "beziehen.",
+   "options": [
+    "Jede erwerbstätige Frau, die ein Kind bekommt, hat Anrecht auf Mutterschaftsurlaub."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 183,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist in der Schweiz verboten? Es ist verboten, …",
+   "options": [
+    "als Mann und Frau unverheiratet zusammen zu leben.",
+    "als erwachsene Person mit den Eltern zusammen zu leben.",
+    "als Mann mit zwei Frauen zur selben Zeit verheiratet zu sein.",
+    "als Mann für seine Kinder allein zu sorgen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 184,
+   "section": 2,
+   "level": "bund",
+   "question": "Was regelt der Mietvertrag für eine Wohnung?",
+   "options": [
+    "den Wohnstandard",
+    "die Rechte und Pflichten der Vertragspartner",
+    "was gekocht werden darf",
+    "wie die Wohnung eingerichtet werden muss"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 185,
+   "section": 2,
+   "level": "bund",
+   "question": "Unter welchen Voraussetzungen darf man in der Schweiz heiraten?",
+   "options": [
+    "Die Braut muss schwanger sein.",
+    "Man muss 18 Jahre alt und urteilsfähig sein.",
+    "Man muss über ein Mindesteinkommen verfügen.",
+    "Die Eltern müssen einverstanden sein."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 186,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer kann einen Antrag auf Scheidung stellen?",
+   "options": [
+    "nur der Ehemann",
+    "die Kinder der Eheleute",
+    "die Ehefrau oder der Ehemann oder beide zusammen",
+    "nur die Ehefrau"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 187,
+   "section": 2,
+   "level": "bund",
+   "question": "Wer muss beim Zivilstandsamt die Heiratsabsicht anmelden?",
+   "options": [
+    "nur der Mann",
+    "nur die Eltern",
+    "Frau und Mann",
+    "nur die Frau"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 188,
+   "section": 2,
+   "level": "bund",
+   "question": "Wen muss man auf begründetes Verlangen in Ihre Wohnung lassen?",
+   "options": [
+    "die Postbotin oder den Postboten",
+    "die Vermieterin oder den Vermieter",
+    "Personen, die für ein öffentliches Amt in der Gemeinde kandidieren",
+    "die Arbeitgeberin oder den Arbeitgeber"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 189,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist der Mieterinnen- und Mieterverband?",
+   "options": [
+    "eine Schlichtungsstelle des Bundes in Mietfragen",
+    "ein Wohnungsvermittlungsinstitut",
+    "eine Interessensvertretung der Mieterinnen und Mieter",
+    "ein Zusammenschluss aller Mieterinnen und Mieter der Schweiz"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 190,
+   "section": 2,
+   "level": "bund",
+   "question": "Was ist eine Voraussetzung für eine Eheschliessung in der Schweiz?",
+   "options": [
+    "Beide Partner müssen mindestens 16 Jahre alt sein.",
+    "Die Partner müssen bereits in einer eingetragenen Partnerschaft leben.",
+    "Die Partner müssen den gleichen Wohnsitz haben.",
+    "Die Partner dürfen nicht eng verwandt sein."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 191,
+   "section": 2,
+   "level": "bund",
+   "question": "Wann kann der Fahrausweis entzogen werden?",
+   "options": [
+    "bei unerlaubtem Hupen",
+    "bei Fahren unter Einfluss von Alkohol oder Drogen",
+    "bei falschem Parkieren",
+    "bei Fahren bei starkem Nebel"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 192,
+   "section": 2,
+   "level": "bund",
+   "question": "Welchen Nachnamen bekommt ein Kind von verheirateten Eltern?",
+   "options": [
+    "immer einen Doppelnamen mit dem Namen der Mutter zuerst",
+    "immer den Namen des Vaters",
+    "immer den Namen der Mutter",
+    "muss von den Eltern ohne gemeinsamen Familiennamen bei der Heirat entschieden"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 193,
+   "section": 2,
+   "level": "bund",
+   "question": "werden Besitzer eines Hundes müssen für ihren Hund …",
+   "options": [
+    "einen Namen haben.",
+    "eine Geburtsurkunde besitzen.",
+    "Hundesteuern zahlen.",
+    "eine Krankenversicherung abschliessen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 194,
+   "section": 2,
+   "level": "bund",
+   "question": "Wann kann jemand sogenannte Ergänzungsleistungen beziehen?",
+   "options": [
+    "Wenn man eine Lehrstelle in einem Betrieb hat.",
+    "Wenn man den Mindestlohn nicht erreicht.",
+    "Wenn man trotz IV- oder AHV-Rente das Existenzminimum nicht erreicht.",
+    "Wenn man arbeitslos ist."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 195,
+   "section": 2,
+   "level": "bund",
+   "question": "Wo muss man in der Schweiz obligatorisch Mitglied sein?",
+   "options": [
+    "in einer Partei",
+    "in einem Sportverein",
+    "in einer Krankenkasse",
+    "in einem Automobilclub oder Veloclub"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 196,
+   "section": 2,
+   "level": "kanton",
+   "question": "Wer darf einen Verein gründen?",
+   "options": [
+    "nur Personen mit einem sportlichen Leistungsausweis",
+    "nur Personen ab einem bestimmten Einkommen",
+    "jede Person in der Schweiz",
+    "alle Frauen und Männer ab 21 Jahren"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 197,
+   "section": 2,
+   "level": "kanton",
+   "question": "Was gehört zu den wichtigsten Kantonssteuern und Gemeindesteuern?",
+   "options": [
+    "Vermögenssteuer",
+    "Tabaksteuer",
+    "Privatsteuer",
+    "Handysteuer"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 198,
+   "section": 2,
+   "level": "kanton",
+   "question": "Was gehört zu den wichtigsten Kantonssteuern und Gemeindesteuern?",
+   "options": [
+    "Verrechnungssteuer",
+    "Alkoholsteuer",
+    "Zölle",
+    "Einkommenssteuer"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 199,
+   "section": 2,
+   "level": "kanton",
+   "question": "Wer ist in der Schweiz in erster Linie für die Volksschule verantwortlich?",
+   "options": [
+    "die Bundesschulverwaltung",
+    "die Kantone und Gemeinden",
+    "die Schulkonferenz der Kantone",
+    "der Volksschulrat"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 200,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Wann beginnt die obligatorische Schulzeit im Kanton Zürich?",
+   "options": [
+    "Kindergarten",
+    "Primarschule",
+    "Spielgruppe",
+    "Einführungsklasse"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 201,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Was ist ein Quartierverein?",
+   "options": [
+    "Ein Verein, der die Rechte eines Quartiers gegenüber dem Bund und dem Kanton",
+    "regelt.",
+    "Ein Verein, der für die Interessen der Bewohnerinnen und Bewohner eines Quartiers",
+    "gegenüber Behörden eintritt und das gesellschaftliche Leben fördert.",
+    "Ein Verein, in dem Bewohnerinnen und Bewohner eines Quartiers automatisch Mit-"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 202,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "glied sind.",
+   "options": [
+    "Ein Verein, der die Verkehrswege innerhalb eines Quartiers regelt und die Einhaltung der Verkehrsvorschriften kontrolliert."
+   ],
+   "answer": -1
+  },
+  {
+   "n": 203,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Was will der Finanzausgleich zwischen den Gemeinden?",
+   "options": [
+    "Er soll helfen, die Korruption zu bekämpfen.",
+    "Er soll helfen, eine Inflation zu vermeiden.",
+    "Er zwingt arme Gemeinden zur Erledigung ihrer Pflichten (Schulen, Altersheime, usw.).",
+    "Er unterstützt arme Gemeinden oder Gemeinden mit hohen Sozialausgaben bei der"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 204,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Erledigung ihrer Aufgaben. Welche Unterstützung gibt die Gemeinde, wenn das eigene Einkommen oder Vermögen für den Lebensunterhalt nicht ausreicht?",
+   "options": [
+    "Geld für Mahlzeiten (Kostgeld)",
+    "einen Gemeindebeitrag (Gemeinderappen)",
+    "Sozialhilfe",
+    "Kantonsgeld"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 205,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Wo kann man sich über Angebote und Regelungen der Gemeinde informieren?",
+   "options": [
+    "in der Lokalzeitung oder im Internet",
+    "im Fernsehen",
+    "am Anschlagbrett im Einkaufszentrum",
+    "auf Plakaten"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 206,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Für welche sozialen Leistungen zahlen die Gemeinden?",
+   "options": [
+    "Sozialhilfe in einer Notsituation",
+    "Altersrente",
+    "Kosten für die Fahrprüfung",
+    "Reisekosten in der Freizeit"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 207,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Wer ist zuständig für die Finanzierung und Organisation der Primarschule?",
+   "options": [
+    "die Eltern",
+    "der Kanton mit den Gemeinden",
+    "der Bund",
+    "der Schulkreis"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 208,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Wo muss man sich melden, wenn man heiraten möchte?",
+   "options": [
+    "an die Eltern",
+    "an die Regionale Partnervermittlung",
+    "an das Zivilstandsamt",
+    "an die Eheberatung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 209,
+   "section": 2,
+   "level": "gemeinde",
+   "question": "Wo muss man sich melden, wenn man umzieht?",
+   "options": [
+    "bei den Steuerbehörden",
+    "bei der Polizei",
+    "bei der Gebäudeversicherung",
+    "bei der Gemeinde (Einwohnerkontrolle)"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 210,
+   "section": 3,
+   "level": "bund",
+   "question": "Wer leitet die Volksschulen in den Zürcher Gemeinden?",
+   "options": [
+    "der Elternrat",
+    "die Schulleitung",
+    "das Schulsekretariat",
+    "die Konferenz der Lehrpersonen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 211,
+   "section": 3,
+   "level": "bund",
+   "question": "Im Jahr 1798 machte ein europäischer Herrscher für kurze Zeit einen Zentralstaat aus der Eidgenossenschaft. Wie hiess der Herrscher?",
+   "options": [
+    "Rudolf von Habsburg",
+    "Friedrich der Grosse",
+    "Karl der Kühne",
+    "Napoleon Bonaparte"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 212,
+   "section": 3,
+   "level": "bund",
+   "question": "Wer war wichtig bei der Gründung der Eidgenössischen Technischen Hochschule (ETH), dem Eisenbahnbau und der Gründung der heutigen Crédit Suisse?",
+   "options": [
+    "Conrad Ferdinand Meyer",
+    "Robert Grimm",
+    "Henri Dufour",
+    "Alfred Escher"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 213,
+   "section": 3,
+   "level": "bund",
+   "question": "Beim Landesstreik 1918 forderten die Arbeitenden mehr Rechte. Was war eine Folge des Landesstreiks?",
+   "options": [
+    "Die 48-Stunden-Woche wurde eingeführt.",
+    "Die Arbeitenden konnten mit der Eisenbahn gratis zur Arbeit fahren.",
+    "Arbeitenden bekamen 6 Wochen Ferien.",
+    "Die Fabriken wurden Eigentum des Staates."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 214,
+   "section": 3,
+   "level": "bund",
+   "question": "Was verlangte die sogenannte \"Schwarzenbach-Initiative\" 1970?",
+   "options": [
+    "die Einführung des Englischunterrichts in der Primarschule",
+    "ein Verbot von Minarettbauten",
+    "die Abschaffung der Armee",
+    "eine Begrenzung der Anzahl Ausländerinnen und Ausländer"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 215,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche Bedeutung hat das Jahr 1848 für die Geschichte der Schweiz?",
+   "options": [
+    "Gründung des Schweizer Bundesstaates",
+    "Garantie der Neutralität durch die europäischen Mächte",
+    "Niederlage eidgenössischer Truppen bei Marignano",
+    "Unabhängigkeit vom Heiligen Römischen Reich"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 216,
+   "section": 3,
+   "level": "bund",
+   "question": "Wie heisst die Schweizer Nationalhymne?",
+   "options": [
+    "Swiss-Song",
+    "Hallelujah",
+    "Schweizerpsalm",
+    "Schweizer Hit"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 217,
+   "section": 3,
+   "level": "bund",
+   "question": "Welcher Kanton ist erst seit 1979 ein eigenständiger Kanton?",
+   "options": [
+    "St. Gallen",
+    "Jura",
+    "Zürich",
+    "Solothurn"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 218,
+   "section": 3,
+   "level": "bund",
+   "question": "Im 16. Jahrhundert gab es in Europa und in der Schweiz eine wichtige religiöse Bewegung. Wie heisst sie?",
+   "options": [
+    "Islamisierung",
+    "Reformation",
+    "Skeptizismus",
+    "Hinduismus"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 219,
+   "section": 3,
+   "level": "bund",
+   "question": "Wann haben Schweizer Frauen das Stimm- und Wahlrecht auf Bundesebene bekommen?",
+   "options": [
+    "1918",
+    "1971",
+    "1948",
+    "1988"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 220,
+   "section": 3,
+   "level": "bund",
+   "question": "In den 1950er-Jahren brauchte die Schweiz ausländische Arbeitskräfte. Woher kamen die meisten?",
+   "options": [
+    "Portugal",
+    "Frankreich",
+    "Italien",
+    "Griechenland"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 221,
+   "section": 3,
+   "level": "bund",
+   "question": "Warum kamen viele Menschen in den 1990-er Jahren aus (Ex-)Jugoslawien in die Schweiz?",
+   "options": [
+    "Sie wollten an einer Schweizer Universität studieren.",
+    "Sie wollten ihre Verwandten besuchen und die Schweiz bereisen.",
+    "Sie flohen vor dem Krieg aus ihrer Heimat.",
+    "Sie wurden beim Staudammprojekt Grand-Dixence als Arbeitskräfte benötigt."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 222,
+   "section": 3,
+   "level": "bund",
+   "question": "Wie kann man das Verhältnis der Schweiz zu den kriegführenden Mächten im Zweiten Weltkrieg beschreiben?",
+   "options": [
+    "Bündnispartner der Alliierten",
+    "Bündnispartner der Achsenmächte",
+    "neutral - politische und wirtschaftliche Beziehungen zu den kriegführenden Mächten",
+    "neutral - keine Beziehungen zu den kriegführenden Mächten"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 223,
+   "section": 3,
+   "level": "bund",
+   "question": "In der Schweiz begann die Industrialisierung im frühen 19. Jahrhundert. Was war dabei am wichtigsten?",
+   "options": [
+    "Textilindustrie",
+    "Stahlindustrie",
+    "Kohlenförderung",
+    "Autoindustrie"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 224,
+   "section": 3,
+   "level": "bund",
+   "question": "Mann und Frau sind gleichberechtigt. Seit wann ist dieser Satz in der Verfassung?",
+   "options": [
+    "seit 1981",
+    "seit 1968",
+    "seit 1996",
+    "seit 1945"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 225,
+   "section": 3,
+   "level": "bund",
+   "question": "Im 19. Jahrhundert wandelte sich die Schweiz ...",
+   "options": [
+    "vom Bundesstaat zum Zentralstaat.",
+    "zu einer europäischen Grossmacht.",
+    "zu einer Kolonialmacht.",
+    "vom Agrarstaat zum Industriestaat."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 226,
+   "section": 3,
+   "level": "bund",
+   "question": "Wann stieg der Lebensstandard in der Schweiz für viele Menschen deutlich an?",
+   "options": [
+    "um 1900",
+    "in den 1930er-Jahren",
+    "in den 1960er-Jahren",
+    "in den 1990er-Jahren"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 227,
+   "section": 3,
+   "level": "bund",
+   "question": "Während der kolonialen Herrschaft Europas ...",
+   "options": [
+    "hatte die Schweiz Kolonien in Asien und Afrika.",
+    "waren Schweizer Söldner in Russland aktiv.",
+    "exportierte die Schweiz Gewürze nach Nordamerika.",
+    "konnte sich die Schweiz dank Zugang zu Rohstoffen als Industrienation etablieren."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 228,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche Urkantone schlossen sich 1291 zu einem Bündnis zusammen?",
+   "options": [
+    "St. Gallen, Thurgau, Schaffhausen",
+    "Genf, Waadt, Freiburg",
+    "Bern, Zürich, Zug",
+    "Uri, Schwyz, Unterwalden"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 229,
+   "section": 3,
+   "level": "bund",
+   "question": "Welches Volk lebte zur Zeit des alten Roms im Gebiet der heutigen Schweiz?",
+   "options": [
+    "Helvetier",
+    "Eidgenossen",
+    "Etrusker",
+    "Illyrier"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 230,
+   "section": 3,
+   "level": "bund",
+   "question": "Wer kämpfte im Sonderbundskrieg 1847 gegeneinander?",
+   "options": [
+    "Adel und Bauern",
+    "Zürich und Bern",
+    "Katholiken und Liberale",
+    "Westschweiz und Tessin"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 231,
+   "section": 3,
+   "level": "bund",
+   "question": "Von welcher antiken Herrschaft und Kultur stammt das hier abgebildete Amphitheater (in Avenches)?",
+   "options": [
+    "von den Galliern",
+    "von den Römern",
+    "von den Wikingern",
+    "von den Griechen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 232,
+   "section": 3,
+   "level": "bund",
+   "question": "Im Jahr 1515 verloren die Eidgenossen die Schlacht bei Marignano. Welche Folgen hatte diese Niederlage?",
+   "options": [
+    "Die Eidgenossen verzichteten auf die Eroberung weiterer Gebiete.",
+    "Die Schweiz schaffte ihre Armee ab.",
+    "Die Bauern wehrten sich gegen die Regierungen in Bern, Zürich und Luzern.",
+    "Die Eidgenossen überfielen die Stadt Zürich."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 233,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche neue Glaubensrichtung entstand mit der Reformation?",
+   "options": [
+    "das Judentum",
+    "der Buddhismus",
+    "der Islam",
+    "der protestantische Glaube"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 234,
+   "section": 3,
+   "level": "bund",
+   "question": "Was führte zur konfessionellen Spaltung der Schweiz?",
+   "options": [
+    "die Täuferbewegung",
+    "die Reformation",
+    "der Generalstreik",
+    "die Aufhebung der Klöster"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 235,
+   "section": 3,
+   "level": "bund",
+   "question": "Was führte 1798 zur politischen Neuordnung der Eidgenossenschaft?",
+   "options": [
+    "die Einführung der allgemeinen Schulpflicht",
+    "die Revolution im Waadtland",
+    "der Einmarsch der Franzosen in die Schweiz",
+    "die Gründung des Kantons Zürich"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 236,
+   "section": 3,
+   "level": "bund",
+   "question": "Was haben die europäischen Mächte am Wiener Kongress 1815 für die Schweiz festgelegt?",
+   "options": [
+    "die Befolgung der Neutralität",
+    "die Aufhebung der Zölle an den Schweizer Grenzen",
+    "den Verzicht auf das Söldnerwesen",
+    "die Loslösung von Österreich"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 237,
+   "section": 3,
+   "level": "bund",
+   "question": "Wie wurde die Eidgenossenschaft in der Bundesverfassung von 1848 neu definiert?",
+   "options": [
+    "als Volksrepublik",
+    "als föderalistischer Bundesstaat",
+    "als Zentralstaat",
+    "als parlamentarische Monarchie"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 238,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche wichtige humanitäre Organisation wurde 1863 in Genf gegründet?",
+   "options": [
+    "Amnesty International",
+    "die Pro Juventute",
+    "das Internationale Komitee vom Roten Kreuz (IKRK)",
+    "die Glückskette"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 239,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche Erfindung hat die Schweizer Industrie im 18. Jahrhundert grundlegend verändert?",
+   "options": [
+    "der Benzinmotor (Otto-Motor)",
+    "die Dampfmaschine",
+    "der Elektromotor",
+    "der Computer"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 240,
+   "section": 3,
+   "level": "bund",
+   "question": "Im Jahr 1877 hat man die Kinderarbeit in der Schweiz verboten. Warum?",
+   "options": [
+    "Kinder mussten zuhause auf den Bauernhöfen mithelfen.",
+    "Kinder konnten bei schweren und gefährlichen Arbeiten sowieso nicht eingesetzt",
+    "werden.",
+    "Kinder konnten nicht zur Schule gehen, weil sie in Fabriken arbeiteten.",
+    "Kinder wurden zur Arbeit ausgeliehen. Sie verdienten dort aber zu wenig."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 241,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche Versicherung wurde 1948 in der Schweiz eingeführt?",
+   "options": [
+    "die Haftpflichtversicherung für Motorfahrzeuge",
+    "die Feuerversicherung",
+    "die Alters- und Hinterlassenenversicherung (AHV)",
+    "die Lebensversicherung"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 242,
+   "section": 3,
+   "level": "bund",
+   "question": "Seit wann dürfen Schweizer Bürgerinnen auf Bundesebene wählen und abstimmen?",
+   "options": [
+    "seit 1878",
+    "seit 1946",
+    "seit 1919",
+    "seit 1971"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 243,
+   "section": 3,
+   "level": "bund",
+   "question": "Wer war die erste Frau im Schweizer Bundesrat?",
+   "options": [
+    "Ruth Dreifuss",
+    "Elisabeth Kopp",
+    "Ruth Metzler",
+    "Micheline Calmy-Rey"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 244,
+   "section": 3,
+   "level": "bund",
+   "question": "Mit was wurden die Grundlagen der heutigen Beziehungen der Schweiz zur EU gelegt?",
+   "options": [
+    "mit der Zustimmung des Stimmvolks zu den Bilateralen Verträgen I im Jahr 2000",
+    "mit der Ablehnung des EWR-Beitritts durch die Volksabstimmung im Jahr 1992",
+    "mit dem Rückzug des Gesuchs für einen EU-Beitritt der Schweiz im Jahr 2016",
+    "mit dem UNO-Beitritt der Schweiz im Jahr 2002"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 245,
+   "section": 3,
+   "level": "bund",
+   "question": "Wer war Wilhelm Tell?",
+   "options": [
+    "ein eidgenössischer Söldner in fremden Diensten",
+    "eine Innerschweizer Sagenfigur, die gegen fremde Herrscher kämpfte",
+    "ein adliger Grundherr im Schweizer Mittelland",
+    "ein Anführer im Bauernkrieg"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 246,
+   "section": 3,
+   "level": "bund",
+   "question": "Welche Organisation gründete Henry Dunant (1828-1910) in Genf?",
+   "options": [
+    "den Christlichen Verein junger Männer",
+    "die Pro Juventute",
+    "das Internationale Komitee vom Roten Kreuz (IKRK)",
+    "den Weltpostverein"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 247,
+   "section": 3,
+   "level": "bund",
+   "question": "In welcher Wirtschaftsbranche ist die Schweiz seit Jahrhunderten weltweit führend?",
+   "options": [
+    "in der Textilindustrie",
+    "in der Uhrenindustrie",
+    "in der Autoindustrie",
+    "im Bergbau"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 248,
+   "section": 3,
+   "level": "kanton",
+   "question": "Weshalb wanderten viele Schweizerinnen und Schweizer im 19. Jahrhundert aus?",
+   "options": [
+    "Weil sie in der Schweiz politisch verfolgt wurden.",
+    "Weil sie Berufserfahrung sammeln wollten.",
+    "Weil Hunger, Armut und Arbeitslosigkeit herrschte.",
+    "Weil sie Lust auf Abenteuer hatten."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 249,
+   "section": 3,
+   "level": "kanton",
+   "question": "Für was wurde der Sechseläutenplatz im Zweiten Weltkrieg benutzt?",
+   "options": [
+    "als Chilbi",
+    "als Sportplatz",
+    "als Pferderennbahn",
+    "als Kartoffelfeld"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 250,
+   "section": 3,
+   "level": "kanton",
+   "question": "Zur Römerzeit war der Name der Stadt Zürich …",
+   "options": [
+    "Vitudurum",
+    "Vindonissa",
+    "Aquae Helveticae",
+    "Turicum"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 251,
+   "section": 3,
+   "level": "kanton",
+   "question": "Was haben die Römer nach Zürich gebracht?",
+   "options": [
+    "die Badekultur",
+    "Chinesisches Porzellan",
+    "das Alphorn",
+    "die Tropenhäuser des Botanischen Gartens"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 252,
+   "section": 3,
+   "level": "kanton",
+   "question": "Von 5000 bis 1000 vor Christus bauten die Menschen am Zürichsee …",
+   "options": [
+    "Iglus.",
+    "Pfahlbauten.",
+    "Kirchen.",
+    "Höhlensysteme."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 253,
+   "section": 3,
+   "level": "kanton",
+   "question": "An was starb zwischen 1611 und 1635 fast die Hälfte der Zürcher Bevölkerung?",
+   "options": [
+    "an der Pest",
+    "am Corona-Virus",
+    "an Krebs",
+    "an der Spanischen Grippe"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 254,
+   "section": 3,
+   "level": "kanton",
+   "question": "Ulrich Zwingli (1484-1531) war ein bekannter . . .",
+   "options": [
+    "Reformator in Zürich.",
+    "Unternehmer.",
+    "Naturwissenschaftler.",
+    "Musiker."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 255,
+   "section": 3,
+   "level": "kanton",
+   "question": "Den Kanton Zürich im modernen Sinn gibt es seit ...",
+   "options": [
+    "1415",
+    "1291",
+    "1803",
+    "1798"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 256,
+   "section": 3,
+   "level": "kanton",
+   "question": "Wer hat die Kirche in Zürich reformiert?",
+   "options": [
+    "Jan Hus",
+    "Ulrich Zwingli",
+    "Martin Luther",
+    "Jean Calvin"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 257,
+   "section": 3,
+   "level": "kanton",
+   "question": "Wofür hat sich Emilie Lieberherr (1924-2011) eingesetzt?",
+   "options": [
+    "für eine freie Presse",
+    "für das Frauenstimmrecht",
+    "gegen den Beitritt der Schweiz zur UNO (Vereinte Nationen)",
+    "für die Beteiligung der Schweiz an der Raumfahrt"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 258,
+   "section": 4,
+   "level": "bund",
+   "question": "Welche Fabriken gründeten Philippe Suchard (1797-1884) und Rudolph Lindt (1855-1909) in der Schweiz?",
+   "options": [
+    "Textilfabriken",
+    "Druckereien",
+    "Schokoladefabriken",
+    "Maschinenfabriken"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 259,
+   "section": 4,
+   "level": "bund",
+   "question": "Was ist am Gotthard-Basis-Tunnel speziell?",
+   "options": [
+    "Er war der erste Tunnel in Europa.",
+    "Er ist der einzige Eisenbahntunnel Europas.",
+    "Er ist der längste Eisenbahntunnel der Welt.",
+    "Er hat den grössten Tunneldurchmesser der Welt."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 260,
+   "section": 4,
+   "level": "bund",
+   "question": "Simplon, Gotthard, Grosser Sankt Bernhard sind Beispiele für ...",
+   "options": [
+    "Schweizer Käsesorten.",
+    "Schweizer Hauptverkehrsachsen.",
+    "Schweizer Naturreservate.",
+    "Schweizer Alpenpässe."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 261,
+   "section": 4,
+   "level": "bund",
+   "question": "Wohin fliesst der Rhein?",
+   "options": [
+    "in die Nordsee",
+    "ins Schwarze Meer",
+    "in den Pazifik",
+    "ins Mittelmeer"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 262,
+   "section": 4,
+   "level": "bund",
+   "question": "Wohin fliesst die Rhone?",
+   "options": [
+    "in die Ostsee",
+    "in den Atlantik",
+    "ins Mittelmeer",
+    "ins Schwarze Meer"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 263,
+   "section": 4,
+   "level": "bund",
+   "question": "Rund zwei Drittel der ausländischen Bevölkerung der Schweiz ...",
+   "options": [
+    "kommen aus einem EU-Land.",
+    "kommen aus Italien.",
+    "sprechen fliessend Englisch.",
+    "leben in der Ostschweiz."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 264,
+   "section": 4,
+   "level": "bund",
+   "question": "Aus geografischer Sicht ist die Schweiz ...",
+   "options": [
+    "ein Binnenland.",
+    "eine Exklave.",
+    "ein Kontinent.",
+    "eine Insel."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 265,
+   "section": 4,
+   "level": "bund",
+   "question": "Über das Eisenbahnnetz der Schweiz sagt man, ...",
+   "options": [
+    "es sei das schönste der Welt.",
+    "es sei das dichteste der Welt.",
+    "es sei das längste der Welt.",
+    "es sei das billigste der Welt."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 266,
+   "section": 4,
+   "level": "bund",
+   "question": "Wer ist der wichtigste Handelspartner der Schweiz?",
+   "options": [
+    "USA",
+    "EU",
+    "China",
+    "Brasilien"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 267,
+   "section": 4,
+   "level": "bund",
+   "question": "Die drei grossen geografischen Räume der Schweiz sind:",
+   "options": [
+    "Jura, Mittelland, Alpen",
+    "Rhonetal, Südtäler, Alpennordfuss",
+    "Rheintal, Rhonetal, Aaretal",
+    "Bündner Alpen, Innerschweizer Alpen, Berner Alpen"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 268,
+   "section": 4,
+   "level": "bund",
+   "question": "Die Ausdehnung der Schweiz von Norden nach Süden ist ...",
+   "options": [
+    "580 km.",
+    "220 km.",
+    "130 km.",
+    "760 km."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 269,
+   "section": 4,
+   "level": "bund",
+   "question": "Die Ausdehnung der Schweiz von Osten nach Westen ist ...",
+   "options": [
+    "700 km.",
+    "150 km.",
+    "350 km.",
+    "900 km."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 270,
+   "section": 4,
+   "level": "bund",
+   "question": "Welcher Kanton ist ein Bergkanton?",
+   "options": [
+    "Wallis",
+    "Schaffhausen",
+    "Zürich",
+    "Aargau"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 271,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie heisst die höchste Bergspitze in der Schweiz?",
+   "options": [
+    "Dom",
+    "Dufourspitze",
+    "Liskamm",
+    "Weisshorn"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 272,
+   "section": 4,
+   "level": "bund",
+   "question": "Was ist eine wichtige Aufgabe der Raumplanung?",
+   "options": [
+    "Schutz von unverbauten Landschaften",
+    "Unterhalt von Kanalisationen",
+    "Bau von Einkaufszentren",
+    "Finanzausgleich zwischen Gemeinden"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 273,
+   "section": 4,
+   "level": "bund",
+   "question": "Warum werden die Gletscher in der Schweiz kleiner?",
+   "options": [
+    "wegen dem Klimawandel",
+    "wegen den vielen Touristen in den Bergen",
+    "wegen der Benutzung für die Ski-Rennen",
+    "wegen dem vielen Regen im Sommer"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 274,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie reagieren Förster auf den Anstieg der Temperaturen wegen des Klimawandels?",
+   "options": [
+    "Sie holzen die Wälder ab.",
+    "Sie pflanzen andere Baumsorten.",
+    "Sie besprühen die Wälder.",
+    "Sie verweigern die Arbeit."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 275,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie heisst ein trockener und warmer Südwind in der Schweiz?",
+   "options": [
+    "Bise",
+    "Föhn",
+    "Brise",
+    "Führ"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 276,
+   "section": 4,
+   "level": "bund",
+   "question": "Die Schweiz grenzt im Westen an …",
+   "options": [
+    "Portugal.",
+    "Spanien.",
+    "Frankreich.",
+    "Deutschland."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 277,
+   "section": 4,
+   "level": "bund",
+   "question": "Das Nachbarland im Süden der Schweiz ist …",
+   "options": [
+    "Spanien.",
+    "Kroatien.",
+    "Liechtenstein.",
+    "Italien."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 278,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie heisst die grösste Stadt der Schweiz?",
+   "options": [
+    "Zürich",
+    "Basel",
+    "Bern",
+    "Genf"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 279,
+   "section": 4,
+   "level": "bund",
+   "question": "Wo leben die meisten Menschen in der Schweiz?",
+   "options": [
+    "in den Alpen",
+    "im Westschweizer Jura",
+    "im Mittelland",
+    "im Tessin"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 280,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie viele Ausländerinnen und Ausländer leben in der Schweiz (Stand 2020)?",
+   "options": [
+    "3.5 Millionen",
+    "2.1 Millionen",
+    "630'000",
+    "1.1 Millionen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 281,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie heisst dieser Berg?",
+   "options": [
+    "Finsteraarhorn",
+    "Eiger",
+    "Matterhorn",
+    "Mont Blanc"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 282,
+   "section": 4,
+   "level": "bund",
+   "question": "Welcher Kanton hat die grösste Fläche?",
+   "options": [
+    "Basel",
+    "Graubünden",
+    "Zürich",
+    "Glarus"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 283,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie viele Menschen leben in der Schweiz (Stand 2020)?",
+   "options": [
+    "600’000",
+    "12 Millionen",
+    "5 Millionen",
+    "8.6 Millionen"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 284,
+   "section": 4,
+   "level": "bund",
+   "question": "Wie gross ist der Anteil der ausländischen Wohnbevölkerung in der Schweiz (Stand 2020)?",
+   "options": [
+    "10%",
+    "60%",
+    "25%",
+    "40%"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 285,
+   "section": 4,
+   "level": "bund",
+   "question": "Was ist eine wichtige natürliche Ressource der Schweiz?",
+   "options": [
+    "grosse Goldvorkommen in der Zentralschweiz",
+    "grosse Wasservorräte zum Betrieb von Wasserkraftwerken",
+    "wertvolle Bodenschätze (Erdöl, Kohle)",
+    "grosser Bestand an Fischen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 286,
+   "section": 4,
+   "level": "bund",
+   "question": "In welchem Kanton spricht man Französisch und Deutsch?",
+   "options": [
+    "St. Gallen",
+    "Tessin",
+    "Graubünden",
+    "Freiburg"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 287,
+   "section": 4,
+   "level": "bund",
+   "question": "Welche Region in der Schweiz nennt man Welschland oder Romandie?",
+   "options": [
+    "die Ostschweiz",
+    "die französischsprachige Schweiz",
+    "die deutschsprachige Schweiz",
+    "das Tessin"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 288,
+   "section": 4,
+   "level": "bund",
+   "question": "Welche Sprache spricht man im Kanton Tessin?",
+   "options": [
+    "Rätoromanisch",
+    "Französisch",
+    "Italienisch",
+    "Deutsch"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 289,
+   "section": 4,
+   "level": "bund",
+   "question": "In welchem Kanton spricht man Rätoromanisch?",
+   "options": [
+    "Freiburg",
+    "Appenzell",
+    "Glarus",
+    "Graubünden"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 290,
+   "section": 4,
+   "level": "kanton",
+   "question": "Was bedeutet das Wort Röstigraben?",
+   "options": [
+    "die kulturelle Grenze zwischen der deutschsprachigen und der französischsprachigen Schweiz",
+    "das Rhonetal",
+    "die Aareschlucht",
+    "die Grenze zwischen der Schweiz und Deutschland"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 291,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wo liegt der Kanton Zürich?",
+   "options": [
+    "a)",
+    "b)",
+    "c)",
+    "d)"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 292,
+   "section": 4,
+   "level": "kanton",
+   "question": "Karten: © BFS, Webseite Statistik Schweiz Geografisch gehört der Kanton Zürich ...",
+   "options": [
+    "zum Jura.",
+    "zur Seenplatte.",
+    "zum Mittelland.",
+    "zur Tössebene."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 293,
+   "section": 4,
+   "level": "kanton",
+   "question": "An wie viele Kantone grenzt der Kanton Zürich?",
+   "options": [
+    "10",
+    "2",
+    "6",
+    "8"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 294,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wie heissen die drei grössten Städte des Kantons Zürich?",
+   "options": [
+    "Zürich, Winterthur, Uster",
+    "Zürich, Zug, Cham",
+    "Zürich, Winterthur, Bülach",
+    "Zürich, Baden, Wettingen"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 295,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welche Hügel umrahmen den Zürichsee?",
+   "options": [
+    "Chli Aubrig, Hörnli, Randen",
+    "Randen, Hörnli, Albis",
+    "Lägeren, Stierenberg, Pfannenstiel",
+    "Uetliberg, Albis, Pfannenstiel"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 296,
+   "section": 4,
+   "level": "kanton",
+   "question": "In welcher Gemeinde liegt der Flughafen Zürich?",
+   "options": [
+    "Zürich",
+    "Winterthur",
+    "Kloten",
+    "Bülach"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 297,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welcher See liegt im Kanton Zürich?",
+   "options": [
+    "Hallwilersee",
+    "Pfäffikersee",
+    "Zugersee",
+    "Sempachersee"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 298,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wie heisst der zweitgrösste See des Kantons Zürich?",
+   "options": [
+    "Walensee",
+    "Zugersee",
+    "Sihlsee",
+    "Greifensee"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 299,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welcher Fluss fliesst in der Stadt Zürich in die Limmat?",
+   "options": [
+    "Sihl",
+    "Aare",
+    "Rhone",
+    "Tessin"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 300,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welcher Fluss fliesst durch den Kanton Zürich?",
+   "options": [
+    "Rhone",
+    "Inn",
+    "Aare",
+    "Limmat"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 301,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welcher Fluss fliesst durch Winterthur?",
+   "options": [
+    "Töss",
+    "Rhein",
+    "Limmat",
+    "Sihl"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 302,
+   "section": 4,
+   "level": "kanton",
+   "question": "Welches Schloss liegt im Kanton Zürich?",
+   "options": [
+    "Schloss Kyburg",
+    "Château de Chillon",
+    "Schloss Hallwyl",
+    "Schloss Greyerz"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 303,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wie gross ist die Landwirtschaftsfläche im Kanton Zürich?",
+   "options": [
+    "5%",
+    "60%",
+    "80%",
+    "41%"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 304,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wie viele Personen leben im Kanton Zürich (Stand 2020)?",
+   "options": [
+    "1.5 Millionen",
+    "360'000",
+    "600'000",
+    "3.1 Millionen"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 305,
+   "section": 4,
+   "level": "kanton",
+   "question": "Wie heisst die Hauptstadt des Kantons Zürich?",
+   "options": [
+    "Uster",
+    "Winterthur",
+    "Wädenswil",
+    "Zürich"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 306,
+   "section": 5,
+   "level": "bund",
+   "question": "Welcher Kanton grenzt an den Kanton Zürich?",
+   "options": [
+    "Freiburg",
+    "Thurgau",
+    "Luzern",
+    "Glarus"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 307,
+   "section": 5,
+   "level": "bund",
+   "question": "Wie heisst das traditionelle Kartenspiel der Schweiz?",
+   "options": [
+    "Uno",
+    "Jass",
+    "Poker",
+    "Bridge"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 308,
+   "section": 5,
+   "level": "bund",
+   "question": "Wie heisst der grösste Schweizer Zirkus?",
+   "options": [
+    "Zirkus Knie",
+    "Zirkus Busch",
+    "Zirkus Krone",
+    "Zirkus Roncalli"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 309,
+   "section": 5,
+   "level": "bund",
+   "question": "Die Basler Fasnacht wird mit dem «Morgestraich» an einem Montag um 4 Uhr morgens angepfiffen. Was passiert dann?",
+   "options": [
+    "Alle Baslerinnen und Basler beginnen zu singen.",
+    "Die Vorsitzenden der Fasnachtsgruppen halten Reden.",
+    "Die Strassenlichter werden gelöscht und die Pfeiffer und Trommler beginnen zu",
+    "spielen.",
+    "Brennende Besen werden durch die Stadt getragen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 310,
+   "section": 5,
+   "level": "bund",
+   "question": "Wie heisst eine traditionelle Schweizer Sportart?",
+   "options": [
+    "Basketball",
+    "Eishockey",
+    "Schwingen",
+    "Volleyball"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 311,
+   "section": 5,
+   "level": "bund",
+   "question": "Wann ist der Schweizer Nationalfeiertag?",
+   "options": [
+    "14. Juli",
+    "1. August",
+    "4. Juli",
+    "3. Oktober"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 312,
+   "section": 5,
+   "level": "bund",
+   "question": "Was bedeutet die Abkürzung SBB?",
+   "options": [
+    "Schweizerische Bundesbahnen",
+    "Gesellschaft der schweizerischen Börse",
+    "Zusammenschluss des Bühnenpersonals in der Schweiz",
+    "Schweizerische Gesellschaft für Bildungsforschung"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 313,
+   "section": 5,
+   "level": "bund",
+   "question": "SBB, BLS, SOB, SZU sind Abkürzungen für Schweizer ...",
+   "options": [
+    "Gewerkschaften.",
+    "Kulturvereine.",
+    "Eisenbahngesellschaften.",
+    "Seilbahngesellschaften."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 314,
+   "section": 5,
+   "level": "bund",
+   "question": "Was soll man tun, wenn die Alarm-Sirenen im Ernstfall heulen?",
+   "options": [
+    "nach Hause gehen",
+    "Radio hören",
+    "den Fernseher abstellen",
+    "zum zentralen Platz der Gemeinde gehen"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 315,
+   "section": 5,
+   "level": "bund",
+   "question": "Was wird im Landesmuseum Zürich gezeigt?",
+   "options": [
+    "Werke des europäischen Impressionismus",
+    "die Geschichte der Schweiz",
+    "eine Insektensammlung",
+    "eine Sammlung von historischen Autos"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 316,
+   "section": 5,
+   "level": "bund",
+   "question": "Für welche Industrie ist die Juraregion bekannt?",
+   "options": [
+    "Uhrenindustrie",
+    "Wurstproduktion",
+    "Schuhherstellung",
+    "Seidenmalerei"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 317,
+   "section": 5,
+   "level": "bund",
+   "question": "Was ist eine bäuerliche kulturelle Tradition der Schweiz?",
+   "options": [
+    "Didgeridoo spielen.",
+    "Kastagnetten schlagen.",
+    "Jodeln.",
+    "Bembé Trommel spielen."
+   ],
+   "answer": 2
+  },
+  {
+   "n": 318,
+   "section": 5,
+   "level": "bund",
+   "question": "Was braucht man zum Jodeln?",
+   "options": [
+    "Holzschuhe.",
+    "eine kleine Pfeife.",
+    "die Hände.",
+    "die Stimme."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 319,
+   "section": 5,
+   "level": "bund",
+   "question": "Wer entscheidet, welche Artikel in der Zeitung veröffentlicht werden?",
+   "options": [
+    "die Zeitungsredaktion",
+    "der kantonale Verband der Journalistinnen und Journalisten",
+    "die zentrale Medienstelle des Kantons",
+    "die Medienpolizei"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 320,
+   "section": 5,
+   "level": "bund",
+   "question": "Was ist eine Schweizer Wochenzeitung (erscheint 1x pro Woche)?",
+   "options": [
+    "Tages-Anzeiger",
+    "Blick",
+    "Neue Zürcher Zeitung",
+    "Sonntagszeitung"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 321,
+   "section": 5,
+   "level": "bund",
+   "question": "Wie wird die Schweiz auch bezeichnet?",
+   "options": [
+    "Freistaat Schweiz",
+    "Eidgenossenschaft",
+    "Bündnis Schweiz",
+    "Freie Alpenrepublik"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 322,
+   "section": 5,
+   "level": "bund",
+   "question": "Roger Federer ist ein bekannter Schweizer …",
+   "options": [
+    "Tennisspieler.",
+    "Fussballspieler.",
+    "Skirennfahrer.",
+    "Filmschauspieler."
+   ],
+   "answer": 0
+  },
+  {
+   "n": 323,
+   "section": 5,
+   "level": "bund",
+   "question": "An was erinnert das Rütli?",
+   "options": [
+    "an eine prähistorische Kultstätte",
+    "an das Bündnis der Urkantone",
+    "an ein Schlachtfeld",
+    "an einen Friedensvertrag"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 324,
+   "section": 5,
+   "level": "bund",
+   "question": "Wer ist auf der 2-Franken-Münze zu sehen?",
+   "options": [
+    "die lächelnde Mona Lisa",
+    "die allegorische Frauenfigur Helvetia",
+    "eine römische Siegerin",
+    "eine antike Priesterin"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 325,
+   "section": 5,
+   "level": "bund",
+   "question": "Die Stadt Bern ist politisch wichtig. Warum?",
+   "options": [
+    "Sie ist Sitz der FIFA.",
+    "Sie ist die Hauptstadt der Schweiz.",
+    "Sie ist der Sitz der UNO (Vereinte Nationen).",
+    "Sie ist der Sitz des Europarats."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 326,
+   "section": 5,
+   "level": "bund",
+   "question": "Als was ist die Region Basel besonders bekannt?",
+   "options": [
+    "als Weinland",
+    "als Standort grosser Pharmafirmen",
+    "als Land der Burgen und Klöster",
+    "als Standort verschiedener internationaler Organisationen (z.B. UNO)"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 327,
+   "section": 5,
+   "level": "bund",
+   "question": "Welcher Kanton hat am meisten Einwohnerinnen und Einwohner?",
+   "options": [
+    "Waadt",
+    "Bern",
+    "Zürich",
+    "St. Gallen"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 328,
+   "section": 5,
+   "level": "bund",
+   "question": "Wann feiert die Schweiz ihren Nationalfeiertag?",
+   "options": [
+    "am 4. Juli",
+    "am 8. November",
+    "am 1. August",
+    "am 1. Mai"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 329,
+   "section": 5,
+   "level": "bund",
+   "question": "Was bedeutet die Abkürzung CH?",
+   "options": [
+    "Confoederatio Helvetica",
+    "Schweizerisches Längenmass",
+    "Christlicher Verein",
+    "Cultura Habsburgiensia"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 330,
+   "section": 5,
+   "level": "bund",
+   "question": "Welchen Sport machen viele Menschen in der Schweiz im Winter?",
+   "options": [
+    "Skifahren",
+    "Schwingen",
+    "Berg-Radfahren",
+    "Bergsee-Segeln"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 331,
+   "section": 5,
+   "level": "bund",
+   "question": "Welche Tradition ist in der Schweiz mit der Fasnacht verbunden?",
+   "options": [
+    "Fahnenschwingen",
+    "Maskenumzüge",
+    "Jodeln",
+    "Bergfeuer"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 332,
+   "section": 5,
+   "level": "bund",
+   "question": "Welche berühmte Figur hat die Schriftstellerin Johanna Spyri erfunden?",
+   "options": [
+    "Ueli der Knecht",
+    "Schellenursli",
+    "Heidi",
+    "Peter und der Wolf"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 333,
+   "section": 5,
+   "level": "bund",
+   "question": "Max Frisch (1911-1991) und Friedrich Dürrenmatt (1921-1990) waren bekannte Schweizer ...",
+   "options": [
+    "Komponisten.",
+    "Schriftsteller.",
+    "Unternehmer.",
+    "Journalisten."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 334,
+   "section": 5,
+   "level": "bund",
+   "question": "Nicky Saint-Phalle, Sophie Täuber-Arp und Pipilotti Rist sind international berühmte Schweizer ...",
+   "options": [
+    "Politikerinnen.",
+    "Sportlerinnen.",
+    "Ingenieurinnen.",
+    "Künstlerinnen."
+   ],
+   "answer": 3
+  },
+  {
+   "n": 335,
+   "section": 5,
+   "level": "bund",
+   "question": "Welche internationale Organisation hat ihren Hauptsitz in der Schweiz?",
+   "options": [
+    "der internationale Strafgerichtshof",
+    "die Organisation für Sicherheit und Zusammenarbeit in Europa (OSZE)",
+    "der Europarat",
+    "das Internationale Komitee vom Roten Kreuz (IKRK)"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 336,
+   "section": 5,
+   "level": "bund",
+   "question": "Bei welcher internationalen Organisation ist die Schweiz seit 2002 Mitglied?",
+   "options": [
+    "der Europäischen Union (EU)",
+    "dem Europäischen Wirtschaftsraum (EWR)",
+    "der Organisation der Vereinten Nationen (UNO)",
+    "dem Weltwährungsfonds (IWF)"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 337,
+   "section": 5,
+   "level": "bund",
+   "question": "Die Schweiz ist Mitglied der Organisation für Sicherheit und Zusammenarbeit in Europa (OSZE). Für was setzt sie sich dort besonders ein?",
+   "options": [
+    "für die Friedenssicherung in Osteuropa und Zentralasien",
+    "für die wirtschaftliche Entwicklung Indiens",
+    "für die Förderung des Baus von Flusskraftwerken",
+    "für die Förderung des Tourismus in Europa"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 338,
+   "section": 5,
+   "level": "bund",
+   "question": "Wie ist das Verhältnis der Schweiz zur Europäischen Union (EU) geregelt?",
+   "options": [
+    "Sie ist Mitglied der EU.",
+    "Sie hat mit der EU die Bilateralen Verträge abgeschlossen.",
+    "Sie hat mit allen EU-Mitgliedstaaten Einzelverträge abgeschlossen.",
+    "Sie ist gegenüber der EU vollständig unabhängig."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 339,
+   "section": 5,
+   "level": "bund",
+   "question": "Welche wichtige internationale Veranstaltung findet regelmässig in der Schweiz statt?",
+   "options": [
+    "der jährliche Umweltgipfel der UNO",
+    "die olympischen Winterspiele",
+    "das Skirennen der Mitglieder des EU-Parlaments",
+    "das Weltwirtschaftsforum (WEF) in Davos"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 340,
+   "section": 5,
+   "level": "bund",
+   "question": "In welcher Stadt hat die UNO-Menschenrechtskommission ihren Sitz?",
+   "options": [
+    "Neuenburg",
+    "St. Gallen",
+    "Genf",
+    "Bern"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 341,
+   "section": 5,
+   "level": "bund",
+   "question": "Welcher internationale Sportverband hat seinen Sitz in Zürich?",
+   "options": [
+    "Internationaler Golfverband (IGF)",
+    "Internationaler Skiverband (FIS)",
+    "Weltfussballverband (FIFA)",
+    "Internationaler Schwimmverband (FINA)"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 342,
+   "section": 5,
+   "level": "bund",
+   "question": "Was kann man auf einer \"Chilbi\" erleben?",
+   "options": [
+    "eine Fahrt mit der Achterbahn",
+    "eine Opernaufführung",
+    "einen Fussballmatch",
+    "einen Schwimmwettkampf"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 343,
+   "section": 5,
+   "level": "kanton",
+   "question": "Welchen Sport macht man in der Schweiz am häufigsten in einem Verein?",
+   "options": [
+    "Schwimmen",
+    "Skifahren",
+    "Unihockey",
+    "Fussball"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 344,
+   "section": 5,
+   "level": "kanton",
+   "question": "Man sagt: Je schneller am Sechseläuten der \"Böögg\" (SchneemannPuppe) auf dem Scheiterhaufen den Kopf verliert, desto ...",
+   "options": [
+    "kälter wird der Zürichsee im Sommer.",
+    "schöner wird der nächste Sommer.",
+    "mehr Kinder wird es im kommenden Jahr geben.",
+    "besser wird die Wirtschaft im kommenden Jahr laufen."
+   ],
+   "answer": 1
+  },
+  {
+   "n": 345,
+   "section": 5,
+   "level": "kanton",
+   "question": "Wofür steht die Street Parade in Zürich?",
+   "options": [
+    "für Liebe, Friede, Freiheit, Grosszügigkeit und Toleranz",
+    "für Demokratie und Menschenrechte",
+    "für Theater und Kunst der jungen Generation",
+    "für Volksmusik und Spektakel"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 346,
+   "section": 5,
+   "level": "kanton",
+   "question": "Was bietet das Zürcher Theater Spektakel immer im August?",
+   "options": [
+    "Theater, Tanz und Musik aus der ganzen Welt",
+    "Jassturniere für ältere Menschen",
+    "ein Weinfest",
+    "die Vorführung neuer Schweizer Filme"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 347,
+   "section": 5,
+   "level": "kanton",
+   "question": "Was ist ein Zürcher Sportevent?",
+   "options": [
+    "Weltklasse Zürich",
+    "Engadiner Skimarathon",
+    "Swiss Indoors",
+    "Schweizer Frauenlauf"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 348,
+   "section": 5,
+   "level": "kanton",
+   "question": "In diesem Museum kann man experimentieren. In welcher Stadt ist das Technorama?",
+   "options": [
+    "Zürich",
+    "Winterthur",
+    "Aarau",
+    "Zug"
+   ],
+   "answer": 1
+  },
+  {
+   "n": 349,
+   "section": 5,
+   "level": "kanton",
+   "question": "In welchem Museum kann man alles berühren und experimentieren?",
+   "options": [
+    "Sammlung Reinhart \"Am Römerholz\"",
+    "Fotomuseum Winterthur",
+    "Technorama",
+    "Villa Lindengut"
+   ],
+   "answer": 2
+  },
+  {
+   "n": 350,
+   "section": 5,
+   "level": "kanton",
+   "question": "Wo ist die Masoala-Halle mit einem Urwald aus Madagaskar?",
+   "options": [
+    "im Zoo Zürich",
+    "im China Garten von Zürich",
+    "im alten botanischen Garten Zürich",
+    "im Rieterpark in Zürich"
+   ],
+   "answer": 0
+  },
+  {
+   "n": 351,
+   "section": 5,
+   "level": "kanton",
+   "question": "Wer spielt eine wichtige Rolle am Zürcher Sechseläuten?",
+   "options": [
+    "die Frauen",
+    "die Kirchen",
+    "die Gewerkschaften",
+    "die Zünfte"
+   ],
+   "answer": 3
+  },
+  {
+   "n": 352,
+   "section": 5,
+   "level": "kanton",
+   "question": "Gottfried Keller (1819-1890) war ein bekannter Zürcher ...",
+   "options": [
+    "Erfinder.",
+    "Schriftsteller.",
+    "reformierter Pfarrer.",
+    "Fabrikant."
+   ],
+   "answer": 1
+  }
+ ]
+}
