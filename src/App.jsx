@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef, createContext, useContext } from "react";
-import { ALL_QUESTIONS, QUESTIONS_VERSION } from "./questions";
+import { ALL_QUESTIONS, QUESTIONS_VERSION, QUESTIONS_UPDATED } from "./questions";
 import { Q_IMAGES } from "./images";
 import { EXPLANATIONS } from "./explanations";
 import { LANG_KEY, LANGS, PRIMARY_LANGS, OTHER_LABEL, MORE_LANGS_LABEL, RTL_LANGS, HAS_TRANSLATION, UI, SECTION_NAMES as SECTION_I18N, LVL_LABELS_I18N, HELP_SECTIONS_BY_LANG, HELP_OFFICIAL } from "./i18n";
@@ -621,6 +621,7 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
   const T = useT(); const lang = useLang();
   // Section-card headings use Title Case in English; other languages keep their own casing conventions.
   const tc = (s) => lang === "en" ? s.replace(/\b([a-z])/g, (_, c) => c.toUpperCase()) : s;
+  const updatedDate = QUESTIONS_UPDATED.split("-").reverse().join("."); // YYYY-MM-DD → DD.MM.YYYY (Swiss)
   const { set: savedSet } = useBookmarks();
   const savedCount = savedSet.size;
   const counts = countByDiff(difficulties);
@@ -669,7 +670,10 @@ function HomeScreen({ difficulties, history, progress, dueCount, resume, onResum
     <div style={{ padding:"1rem" }}>
       <div style={{ marginBottom:"1.25rem", borderBottom:"2px solid var(--sw-red)", paddingBottom:".6rem" }}>
         <h2 style={{ fontSize:17, fontWeight:700, margin:"0 0 4px", textTransform:"uppercase", letterSpacing:"0.03em", lineHeight:1.12 }}>Zürich Grundkenntnistest</h2>
-        <p style={{ fontSize:12.5, color:"var(--color-text-secondary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
+        <p style={{ fontSize:12, color:"var(--color-text-secondary)", margin:"0 0 3px", lineHeight:1.45 }}>
+          {T("A study aid based on the official question set for practice — questions last updated on {date}.", { date: updatedDate })}
+        </p>
+        <p style={{ fontSize:11.5, color:"var(--color-text-tertiary)", margin:0 }}>{ALL_QUESTIONS.length} {T("questions")} · 5 {T("sections")}</p>
       </div>
 
       {/* At-a-glance progress: study streak, questions answered today, and a rough exam-readiness estimate */}

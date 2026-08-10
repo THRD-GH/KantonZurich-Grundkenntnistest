@@ -4,6 +4,9 @@
 // backups refuse to import (see buildBackup/restore in App.jsx). Pure typo fixes that keep every
 // id pointing at the same question do NOT require a bump.
 export const QUESTIONS_VERSION = 1;
+// Shown on the home screen. Date (YYYY-MM-DD) the set was last verified against the
+// official catalogue — bump it whenever you re-run `npm run check:catalogue` and reconcile.
+export const QUESTIONS_UPDATED = "2026-08-05";
 
 // Source: official Kanton Zürich Grundkenntnistest question catalogue — 350 questions,
 // 5 sections (Demokratie/Sozialstaat/Geschichte/Geografie/Kultur), each split
