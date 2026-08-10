@@ -58,9 +58,9 @@ into `ACCEPTED` with a one-line reason. When a genuine answer changes, fix `ques
 ## Current known state (snapshot in this repo)
 
 350 questions, structure identical (5 sections × Bund/Kanton/Gemeinde). Answer keys:
-337 matched, 3 image (verified by hand), 8 accepted paraphrases, and **1 open discrepancy**:
+**338 matched, 3 image (verified by hand), 8 accepted paraphrases, 0 discrepancies.**
 
-- **id175 — retirement age.** Ours: "65 Jahre bei Frauen und Männern". Official catalogue:
-  "64 Jahre bei Frauen und 65 Jahre bei Männern" (pre-AHV21 wording; our four options don't
-  even include the official's correct one). Needs a decision: match the official catalogue,
-  or keep the equalised "65/65" if the catalogue is behind the AHV21 reform.
+- **id175 (retirement age)** was reconciled to the official catalogue: options/answer now
+  use the catalogue's "64 Jahre bei Frauen und 65 Jahre bei Männern". (The AHV 21 reform is
+  gradually raising women's reference age to 65 — worth re-checking when the canton
+  republishes the catalogue.)

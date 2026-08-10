@@ -176,7 +176,7 @@ export const PT_CONTENT = {
     172: {"q":"O que se pode fazer se a entidade empregadora pagar um salário inferior ao devido?","o":["Não existem possibilidades legais.","Pode-se deixar de ir trabalhar até ao fim do contrato.","Pode-se recorrer ao tribunal de trabalho.","Pode-se apresentar queixa na polícia."]},
     173: {"q":"O que é um centro de formação profissional?","o":["um serviço de colocação de emprego","um local com diversas ofertas de formação profissional","uma escola superior politécnica","um centro de investigação técnico-laboral"]},
     174: {"q":"Que feriado é válido por lei para toda a Suíça?","o":["1 de agosto","Ascensão","Sexta-feira Santa","1 de maio"]},
-    175: {"q":"Qual é a idade normal de reforma na Suíça?","o":["63 anos para mulheres e homens","64 anos para mulheres e homens","65 anos para mulheres e homens","66 anos para mulheres e homens"]},
+    175: {"q":"Qual é a idade normal de reforma na Suíça?","o":["64 anos para mulheres e homens","65 anos para mulheres e homens","64 anos para as mulheres e 65 anos para os homens","63 anos para as mulheres e 64 anos para os homens"]},
     176: {"q":"Quem não paga prémios para o seguro de desemprego?","o":["Pessoas em formação profissional","Reformados","Trabalhadoras e trabalhadores","Todas as pessoas a partir dos 50 anos"]},
     177: {"q":"Onde se encontram informações sobre lugares de aprendizagem, profissão e trabalho?","o":["na administração fiscal","no Arquivo Federal","na Secretaria de Estado da Formação, Investigação e Inovação","no centro de informação profissional"]},
     178: {"q":"Quem é o parceiro comercial mais importante da Suíça (situação em 2017)?","o":["UE","EUA","China","Rússia"]},

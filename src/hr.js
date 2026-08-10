@@ -176,7 +176,7 @@ export const HR_CONTENT = {
     172: {"q":"Što se može učiniti ako poslodavac isplaćuje premalu plaću?","o":["Ne postoje pravne mogućnosti.","Može se ne odlaziti na posao do isteka ugovora.","Može se obratiti radnom sudu.","Može se podnijeti prijava policiji."]},
     173: {"q":"Što je centar za strukovno obrazovanje?","o":["posredovalište za rad","mjesto s različitim ponudama strukovnog obrazovanja","stručna visoka škola","istraživački centar za područje rada"]},
     174: {"q":"Koji blagdan prema zakonu vrijedi za cijelu Švicarsku?","o":["1. kolovoza","Uzašašće","Veliki petak","1. svibnja"]},
-    175: {"q":"Koja je redovna dob za umirovljenje u Švicarskoj?","o":["63 godine za žene i muškarce","64 godine za žene i muškarce","65 godina za žene i muškarce","66 godina za žene i muškarce"]},
+    175: {"q":"Koja je redovna dob za umirovljenje u Švicarskoj?","o":["64 godine za žene i muškarce","65 godina za žene i muškarce","64 godine za žene i 65 godina za muškarce","63 godine za žene i 64 godine za muškarce"]},
     176: {"q":"Tko ne plaća premije za osiguranje za slučaj nezaposlenosti?","o":["osobe na strukovnom osposobljavanju","umirovljenici","zaposlenice i zaposlenici","sve osobe od 50 godina nadalje"]},
     177: {"q":"Gdje se mogu pronaći informacije o naukovanju, zanimanju i radu?","o":["u poreznoj upravi","u Saveznom arhivu","u Državnom tajništvu za obrazovanje, istraživanje i inovacije","u centru za informiranje o zanimanjima"]},
     178: {"q":"Tko je najvažniji trgovinski partner Švicarske (stanje 2017.)?","o":["EU","SAD","Kina","Rusija"]},

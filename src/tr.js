@@ -176,7 +176,7 @@ export const TR_CONTENT = {
     172: {"q":"İşveren ücreti eksik öderse ne yapılabilir?","o":["Hiçbir yasal olanak yoktur.","Sözleşme sona erene kadar işe gitmemeye devam edilebilir.","İş mahkemesine başvurulabilir.","Polise şikâyette bulunulabilir."]},
     173: {"q":"Meslek eğitim merkezi (Berufsbildungszentrum) nedir?","o":["bir iş bulma kurumu","mesleki eğitime yönelik çeşitli olanakların bulunduğu bir yerleşke","bir uygulamalı bilimler üniversitesi","iş tekniğine yönelik bir araştırma merkezi"]},
     174: {"q":"Hangi resmi tatil günü yasa gereği tüm İsviçre için geçerlidir?","o":["1 Ağustos","Hz. İsa'nın Göğe Yükselişi (Auffahrt)","Hayırlı Cuma (Karfreitag)","1 Mayıs"]},
-    175: {"q":"İsviçre'de normal emeklilik yaşı kaçtır?","o":["kadınlarda ve erkeklerde 63 yaş","kadınlarda ve erkeklerde 64 yaş","kadınlarda ve erkeklerde 65 yaş","kadınlarda ve erkeklerde 66 yaş"]},
+    175: {"q":"İsviçre'de normal emeklilik yaşı kaçtır?","o":["kadınlarda ve erkeklerde 64 yaş","kadınlarda ve erkeklerde 65 yaş","kadınlarda 64, erkeklerde 65 yaş","kadınlarda 63, erkeklerde 64 yaş"]},
     176: {"q":"Kim işsizlik sigortası primi ödemez?","o":["meslek eğitimi gören kişiler","emekliler","çalışanlar","50 yaş ve üzerindeki tüm kişiler"]},
     177: {"q":"Çıraklık yeri, meslek ve iş hakkında bilgiler nereden bulunur?","o":["vergi dairesinde","Federal Arşiv'de","Eğitim, Araştırma ve İnovasyon Devlet Sekreterliği'nde","Meslek Bilgilendirme Merkezi'nde"]},
     178: {"q":"İsviçre'nin en önemli ticaret ortağı kimdir (2017 itibarıyla)?","o":["AB","ABD","Çin","Rusya"]},
