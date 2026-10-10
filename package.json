@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview --port 5173 --strictPort",
     "test": "node validate-data.mjs",
-    "check:catalogue": "node tools/catalogue-check/validate.mjs"
+    "check:catalogue": "node tools/catalogue-check/validate.mjs",
+    "check:catalogue:source": "node tools/catalogue-check/check-source.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,111 +1,197 @@
 #!/usr/bin/env python3
 """Extract the official Kanton Zürich Grundkenntnistest catalogue from its PDF.
 
-Produces two files next to this script:
-  official-catalogue.txt   raw extracted text (what validate.mjs reads — stable, robust)
-  official-catalogue.json  a best-effort structured view: {n, section, level, question, options[], answer}
+By default this downloads the catalogue straight from the canton's own source
+(the `pdf_url` in source.json — zh.ch), so the snapshot is always taken from the
+authoritative Zürich source rather than a mirror or a stray local copy. Pass a
+local path to extract from a file you already have instead.
 
-The correct answer is the option the catalogue prints with a check mark (✔); the
-other three carry an empty checkbox glyph. A handful of picture questions (flag,
-arms, portraits, map) have image options and won't structure cleanly — those are
-flagged in the JSON `_meta.anomalies` and handled by validate.mjs's image allow-list.
+Produces two files next to this script:
+  official-catalogue.txt   raw extracted text (kept for reference / diffing)
+  official-catalogue.json  structured view {n, section, level, question, options[],
+                           answer, image} + a `_meta` block recording exactly where the
+                           PDF came from: source_url, sha256, bytes, http_last_modified,
+                           extracted_at. validate.mjs reads this file.
+
+Answer format: the current catalogue states the correct option explicitly as a line
+"Richtige Antwort: a|b|c|d" after each question's four options (a)…d)). Picture
+questions (flag / arms / map) print their options as images on one combined label
+line and carry no option text — they are flagged `"image": true` and checked by
+answer index instead of wording.
 
 Usage:
   pip install pymupdf
-  python extract.py path/to/grundkenntnistest_kanton_zuerich.pdf
+  python extract.py                 # download from the official zh.ch source (recommended)
+  python extract.py path/to/cat.pdf # extract from a local file instead
 
-Source PDF (Canton of Zürich): see README.md.
+Source of truth for the URL: source.json (next to this script).
 """
-import sys, re, json, os
+import sys, re, json, os, hashlib, tempfile, datetime, urllib.request
+
 try:
-    import fitz  # PyMuPDF
+    import pymupdf as fitz          # PyMuPDF >= 1.24 preferred spelling
 except ImportError:
-    sys.exit("Missing dependency: pip install pymupdf")
+    try:
+        import fitz                 # older PyMuPDF
+    except ImportError:
+        sys.exit("Missing dependency: pip install pymupdf")
 
-TICK = chr(0x2714)  # correct-option check mark
-BOX  = chr(0xF072)  # wrong-option glyph (private-use char in catalogue font)
-SEC = {'demokratie und föderalismus':1, 'sozialstaat und zivilgesellschaft':2,
-       'geschichte':3, 'geografie':4, 'kultur und alltagskultur':5}
-LVL = {'bund':'bund', 'kanton':'kanton', 'gemeinde':'gemeinde'}
-STEM_END = ('?', '…', '...', ':')
+HERE = os.path.dirname(os.path.abspath(__file__))
 
-def classify(raw):
-    s = raw.strip()
-    if not s: return ('blank', None, None)
-    if TICK in raw: return ('opt', True,  raw.replace(TICK, '').strip())
-    if BOX  in raw: return ('opt', False, raw.replace(BOX,  '').strip())
+SEC = {'demokratie und föderalismus': 1, 'sozialstaat und zivilgesellschaft': 2,
+       'geschichte': 3, 'geografie': 4, 'kultur und alltagskultur': 5}
+LVL = {'bund', 'kanton', 'gemeinde'}
+
+
+def load_source():
+    with open(os.path.join(HERE, 'source.json'), encoding='utf-8') as f:
+        return json.load(f)
+
+
+def download(url):
+    """Fetch the catalogue PDF from the official source; return (path, last_modified)."""
+    print(f"Downloading official catalogue from the Zürich source:\n  {url}")
+    req = urllib.request.Request(url, headers={'User-Agent': 'gkt-catalogue-check/1.0'})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        data = r.read()
+        last_mod = r.headers.get('Last-Modified')
+    fd, path = tempfile.mkstemp(prefix='gkt-catalogue-', suffix='.pdf')
+    with os.fdopen(fd, 'wb') as f:
+        f.write(data)
+    return path, last_mod
+
+
+def classify(line):
+    s = line.strip()
+    if not s:
+        return ('blank',)
+    m = re.match(r'Richtige Antwort:\s*([a-dA-D])\b', s)
+    if m:
+        return ('answer', m.group(1).lower())
+    labels = re.findall(r'(?<![A-Za-z])([a-d])\)', s)
+    m2 = re.match(r'^([a-d])\)\s*(.*)$', s)
+    if m2 and labels:
+        if len(labels) >= 2:                      # combined image-option line "a) b) c) d)"
+            return ('imgopts',)
+        return ('opt', m2.group(2).strip())
+    if re.fullmatch(r'seite\s*\d+\s*/\s*\d+', s.lower()):
+        return ('struct',)
+    if re.fullmatch(r'\d+(\.\d+)?', s):
+        return ('struct',)
     low = s.lower().rstrip(' ?').strip()
-    if re.fullmatch(r'seite\s*\d+\s*/\s*\d+', low): return ('struct', None, None)
-    if re.fullmatch(r'\d+(\.\d+)?', s):             return ('struct', None, None)
-    if low in SEC: return ('section', SEC[low], None)
-    if low in LVL: return ('level', LVL[low], None)
-    return ('text', None, s)
+    if low in SEC:
+        return ('section', SEC[low])
+    if low in LVL:
+        return ('level', low)
+    return ('text', s)
 
-def stem_like(t): return t.rstrip().endswith(STEM_END)
+
+def join(frags):
+    r = ''
+    for f in frags:
+        if r.endswith('­') or r.endswith('-'):   # soft hyphen / hyphen wrap
+            r = r[:-1] + f
+        else:
+            r = (r + ' ' + f) if r else f
+    return r.strip()
+
 
 def parse(lines):
+    # drop cover + table of contents: ignore everything up to the first page marker
+    start = 0
+    for i, l in enumerate(lines):
+        if re.fullmatch(r'\s*seite\s*\d+\s*/\s*\d+\s*', l.lower()):
+            start = i + 1
+            break
+
     qs, anomalies = [], []
     sec = lvl = None
-    stem, opts, mode = [], [], 'stem'
-    def join(frags):
-        r = ''
-        for f in frags:
-            r = r[:-1] + f if r.endswith('-') else (r + ' ' + f if r else f)
-        return r.strip()
+    stem, opts, ans, img, cur = [], [], None, False, None
+    mode = 'stem'
+
+    def push_opt():
+        nonlocal cur
+        if cur is not None:
+            opts.append(join(cur)); cur = None
+
     def flush():
-        nonlocal stem, opts
-        if not stem: return
-        q = join(stem)
-        ans = [i for i, o in enumerate(opts) if o[0]]
-        rec = {'n': len(qs)+1, 'section': sec, 'level': lvl, 'question': q,
-               'options': [o[1] for o in opts], 'answer': ans[0] if len(ans) == 1 else -1}
-        qs.append(rec)
-        if len(opts) != 4 or rec['answer'] < 0 or not stem_like(q):
-            anomalies.append({'n': rec['n'], 'options': len(opts), 'answer': rec['answer'], 'question': q[:70]})
-        stem, opts = [], []
-    for raw in lines:
-        k, a, t = classify(raw)
-        if k in ('blank', 'struct'): continue
-        if k == 'section': sec = a; continue
-        if k == 'level':   lvl = a; continue
-        if k == 'opt':
-            if mode == 'stem': mode = 'opt'
-            opts.append([a, t]); continue
-        # k == 'text'
-        if mode == 'stem':
-            stem.append(t)
-        elif len(opts) >= 4:
-            flush(); stem, opts, mode = [t], [], 'stem'
-        elif opts and opts[-1][1].endswith('-'):
-            opts[-1][1] = opts[-1][1][:-1] + t
-        elif not stem_like(t):
-            opts.append([False, t])                 # option whose checkbox glyph didn't extract
-        else:
-            flush(); stem, opts, mode = [t], [], 'stem'
+        nonlocal stem, opts, ans, img, cur, mode
+        push_opt()
+        if stem and ans is not None:
+            rec = {'n': len(qs) + 1, 'section': sec, 'level': lvl,
+                   'question': join(stem), 'options': opts[:],
+                   'answer': 'abcd'.index(ans), 'image': img}
+            qs.append(rec)
+            if not img and len(opts) != 4:
+                anomalies.append({'n': rec['n'], 'options': len(opts), 'question': rec['question'][:70]})
+        stem, opts, ans, img, cur, mode = [], [], None, False, None, 'stem'
+
+    for line in lines[start:]:
+        k = classify(line)
+        t = k[0]
+        if t in ('blank', 'struct'):
+            continue
+        if t == 'section': sec = k[1]; continue
+        if t == 'level':   lvl = k[1]; continue
+        if t == 'answer':  ans = k[1]; flush(); continue
+        if t == 'imgopts': push_opt(); img = True; mode = 'opt'; continue
+        if t == 'opt':     push_opt(); cur = [k[1]]; mode = 'opt'; continue
+        if t == 'text':
+            if mode == 'stem':      stem.append(k[1])
+            elif cur is not None:   cur.append(k[1])
+            else:                   stem.append(k[1])
     flush()
     return qs, anomalies
 
+
 def main():
-    if len(sys.argv) < 2:
-        sys.exit(__doc__)
-    pdf = sys.argv[1]
-    here = os.path.dirname(os.path.abspath(__file__))
+    src = load_source()
+    args = [a for a in sys.argv[1:] if not a.startswith('-')]
+    last_mod = source_url = None
+    if args:
+        pdf = args[0]                                   # extract from a local file
+    else:
+        pdf, last_mod = download(src['pdf_url'])        # download from the official source
+        source_url = src['pdf_url']
+
+    with open(pdf, 'rb') as f:
+        pdf_bytes = f.read()
+    sha = hashlib.sha256(pdf_bytes).hexdigest()
+
     doc = fitz.open(pdf)
     lines = []
     for pg in doc:
         lines += pg.get_text().split('\n')
     raw_text = '\n'.join(lines)
-    with open(os.path.join(here, 'official-catalogue.txt'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(HERE, 'official-catalogue.txt'), 'w', encoding='utf-8') as f:
         f.write(raw_text)
+
     qs, anomalies = parse(lines)
-    out = {'_meta': {'source_pdf': os.path.basename(pdf), 'count': len(qs),
-                     'ticks': raw_text.count(TICK), 'boxes': raw_text.count(BOX),
-                     'anomalies': anomalies},
-           'questions': qs}
-    with open(os.path.join(here, 'official-catalogue.json'), 'w', encoding='utf-8') as f:
+    images = [q['n'] for q in qs if q['image']]
+    meta = {
+        'source': src.get('label'),
+        'source_url': source_url,                       # null when extracted from a local file
+        'source_page': src.get('page_url'),
+        'from_local_file': source_url is None,
+        'source_pdf': os.path.basename(args[0]) if args else os.path.basename(src['pdf_url']),
+        'sha256': sha,
+        'bytes': len(pdf_bytes),
+        'http_last_modified': last_mod,
+        'extracted_at': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'count': len(qs),
+        'image_questions': images,
+        'anomalies': anomalies,
+    }
+    out = {'_meta': meta, 'questions': qs}
+    with open(os.path.join(HERE, 'official-catalogue.json'), 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
-    print(f"extracted {len(qs)} questions  ({raw_text.count(TICK)} correct marks)  "
-          f"anomalies: {len(anomalies)}  → official-catalogue.txt / .json")
+
+    print(f"extracted {len(qs)} questions  (image: {len(images)}  anomalies: {len(anomalies)})")
+    print(f"  source:  {source_url or pdf}")
+    print(f"  sha256:  {sha}")
+    print(f"  bytes:   {len(pdf_bytes)}  last-modified: {last_mod or '(local file)'}")
+    print("  -> official-catalogue.txt / official-catalogue.json")
+
 
 if __name__ == '__main__':
     main()

@@ -1,15 +1,16 @@
  
  
+ 
 Kanton Zürich 
 Direktion der Justiz und des Innern 
 Gemeindeamt 
+Abteilung Einbürgerungen 
  
  
 Kantonaler Grundkenntnistest im 
 Einbürgerungsverfahren 
- 
- 
- 
+Inhaltsverzeichnis 
+1 
 1 
 Demokratie und Föderalismus 
 2 
@@ -18,49 +19,49 @@ Bund
 2 
 1.2 
 Kanton 
-19 
+23 
 1.3 
 Gemeinde 
-22 
+27 
 2 
 Sozialstaat und Zivilgesellschaft 
-24 
+29 
 2.1 
 Bund 
-24 
+29 
 2.2 
 Kanton 
-36 
+43 
 2.3 
 Gemeinde 
-37 
+44 
 3 
 Geschichte 
-39 
+47 
 3.1 
 Bund 
-39 
+47 
 3.2 
 Kanton 
-46 
+55 
 4 
 Geografie 
-48 
+58 
 4.1 
 Bund 
-48 
+58 
 4.2 
 Kanton 
-54 
+65 
 5 
 Kultur und Alltagskultur 
-57 
+69 
 5.1 
 Bund 
-57 
+69 
 5.2 
 Kanton 
-64 
+77 
  
  
  
@@ -69,7 +70,8 @@ Kanton
  
  
  
-Seite 2/65 
+ 
+Seite 2/78 
  
  
 1 
@@ -77,48 +79,33 @@ Demokratie und Föderalismus
 1.1 
 Bund 
 Die Schweiz ist neutral. Was heisst das? 
- Sie unterzeichnet keine internationalen Verträge.  
- Sie schliesst nur mit Staaten Verträge, die nicht in Kriege verwickelt sind. 
- 
-✔ Sie mischt sich nicht in bewaffnete Konflikte anderer Staaten ein. 
- 
- Sie will als Transitland wirtschaftlich unabhängig sein. 
+a) Sie unterzeichnet keine internationalen Verträge. 
+b) Sie schliesst nur mit Staaten Verträge, die nicht in Kriege verwickelt sind. 
+c) Sie mischt sich nicht in bewaffnete Konflikte anderer Staaten ein. 
+d) Sie will als Transitland wirtschaftlich unabhängig sein. 
+Richtige Antwort: c 
  
 Was ist eine Grenzgängerin oder ein Grenzgänger? 
- 
-✔ eine Person, die in der Schweiz arbeitet und im Ausland wohnt 
- 
- eine Person, die nicht im gleichen Kanton wohnt und arbeitet 
- 
- Schweizer Handelsware, die ins Ausland exportiert wird 
- 
- Schweizer Handelsware, die vom Ausland in die Schweiz importiert wird 
+a) eine Person, die in der Schweiz arbeitet und im Ausland wohnt 
+b) eine Person, die nicht im gleichen Kanton wohnt und arbeitet 
+c) Schweizer Handelsware, die ins Ausland exportiert wird 
+d) Schweizer Handelsware, die vom Ausland in die Schweiz importiert wird 
+Richtige Antwort: a 
  
 Confoederatio Helvetica ... 
+a) ist der Name einer Schweizer Schokolade. 
+b) ist der lateinische Name für die Schweizer Eidgenossenschaft. 
+c) ist der Name des ersten Parlaments der Schweiz. 
+d) ist eine Fraktion des Parlaments. 
+Richtige Antwort: b 
  
- ist der Name einer Schweizer Schokolade.  
-✔ ist der lateinische Name für die Schweizer Eidgenossenschaft. 
+Was ist ein Departement der Bundesverwaltung? 
+a) Ernährungsdepartement 
+b) Natur- und Klimadepartement 
+c) Schul- und Weiterbildungsdepartement 
+d) Justiz- und Polizeidepartement 
+Richtige Antwort: d 
  
- ist der Name des ersten Parlaments der Schweiz.  
- ist eine Fraktion des Parlaments. 
- 
-Was ist ein Departement der Bundesverwaltung?  
- Ernährungsdepartement 
- 
- Natur- und Klimadepartement 
- 
- Schul- und Weiterbildungsdepartement 
- 
-✔ Justiz- und Polizeidepartement 
- 
-Zwischen den Mitgliedern des Bundesrats gilt das Kollegialitätsprin-
-zip. Was heisst das? 
- 
- Die Mitglieder des Bundesrates müssen sich gut kennen.  
- Jeder Bundesrat vertritt seine eigenen politischen Meinungen. 
- 
-✔ Alle Mitglieder müssen Entscheide des Bundesrates nach aussen gleich vertreten. 
- Der Bundesrat Entscheidungen mit Abstimmung. 
  
  
 
@@ -126,535 +113,494 @@ zip. Was heisst das?
  
  
  
-Seite 3/65 
  
+Seite 3/78 
+ 
+ 
+Zwischen den Mitgliedern des Bundesrats gilt das Kollegialitätsprin­
+zip. Was heisst das? 
+a) Die Mitglieder des Bundesrates müssen sich gut kennen. 
+b) Jeder Bundesrat vertritt seine eigenen politischen Meinungen. 
+c) Alle Mitglieder müssen Entscheide des Bundesrates nach aussen gleich vertre­
+ten. 
+d) Der Bundesrat Entscheidungen mit Abstimmung. 
+Richtige Antwort: c 
  
 Können die Stimmbürgerinnen und Stimmbürger ein neues Gesetz 
-stoppen?  
- Ja - mit einer Initiative 
- 
- Nein - nur der Bundesrat kann Gesetze ändern 
- Nein - nur der Nationalrat kann Gesetze ändern 
- 
-✔ Ja - mit einem Referendum 
+stoppen? 
+a) Ja - mit einer Initiative 
+b) Nein - nur der Bundesrat kann Gesetze ändern 
+c) Nein - nur der Nationalrat kann Gesetze ändern 
+d) Ja - mit einem Referendum 
+Richtige Antwort: d 
  
 Was macht der Bundeskanzler oder die Bundeskanzlerin der Schweiz? 
-✔ den Bundesrat unterstützen 
+a) den Bundesrat unterstützen 
+b) die Schweiz regieren 
+c) den Bundesrat wählen 
+d) Gesetze machen 
+Richtige Antwort: a 
  
- die Schweiz regieren 
+Was bedeutet bei Abstimmungen «Ständemehr»? 
+a) Mehrheit aller Stimmen 
+b) Mehrheit der Kantone 
+c) Mehrheit der Stimmen nach Sprachregionen der Schweiz 
+d) Mehrheit in den vorausgegangenen Meinungsumfragen 
+Richtige Antwort: b 
  
- den Bundesrat wählen 
  
- Gesetze machen 
  
-Was bedeutet bei Abstimmungen "Ständemehr"?  
- Mehrheit aller Stimmen 
+
  
-✔ Mehrheit der Kantone 
  
- Mehrheit der Stimmen nach Sprachregionen der Schweiz  
- Mehrheit in den vorausgegangenen Meinungsumfragen 
+ 
+ 
+ 
+Seite 4/78 
+ 
  
 Welche politischen Rechte haben Schweizerinnen und Schweizer, die 
 im Ausland leben? 
+a) Sie dürfen an Abstimmungen und Wahlen teilnehmen, wenn sie in der Schweiz 
+zu Besuch sind. 
+b) Sie verlieren alle politischen Rechte in der Schweiz. 
+c) Sie können an nationalen Abstimmungen und Wahlen teilnehmen, ohne deswe­
+gen in die Schweiz reisen zu müssen. 
+d) Sie dürfen sich im Gastland in keiner Weise politisch engagieren. 
+Richtige Antwort: c 
  
- Sie dürfen an Abstimmungen und Wahlen teilnehmen, wenn sie in der Schweiz zu 
-Besuch sind. 
- 
- Sie verlieren alle politischen Rechte in der Schweiz. 
- 
-✔ Sie können an nationalen Abstimmungen und Wahlen teilnehmen, ohne deswegen 
-in die Schweiz reisen zu müssen. 
- 
- Sie dürfen sich im Gastland in keiner Weise politisch engagieren. 
- 
-Wer in der Schweiz wählen und abstimmen will, …  
-✔ muss das Schweizer Bürgerrecht haben. 
- 
- muss einen Computer haben. 
- 
- muss in der Schweiz geboren sein. 
- 
- muss mehr Steuern zahlen. 
- 
- 
- 
-
- 
- 
- 
- 
-Seite 4/65 
- 
+Wer in der Schweiz wählen und abstimmen will, … 
+a) muss das Schweizer Bürgerrecht haben. 
+b) muss einen Computer haben. 
+c) muss in der Schweiz geboren sein. 
+d) muss mehr Steuern zahlen. 
+Richtige Antwort: a 
  
 Was ist eine Partei? 
- 
- ein Zusammenschluss von Menschen aus der gleichen Stadt oder dem gleichen Dorf 
-✔ ein Zusammenschluss von Menschen mit ähnlichen politischen Zielen 
- 
- ein Zusammenschluss von Menschen mit unterschiedlichen Weltanschauungen 
- ein Zusammenschluss von Nationalräten oder Ständeräten, um die Mehrheit zu er-
-reichen 
- 
-Was ist eine Aufgabe des Bundes? 
- 
- Wasserversorgung 
- 
-✔ Geldpolitik 
- 
- Polizeiwesen 
- 
- Organisation der Volksschule 
+a) ein Zusammenschluss von Menschen aus der gleichen Stadt oder dem gleichen 
+Dorf 
+b) ein Zusammenschluss von Menschen mit ähnlichen politischen Zielen 
+c) ein Zusammenschluss von Menschen mit unterschiedlichen Weltanschauungen 
+d) ein Zusammenschluss von Nationalräten oder Ständeräten, um die Mehrheit zu 
+erreichen 
+Richtige Antwort: b 
  
 Was ist eine Aufgabe des Bundes? 
+a) Wasserversorgung 
+b) Geldpolitik 
+c) Polizeiwesen 
+d) Organisation der Volksschule 
+Richtige Antwort: b 
  
- Feuerwehr 
  
- Begrünung von Parks 
- 
-✔ Zoll  
- Spitäler 
- 
-Was ist ein Grundrecht in der Schweiz?  
- Tierhaltung 
- 
-✔ Meinungs- und Informationsfreiheit 
- 
- kostenloser Fernsehzugang 
- 
- WLAN-Zugang 
- 
-Was ist ein Grundrecht in der Schweiz?  
- Recht auf Waffenbesitz 
- 
- Recht auf eine Wohnung 
- 
- Recht auf einen Arbeitsplatz 
- 
-✔ Glaubens- und Gewissensfreiheit 
- 
-Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz? 
-✔ Sie müssen Steuern bezahlen. 
- 
- Sie müssen eine Lehre machen. 
- 
- Sie müssen ein Bankkonto haben. 
- 
- Sie müssen den Führerausweis haben. 
  
 
  
  
  
  
-Seite 5/65 
+ 
+Seite 5/78 
+ 
+ 
+Was ist eine Aufgabe des Bundes? 
+a) Feuerwehr 
+b) Begrünung von Parks 
+c) Zoll 
+d) Spitäler 
+Richtige Antwort: c 
+ 
+Was ist ein Grundrecht in der Schweiz? 
+a) Tierhaltung 
+b) Meinungs- und Informationsfreiheit 
+c) kostenloser Fernsehzugang 
+d) WLAN-Zugang 
+Richtige Antwort: b 
+ 
+Was ist ein Grundrecht in der Schweiz? 
+a) Recht auf Waffenbesitz 
+b) Recht auf eine Wohnung 
+c) Recht auf einen Arbeitsplatz 
+d) Glaubens- und Gewissensfreiheit 
+Richtige Antwort: d 
+ 
+Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz? 
+a) Sie müssen Steuern bezahlen. 
+b) Sie müssen eine Lehre machen. 
+c) Sie müssen ein Bankkonto haben. 
+d) Sie müssen den Führerausweis haben. 
+Richtige Antwort: a 
+ 
+Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz? 
+a) Sie müssen eine Weiterbildung machen. 
+b) Sie müssen Mitglied einer Kirche sein. 
+c) Sie müssen sich in der Gemeinde anmelden. 
+d) Sie müssen ein Telefon haben. 
+Richtige Antwort: c 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 6/78 
  
  
 Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz? 
- Sie müssen eine Weiterbildung machen. 
- 
- Sie müssen Mitglied einer Kirche sein. 
- 
-✔ Sie müssen sich in der Gemeinde anmelden. 
- 
- Sie müssen ein Telefon haben. 
- 
-Welche Pflichten haben Einwohnerinnen und Einwohner der Schweiz? 
- Sie müssen gegen Diebstahl versichert sein. 
- 
-✔ Sie müssen bei einer Krankenkasse versichert sein. 
- 
- Sie müssen ein Halbtax der SBB haben. 
- 
- Sie müssen ein Haus besitzen. 
+a) Sie müssen gegen Diebstahl versichert sein. 
+b) Sie müssen bei einer Krankenkasse versichert sein. 
+c) Sie müssen ein Halbtax der SBB haben. 
+d) Sie müssen ein Haus besitzen. 
+Richtige Antwort: b 
  
 Was bedeutet Rechtsgleichheit? 
+a) Alle verdienen gleich viel. 
+b) Alle Kantone haben die gleichen Gesetze. 
+c) Alle Menschen sind vor dem Gesetz gleich. 
+d) Alle Menschen haben gleich lange Ferien. 
+Richtige Antwort: c 
  
- Alle verdienen gleich viel. 
- 
- Alle Kantone haben die gleichen Gesetze.  
-✔ Alle Menschen sind vor dem Gesetz gleich. 
- Alle Menschen haben gleich lange Ferien. 
- 
-Wie heissen die beiden "Kammern" des Schweizer Parlaments? 
- 
- Oberhaus und Unterhaus 
- 
- Senat und Kongress 
- 
-✔ Nationalrat und Ständerat 
- 
- Fraktion und Kommission 
+Wie heissen die beiden «Kammern» des Schweizer Parlaments? 
+a) Oberhaus und Unterhaus 
+b) Senat und Kongress 
+c) Nationalrat und Ständerat 
+d) Fraktion und Kommission 
+Richtige Antwort: c 
  
 Die Schweiz ist … 
- 
- eine Diktatur. 
- 
- ein absolutistischer Staat. 
- 
-✔ eine Demokratie. 
- 
- ein Fürstentum. 
+a) eine Diktatur. 
+b) ein absolutistischer Staat. 
+c) eine Demokratie. 
+d) ein Fürstentum. 
+Richtige Antwort: c 
  
 Was ist ein wichtiges Merkmal der Demokratie? 
+a) Das Volk wählt ein Parlament. 
+b) Es regiert ein König. 
+c) Die Menschen können frei reisen. 
+d) Die Menschen haben ein garantiertes Grundeinkommen. 
+Richtige Antwort: a 
  
-✔ Das Volk wählt ein Parlament. 
  
- Es regiert ein König. 
- 
- Die Menschen können frei reisen. 
- 
- Die Menschen haben ein garantiertes Grundeinkommen. 
  
 
  
  
  
  
-Seite 6/65 
+ 
+Seite 7/78 
  
  
 Warum gibt es in einer Demokratie regelmässig Wahlen? 
- 
- Damit das Interesse für Politik geweckt wird. 
- 
-✔ Damit das Volk die Volksvertretung bestimmen kann. 
- 
- Damit die Armen mehr Macht bekommen.  
- Damit Frauen und Männer gleichmässig vertreten sind. 
+a) Damit das Interesse für Politik geweckt wird. 
+b) Damit das Volk die Volksvertretung bestimmen kann. 
+c) Damit die Armen mehr Macht bekommen. 
+d) Damit Frauen und Männer gleichmässig vertreten sind. 
+Richtige Antwort: b 
  
 Wie heisst die Verfassung der Schweizerischen Eidgenossenschaft? 
- Grundgesetz 
+a) Grundgesetz 
+b) Verfassungsvertrag 
+c) Bundesbrief 
+d) Bundesverfassung 
+Richtige Antwort: d 
  
- Verfassungsvertrag 
+Wer führt die Regierungsgeschäfte der Schweiz? 
+a) die Parteien 
+b) die Medien 
+c) der Bundesrat 
+d) die Bundesversammlung 
+Richtige Antwort: c 
  
- Bundesbrief 
- 
-✔ Bundesverfassung 
- 
-Wer führt die Regierungsgeschäfte der Schweiz?  
- die Parteien 
- 
- die Medien 
- 
-✔ der Bundesrat 
- 
- die Bundesversammlung 
- 
-Wer beschliesst auf Bundesebene neue Gesetze?  
- das Bundesgericht 
- 
- die Präsidentinnen und Präsidenten der Parteien 
- 
-✔ der Nationalrat und der Ständerat und das Volk (Referendum) 
- 
- die Bundeskanzlei 
+Wer beschliesst auf Bundesebene neue Gesetze? 
+a) das Bundesgericht 
+b) die Präsidentinnen und Präsidenten der Parteien 
+c) der Nationalrat und der Ständerat und das Volk (Referendum) 
+d) die Bundeskanzlei 
+Richtige Antwort: c 
  
 Wer darf auf Bundesebene wählen und abstimmen? 
+a) Personen, die in der Schweiz wohnen 
+b) Schweizerinnen und Schweizer ab 18 Jahren 
+c) Schweizerinnen und Schweizer, die nicht vorbestraft sind 
+d) Personen, die in der Schweiz Steuern bezahlen 
+Richtige Antwort: b 
  
- Personen, die in der Schweiz wohnen 
  
-✔ Schweizerinnen und Schweizer ab 18 Jahren  
- Schweizerinnen und Schweizer, die nicht vorbestraft sind  
- Personen, die in der Schweiz Steuern bezahlen 
  
-Ab wann sind Schweizerinnen und Schweizer auf Bundesebene stimm- 
-und wahlberechtigt? 
- 
-✔ ab 18 Jahren 
- 
- ab 21 Jahren 
- 
- ab 25 Jahren 
- 
- ab 16 Jahren 
 
  
  
  
  
-Seite 7/65 
  
+Seite 8/78 
+ 
+ 
+Ab wann sind Schweizerinnen und Schweizer auf Bundesebene stimm- 
+und wahlberechtigt? 
+a) ab 18 Jahren 
+b) ab 21 Jahren 
+c) ab 25 Jahren 
+d) ab 16 Jahren 
+Richtige Antwort: a 
  
 Was bedeutet das aktive Wahlrecht in der Demokratie? 
- 
- Man darf nur wählen und abstimmen, wenn man in einer politischen Partei aktiv ist. 
- Man kann in ein politisches Amt gewählt werden.  
-✔ Man darf wählen und abstimmen. 
- 
- Man muss beim Auszählen der Stimmen helfen. 
+a) Man darf nur wählen und abstimmen, wenn man in einer politischen Partei aktiv 
+ist. 
+b) Man kann in ein politisches Amt gewählt werden. 
+c) Man darf wählen und abstimmen. 
+d) Man muss beim Auszählen der Stimmen helfen. 
+Richtige Antwort: c 
  
 Wer kann auf Bundesebene in ein politisches Amt gewählt werden? 
- wer eine Arbeit hat 
- 
- wer in der Schweiz lebt 
- 
-✔ wer das Schweizer Bürgerrecht hat und volljährig ist 
- 
- wer mindestens zwei Landessprachen spricht 
+a) wer eine Arbeit hat 
+b) wer in der Schweiz lebt 
+c) wer das Schweizer Bürgerrecht hat und volljährig ist 
+d) wer mindestens zwei Landessprachen spricht 
+Richtige Antwort: c 
  
 Wie können Schweizer Bürgerinnen und Bürger auf die Gesetzgebung 
 Einfluss nehmen? 
+a) Sie können über Initiativen und Referenden abstimmen. 
+b) Sie haben keine direkte Einflussmöglichkeit. 
+c) Sie können einer Partei beitreten. 
+d) Sie können den Bundesrat wählen. 
+Richtige Antwort: a 
  
-✔ Sie können über Initiativen und Referenden abstimmen. 
- Sie haben keine direkte Einflussmöglichkeit. 
+Gegen was kann man das Referendum ergreifen? 
+a) gegen Beschlüsse des Bundesrats 
+b) gegen Urteile des Bundesgerichts 
+c) gegen Gesetzesvorlagen von Nationalrat und Ständerat 
+d) gegen Massnahmen der Bundesverwaltung 
+Richtige Antwort: c 
  
- Sie können einer Partei beitreten. 
+
  
- Sie können den Bundesrat wählen. 
  
-Gegen was kann man das Referendum ergreifen?  
- gegen Beschlüsse des Bundesrats 
  
- gegen Urteile des Bundesgerichts 
  
-✔ gegen Gesetzesvorlagen von Nationalrat und Ständerat 
- gegen Massnahmen der Bundesverwaltung 
+ 
+Seite 9/78 
+ 
  
 Weshalb ist die Volksinitiative ein wichtiges politisches Recht der 
 Stimmbürgerinnen und Stimmbürger? Sie können mit der  
 Volksinitiative … 
+a) das Parlament ausschalten. 
+b) die Regierung abwählen. 
+c) politische Entscheidungen rückgängig machen. 
+d) wichtige Anliegen aus der Bevölkerung politisch durchsetzen. 
+Richtige Antwort: d 
  
- das Parlament ausschalten. 
- 
- die Regierung abwählen. 
- 
- politische Entscheidungen rückgängig machen. 
- 
-✔ wichtige Anliegen aus der Bevölkerung politisch durchsetzen. 
- 
- 
- 
-
- 
- 
- 
- 
-Seite 8/65 
- 
- 
-Wie oft wählen die Stimmbürgerinnen und Stimmbürger das Bun-
+Wie oft wählen die Stimmbürgerinnen und Stimmbürger das Bun­
 desparlament? 
- 
- alle 6 Jahre 
- 
- alle 2 Jahre 
- 
-✔ alle 4 Jahre 
- 
- alle 7 Jahre 
+a) alle 6 Jahre 
+b) alle 2 Jahre 
+c) alle 4 Jahre 
+d) alle 7 Jahre 
+Richtige Antwort: c 
  
 Die Bundesversammlung besteht aus 246 Mitgliedern. Wer wählt diese 
 Mitglieder? 
- 
-✔ die wahlberechtigten Bürgerinnen und Bürger  
- die Parteien 
- 
- alle Einwohnerinnen und Einwohner der Schweiz  
- eine Wahlkommission 
+a) die wahlberechtigten Bürgerinnen und Bürger 
+b) die Parteien 
+c) alle Einwohnerinnen und Einwohner der Schweiz 
+d) eine Wahlkommission 
+Richtige Antwort: a 
  
 Über was können stimmberechtigte Bürgerinnen und Bürger in der 
-Schweiz auf Bundesebene abstimmen?  
- über Parteiprogramme 
+Schweiz auf Bundesebene abstimmen? 
+a) über Parteiprogramme 
+b) über das Radio- und Fernsehprogramm 
+c) über Volksinitiativen und Referenden 
+d) über die Besetzung von Verwaltungsstellen 
+Richtige Antwort: c 
  
- über das Radio- und Fernsehprogramm 
  
-✔ über Volksinitiativen und Referenden 
  
- über die Besetzung von Verwaltungsstellen 
+
  
-Was ist die zentrale Aufgabe der Bundesversammlung (Bundesparla-
+ 
+ 
+ 
+ 
+Seite 10/78 
+ 
+ 
+Was ist die zentrale Aufgabe der Bundesversammlung (Bundesparla­
 ment)? 
- 
- Sie organisiert Wahlen und Abstimmungen. 
- 
-✔ Sie berät und beschliesst Gesetze. 
- 
- Sie führt die Regierungsgeschäfte in der Schweiz.  
- Sie fällt Gerichtsurteile in letzter Instanz. 
+a) Sie organisiert Wahlen und Abstimmungen. 
+b) Sie berät und beschliesst Gesetze. 
+c) Sie führt die Regierungsgeschäfte in der Schweiz.  
+d) Sie fällt Gerichtsurteile in letzter Instanz. 
+Richtige Antwort: b 
  
 Wie setzt sich die Vereinigte Bundesversammlung zusammen? 
- 
-✔ aus den Mitgliedern des Nationalrats und Ständerats 
- 
- aus den Bundesrichterinnen und Bundesrichtern 
- 
- aus den Mitgliedern der kantonalen Regierungen  
- aus den Parteipräsidentinnen und Parteipräsidenten 
- 
- 
- 
-
- 
- 
- 
- 
-Seite 9/65 
- 
+a) aus den Mitgliedern des Nationalrats und Ständerats 
+b) aus den Bundesrichterinnen und Bundesrichtern 
+c) aus den Mitgliedern der kantonalen Regierungen 
+d) aus den Parteipräsidentinnen und Parteipräsidenten 
+Richtige Antwort: a 
  
 Das Bundeshaus in Bern ist der Sitz … 
- des Nationalmuseums. 
- 
-✔ der Bundesversammlung (Schweizer Parlament). 
- 
- der Universität. 
- 
- des Schweizer Fernsehens. 
+a) des Nationalmuseums. 
+b) der Bundesversammlung (Schweizer Parlament). 
+c) der Universität. 
+d) des Schweizer Fernsehens. 
+Richtige Antwort: b 
  
 Wie heisst die Exekutive in der Schweiz auf Bundesebene? 
+a) Grosser Rat 
  
- Grosser Rat 
+b) Generalrat 
+c) Bundesrat 
+d) Landrat 
+Richtige Antwort: c 
  
- Generalrat 
+Wer wählt die sieben Mitglieder des Bundesrats? 
+a) die Parteipräsidentinnen und Parteipräsidenten 
+b) die Stimmbürgerinnen und Stimmbürger in direkter Wahl 
+c) der Rat der Ältesten 
+d) Nationalrat und Ständerat 
+Richtige Antwort: d 
  
-✔ Bundesrat 
  
- Landrat 
  
-Wer wählt die sieben Mitglieder des Bundesrats?  
- die Parteipräsidentinnen und Parteipräsidenten 
- die Stimmbürgerinnen und Stimmbürger in direkter Wahl 
+
  
- der Rat der Ältesten 
  
-✔ Nationalrat und Ständerat 
+ 
+ 
+ 
+Seite 11/78 
+ 
  
 Welche Funktion haben die Parteien in einer Demokratie? 
+a) Sie vertreten verschiedene Interessen und Anliegen der Bevölkerung. 
+b) Sie wählen die Regierung. 
+c) Sie kontrollieren die Medien. 
+d) Sie vermitteln bei Streit zwischen verschiedenen Ämtern. 
+Richtige Antwort: a 
  
-✔ Sie vertreten verschiedene Interessen und Anliegen der Bevölkerung. 
- 
- Sie wählen die Regierung. 
- 
- Sie kontrollieren die Medien. 
- 
- Sie vermitteln bei Streit zwischen verschiedenen Ämtern. 
- 
-Wie viele Unterschriften braucht es für eine Volksinitiative auf Bun-
+Wie viele Unterschriften braucht es für eine Volksinitiative auf Bun­
 desebene? 
+a) 30'000 
+b) 100'000 
+c) 500'000 
+d) 800'000 
+Richtige Antwort: b 
  
- 30'000 
- 
-✔ 100'000  
- 500'000  
- 800'000 
- 
-Was ist die Aufgabe des Ständerates?   
- Er hat nur eine repräsentative Funktion. 
- 
- Er ist die höchste juristische Instanz. 
- 
-✔ Er vertritt vor allem die Interessen der Kantone.  
- Er koordiniert die Planung der Gemeinden. 
- 
-
- 
- 
- 
- 
-Seite 10/65 
- 
+Was ist die Aufgabe des Ständerates?  
+a) Er hat nur eine repräsentative Funktion. 
+b) Er ist die höchste juristische Instanz. 
+c) Er vertritt vor allem die Interessen der Kantone. 
+d) Er koordiniert die Planung der Gemeinden. 
+Richtige Antwort: c 
  
 Was machen Nationalrat und Ständerat gemeinsam? 
+a) Sie entscheiden über internationale Verträge. 
+b) Sie wählen die Mitglieder des Bundesrats und des Bundesgerichts. 
+c) Sie entwerfen das Bundesbudget. 
+d) Sie fällen im Bundesgericht Urteile. 
+Richtige Antwort: b 
  
- Sie entscheiden über internationale Verträge.  
-✔ Sie wählen die Mitglieder des Bundesrats und des Bundesgerichts. 
- 
- Sie entwerfen das Bundesbudget. 
- 
- Sie fällen im Bundesgericht Urteile. 
- 
-Wie oft pro Jahr stimmt das Stimmvolk normalerweise in Bundesange-
+Wie oft pro Jahr stimmt das Stimmvolk normalerweise in Bundesange­
 legenheiten ab? 
- 
- 5 
- 
- 3 
- 
- 2 
- 
-✔ 4 
- 
-Wer beschliesst ein Grossteil der neuen Gesetze auf Bundesebene? 
- das Bundesgericht  
- 
- die Kantone 
- 
-✔ der Nationalrat und der Ständerat  
- 
- der Bundesrat 
- 
-Wann ist eine Initiative auf Bundesebene angenommen? 
- 
- Bei Ständemehr 
- 
- Bei Volksmehr 
- 
-✔ Bei Volksmehr und Ständemehr 
- 
- Bei Volksmehr und mindestens einem Drittel der Stände 
- 
-Durch eine Volksinitiative kann … 
- 
- der National- und Ständerat abgesetzt werden.  
-✔ die Bundesverfassung geändert werden. 
- 
- das Völkerrecht geändert werden. 
- 
- der Bundesrat ausgetauscht werden. 
- 
-Wie stimmen die meisten Stimmberechtigten ab?  
- per Gang an die Urne 
- 
- per Internet 
- 
- per Telefon 
- 
-✔ per Brief 
+a) 5 
+b) 3 
+c) 2 
+d) 4 
+Richtige Antwort: d 
  
 
  
  
  
  
-Seite 11/65 
  
+Seite 12/78 
+ 
+ 
+Wer beschliesst ein Grossteil der neuen Gesetze auf Bundesebene? 
+a) das Bundesgericht  
+b) die Kantone 
+c) der Nationalrat und der Ständerat  
+d) der Bundesrat 
+Richtige Antwort: c 
+ 
+Wann ist eine Initiative auf Bundesebene angenommen? 
+a) Bei Ständemehr 
+b) Bei Volksmehr 
+c) Bei Volksmehr und Ständemehr 
+d) Bei Volksmehr und mindestens einem Drittel der Stände 
+Richtige Antwort: c 
+ 
+Durch eine Volksinitiative kann … 
+a) der National- und Ständerat abgesetzt werden. 
+b) die Bundesverfassung geändert werden. 
+c) das Völkerrecht geändert werden. 
+d) der Bundesrat ausgetauscht werden. 
+Richtige Antwort: b 
+ 
+Wie stimmen die meisten Stimmberechtigten ab? 
+a) per Gang an die Urne 
+b) per Internet 
+c) per Telefon 
+d) per Brief 
+Richtige Antwort: d 
  
 An welchem Wochentag finden nationale Wahlen und Abstimmungen 
-statt?  
-✔ Sonntag  
- Mittwoch  
- Montag 
- Freitag 
+statt? 
+a) Sonntag 
+b) Mittwoch 
+c) Montag 
+d) Freitag 
+Richtige Antwort: a 
  
-Was ist eine wichtige Aufgabe des Bundesstaats?  
-✔ Er sorgt für soziale Sicherheit. 
  
- Er organisiert die Arbeit in Fabriken und Betrieben.  
- Er garantiert günstigen Wohnraum für alle.  
- Er gibt verschiedene Tageszeitungen in allen Landessprachen heraus. 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 13/78 
+ 
+ 
+Was ist eine wichtige Aufgabe des Bundesstaats? 
+a) Er sorgt für soziale Sicherheit. 
+b) Er organisiert die Arbeit in Fabriken und Betrieben. 
+c) Er garantiert günstigen Wohnraum für alle. 
+d) Er gibt verschiedene Tageszeitungen in allen Landessprachen heraus. 
+Richtige Antwort: a 
  
 Was ist eine wichtige Aufgabe des Bundes?  
- Er fördert die Gründung von Vereinen. 
+a) Er fördert die Gründung von Vereinen. 
+b) Er unterstützt die Gründung von Firmen. 
+c) Er sorgt für die innere und äussere Sicherheit. 
+d) Er unterhält eigene Spitäler und Kliniken. 
+Richtige Antwort: c 
  
- Er unterstützt die Gründung von Firmen. 
- 
-✔ Er sorgt für die innere und äussere Sicherheit.  
- Er unterhält eigene Spitäler und Kliniken. 
- 
-Was ist eine wichtige Aufgabe des Bundes?  
- Er finanziert die Herstellung von Autos. 
- 
-✔ Er sorgt für den Schutz der Umwelt. 
- 
- Er bestimmt die Leitzinsen der Nationalbank.  
- Er unterhält eigene Elektrizitätswerke. 
+Was ist eine wichtige Aufgabe des Bundes? 
+a) Er finanziert die Herstellung von Autos. 
+b) Er sorgt für den Schutz der Umwelt. 
+c) Er bestimmt die Leitzinsen der Nationalbank. 
+d) Er unterhält eigene Elektrizitätswerke. 
+Richtige Antwort: b 
  
 Welche ist die Schweizer Nationalfahne? 
  
  
+     a) 
  
-      a) 
-                          b)                         ✔ c)                            d) 
+                         b)                         c)                           d) 
+Richtige Antwort: c 
  
  
  
@@ -663,1215 +609,1075 @@ Welche ist die Schweizer Nationalfahne?
  
  
  
-Seite 12/65 
+ 
+Seite 14/78 
  
  
 Der Schweizer Bundesstaat besteht aus verschiedenen. . . 
- 
- Bundesländern. 
-✔ Kantonen. 
- 
- Distrikten. 
- 
- Provinzen. 
+a) Bundesländern 
+b) Kantonen. 
+c) Distrikten. 
+d) Provinzen. 
+Richtige Antwort: b 
  
 Wie viele Kantone hat der Schweizer Bundesstaat? 
- 
- 12 (10 Kantone und 2 Halbkantone) 
- 
-✔ 26 (20 Kantone und 6 Halbkantone) 
- 
- 34 (28 Kantone und 6 Halbkantone) 
- 
- 16 (12 Kantone und 4 Halbkantone) 
+a) 12 (10 Kantone und 2 Halbkantone) 
+b) 26 (20 Kantone und 6 Halbkantone) 
+c) 34 (28 Kantone und 6 Halbkantone) 
+d) 16 (12 Kantone und 4 Halbkantone) 
+Richtige Antwort: b 
  
 Wie viele politische Gemeinden gibt es in der Schweiz (Stand 2021)? 
- Etwa 50  
- Etwa 200 
- 
-✔ Etwa 2200 
- 
- Etwa 8000 
+a) Etwa 50 
+b) Etwa 200 
+c) Etwa 2200 
+d) Etwa 8000 
+Richtige Antwort: c 
  
 Die Schweiz ist ein föderalistischer Staat mit drei Staatsebenen. Was 
 ist die unterste Ebene? 
- 
- der Kanton 
- 
-✔ die Gemeinde 
- 
- der Bezirk 
- 
- der Bund 
+a) der Kanton 
+b) die Gemeinde 
+c) der Bezirk 
+d) der Bund 
+Richtige Antwort: b 
  
 Die Schweiz ist ein föderalistischer Staat mit drei Staatsebenen. Was 
 ist die oberste Ebene? 
- 
- die Gemeinde 
- 
- der Kanton 
- 
-✔ der Bund  
- die Region 
- 
-Für was ist der Bund zuständig? 
- 
- für die Organisation der Volksschule 
- 
-✔ für die Aussenpolitik 
- 
- für den Erlass von Bauordnungen 
- 
- für die Wahl der Kantonsrichterinnen und Kantonsrichter 
+a) die Gemeinde 
+b) der Kanton 
+c) der Bund 
+d) die Region 
+Richtige Antwort: c 
  
 
  
  
  
  
-Seite 13/65 
+ 
+Seite 15/78 
  
  
-Welche Staatsebene ist für das Militär zuständig?  
-✔ Bund  
- Kanton  
- Bezirk 
+Für was ist der Bund zuständig? 
+a) für die Organisation der Volksschule 
+b) für die Aussenpolitik 
+c) für den Erlass von Bauordnungen 
+d) für die Wahl der Kantonsrichterinnen und Kantonsrichter 
+Richtige Antwort: b 
  
- Gemeinde 
+Welche Staatsebene ist für das Militär zuständig? 
+a) Bund 
+b) Kanton 
+c) Bezirk 
+d) Gemeinde 
+Richtige Antwort: a 
  
-Was sind die Landessprachen der Schweiz?  
- Französisch, Italienisch, Englisch, Deutsch  
-✔ Französisch, Italienisch, Rätoromanisch, Deutsch  
- Französisch, Italienisch, Dialekte der Kantone und Rätoromanisch 
- 
- Deutsch, Französisch, Italienisch 
+Was sind die Landessprachen der Schweiz? 
+a) Französisch, Italienisch, Englisch, Deutsch 
+b) Französisch, Italienisch, Rätoromanisch, Deutsch 
+c) Französisch, Italienisch, Dialekte der Kantone und Rätoromanisch 
+d) Deutsch, Französisch, Italienisch 
+Richtige Antwort: b 
  
 Was ist eine offizielle Landessprache in der Schweiz? 
+a) Französisch 
  
-✔ Französisch 
- 
- Englisch  
- Portugiesisch 
- 
- Spanisch 
+b) Englisch 
+c) Portugiesisch 
+d) Spanisch 
+Richtige Antwort: a 
  
 Wie viele offizielle Landessprachen gibt es in der Schweiz? 
+a) 2 
+b) 3 
+c) 4 
+d) 8 
+Richtige Antwort: c 
  
- 2 
  
- 3 
  
-✔ 4  
- 8 
+
+ 
+ 
+ 
+ 
+ 
+Seite 16/78 
+ 
  
 Was ist die vierte Landessprache der Schweiz? 
- 
- Elsässisch 
- 
-✔ Rätoromanisch 
- 
- Englisch  
- Portugiesisch 
+a) Elsässisch 
+b) Rätoromanisch 
+c) Englisch 
+d) Portugiesisch 
+Richtige Antwort: b 
  
 Wer darf in der Schweiz Gewalt gegen Menschen und Sachen ausüben 
 (Gewaltmonopol)? 
- betroffene Bürgerinnen und Bürger 
- 
- die Parteien 
- 
- die Medien 
- 
-✔ der Staat (Polizei, Militär) 
-
- 
- 
- 
- 
-Seite 14/65 
- 
+a) betroffene Bürgerinnen und Bürger 
+b) die Parteien 
+c) die Medien 
+d) der Staat (Polizei, Militär) 
+Richtige Antwort: d 
  
 Wer hat auf Bundesebene die richterliche Gewalt (Judikative)? 
- 
- die Parlamentarierinnen und Parlamentarier 
- 
-✔ das Bundesgericht 
- 
- die Regierungen 
- 
- das Militär 
+a) die Parlamentarierinnen und Parlamentarier 
+b) das Bundesgericht 
+c) die Regierungen 
+d) das Militär 
+Richtige Antwort: b 
  
 Wer hat auf Bundesebene die gesetzgebende Gewalt (Legislative)? 
- der Bundesrat 
- 
- der Militärrat 
- 
-✔ das Bundesparlament (Nationalrat und Ständerat)  
- das Bundesgericht 
+a) der Bundesrat 
+b) der Militärrat 
+c) das Bundesparlament (Nationalrat und Ständerat) 
+d) das Bundesgericht 
+Richtige Antwort: c 
  
 Wer hat auf Bundesebene die ausführende Gewalt (Exekutive)? 
+a) der Bundesrat 
+b) die Parteien 
+c) das Bundesparlament (Nationalrat und Ständerat) 
+d) das Bundesverwaltungsgericht 
+Richtige Antwort: a 
  
-✔ der Bundesrat 
  
- die Parteien 
  
- das Bundesparlament (Nationalrat und Ständerat)  
- das Bundesverwaltungsgericht 
+
+ 
+ 
+ 
+ 
+ 
+Seite 17/78 
+ 
  
 Was bezeichnet man häufig als vierte Gewalt im Staat? 
- 
- die Kirche 
- 
- die Verbände und Vereine 
- 
-✔ die Medien (Zeitungen, Radio, Fernsehen)  
- die Werbung 
+a) die Kirche 
+b) die Verbände und Vereine 
+c) die Medien (Zeitungen, Radio, Fernsehen) 
+d) die Werbung 
+Richtige Antwort: c 
  
 Was ist die Aufgabe der Richterinnen und Richter? 
- Sie überwachen die Verwaltung. 
- 
-✔ Sie fällen Gerichtsurteile. 
- 
- Sie verteidigen die Angeklagten. 
- 
- Sie verfassen Gesetze. 
+a) Sie überwachen die Verwaltung. 
+b) Sie fällen Gerichtsurteile. 
+c) Sie verteidigen die Angeklagten. 
+d) Sie verfassen Gesetze. 
+Richtige Antwort: b 
  
 Was ist eine Aufgabe der Polizei? 
- 
- Sie hilft bei der Steuererklärung. 
- 
-✔ Sie verfolgt Rechtsverletzungen. 
- 
- Sie erlässt neue Gesetze. 
- 
- Sie fällt Gerichtsurteile. 
- 
- 
-
- 
- 
- 
- 
-Seite 15/65 
- 
+a) Sie hilft bei der Steuererklärung. 
+b) Sie verfolgt Rechtsverletzungen. 
+c) Sie erlässt neue Gesetze. 
+d) Sie fällt Gerichtsurteile. 
+Richtige Antwort: b 
  
 Wer darf Kriminelle verhaften? 
- 
- Zeuginnen und Zeugen eines Verbrechens  
- der Gemeinderat 
- 
-✔ die Polizei 
- 
- die Bürgerwehr 
+a) Zeuginnen und Zeugen eines Verbrechens 
+b) der Gemeinderat 
+c) die Polizei 
+d) die Bürgerwehr 
+Richtige Antwort: c 
  
 Was bedeutet Gewaltenteilung? 
+a) Polizei und Militär dürfen beide Gewalt anwenden. 
+b) Die Verteilung der Macht auf Staat und Kirche. 
+c) Die Verteilung der Staatsgewalt auf verschiedene Staatsorgane wie Regierung, 
+Parlament und Gerichte. 
+d) Die Verteilung der Macht auf den Nationalrat und den Ständerat. 
+Richtige Antwort: c 
  
- Polizei und Militär dürfen beide Gewalt anwenden.  
- Die Verteilung der Macht auf Staat und Kirche.  
-✔ Die Verteilung der Staatsgewalt auf verschiedene Staatsorgane wie Regierung, Par-
-lament und Gerichte. 
  
- Die Verteilung der Macht auf den Nationalrat und den Ständerat. 
- 
-Die Schweiz ist ein Rechtsstaat. Was bedeutet das? 
- 
-✔ Auch der Staat muss sich an die Gesetze halten. 
- 
- Die Gesetze gelten nur für die Personen, die diesen Gesetzen zugestimmt haben. 
- Die Gesetze gelten nur für Schweizer Bürgerinnen und Bürger. 
- 
- Die Gesetze gelten nicht für Politikerinnen und Politiker. 
- 
-Welches Grundrecht ist in der Bundesverfassung verankert? 
- 
- der Waffenbesitz 
- 
-✔ die Glaubens- und Gewissensfreiheit 
- 
- die persönliche Rache 
- 
- das Recht auf ein eigenes Haus 
- 
-Welches Grundrecht garantiert die Bundesverfassung? 
- 
-✔ die Meinungsfreiheit 
- 
- das Recht auf WLAN 
- 
- das Recht auf kostenlose Aus- und Weiterbildung  
- das Halten von Haustieren 
- 
-Was wird durch die Glaubens- und Gewissensfreiheit garantiert?  
- freie Schulwahl 
- 
- Freizeit  
- Versammlungsfreiheit 
- 
-✔ Religionsfreiheit 
  
 
  
  
  
  
-Seite 16/65 
  
+Seite 18/78 
+ 
+ 
+Die Schweiz ist ein Rechtsstaat. Was bedeutet das? 
+a) Auch der Staat muss sich an die Gesetze halten. 
+b) Die Gesetze gelten nur für die Personen, die diesen Gesetzen zugestimmt ha­
+ben. 
+c) Die Gesetze gelten nur für Schweizer Bürgerinnen und Bürger. 
+d) Die Gesetze gelten nicht für Politikerinnen und Politiker. 
+Richtige Antwort: a 
+ 
+Welches Grundrecht ist in der Bundesverfassung verankert? 
+a) der Waffenbesitz 
+b) die Glaubens- und Gewissensfreiheit 
+c) die persönliche Rache 
+d) das Recht auf ein eigenes Haus 
+Richtige Antwort: b 
+ 
+Welches Grundrecht garantiert die Bundesverfassung? 
+a) die Meinungsfreiheit 
+b) das Recht auf WLAN 
+c) das Recht auf kostenlose Aus- und Weiterbildung 
+d) das Halten von Haustieren 
+Richtige Antwort: a 
+ 
+Was wird durch die Glaubens- und Gewissensfreiheit garantiert? 
+a) freie Schulwahl 
+b) Freizeit 
+c) Versammlungsfreiheit 
+d) Religionsfreiheit 
+Richtige Antwort: d 
  
 Frauen und Männer sind laut Verfassung und Gesetz in der Schweiz 
 gleichberechtigt. Was heisst das? 
- Kochen ist Männersache. 
+a) Kochen ist Männersache. 
+b) Frauen und Männer haben grundsätzlich die gleichen Rechte. 
+c) In politischen Gremien müssen gleich viele Männer wie Frauen vertreten sein. 
+d) Kindererziehung ist Frauensache. 
+Richtige Antwort: b 
  
-✔ Frauen und Männer haben grundsätzlich die gleichen Rechte. 
- 
- In politischen Gremien müssen gleich viele Männer wie Frauen vertreten sein.  
- Kindererziehung ist Frauensache. 
- 
-Was ist in der Schweiz verboten?  
- 
-✔ Man darf keine falschen Behauptungen über Personen öffentlich verbreiten. 
- 
- Man darf die Regierung nicht öffentlich kritisieren.  
- Man darf eine geschlossene Ehe nicht auflösen. 
- 
- Man darf nicht an Demonstrationen teilnehmen. 
- 
-Jemand bekommt wegen seiner Hautfarbe oder seinem Geschlecht 
-eine Arbeitsstelle nicht. Welches Grundrecht wird damit verletzt?  
- das Recht auf freie Meinungsäusserung 
- 
- die Niederlassungsfreiheit 
- 
-✔ das Recht auf rechtsgleiche Behandlung (Diskriminierungsverbot) 
- 
- das Recht auf Bildung 
- 
-Welches Recht bekommen Personen erst mit der Einbürgerung? 
- 
- Sie dürfen einem Verein beitreten. 
- 
-✔ Sie dürfen an politischen Wahlen und Abstimmungen auf Bundesebene teilnehmen. 
- Sie dürfen eine Wohnung kaufen. 
- 
- Sie dürfen den Arbeitsplatz frei wählen. 
- 
-Durch was wird der Persönlichkeits- oder Datenschutz verletzt? 
- 
- Wenn der persönliche Computer nicht genügend geschützt ist. 
- 
- Wenn eine Person auf einer öffentlichen Strasse fotografiert wird. 
- 
- Wenn eine Zeitung über eine Person berichtet.  
-✔ Wenn private Informationen über einzelne Personen ohne gesetzliche Grundlage 
-oder ohne Zustimmung der Person veröffentlicht werden. 
- 
-Was verbietet die Schweizer Bundesverfassung?  
- Man darf im öffentlichen Raum keine religiösen Zeichen tragen. 
- 
- Man darf keine Sammelaktionen für notleidende Menschen durchführen. 
- 
-✔ Es darf niemand gefoltert werden. 
- 
- Man darf nicht ohne Lohn arbeiten. 
 
  
  
  
  
-Seite 17/65 
  
+Seite 19/78 
  
-Welches Recht ist in der Schweizer Bundesverfassung verankert?  
- Alle Menschen haben ein Recht auf gesunde und kostenlose Ernährung. 
- 
-✔ Das persönliche Eigentum ist geschützt. 
- 
- Man darf Haustiere halten. 
- 
- Man darf kostenlos das Internet benutzen. 
  
 Was ist in der Schweiz verboten? 
+a) Man darf keine falschen Behauptungen über Personen öffentlich verbreiten. 
+b) Man darf die Regierung nicht öffentlich kritisieren. 
+c) Man darf eine geschlossene Ehe nicht auflösen. 
+d) Man darf nicht an Demonstrationen teilnehmen. 
+Richtige Antwort: a 
  
- die Arbeit des Bundesrats zu kritisieren 
+Jemand bekommt wegen seiner Hautfarbe oder seinem Geschlecht 
+eine Arbeitsstelle nicht. Welches Grundrecht wird damit verletzt? 
+a) das Recht auf freie Meinungsäusserung 
+b) die Niederlassungsfreiheit 
+c) das Recht auf rechtsgleiche Behandlung (Diskriminierungsverbot) 
+d) das Recht auf Bildung 
+Richtige Antwort: c 
  
- ohne Bewilligung Velo zu fahren 
+Welches Recht bekommen Personen erst mit der Einbürgerung? 
+a) Sie dürfen einem Verein beitreten. 
+b) Sie dürfen an politischen Wahlen und Abstimmungen auf Bundesebene teilneh­
+men. 
+c) Sie dürfen eine Wohnung kaufen. 
+d) Sie dürfen den Arbeitsplatz frei wählen. 
+Richtige Antwort: b 
  
- im öffentlichen Raum ein religiöses Zeichen zu tragen  
-✔ andere Menschen wegen ihrer Herkunft oder Religion öffentlich zu beschimpfen 
+Durch was wird der Persönlichkeits- oder Datenschutz verletzt? 
+a) Wenn der persönliche Computer nicht genügend geschützt ist. 
+b) Wenn eine Person auf einer öffentlichen Strasse fotografiert wird. 
+c) Wenn eine Zeitung über eine Person berichtet. 
+d) Wenn private Informationen über einzelne Personen ohne gesetzliche Grund­
+lage oder ohne Zustimmung der Person veröffentlicht werden. 
+Richtige Antwort: d 
+ 
+Was verbietet die Schweizer Bundesverfassung? 
+a) Man darf im öffentlichen Raum keine religiösen Zeichen tragen. 
+b) Man darf keine Sammelaktionen für notleidende Menschen durchführen. 
+c) Es darf niemand gefoltert werden. 
+d) Man darf nicht ohne Lohn arbeiten. 
+Richtige Antwort: c 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 20/78 
+ 
+ 
+Welches Recht ist in der Schweizer Bundesverfassung verankert? 
+a) Alle Menschen haben ein Recht auf gesunde und kostenlose Ernährung. 
+b) Das persönliche Eigentum ist geschützt. 
+c) Man darf Haustiere halten. 
+d) Man darf kostenlos das Internet benutzen. 
+Richtige Antwort: b 
+ 
+Was ist in der Schweiz verboten? 
+a) die Arbeit des Bundesrats zu kritisieren 
+b) ohne Bewilligung Velo zu fahren 
+c) im öffentlichen Raum ein religiöses Zeichen zu tragen 
+d) andere Menschen wegen ihrer Herkunft oder Religion öffentlich zu beschimpfen 
+Richtige Antwort: d 
  
 Wer muss in der Schweiz Militärdienst oder Zivilschutzdienst leisten? 
-✔ junge Männer mit Schweizer Bürgerrecht 
- 
- Frauen und Männer im Alter von 20 Jahren, die mindestens 10 Jahre in der Schweiz 
-gelebt haben 
- Militärdienst ist für alle freiwillig 
- 
- junge Frauen und Männer mit einem technischen oder medizinischen Beruf 
+a) junge Männer mit Schweizer Bürgerrecht 
+b) Frauen und Männer im Alter von 20 Jahren, die mindestens 10 Jahre in der 
+Schweiz gelebt haben 
+c) Militärdienst ist für alle freiwillig 
+d) junge Frauen und Männer mit einem technischen oder medizinischen Beruf 
+Richtige Antwort: a 
  
 Zwei Jugendliche werden wegen ihrer dunklen Hautfarbe nicht ins 
 Schwimmbad hineingelassen. Gegen welches Grundrecht verstösst  
-das?  
- gegen die freie Sportbetätigung 
+das? 
+a) gegen die freie Sportbetätigung 
+b) gegen das Diskriminierungsverbot 
+c) gegen die Meinungsfreiheit 
+d) gegen die Versammlungsfreiheit 
+Richtige Antwort: b 
  
-✔ gegen das Diskriminierungsverbot 
- 
- gegen die Meinungsfreiheit 
- 
- gegen die Versammlungsfreiheit 
- 
-Welche Pflicht gilt in der Schweiz nur für Männer?  
-✔ Männer müssen bis zu einem bestimmten Alter Militärdienst oder Zivilschutzdienst 
-leisten. 
- Männer müssen bei Bedarf ein politisches Amt übernehmen. 
- 
- Männer müssen für den Unterhalt der Familie sorgen.  
- Männer müssen mehr Steuern und Krankenkassenprämien bezahlen. 
- 
- 
- 
+Welche Pflicht gilt in der Schweiz nur für Männer? 
+a) Männer müssen bis zu einem bestimmten Alter Militärdienst oder Zivilschutz­
+dienst leisten. 
+b) Männer müssen bei Bedarf ein politisches Amt übernehmen. 
+c) Männer müssen für den Unterhalt der Familie sorgen. 
+d) Männer müssen mehr Steuern und Krankenkassenprämien bezahlen. 
+Richtige Antwort: a 
 
  
  
  
  
-Seite 18/65 
+ 
+Seite 21/78 
  
  
-Was ist in einem Rechtsstaat verboten?  
- Gesetze zu kritisieren 
- 
- die Arbeit von demokratisch gewählten Behörden in Frage zu stellen 
- 
-✔ Personen grundlos zu verhaften und einzusperren  
- einer religiösen Gruppierung beizutreten 
+Was ist in einem Rechtsstaat verboten? 
+a) Gesetze zu kritisieren 
+b) die Arbeit von demokratisch gewählten Behörden in Frage zu stellen 
+c) Personen grundlos zu verhaften und einzusperren 
+d) einer religiösen Gruppierung beizutreten 
+Richtige Antwort: c 
  
 Was geschieht in der Schweiz, wenn jemand eine Straftat begeht? 
-✔ Wer gegen ein Gesetz verstossen hat, wird bestraft. 
- 
- Wer Opfer eines Verbrechens geworden ist, darf sich selber rächen. 
- 
- Wer sich selbst anzeigt, bleibt straffrei. 
- 
- Die Opfer eines Verbrechens können zwischen verschiedenen Strafen wählen. 
+a) Wer gegen ein Gesetz verstossen hat, wird bestraft. 
+b) Wer Opfer eines Verbrechens geworden ist, darf sich selber rächen. 
+c) Wer sich selbst anzeigt, bleibt straffrei. 
+d) Die Opfer eines Verbrechens können zwischen verschiedenen Strafen wählen. 
+Richtige Antwort: a 
  
 Welche Strafe verbietet die Bundesverfassung? 
- eine Gefängnisstrafe 
+a) eine Gefängnisstrafe 
+b) eine Geldstrafe 
+c) die Todesstrafe 
+d) gemeinnützige Arbeit 
+Richtige Antwort: c 
  
- eine Geldstrafe 
- 
-✔ die Todesstrafe 
- 
- gemeinnützige Arbeit 
- 
-In der Schweiz gibt es verschiedene Gesetze. Welches regelt das Mie-
+In der Schweiz gibt es verschiedene Gesetze. Welches regelt das Mie­
 ten von Wohnungen? 
-✔ Obligationenrecht (OR) 
+a) Obligationenrecht (OR) 
+b) Mehrwertsteuergesetz (MWSTG) 
+c) Strafgesetzbuch (StGB) 
+d) Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) 
+Richtige Antwort: a 
  
- Mehrwertsteuergesetz (MWSTG) 
- 
- Strafgesetzbuch (StGB) 
- 
- Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) 
- 
-In der Schweiz gibt es verschiedene Gesetze. Was regelt das Zivilge-
+In der Schweiz gibt es verschiedene Gesetze. Was regelt das Zivilge­
 setzbuch (ZGB)? 
- 
-✔ Eheschliessungen und Scheidungen 
- 
- Firmengründungen 
- 
- Strafen bei Mord und Totschlag 
- 
- Staatsverträge 
- 
- 
+a) Eheschliessungen und Scheidungen 
+b) Firmengründungen 
+c) Strafen bei Mord und Totschlag 
+d) Staatsverträge 
+Richtige Antwort: a 
  
 
  
  
  
  
-Seite 19/65 
+ 
+Seite 22/78 
  
  
-In der Schweiz gibt es verschiedene Gesetze. Welches regelt, ob je-
+In der Schweiz gibt es verschiedene Gesetze. Welches regelt, ob je­
 mand ins Gefängnis muss? 
- Obligationenrecht (OR) 
+a) Obligationenrecht (OR) 
+b) Zivilgesetzbuch (ZGB) 
+c) Strafgesetzbuch (StGB) 
+d) Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) 
+Richtige Antwort: c 
  
- Zivilgesetzbuch (ZGB) 
+Wie werden Richterinnen und Richter am Bundesgericht ernannt? 
+a) Durch die Kantonsparlamente. Jeder Kanton kann einen Richter stellen. 
+b) Durch ein normales Bewerbungsverfahren mit Vorstellungsgespräch. 
+c) Durch Wahl des Bundesparlaments. 
+d) Der Bundesrat hat das Recht, Richter einzusetzen. 
+Richtige Antwort: c 
  
-✔ Strafgesetzbuch (StGB) 
- 
- Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) 
- 
-Wie werden Richterinnen und Richter am Bundesgericht ernannt?  
- Durch die Kantonsparlamente. Jeder Kanton kann einen Richter stellen. 
- 
- Durch ein normales Bewerbungsverfahren mit Vorstellungsgespräch. 
- 
-✔ Durch Wahl des Bundesparlaments. 
- 
- Der Bundesrat hat das Recht, Richter einzusetzen. 
- 
-Dürfen Schweizer Bürgerinnen und Bürger an andere Länder ausgelie-
+Dürfen Schweizer Bürgerinnen und Bürger an andere Länder ausgelie­
 fert werden? 
- 
- Nein. Dies ist unter keinen Umständen erlaubt.  
- Ja, aber nur an Länder welche demokratisch organisiert sind. 
- 
- Ja, aber nur wenn die Straftat auch in der Schweiz strafbar ist. 
- 
-✔ Grundsätzlich nicht. Ausgenommen für Prozesse vor internationalen Gerichten. 
+a) Nein. Dies ist unter keinen Umständen erlaubt. 
+b) Ja, aber nur an Länder welche demokratisch organisiert sind. 
+c) Ja, aber nur wenn die Straftat auch in der Schweiz strafbar ist. 
+d) Grundsätzlich nicht. Ausgenommen für Prozesse vor internationalen Gerichten. 
+Richtige Antwort: d 
  
 Von was hängt die individuelle Steuerbelastung ab? 
+a) vom steuerbaren Einkommen und Vermögen 
+b) von der Mitgliedschaft bei einer Partei 
+c) von der Nationalität 
+d) von der Mitgliedschaft in einer Behörde 
+Richtige Antwort: a 
  
-✔ vom steuerbaren Einkommen und Vermögen 
  
- von der Mitgliedschaft bei einer Partei 
+
  
- von der Nationalität 
  
- von der Mitgliedschaft in einer Behörde 
+ 
+ 
+ 
+Seite 23/78 
+ 
+ 
 1.2 
 Kanton 
-Wie viele Regierungsräte hat der Kanton Zürich?  
- 3 
- 
- 250  
-✔ 7  
- 180 
- 
- 
- 
-
- 
- 
- 
- 
-Seite 20/65 
- 
+Wie viele Regierungsräte hat der Kanton Zürich? 
+a) 3 
+b) 250 
+c) 7 
+d) 180 
+Richtige Antwort: c 
  
 Wie heisst eine Direktion des Kanton Zürichs?  
- Tourismusdirektion 
- 
-✔ Baudirektion 
- 
- Ernährungsdirektion 
- 
- Militärdirektion 
+a) Tourismusdirektion 
+b) Baudirektion 
+c) Ernährungsdirektion 
+d) Militärdirektion 
+Richtige Antwort: b 
  
 Wie heisst in der Stadt Zürich die Exekutive? 
+a) Stadtrat 
+b) Nationalrat 
+c) Regierungsrat 
+d) Bundesrat 
+Richtige Antwort: a 
  
-✔ Stadtrat  
- Nationalrat 
+Was ist eine Aufgabe des Kantons Zürich? 
+a) Abschluss von Verträgen mit der Europäischen Union 
+b) Organisation der Universität 
+c) Digitalisierung der Bundesverwaltung 
+d) Organisation der Armee 
+Richtige Antwort: b 
  
- Regierungsrat 
+Wie viele Bezirke gibt es im Kanton Zürich? 
+a) 12 
+b) 18 
+c) 7 
+d) 25 
+Richtige Antwort: a 
  
- Bundesrat 
- 
-Was ist eine Aufgabe des Kantons Zürich?  
- Abschluss von Verträgen mit der Europäischen Union  
-✔ Organisation der Universität 
- 
- Digitalisierung der Bundesverwaltung 
- 
- Organisation der Armee 
- 
-Wie viele Bezirke gibt es im Kanton Zürich?  
-✔ 12 
- 
- 18 
- 
- 7 
- 
- 25 
- 
-Wie können im Kanton Zürich auch Personen ohne Schweizer Pass 
-politisch aktiv werden? 
- 
- mit einem Referendum. 
- 
-✔ mit einer Petition. 
-  
- mit einem Einsitz in die Regierung. 
- 
- mit einem parlamentarischen Kommissionsantrag. 
- 
-Wie viele Mitglieder hat die Regierung des Kantons Zürich? 
- 
-✔ 7  
- 3 
- 
- 5 
- 
- je nach Aufgaben, die anstehen. 
 
  
  
  
  
-Seite 21/65 
+ 
+Seite 24/78 
  
  
-Für was sind die Kantone vor allem zuständig?  
-✔ für die Leitung der kantonalen Verwaltung und für kantonale Gesetze 
+Wie können im Kanton Zürich auch Personen ohne Schweizer Pass po­
+litisch aktiv werden? 
+a) mit einem Referendum. 
+b) mit einer Petition. 
+c) mit einem Einsitz in die Regierung. 
+d) mit einem parlamentarischen Kommissionsantrag. 
+Richtige Antwort: b 
  
- für die Innen- und Aussenpolitik auf nationaler Ebene  
- für die nationale Verteidigung (Militär) 
+Wie viele Mitglieder hat die Regierung des Kantons Zürich? 
+a) 7 
+b) 3 
+c) 5 
+d) je nach Aufgaben, die anstehen. 
+Richtige Antwort: a 
  
- für die Geldpolitik und die Zölle 
+Für was sind die Kantone vor allem zuständig? 
+a) für die Leitung der kantonalen Verwaltung und für kantonale Gesetze 
+b) für die Innen- und Aussenpolitik auf nationaler Ebene 
+c) für die nationale Verteidigung (Militär) 
+d) für die Geldpolitik und die Zölle 
+Richtige Antwort: a 
  
 Wie oft werden die Mitglieder des Kantonsrats gewählt? 
- 
- alle 6 Jahre 
- 
- alle 2 Jahre 
- 
- alle 7 Jahre 
- 
-✔ alle 4 Jahre 
+a) alle 6 Jahre 
+b) alle 2 Jahre 
+c) alle 7 Jahre 
+d) alle 4 Jahre 
+Richtige Antwort: d 
  
 Wie heisst die Exekutive im Kanton Zürich?  
- Landammann 
+a) Landammann 
+b) Regierungsrat 
+c) Ständerat 
+d) Es gibt keine Exekutive. 
+Richtige Antwort: b 
  
-✔ Regierungsrat 
  
- Ständerat 
+
  
- Es gibt keine Exekutive. 
  
-Welches ist das Wappen des Kantons Zürich?  
+ 
+ 
+ 
+Seite 25/78 
+ 
+ 
+Welches ist das Wappen des Kantons Zürich? 
  
     
    
    
  
-  a)                    b)                  ✔ c)                    d) 
+ a)                   b)                  c)                   d) 
+ 
+Richtige Antwort: c 
  
 Wie viele Personen sind für den Kanton Zürich im Ständerat? 
- 
- 13 
- 
- 5 
- 
-✔ 2  
- 7 
+a) 13 
+b) 5 
+c) 2 
+d) 7 
+Richtige Antwort: c 
  
 Wie heisst das Parlament im Kanton Zürich? 
+a) Landtag 
+b) Grosser Rat 
  
- Landtag  
- Grosser Rat 
+c) Kantonsrat 
+d) Regierungsrat 
+Richtige Antwort: c 
  
-✔ Kantonsrat 
+Wie werden die Mitglieder der Zürcher Regierung bestimmt? 
+a) Sie werden von den Parteien ernannt. 
+b) Sie werden vom Kantonsrat gewählt. 
+c) Sie werden auf Parteiversammlungen gewählt. 
+d) Sie werden von den Zürcher Stimmbürgerinnen und Stimmbürgern gewählt. 
+Richtige Antwort: d 
  
- Regierungsrat 
+ 
 
  
  
  
  
-Seite 22/65 
  
+Seite 26/78 
  
-Wie werden die Mitglieder der Zürcher Regierung bestimmt? 
- 
- Sie werden von den Parteien ernannt. 
- 
- Sie werden vom Kantonsrat gewählt. 
- 
- Sie werden auf Parteiversammlungen gewählt.  
-✔ Sie werden von den Zürcher Stimmbürgerinnen und Stimmbürgern gewählt. 
  
 Wer stellt im Kanton Zürich die Führerausweise für Autofahrerinnen 
 und Autofahrer aus? 
- 
- die Gemeinde 
- 
-✔ das Strassenverkehrsamt 
- 
- die Verkehrsverbände 
- 
- die Verkehrspolizei 
+a) die Gemeinde 
+b) das Strassenverkehrsamt 
+c) die Verkehrsverbände 
+d) die Verkehrspolizei 
+Richtige Antwort: b 
  
 Wer darf Motorfahrzeuge für den Verkehr zulassen? 
- 
- die Gemeinde 
- 
- die grossen Autogaragen 
- 
-✔ das Strassenverkehrsamt 
- 
- die Verkehrspolizei 
+a) die Gemeinde 
+b) die grossen Autogaragen 
+c) das Strassenverkehrsamt 
+d) die Verkehrspolizei 
+Richtige Antwort: c 
  
 Wie werden die Mitglieder des Kantonsrats bestimmt? 
+a) durch Wahlen 
+b) durch Ernennung von der Kantonsregierung 
+c) durch das eidgenössische Parlament 
+d) durch die Ständeräte des Kantons 
+Richtige Antwort: a 
  
-✔ durch Wahlen 
  
- durch Ernennung von der Kantonsregierung 
+
  
- durch das eidgenössische Parlament 
  
- durch die Ständeräte des Kantons 
+ 
+ 
+ 
+Seite 27/78 
+ 
  
 1.3 
 Gemeinde 
-Was passiert an einer Gemeindeversammlung?  
-✔ Die Stimmbürgerinnen und Stimmbürger entscheiden über das Budget. 
+Was passiert an einer Gemeindeversammlung? 
+a) Die Stimmbürgerinnen und Stimmbürger entscheiden über das Budget. 
+b) Die Einwohnerinnen und Einwohner feiern ein Fest. 
+c) Die Stimmbürgerinnen und Stimmbürger wählen den Chef oder die Chefin der 
+Feuerwehr. 
+d) Die Stimmbürgerinnen und Stimmbürger beschliessen neue nationale Gesetze. 
+Richtige Antwort: a 
  
- Die Einwohnerinnen und Einwohner feiern ein Fest. 
- 
- Die Stimmbürgerinnen und Stimmbürger wählen den Chef oder die Chefin der Feu-
-erwehr.  
- Die Stimmbürgerinnen und Stimmbürger beschliessen neue nationale Gesetze. 
- 
-
- 
- 
- 
- 
-Seite 23/65 
- 
- 
-Wer wählt den Gemeinderat der Stadt Zürich?  
- der Kantonsrat 
- 
- der Regierungsrat 
- 
- der Bezirksrat 
- 
-✔ das Volk 
+Wer wählt den Gemeinderat der Stadt Zürich? 
+a) der Kantonsrat 
+b) der Regierungsrat 
+c) der Bezirksrat 
+d) das Volk 
+Richtige Antwort: d 
  
 Was ist eine Aufgabe von Zürcher Gemeinden?  
- Sie bauen Autobahnen. 
+a) Sie bauen Autobahnen. 
+b) Sie führen das Militär. 
+c) Sie verkaufen Versicherungen. 
+d) Sie organisieren die Primarschule. 
+Richtige Antwort: d 
  
- Sie führen das Militär. 
- 
- Sie verkaufen Versicherungen. 
- 
-✔ Sie organisieren die Primarschule. 
- 
-Wer erteilt die Baubewilligung für ein Einfamilienhaus im Kanton Zü-
+Wer erteilt die Baubewilligung für ein Einfamilienhaus im Kanton Zü­
 rich?  
- der Nachbar 
+a) der Nachbar 
+b) die Gemeinde 
+c) das Quartierkomitee 
+d) die Architektin 
+Richtige Antwort: b 
  
-✔ die Gemeinde 
- 
- das Quartierkomitee 
- 
- die Architektin 
- 
-Für was sind die Gemeinden zuständig?  
- für die Organisation von privaten Geburtstagsfesten 
- 
- für die Aussenpolitik 
- 
-✔ für die lokale Raumplanung 
- 
- für das Militär 
- 
-Wer zählt bei politischen Abstimmungen die Stimmzettel? 
- 
- das Militärbüro 
- 
-✔ das Wahlbüro 
- 
- die Stimmbürgerinnen und Stimmbürger selber  
- die Polizei 
- 
-Bürgerinnen und Bürger können auf Gemeindeebene politisch ent-
-scheiden, indem sie . . . 
- regelmässig an Volksfesten teilnehmen. 
- 
- die Steuern rechtzeitig bezahlen. 
- 
- in Vereinen mitwirken. 
- 
-✔ an Wahlen und Abstimmungen teilnehmen. 
+Für was sind die Gemeinden zuständig? 
+a) für die Organisation von privaten Geburtstagsfesten 
+b) für die Aussenpolitik 
+c) für die lokale Raumplanung 
+d) für das Militär 
+Richtige Antwort: c 
 
  
  
  
  
-Seite 24/65 
  
+Seite 28/78 
+ 
+ 
+Wer zählt bei politischen Abstimmungen die Stimmzettel? 
+a) das Militärbüro 
+b) das Wahlbüro 
+c) die Stimmbürgerinnen und Stimmbürger selber 
+d) die Polizei 
+Richtige Antwort: b 
+ 
+Bürgerinnen und Bürger können auf Gemeindeebene politisch ent­
+scheiden, indem sie . . . 
+a) regelmässig an Volksfesten teilnehmen. 
+b) die Steuern rechtzeitig bezahlen. 
+c) in Vereinen mitwirken. 
+d) an Wahlen und Abstimmungen teilnehmen. 
+Richtige Antwort: d 
  
 Wer leitet die Verwaltung und plant die Ziele öffentlichen Handelns 
 der Stadt Zürich? 
- 
- die Stadtkanzlei 
- 
-✔ der Stadtrat 
- 
- die Einwohnerkontrolle 
- 
- die Einwohnerinnen und Einwohner der Stadt 
+a) die Stadtkanzlei 
+b) der Stadtrat 
+c) die Einwohnerkontrolle 
+d) die Einwohnerinnen und Einwohner der Stadt 
+Richtige Antwort: b 
  
 Wofür ist die Gemeinde zuständig? 
- 
- Fachhochschulen 
- 
- Geldpolitik 
- 
- Zivildienst 
- 
-✔ Einwohnerkontrolle 
+a) Fachhochschulen 
+b) Geldpolitik 
+c) Zivildienst 
+d) Einwohnerkontrolle 
+Richtige Antwort: d 
  
 Wie viele Gemeinden gibt es im Kanton Zürich? 
+a) zwischen 30 und 50 
+b) zwischen 150 und 170 
+c) zwischen 420 und 440 
+d) zwischen 300 und 320 
+Richtige Antwort: b 
+
  
- zwischen 30 und 50 
  
-✔ zwischen 150 und 170 
  
- zwischen 420 und 440 
  
- zwischen 300 und 320 
  
-Wie nennt man die oberste Repräsentantin oder den obersten Reprä-
+Seite 29/78 
+ 
+ 
+Wie nennt man die oberste Repräsentantin oder den obersten Reprä­
 sentanten in kleineren Zürcher Gemeinden? 
- 
- Bürgermeisterin oder Bürgermeister 
- 
- Gemeindeammann 
- 
- Bezirksamtmann 
- 
-✔ Gemeindepräsidentin oder Gemeindepräsident 
+a) Bürgermeisterin oder Bürgermeister 
+b) Gemeindeammann 
+c) Bezirksamtmann 
+d) Gemeindepräsidentin oder Gemeindepräsident 
+Richtige Antwort: d 
 2 
 Sozialstaat und Zivilgesellschaft 
 2.1 
 Bund 
 Die Steuererklärung ... 
- 
- beschreibt das Vorgehen bei Abgabe der Steuer.  
-✔ weist die finanzielle Situation des Steuerzahlenden gegenüber der Steuerbehörde 
-aus. 
- belegt gegenüber der Steuerbehörde die Lotteriegewinne.  
- beschreibt, wie man die Formulare für die Steuerbehörde ausfüllen muss. 
-
- 
- 
- 
- 
-Seite 25/65 
- 
+a) beschreibt das Vorgehen bei Abgabe der Steuer. 
+b) weist die finanzielle Situation des Steuerzahlenden gegenüber der Steuerbe­
+hörde aus. 
+c) belegt gegenüber der Steuerbehörde die Lotteriegewinne. 
+d) beschreibt, wie man die Formulare für die Steuerbehörde ausfüllen muss. 
+Richtige Antwort: b 
  
 Was ist ein Arbeitszeugnis? 
- 
- eine Liste aller bisherigen Arbeitsstellen eines Arbeitsnehmers 
- 
- eine vom Arbeitnehmer bewertete Leistung des Arbeitsgebers 
- 
- ein Vertrag zwischen Arbeitnehmer-Verbänden und Arbeitgeber-Verbänden über die 
-Arbeitsbedingungen in einer bestimmten Branche  
-✔ vom Arbeitgeber ausgestellte Urkunde, die Auskunft über die Leistung und das Ver-
-halten des Arbeitnehmers macht 
+a) eine Liste aller bisherigen Arbeitsstellen eines Arbeitsnehmers 
+b) eine vom Arbeitnehmer bewertete Leistung des Arbeitsgebers 
+c) ein Vertrag zwischen Arbeitnehmer-Verbänden und Arbeitgeber-Verbänden 
+über die Arbeitsbedingungen in einer bestimmten Branche 
+d) vom Arbeitgeber ausgestellte Urkunde, die Auskunft über die Leistung und das 
+Verhalten des Arbeitnehmers macht 
+Richtige Antwort: d 
  
 Welche Versicherung im Gesundheitswesen ist Pflicht? 
- 
- die Versicherung für Alternativmedizin 
- 
- die zahnmedizinische Versicherung 
- 
- die Zusatzversicherung 
- 
-✔ die obligatorische Krankenpflegeversicherung 
- 
-Arbeitnehmende und Selbständigerwerbende mit Kindern haben An-
-spruch auf … 
- Kinderbegünstigung. 
- 
- Elternentlastung. 
- 
-✔ Familienzulage. 
- 
- Finanzhilfe. 
- 
-Der Zivildienst in der Schweiz ist ...  
- für alle Männer und Frauen obligatorisch.  
- ein freiwilliger Einsatz für die Gesellschaft.  
-✔ ein Ersatz zum Militärdienst. 
- 
- ein Freifach der obligatorischen Schule. 
- 
-Welche Aussage zur obligatorischen Versicherung in einer Kranken-
-kasse in der Schweiz ist richtig? 
- Jede Krankenkasse bestimmt ihre Leistungen selbst. 
- 
-✔ Man kann die Krankenkasse frei wählen. 
- 
- Es ist freiwillig, eine Krankenkasse zu haben.  
- Der Kanton kann seinen Einwohnerinnen und Einwohnern eine Krankenkasse zuteilen. 
- 
- 
- 
+a) die Versicherung für Alternativmedizin 
+b) die zahnmedizinische Versicherung 
+c) die Zusatzversicherung 
+d) die obligatorische Krankenpflegeversicherung 
+Richtige Antwort: d 
 
  
  
  
  
-Seite 26/65 
  
+Seite 30/78 
+ 
+ 
+Arbeitnehmende und Selbständigerwerbende mit Kindern haben An­
+spruch auf … 
+a) Kinderbegünstigung. 
+b) Elternentlastung. 
+c) Familienzulage. 
+d) Finanzhilfe. 
+Richtige Antwort: c 
+ 
+Der Zivildienst in der Schweiz ist ... 
+a) für alle Männer und Frauen obligatorisch. 
+b) ein freiwilliger Einsatz für die Gesellschaft. 
+c) ein Ersatz zum Militärdienst. 
+d) ein Freifach der obligatorischen Schule. 
+Richtige Antwort: c 
+ 
+Welche Aussage zur obligatorischen Versicherung in einer Kranken­
+kasse in der Schweiz ist richtig? 
+a) Jede Krankenkasse bestimmt ihre Leistungen selbst. 
+b) Man kann die Krankenkasse frei wählen. 
+c) Es ist freiwillig, eine Krankenkasse zu haben. 
+d) Der Kanton kann seinen Einwohnerinnen und Einwohnern eine Krankenkasse zu­
+teilen. 
+Richtige Antwort: b 
  
 Wann dürfen Einwohnerinnen und Einwohner ohne Schweizer Pass an 
-nationalen Abstimmungen teilnehmen?  
- nur bei Abstimmungen über Volksinitiativen 
+nationalen Abstimmungen teilnehmen? 
+a) nur bei Abstimmungen über Volksinitiativen 
+b) nur bei nationalen Referenden 
+c) Sie dürfen gar nicht abstimmen. 
+d) nur bei den Abstimmungen Ende Jahr 
+Richtige Antwort: c 
  
- nur bei nationalen Referenden 
  
-✔ Sie dürfen gar nicht abstimmen. 
  
- nur bei den Abstimmungen Ende Jahr 
- 
-Für was steht in der Schweiz die Nummer 117? 
-✔ für den Polizeinotruf 
- 
- für die Auskunft 
- 
- für die Abfallentsorgungsstelle 
- 
- für den Pannendienst 
- 
-Was gehört zum Schweizer Sozialversicherungs-Systems? 
- 
-✔ Schutz vor Folgen bei Krankheit und Unfall  
- Schutz vor Einbrechern 
- 
- Schutz vor Hochwasser und Unwetter 
- 
- Schutz vor privatem Kommunikationsmissbrauch 
- 
-Für was gibt es in der Schweiz eine Sozialversicherung? 
- 
- wenn man einen Zahn verliert 
- 
-✔ wenn man die Stelle verliert 
- 
- wenn das Velo gestohlen wird 
- 
- wenn man sich scheiden lässt 
- 
-Was ist eine Schweizer Sozialversicherung? 
- 
- Schulvorsorge 
- 
- Jugend- und Freizeitvorsorge 
- 
-✔ Alters-, Hinterlassenen- und Invalidenversicherung (AHV/IV) 
- 
- Scheidungsvorsorge 
- 
-Was ist die erste Säule der Altersvorsorge?  
- das bedingungslose Grundeinkommen 
- 
- die Pensionskasse 
- 
- der Grundpfeiler des Schweizer Parlamentsgebäudes  
-✔ die AHV (Alters-, Hinterlassenen- und Invalidenversicherung) 
 
  
  
  
  
-Seite 27/65 
+ 
+Seite 31/78 
+ 
+ 
+Für was steht in der Schweiz die Nummer 117? 
+a) für den Polizeinotruf 
+b) für die Auskunft 
+c) für die Abfallentsorgungsstelle 
+d) für den Pannendienst 
+Richtige Antwort: a 
+ 
+Was gehört zum Schweizer Sozialversicherungs-Systems? 
+a) Schutz vor Folgen bei Krankheit und Unfall 
+b) Schutz vor Einbrechern 
+c) Schutz vor Hochwasser und Unwetter 
+d) Schutz vor privatem Kommunikationsmissbrauch 
+Richtige Antwort: a 
+ 
+Für was gibt es in der Schweiz eine Sozialversicherung? 
+a) wenn man einen Zahn verliert 
+b) wenn man die Stelle verliert 
+c) wenn das Velo gestohlen wird 
+d) wenn man sich scheiden lässt 
+Richtige Antwort: b 
+ 
+Was ist eine Schweizer Sozialversicherung? 
+a) Schulvorsorge 
+b) Jugend- und Freizeitvorsorge 
+c) Alters-, Hinterlassenen- und Invalidenversicherung (AHV/IV) 
+d) Scheidungsvorsorge 
+Richtige Antwort: c 
+ 
+Was ist die erste Säule der Altersvorsorge?  
+a) das bedingungslose Grundeinkommen 
+b) die Pensionskasse 
+c) der Grundpfeiler des Schweizer Parlamentsgebäudes 
+d) die AHV (Alters-, Hinterlassenen- und Invalidenversicherung) 
+Richtige Antwort: d 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 32/78 
  
  
 Was ist die zweite Säule der Altersvorsorge? 
- 
- ein Denkmal auf dem Bundesplatz 
- 
-✔ die Pensionskasse 
- 
- die Krankenversicherung 
- 
- eine Erbschaft 
+a) ein Denkmal auf dem Bundesplatz 
+b) die Pensionskasse 
+c) die Krankenversicherung 
+d) eine Erbschaft 
+Richtige Antwort: b 
  
 Was ist die dritte Säule der Altersvorsorge?  
-✔ die private Vorsorge 
+a) die private Vorsorge 
+b) der Dienstleistungssektor 
+c) die Invalidenversicherung 
+d) der Erwerbsersatz 
+Richtige Antwort: a 
  
- der Dienstleistungssektor 
- 
- die Invalidenversicherung 
- 
- der Erwerbsersatz 
- 
-Für was setzt sich Amnesty International ein?  
- für die Senkung des CO2 
- 
- für die Artenvielfalt 
- 
- für das Tierwohl 
- 
-✔ für die Achtung der Menschenrechte 
+Für was setzt sich Amnesty International ein? 
+a) für die Senkung des CO2 
+b) für die Artenvielfalt 
+c) für das Tierwohl 
+d) für die Achtung der Menschenrechte 
+Richtige Antwort: d 
  
 Wer setzt sich für die Rechte von Arbeitnehmenden ein? 
+a) Kirchen 
+b) Gewerkschaften 
+c) Spitäler 
+d) Schulen 
+Richtige Antwort: b 
  
- Kirchen  
-✔ Gewerkschaften 
- 
- Spitäler  
- Schulen 
- 
-In der Schweiz sind seit 2002 Abtreibungen mit der Fristenlösung ge-
+In der Schweiz sind seit 2002 Abtreibungen mit der Fristenlösung ge­
 regelt. Was bedeutet das? 
+a) Eine Frau darf bis zur 12. Woche der Schwangerschaft frei entscheiden, ob sie 
+das Kind behalten will. 
+b) Eine Frau braucht die Erlaubnis ihres Ehemannes, um abzutreiben. 
+c) Abtreibung ist in jedem Fall verboten. 
+d) Abtreibung ist nur erlaubt, wenn die Eltern nicht verheiratet sind. 
+Richtige Antwort: a 
  
-✔ Eine Frau darf bis zur 12. Woche der Schwangerschaft frei entscheiden, ob sie das 
-Kind behalten will. 
- Eine Frau braucht die Erlaubnis ihres Ehemannes, um abzutreiben. 
+
  
- Abtreibung ist in jedem Fall verboten. 
  
- Abtreibung ist nur erlaubt, wenn die Eltern nicht verheiratet sind. 
+ 
+ 
+ 
+Seite 33/78 
+ 
  
 Was bedeutet AHV? 
- 
-✔ Alters- und Hinterlassenenversicherung 
- 
- Auto- und Heimreiseversicherung 
- 
- Arbeits- und Haushaltsversicherung 
- 
- Amt für Hausverwaltung 
-
- 
- 
- 
- 
-Seite 28/65 
- 
+a) Alters- und Hinterlassenenversicherung 
+b) Auto- und Heimreiseversicherung 
+c) Arbeits- und Haushaltsversicherung 
+d) Amt für Hausverwaltung 
+Richtige Antwort: a 
  
 Welche staatliche Unterstützung bekommen alle Familien in der 
-Schweiz?  
- keine Unterstützung 
- 
- kostenlose Zugfahrten und Busfahrten 
- 
- Stipendien für Jugendliche in Ausbildung  
-✔ Kinderzulagen 
+Schweiz? 
+a) keine Unterstützung 
+b) kostenlose Zugfahrten und Busfahrten 
+c) Stipendien für Jugendliche in Ausbildung 
+d) Kinderzulagen 
+Richtige Antwort: d 
  
 Welche Versicherung ist in der Schweiz obligatorisch? 
- 
-✔ die Alters- und Hinterlassenenversicherung (AHV)  
- die Jugendversicherung (JV) 
- 
- die Lebensversicherung (LV) 
- 
- die Geburtenversicherung (GV) 
+a) die Alters- und Hinterlassenenversicherung (AHV)  
+b) die Jugendversicherung (JV) 
+c) die Lebensversicherung (LV) 
+d) die Geburtenversicherung (GV) 
+Richtige Antwort: a 
  
 Wenn man mit der Steuerrechnung nicht einverstanden ist, . . . 
- 
- bezahlt man vorläufig nur die Hälfte des Betrags.  
- muss man sie an die Steuerbehörden zurück schicken.  
- muss man sich bei der Polizei melden. 
- 
-✔ kann man bei der Steuerbehörde schriftlich seine Einwände dagegen mitteilen. 
+a) bezahlt man vorläufig nur die Hälfte des Betrags. 
+b) muss man sie an die Steuerbehörden zurück schicken. 
+c) muss man sich bei der Polizei melden. 
+d) kann man bei der Steuerbehörde schriftlich seine Einwände dagegen mitteilen. 
+Richtige Antwort: d 
  
 Wie unterstützt der Staat in der Schweiz die Familien? 
+a) Es gibt keine Unterstützung. 
+b) mit kostenlosem Internet 
+c) mit kostengünstigen Lebensmitteln 
+d) mit Steuerabzügen 
+Richtige Antwort: d 
  
- Es gibt keine Unterstützung. 
  
- mit kostenlosem Internet 
  
- mit kostengünstigen Lebensmitteln 
- 
-✔ mit Steuerabzügen 
- 
-Was finanziert der Staat mit Steuergeldern? 
- Arztpraxen 
- 
- Kinos 
- 
-✔ Schulen 
- Hotels 
- 
-Was ist eine Sozialversicherung in der Schweiz? 
- 
- die Auto- und Insassenversicherung (AIV)  
-✔ die Invalidenversicherung (IV) 
- 
- die Diebstahlversicherung (DV) 
- 
- die Bau- und Feuerversicherung (BFV) 
 
  
  
  
  
-Seite 29/65 
  
+Seite 34/78 
+ 
+ 
+Was finanziert der Staat mit Steuergeldern? 
+a) Arztpraxen 
+b) Kinos 
+c) Schulen 
+d) Hotels 
+Richtige Antwort: c 
+ 
+Was ist eine Sozialversicherung in der Schweiz? 
+a) die Auto- und Insassenversicherung (AIV) 
+b) die Invalidenversicherung (IV) 
+c) die Diebstahlversicherung (DV) 
+d) die Bau- und Feuerversicherung (BFV) 
+Richtige Antwort: b 
  
 Was wird Angestellten direkt vom Lohn abgezogen? Der Beitrag für 
 die . . . 
- 
- Auto- und Unfallversicherung (AUV). 
- 
-✔ Arbeitslosenversicherung (ALV). 
- 
- Diebstahlversicherung (DV). 
- 
- Brandschutzversicherung (BSV). 
+a) Auto- und Unfallversicherung (AUV). 
+b) Arbeitslosenversicherung (ALV). 
+c) Diebstahlversicherung (DV). 
+d) Brandschutzversicherung (BSV). 
+Richtige Antwort: b 
  
 Was ist das RAV? 
- 
-✔ Regionales Arbeitsvermittlungszentrum 
- 
- Rechtsstelle für Allgemeine Versicherungen 
- 
- Institut für Rechtsfragen 
- 
- Rentenanstalt 
+a) Regionales Arbeitsvermittlungszentrum 
+b) Rechtsstelle für Allgemeine Versicherungen 
+c) Institut für Rechtsfragen 
+d) Rentenanstalt 
+Richtige Antwort: a 
  
 Was bedeutet die Abkürzung IV? 
+a) Interessensvertretung 
+b) Internationales Verfahren 
+c) Inakzeptables Vorkommen 
+d) Invalidenversicherung 
+Richtige Antwort: d 
  
- Interessensvertretung 
  
- Internationales Verfahren 
  
- Inakzeptables Vorkommen 
- 
-✔ Invalidenversicherung 
- 
-Wer muss sich bei einer Krankenkasse versichern lassen? 
- 
- niemand  
- nur Arbeitnehmerinnen und Arbeitnehmer  
- nur Kinder und ältere Menschen 
- 
-✔ alle Einwohnerinnen und Einwohner 
- 
-Wer übernimmt die Spitalkosten bei einem schweren Arbeitsunfall? 
- die betroffene Person selbst 
- 
-✔ die Berufsunfallversicherung 
- 
- die Gewerkschaft 
- 
- die Arbeitgeberin oder der Arbeitgeber 
- 
-Welche Versicherung ist in der Schweiz obligatorisch? 
- 
- Haftpflichtversicherung 
- 
-✔ Krankenversicherung 
- 
- Arbeitsversicherung 
- 
- Vermögensversicherung 
 
  
  
  
  
-Seite 30/65 
  
+Seite 35/78 
+ 
+ 
+Wer muss sich bei einer Krankenkasse versichern lassen? 
+a) niemand 
+b) nur Arbeitnehmerinnen und Arbeitnehmer 
+c) nur Kinder und ältere Menschen 
+d) alle Einwohnerinnen und Einwohner 
+Richtige Antwort: d 
+ 
+Wer übernimmt die Spitalkosten bei einem schweren Arbeitsunfall? 
+a) die betroffene Person selbst 
+b) die Berufsunfallversicherung 
+c) die Gewerkschaft 
+d) die Arbeitgeberin oder der Arbeitgeber 
+Richtige Antwort: b 
+ 
+Welche Versicherung ist in der Schweiz obligatorisch? 
+a) Haftpflichtversicherung 
+b) Krankenversicherung 
+c) Arbeitsversicherung 
+d) Vermögensversicherung 
+Richtige Antwort: b 
  
 Was ist das BAG? 
- 
- die Bereitstellung allgemeiner Gesundheitsleistungen  
-✔ das Bundesamt für Gesundheit 
- 
- das Bundesamt für allgemeine Grundversorgung 
- 
- das Kontrollorgan des Bundes für allgemeine Grundversicherungen 
+a) die Bereitstellung allgemeiner Gesundheitsleistungen 
+b) das Bundesamt für Gesundheit 
+c) das Bundesamt für allgemeine Grundversorgung 
+d) das Kontrollorgan des Bundes für allgemeine Grundversicherungen 
+Richtige Antwort: b 
  
 Für was steht in der Schweiz die Nummer 144? 
-✔ für den Sanitätsnotruf 
+a) für den Sanitätsnotruf 
+b) für die Feuerwehrzentrale 
+c) für die Polizeizentrale 
+d) für die Auskunft 
+Richtige Antwort: a 
  
- für die Feuerwehrzentrale 
  
- für die Polizeizentrale 
  
- für die Auskunft 
+
+ 
+ 
+ 
+ 
+ 
+Seite 36/78 
+ 
  
 Ab wann muss ein Kind in der Schweiz eine Krankenversicherung  
 haben? 
- 
- ab spätestens einem Jahr nach der Geburt  
- ab Schuleintritt 
- 
-✔ ab spätestens drei Monaten nach der Geburt 
- 
- Ein Kind braucht keine eigene Krankenversicherung. 
+a) ab spätestens einem Jahr nach der Geburt 
+b) ab Schuleintritt 
+c) ab spätestens drei Monaten nach der Geburt 
+d) Ein Kind braucht keine eigene Krankenversicherung. 
+Richtige Antwort: c 
  
 Wie viele Jahre dauert in der Schweiz die obligatorische Schulzeit? 
-✔ 11 Jahre  
- 13 Jahre  
- 8 Jahre  
- 6 Jahre 
+a) 11 Jahre 
+b) 13 Jahre 
+c) 8 Jahre 
+d) 6 Jahre 
+Richtige Antwort: a 
  
-Wer entscheidet darüber, in welche Klasse ein Kind in der Primar-
+Wer entscheidet darüber, in welche Klasse ein Kind in der Primar­
 schule kommt? 
+a) die Eltern 
+b) die Schulleitung oder die Schulpflege 
+c) die Kinderärztin oder der Kinderarzt 
+d) die Kinder selbst 
+Richtige Antwort: b 
  
- die Eltern 
- 
-✔ die Schulleitung oder die Schulpflege 
- 
- die Kinderärztin oder der Kinderarzt 
- 
- die Kinder selbst 
- 
-Die Erziehung der Kinder ist vor allem Aufgabe …  
- des Staats. 
- 
- der Grosseltern. 
- 
-✔ der Eltern. 
- 
- der Schulen. 
-
- 
- 
- 
- 
-Seite 31/65 
- 
+Die Erziehung der Kinder ist vor allem Aufgabe … 
+a) des Staats. 
+b) der Grosseltern. 
+c) der Eltern. 
+d) der Schulen. 
+Richtige Antwort: c 
  
 Was ist im Schweizer Bildungssystem obligatorisch? 
+a) Weiterbildungskurse nach der Berufslehre 
+b) Kindertagesstätte 
+c) Maturitätsschule 
+d) Primarschule 
+Richtige Antwort: d 
  
- Weiterbildungskurse nach der Berufslehre  
- Kindertagesstätte 
+
  
- Maturitätsschule 
  
-✔ Primarschule 
+ 
+ 
+ 
+Seite 37/78 
+ 
  
 Eine Angestellte darf nicht entlassen werden, wenn sie ... 
- 
- immer pünktlich war. 
- 
- die Kündigung ablehnt. 
- 
-✔ schwanger ist. 
- 
- schon lange im Betrieb gearbeitet hat. 
+a) immer pünktlich war. 
+b) die Kündigung ablehnt. 
+c) schwanger ist. 
+d) schon lange im Betrieb gearbeitet hat. 
+Richtige Antwort: c 
  
 Gewerkschaften vertreten die Interessen von ... 
- 
- Arbeitgeberinnen und Arbeitgebern. 
- 
-✔ Arbeitnehmerinnen und Arbeitnehmern. 
-  
- Jugendlichen. 
- 
- Betrieben. 
+a) Arbeitgeberinnen und Arbeitgebern. 
+b) Arbeitnehmerinnen und Arbeitnehmern. 
+c) Jugendlichen. 
+d) Betrieben. 
+Richtige Antwort: b 
  
 Für welchen Streitfall ist das Arbeitsgericht zuständig? 
- 
- Wenn Arbeitnehmende die Erbschaftssteuer nicht bezahlen. 
- 
-✔ Wenn Arbeitnehmenden ohne Grund gekündigt wird 
- 
- Wenn Arbeitnehmende ein Problem mit einer Nachbarin oder einem Nachbarn  
+a) Wenn Arbeitnehmende die Erbschaftssteuer nicht bezahlen. 
+b) Wenn Arbeitnehmenden ohne Grund gekündigt wird 
+c) Wenn Arbeitnehmende ein Problem mit einer Nachbarin oder einem Nachbarn  
 haben. 
- Wenn Arbeitnehmende finanzielle Schwierigkeiten in der Familie haben, diese  
+d) Wenn Arbeitnehmende finanzielle Schwierigkeiten in der Familie haben, diese  
 jedoch nichts mit dem Betrieb zu tun hat. 
+Richtige Antwort: b 
  
-An wen können sich Arbeitnehmerinnen und Arbeitnehmer bei arbeits-
+An wen können sich Arbeitnehmerinnen und Arbeitnehmer bei arbeits­
 rechtlichen Fragen wenden? 
-✔ an Anwälte, Gewerkschaften und Arbeitsgerichte 
- 
- an die Steuerverwaltung 
- 
- an die Polizei und die Einwohnerkontrolle der Gemeinde 
- 
- an die Kirchgemeinde und den Zivilschutz 
+a) an Anwälte, Gewerkschaften und Arbeitsgerichte 
+b) an die Steuerverwaltung 
+c) an die Polizei und die Einwohnerkontrolle der Gemeinde 
+d) an die Kirchgemeinde und den Zivilschutz 
+Richtige Antwort: a 
  
  
  
@@ -1880,58 +1686,41 @@ rechtlichen Fragen wenden?
  
  
  
-Seite 32/65 
+ 
+Seite 38/78 
  
  
-Was muss man machen, wenn man ein Arbeitsverhältnis regulär be-
-enden will? 
- 
- warten, bis die Chefin oder der Chef aus den Ferien zurück ist 
- 
- den Arbeitsplatz räumen und dann dem Arbeitsplatz fern bleiben 
- 
- den Arbeitsvertrag vernichten 
- 
-✔ mit einem eingeschriebenen Brief kündigen oder den Eingang der Kündigung schrift-
-lich bestätigen lassen 
+Was muss man machen, wenn man ein Arbeitsverhältnis regulär been­
+den will? 
+a) warten, bis die Chefin oder der Chef aus den Ferien zurück ist 
+b) den Arbeitsplatz räumen und dann dem Arbeitsplatz fern bleiben 
+c) den Arbeitsvertrag vernichten 
+d) mit einem eingeschriebenen Brief kündigen oder den Eingang der Kündigung 
+schriftlich bestätigen lassen 
+Richtige Antwort: d 
  
 Economiesuisse vertritt die Interessen ... 
+a) der Angestellten. 
+b) der Unternehmen. 
+c) des Gastgewerbes. 
+d) der Handwerkerinnen und Handwerker. 
+Richtige Antwort: b 
  
- der Angestellten. 
- 
-✔ der Unternehmen. 
- 
- des Gastgewerbes. 
- 
- der Handwerkerinnen und Handwerker. 
- 
-Was ist in einem Arbeitsvertrag unter anderem geregelt? Es ist gere-
+Was ist in einem Arbeitsvertrag unter anderem geregelt? Es ist gere­
 gelt, ... 
- 
- welche Krankenkasse man wählen muss.  
- wie hoch die Altersrente ist. 
- 
- wie die Freizeit gestaltet wird. 
- 
-✔ wie hoch der Lohn ist. 
+a) welche Krankenkasse man wählen muss. 
+b) wie hoch die Altersrente ist. 
+c) wie die Freizeit gestaltet wird. 
+d) wie hoch der Lohn ist. 
+Richtige Antwort: d 
  
 Was kann man tun, wenn die Arbeitgeberin oder der Arbeitgeber ohne 
 Grund zu wenig Lohn ausbezahlt? 
- 
- Es gibt keine rechtlichen Möglichkeiten. 
- 
- Man kann bis zum Vertragsende nicht mehr zur Arbeit gehen. 
- 
-✔ Man kann an das Arbeitsgericht gelangen.  
- Man kann Anzeige bei der Polizei machen. 
- 
-Was ist ein Berufsbildungszentrum?  
- eine Arbeitsvermittlungsstelle 
- 
-✔ ein Standort, an dem unterschiedliche Angebote zur beruflichen Bildung beitragen 
- eine Fachhochschule 
- 
- ein arbeitstechnisches Forschungszentrum 
+a) Es gibt keine rechtlichen Möglichkeiten. 
+b) Man kann bis zum Vertragsende nicht mehr zur Arbeit gehen. 
+c) Man kann an das Arbeitsgericht gelangen. 
+d) Man kann Anzeige bei der Polizei machen. 
+Richtige Antwort: c 
  
  
  
@@ -1940,121 +1729,140 @@ Was ist ein Berufsbildungszentrum?
  
  
  
-Seite 33/65 
  
+Seite 39/78 
+ 
+ 
+Was ist ein Berufsbildungszentrum? 
+a) eine Arbeitsvermittlungsstelle 
+b) ein Standort, an dem unterschiedliche Angebote zur beruflichen Bildung beitra­
+gen 
+c) eine Fachhochschule 
+d) ein arbeitstechnisches Forschungszentrum 
+Richtige Antwort: b 
  
 Welcher Feiertag gilt nach Gesetz für die ganze Schweiz? 
+a) 1. August 
+b) Auffahrt 
+c) Karfreitag 
+d) 1. Mai 
+Richtige Antwort: a 
  
-✔ 1. August  
- Auffahrt  
- Karfreitag 
- 
- 1. Mai 
- 
-Was ist das ordentliche Rentenalter der Schweiz?  
- 64 Jahre bei Frauen und Männern 
- 
- 65 Jahre bei Frauen und Männern 
- 
-✔ 64 Jahre bei Frauen und 65 Jahre bei Männern  
- 63 Jahre bei Frauen und 64 Jahre bei Männern 
+Was ist das ordentliche Rentenalter der Schweiz? 
+a) 63 Jahre bei Frauen und Männern 
+b) 64 Jahre bei Frauen und Männern 
+c) 65 Jahre bei Frauen und Männern 
+d) 66 Jahre bei Frauen und Männern 
+Richtige Antwort: c 
  
 Wer bezahlt keine Prämien für Arbeitslosenversicherung? 
+a) Personen in der Berufsausbildung 
+b) Pensionierte 
+c) Arbeitnehmerinnen und Arbeitnehmer 
+d) alle Personen ab 50 Jahren 
+Richtige Antwort: b 
  
- Personen in der Berufsausbildung 
+Wo findet man Informationen über Lehrstellen, Beruf und Arbeit? 
+a) auf der Steuerverwaltung 
+b) im Bundesarchiv 
+c) im Staatssekretariat für Bildung, Forschung und Innovation 
+d) im Berufsinformationszentrum 
+Richtige Antwort: d 
  
-✔ Pensionierte 
  
- Arbeitnehmerinnen und Arbeitnehmer 
  
- alle Personen ab 50 Jahren 
- 
-Wo findet man Informationen über Lehrstellen, Beruf und Arbeit?  
- auf der Steuerverwaltung 
- 
- im Bundesarchiv 
- 
- im Staatssekretariat für Bildung, Forschung und Innovation  
-✔ im Berufsinformationszentrum 
- 
-Wer ist der wichtigste Handelspartner der Schweiz (Stand 2017)?  
-✔ EU 
- 
- USA  
- China 
- 
- Russland 
- 
-Wann hat man als Arbeitnehmerin oder Arbeitnehmer Anrecht auf be-
-zahlte freie Stunden oder Tage am Arbeitsplatz? 
- 
- bei Stromausfall 
- 
-✔ für die Ausübung eines öffentlichen Amtes  
- für die Erledigung von Administration auf der Bank oder Post 
- 
- bei der Einschulung der eigenen Kinder 
 
  
  
  
  
-Seite 34/65 
  
+Seite 40/78 
+ 
+ 
+Wer ist der wichtigste Handelspartner der Schweiz (Stand 2017)? 
+a) EU 
+b) USA 
+c) China 
+d) Russland 
+Richtige Antwort: a 
+ 
+Wann hat man als Arbeitnehmerin oder Arbeitnehmer Anrecht auf be­
+zahlte freie Stunden oder Tage am Arbeitsplatz? 
+a) bei Stromausfall 
+b) für die Ausübung eines öffentlichen Amtes 
+c) für die Erledigung von Administration auf der Bank oder Post 
+d) bei der Einschulung der eigenen Kinder 
+Richtige Antwort: b 
  
 Was bedeutet MWST? 
- 
- Meinungsfreiheit 
- 
- mittlerer Wohlstand 
- 
-✔ Mehrwertsteuer 
- 
- Mass für Wasserstand in Flüssen 
+a) Meinungsfreiheit 
+b) mittlerer Wohlstand 
+c) Mehrwertsteuer 
+d) Mass für Wasserstand in Flüssen 
+Richtige Antwort: c 
  
 Welche Aussage zum Mutterschaftsurlaub in der Schweiz ist richtig? 
- Der Mutterschaftsurlaub beträgt 20 Wochen. 
- 
- Die normalen Ferien nach der Geburt des Kindes muss man zuerst aufbrauchen. 
-Danach gibt es Mutterschaftsurlaub. 
- 
- Den Mutterschaftsurlaub dürfen Frauen im Alter von 20 bis 50 Jahren nur einmal 
-beziehen.  
-✔ Jede erwerbstätige Frau, die ein Kind bekommt, hat Anrecht auf Mutterschaftsurlaub. 
+a) Der Mutterschaftsurlaub beträgt 20 Wochen. 
+b) Die normalen Ferien nach der Geburt des Kindes muss man zuerst aufbrau­
+chen. Danach gibt es Mutterschaftsurlaub. 
+c) Den Mutterschaftsurlaub dürfen Frauen im Alter von 20 bis 50 Jahren nur ein­
+mal beziehen. 
+d) Jede Frau, die arbeitet und ein Kind bekommt, hat das Recht auf Mutterschaftsur­
+laub. 
+Richtige Antwort: d 
  
 Was ist in der Schweiz verboten? Es ist verboten, … 
+a) als Mann und Frau unverheiratet zusammen zu leben.  
+b) als erwachsene Person mit den Eltern zusammen zu leben. 
+c) als Mann mit zwei Frauen zur selben Zeit verheiratet zu sein. 
+d) als Mann für seine Kinder allein zu sorgen. 
+Richtige Antwort: c 
+
  
- als Mann und Frau unverheiratet zusammen zu leben.  
- als erwachsene Person mit den Eltern zusammen zu leben. 
  
-✔ als Mann mit zwei Frauen zur selben Zeit verheiratet zu sein. 
  
- als Mann für seine Kinder allein zu sorgen. 
  
-Was regelt der Mietvertrag für eine Wohnung?  
- den Wohnstandard 
  
-✔ die Rechte und Pflichten der Vertragspartner 
+Seite 41/78 
  
- was gekocht werden darf 
  
- wie die Wohnung eingerichtet werden muss 
+Was regelt der Mietvertrag für eine Wohnung? 
+a) den Wohnstandard 
+b) die Rechte und Pflichten der Vertragspartner 
+c) was gekocht werden darf 
+d) wie die Wohnung eingerichtet werden muss 
+Richtige Antwort: b 
  
 Unter welchen Voraussetzungen darf man in der Schweiz heiraten? 
- Die Braut muss schwanger sein. 
+a) Die Braut muss schwanger sein. 
+b) Man muss 18 Jahre alt und urteilsfähig sein. 
+c) Man muss über ein Mindesteinkommen verfügen. 
+d) Die Eltern müssen einverstanden sein. 
+Richtige Antwort: b 
  
-✔ Man muss 18 Jahre alt und urteilsfähig sein. 
+Wer kann einen Antrag auf Scheidung stellen? 
+a) nur der Ehemann 
+b) die Kinder der Eheleute 
+c) die Ehefrau oder der Ehemann oder beide zusammen 
+d) nur die Ehefrau 
+Richtige Antwort: c 
  
- Man muss über ein Mindesteinkommen verfügen.  
- Die Eltern müssen einverstanden sein. 
+Wer muss beim Zivilstandsamt den Heiratswillen anmelden? 
+a) nur der Mann allein 
+b) nur die Eltern 
+c) Das verlobte Paar gemeinsam 
+d) nur die Frau allein 
+Richtige Antwort: c 
  
-Wer kann einen Antrag auf Scheidung stellen?  
- nur der Ehemann 
+Wen muss man auf begründetes Verlangen in die eigene Wohnung las­
+sen? 
+a) die Pöstlerin oder den Pöstler 
+b) die Vermieterin oder den Vermieter 
+c) Personen, die für ein öffentliches Amt in der Gemeinde kandidieren 
+d) die Arbeitgeberin oder den Arbeitgeber 
+Richtige Antwort: b 
  
- die Kinder der Eheleute 
- 
-✔ die Ehefrau oder der Ehemann oder beide zusammen  
- nur die Ehefrau 
  
  
 
@@ -2062,119 +1870,45 @@ Wer kann einen Antrag auf Scheidung stellen?
  
  
  
-Seite 35/65 
  
+Seite 42/78 
  
-Wer muss beim Zivilstandsamt die Heiratsabsicht anmelden? 
- 
- nur der Mann 
- 
- nur die Eltern 
- 
-✔ Frau und Mann 
- 
- nur die Frau 
- 
-Wen muss man auf begründetes Verlangen in Ihre Wohnung lassen? 
- die Postbotin oder den Postboten 
- 
-✔ die Vermieterin oder den Vermieter 
- 
- Personen, die für ein öffentliches Amt in der Gemeinde kandidieren 
- 
- die Arbeitgeberin oder den Arbeitgeber 
  
 Was ist der Mieterinnen- und Mieterverband? 
- 
- eine Schlichtungsstelle des Bundes in Mietfragen  
- ein Wohnungsvermittlungsinstitut 
- 
-✔ eine Interessensvertretung der Mieterinnen und Mieter  
- ein Zusammenschluss aller Mieterinnen und Mieter der Schweiz 
+a) eine Schlichtungsstelle des Bundes in Mietfragen 
+b) ein Wohnungsvermittlungsinstitut 
+c) eine Interessensvertretung der Mieterinnen und Mieter 
+d) ein Zusammenschluss aller Mieterinnen und Mieter der Schweiz 
+Richtige Antwort: c 
  
 Was ist eine Voraussetzung für eine Eheschliessung in der Schweiz? 
- Beide Partner müssen mindestens 16 Jahre alt sein. 
- 
- Die Partner müssen bereits in einer eingetragenen Partnerschaft leben. 
- 
- Die Partner müssen den gleichen Wohnsitz haben.  
-✔ Die Partner dürfen nicht eng verwandt sein. 
+a) Beide Partner müssen mindestens 16 Jahre alt sein. 
+b) Die Partner müssen bereits in einer eingetragenen Partnerschaft leben. 
+c) Die Partner müssen den gleichen Wohnsitz haben. 
+d) Die Partner dürfen nicht eng verwandt sein. 
+Richtige Antwort: d 
  
 Wann kann der Fahrausweis entzogen werden? 
- bei unerlaubtem Hupen 
- 
-✔ bei Fahren unter Einfluss von Alkohol oder Drogen  
- bei falschem Parkieren 
- 
- bei Fahren bei starkem Nebel 
+a) bei unerlaubtem Hupen 
+b) bei Fahren unter Einfluss von Alkohol oder Drogen 
+c) bei falschem Parkieren 
+d) bei Fahren bei starkem Nebel 
+Richtige Antwort: b 
  
 Welchen Nachnamen bekommt ein Kind von verheirateten Eltern? 
- immer einen Doppelnamen mit dem Namen der Mutter zuerst 
- 
- immer den Namen des Vaters 
- 
- immer den Namen der Mutter 
- 
-✔ muss von den Eltern ohne gemeinsamen Familiennamen bei der Heirat entschieden 
-werden 
- 
-
- 
- 
- 
- 
-Seite 36/65 
- 
+a) immer einen Doppelnamen mit dem Namen der Mutter zuerst 
+b) immer den Namen des Vaters 
+c) immer den Namen der Mutter 
+d) muss von den Eltern ohne gemeinsamen Familiennamen bei der Heirat ent­
+schieden werden 
+Richtige Antwort: d 
  
 Besitzer eines Hundes müssen für ihren Hund … 
- 
- einen Namen haben. 
- 
- eine Geburtsurkunde besitzen. 
- 
-✔ Hundesteuern zahlen. 
- 
- eine Krankenversicherung abschliessen. 
- 
-Wann kann jemand sogenannte Ergänzungsleistungen beziehen?  
- Wenn man eine Lehrstelle in einem Betrieb hat. 
- 
- Wenn man den Mindestlohn nicht erreicht.  
-✔ Wenn man trotz IV- oder AHV-Rente das Existenzminimum nicht erreicht. 
- 
- Wenn man arbeitslos ist. 
- 
-Wo muss man in der Schweiz obligatorisch Mitglied sein? 
- 
- in einer Partei 
- 
- in einem Sportverein 
- 
-✔ in einer Krankenkasse 
- 
- in einem Automobilclub oder Veloclub 
- 
-Wer darf einen Verein gründen? 
- 
- nur Personen mit einem sportlichen Leistungsausweis  
- nur Personen ab einem bestimmten Einkommen 
- 
-✔ jede Person in der Schweiz 
- 
- alle Frauen und Männer ab 21 Jahren 
-2.2 
-Kanton 
-Was gehört zu den wichtigsten Kantonssteuern und Gemeindesteu-
-ern? 
- 
-✔ Vermögenssteuer 
- 
- Tabaksteuer 
- 
- Privatsteuer 
- 
- Handysteuer 
- 
+a) einen Namen haben. 
+b) eine Geburtsurkunde besitzen. 
+c) Hundesteuern zahlen. 
+d) eine Krankenversicherung abschliessen. 
+Richtige Antwort: c 
  
  
  
@@ -2183,181 +1917,215 @@ ern?
  
  
  
-Seite 37/65 
+ 
+Seite 43/78 
+ 
+ 
+Wann kann jemand sogenannte Ergänzungsleistungen beziehen? 
+a) Wenn man eine Lehrstelle in einem Betrieb hat. 
+b) Wenn man den Mindestlohn nicht erreicht. 
+c) Wenn man trotz IV- oder AHV-Rente das Existenzminimum nicht erreicht. 
+d) Wenn man arbeitslos ist. 
+Richtige Antwort: c 
+ 
+Wo muss man in der Schweiz obligatorisch Mitglied sein? 
+a) in einer Partei 
+b) in einem Sportverein 
+c) in einer Krankenkasse 
+d) in einem Automobilclub oder Veloclub 
+Richtige Antwort: c 
+ 
+Wer darf einen Verein gründen? 
+a) nur Personen mit einem sportlichen Leistungsausweis 
+b) nur Personen ab einem bestimmten Einkommen 
+c) jede Person in der Schweiz 
+d) alle Frauen und Männer ab 21 Jahren 
+Richtige Antwort: c 
+2.2 
+Kanton 
+Was gehört zu den wichtigsten Kantonssteuern und Gemeindesteu­
+ern? 
+a) Vermögenssteuer 
+b) Tabaksteuer 
+c) Privatsteuer 
+ 
+d) Handysteuer 
+Richtige Antwort: a 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 44/78 
  
  
 Was gehört zu den wichtigsten Kantonssteuern und Gemeindesteuern? 
- Verrechnungssteuer 
- 
- Alkoholsteuer 
- 
- Zölle  
-✔ Einkommenssteuer 
- 
+a) Verrechnungssteuer 
+b) Alkoholsteuer 
+c) Zölle 
+d) Einkommenssteuer 
+Richtige Antwort: d 
  
 Wer ist in der Schweiz in erster Linie für die Volksschule verantwortlich? 
- die Bundesschulverwaltung 
- 
-✔ die Kantone und Gemeinden 
- 
- die Schulkonferenz der Kantone 
- 
- der Volksschulrat 
- 
+a) die Bundesschulverwaltung 
+b) die Kantone und Gemeinden 
+c) die Schulkonferenz der Kantone 
+d) der Volksschulrat 
+Richtige Antwort: b 
  
 Wann beginnt die obligatorische Schulzeit im Kanton Zürich? 
- 
-✔ Kindergarten 
- 
- Primarschule 
- 
- Spielgruppe 
- 
- Einführungsklasse 
- 
- 
+a) Kindergarten 
+b) Primarschule 
+c) Spielgruppe 
+d) Einführungsklasse 
+Richtige Antwort: a 
 2.3 
 Gemeinde 
 Was ist ein Quartierverein? 
+a) Ein Verein, der die Rechte eines Quartiers gegenüber dem Bund und dem Kan­
+ton regelt. 
+b) Ein Verein, der für die Interessen der Bewohnerinnen und Bewohner eines 
+Quartiers gegenüber Behörden eintritt und das gesellschaftliche Leben fördert. 
+c) Ein Verein, in dem Bewohnerinnen und Bewohner eines Quartiers automatisch 
+Mitglied sind. 
+d) Ein Verein, der die Verkehrswege innerhalb eines Quartiers regelt und die Ein­
+haltung der Verkehrsvorschriften kontrolliert. 
+Richtige Antwort: b 
  
- Ein Verein, der die Rechte eines Quartiers gegenüber dem Bund und dem Kanton 
-regelt.  
-✔ Ein Verein, der für die Interessen der Bewohnerinnen und Bewohner eines Quartiers 
-gegenüber Behörden eintritt und das gesellschaftliche Leben fördert. 
  
- Ein Verein, in dem Bewohnerinnen und Bewohner eines Quartiers automatisch Mit-
-glied sind.  
- Ein Verein, der die Verkehrswege innerhalb eines Quartiers regelt und die Einhal-
-tung der Verkehrsvorschriften kontrolliert. 
  
-Was will der Finanzausgleich zwischen den Gemeinden? 
- 
- Er soll helfen, die Korruption zu bekämpfen. 
- 
- Er soll helfen, eine Inflation zu vermeiden.  
- Er zwingt arme Gemeinden zur Erledigung ihrer Pflichten (Schulen, Altersheime, usw.). 
-✔ Er unterstützt arme Gemeinden oder Gemeinden mit hohen Sozialausgaben bei der 
-Erledigung ihrer Aufgaben. 
 
  
  
  
  
-Seite 38/65 
+ 
+Seite 45/78 
  
  
-Welche Unterstützung gibt die Gemeinde, wenn das eigene Einkom-
+Was will der Finanzausgleich zwischen den Gemeinden? 
+a) Er soll helfen, die Korruption zu bekämpfen. 
+b) Er soll helfen, eine Inflation zu vermeiden. 
+c) Er zwingt arme Gemeinden zur Erledigung ihrer Pflichten (Schulen, Altersheime, 
+usw.). 
+d) Er unterstützt arme Gemeinden oder Gemeinden mit hohen Sozialausgaben bei 
+der Erledigung ihrer Aufgaben. 
+Richtige Antwort: d 
+ 
+Welche Unterstützung gibt die Gemeinde, wenn das eigene Einkom­
 men oder Vermögen für den Lebensunterhalt nicht ausreicht? 
+a) Geld für Mahlzeiten (Kostgeld) 
+b) einen Gemeindebeitrag (Gemeinderappen) 
+c) Sozialhilfe 
+d) Kantonsgeld 
+Richtige Antwort: c 
  
- Geld für Mahlzeiten (Kostgeld) 
- 
- einen Gemeindebeitrag (Gemeinderappen) 
-✔ Sozialhilfe 
- 
- Kantonsgeld 
- 
-Wo kann man sich über Angebote und Regelungen der Gemeinde in-
-formieren? 
- 
-✔ in der Lokalzeitung oder im Internet 
- 
- im Fernsehen 
- 
- am Anschlagbrett im Einkaufszentrum 
- 
- auf Plakaten 
+Wo kann man sich über Angebote und Regelungen der Gemeinde infor­
+mieren? 
+a) in der Lokalzeitung oder im Internet 
+b) im Fernsehen 
+c) am Anschlagbrett im Einkaufszentrum 
+d) auf Plakaten 
+Richtige Antwort: a 
  
 Für welche sozialen Leistungen zahlen die Gemeinden? 
+a) Sozialhilfe in einer Notsituation 
+b) Altersrente 
  
-✔ Sozialhilfe in einer Notsituation 
+c) Kosten für die Fahrprüfung 
+d) Reisekosten in der Freizeit 
+Richtige Antwort: a 
  
- Altersrente 
  
- Kosten für die Fahrprüfung 
  
- Reisekosten in der Freizeit 
+
  
-Wer ist zuständig für die Finanzierung und Organisation der Primar-
+ 
+ 
+ 
+ 
+Seite 46/78 
+ 
+ 
+Wer ist zuständig für die Finanzierung und Organisation der Primar­
 schule? 
- 
- die Eltern 
- 
-✔ der Kanton mit den Gemeinden 
- 
- der Bund 
- der Schulkreis 
+a) die Eltern 
+b) der Kanton mit den Gemeinden 
+c) der Bund 
+d) der Schulkreis 
+Richtige Antwort: b 
  
 Wo muss man sich melden, wenn man heiraten möchte? 
- 
- an die Eltern 
- 
- an die Regionale Partnervermittlung  
- 
-✔ an das Zivilstandsamt 
- 
- an die Eheberatung 
+a) an die Eltern 
+b) an die Regionale Partnervermittlung  
+c) an das Zivilstandsamt 
+d) an die Eheberatung 
+Richtige Antwort: c 
  
 Wo muss man sich melden, wenn man umzieht? 
  
- bei den Steuerbehörden 
+a) bei den Steuerbehörden 
+b) bei der Polizei 
+c) bei der Gebäudeversicherung 
+d) bei der Gemeinde (Einwohnerkontrolle) 
+Richtige Antwort: d 
  
- bei der Polizei 
+Wer leitet die Volksschulen in den Zürcher Gemeinden? 
+a) der Elternrat 
+b) die Schulleitung 
+c) das Schulsekretariat 
+d) die Konferenz der Lehrpersonen 
+Richtige Antwort: b 
  
- bei der Gebäudeversicherung 
  
-✔ bei der Gemeinde (Einwohnerkontrolle) 
 
  
  
  
  
-Seite 39/65 
+ 
+Seite 47/78 
  
  
-Wer leitet die Volksschulen in den Zürcher Gemeinden? 
- 
- der Elternrat 
- 
-✔ die Schulleitung 
- 
- das Schulsekretariat 
- 
- die Konferenz der Lehrpersonen 
 3 
 Geschichte  
 3.1 
 Bund 
 Im Jahr 1798 machte ein europäischer Herrscher für kurze Zeit einen 
 Zentralstaat aus der Eidgenossenschaft. Wie hiess der Herrscher? 
- Rudolf von Habsburg 
- 
- Friedrich der Grosse 
- 
- Karl der Kühne 
- 
-✔ Napoleon Bonaparte 
+a) Rudolf von Habsburg 
+b) Friedrich der Grosse 
+c) Karl der Kühne 
+d) Napoleon Bonaparte 
+Richtige Antwort: d 
  
 Wer war wichtig bei der Gründung der Eidgenössischen Technischen 
 Hochschule (ETH), dem Eisenbahnbau und der Gründung der heutigen 
 Crédit Suisse? 
- 
- Conrad Ferdinand Meyer 
- 
- Robert Grimm 
- 
- Henri Dufour 
- 
-✔ Alfred Escher 
+a) Conrad Ferdinand Meyer 
+b) Robert Grimm 
+c) Henri Dufour 
+d) Alfred Escher 
+Richtige Antwort: d 
  
 Beim Landesstreik 1918 forderten die Arbeitenden mehr Rechte. Was 
 war eine Folge des Landesstreiks? 
+a) Die 48-Stunden-Woche wurde eingeführt. 
+b) Die Arbeitenden konnten mit der Eisenbahn gratis zur Arbeit fahren. 
+c) Arbeitenden bekamen 6 Wochen Ferien. 
+d) Die Fabriken wurden Eigentum des Staates. 
+Richtige Antwort: a 
  
-✔ Die 48-Stunden-Woche wurde eingeführt.  
- Die Arbeitenden konnten mit der Eisenbahn gratis zur Arbeit fahren. 
- 
- Arbeitenden bekamen 6 Wochen Ferien. 
- 
- Die Fabriken wurden Eigentum des Staates. 
+Was verlangte die sogenannte «Schwarzenbach-Initiative» 1970? 
+a) die Einführung des Englischunterrichts in der Primarschule 
+b) ein Verbot von Minarettbauten 
+c) die Abschaffung der Armee 
+d) eine Begrenzung der Anzahl Ausländerinnen und Ausländer 
+Richtige Antwort: d 
  
  
  
@@ -2366,229 +2134,170 @@ war eine Folge des Landesstreiks?
  
  
  
-Seite 40/65 
  
+Seite 48/78 
  
-Was verlangte die sogenannte "Schwarzenbach-Initiative" 1970?  
- die Einführung des Englischunterrichts in der Primarschule  
- ein Verbot von Minarettbauten 
- 
- die Abschaffung der Armee 
- 
-✔ eine Begrenzung der Anzahl Ausländerinnen und Ausländer 
  
 Welche Bedeutung hat das Jahr 1848 für die Geschichte der Schweiz? 
-✔ Gründung des Schweizer Bundesstaates 
+a) Gründung des Schweizer Bundesstaates 
+b) Garantie der Neutralität durch die europäischen Mächte 
+c) Niederlage eidgenössischer Truppen bei Marignano 
+d) Unabhängigkeit vom Heiligen Römischen Reich 
+Richtige Antwort: a 
  
- Garantie der Neutralität durch die europäischen Mächte 
- 
- Niederlage eidgenössischer Truppen bei Marignano 
- 
- Unabhängigkeit vom Heiligen Römischen Reich 
- 
-Wie heisst die Schweizer Nationalhymne?  
- Swiss-Song 
- 
- Hallelujah 
- 
-✔ Schweizerpsalm 
- 
- Schweizer Hit 
+Wie heisst die Schweizer Nationalhymne? 
+a) Swiss-Song 
+b) Hallelujah 
+c) Schweizerpsalm 
+d) Schweizer Hit 
+Richtige Antwort: c 
  
 Welcher Kanton ist erst seit 1979 ein eigenständiger Kanton? 
- 
- St. Gallen 
- 
-✔ Jura  
- Zürich 
- 
- Solothurn 
+a) St. Gallen 
+b) Jura 
+c) Zürich 
+d) Solothurn 
+Richtige Antwort: b 
  
 Im 16. Jahrhundert gab es in Europa und in der Schweiz eine wichtige 
-religiöse Bewegung. Wie heisst sie?  
- Islamisierung 
+religiöse Bewegung. Wie heisst sie? 
+a) Islamisierung 
+b) Reformation 
+c) Skeptizismus 
+d) Hinduismus 
+Richtige Antwort: b 
  
-✔ Reformation 
- 
- Skeptizismus 
- 
- Hinduismus 
- 
-Wann haben Schweizer Frauen das Stimm- und Wahlrecht auf Bundes-
+Wann haben Schweizer Frauen das Stimm- und Wahlrecht auf Bundes­
 ebene bekommen? 
- 
- 1918  
-✔ 1971  
- 1948  
- 1988 
+a) 1918 
+b) 1971 
+c) 1948 
+d) 1988 
+Richtige Antwort: b 
  
 
  
  
  
  
-Seite 41/65 
+ 
+Seite 49/78 
  
  
-In den 1950er-Jahren brauchte die Schweiz ausländische Arbeitskräf-
-te. Woher kamen die meisten? 
- Portugal  
- Frankreich 
- 
-✔ Italien 
- 
- Griechenland 
+In den 1950er-Jahren brauchte die Schweiz ausländische Arbeits­
+kräfte. Woher kamen die meisten? 
+a) Portugal 
+b) Frankreich 
+c) Italien 
+d) Griechenland 
+Richtige Antwort: c 
  
 Warum kamen viele Menschen in den 1990-er Jahren aus  
 (Ex-)Jugoslawien in die Schweiz? 
- 
- Sie wollten an einer Schweizer Universität studieren. 
- 
- Sie wollten ihre Verwandten besuchen und die Schweiz bereisen. 
- 
-✔ Sie flohen vor dem Krieg aus ihrer Heimat.  
- Sie wurden beim Staudammprojekt Grand-Dixence als Arbeitskräfte benötigt. 
+a) Sie wollten an einer Schweizer Universität studieren. 
+b) Sie wollten ihre Verwandten besuchen und die Schweiz bereisen. 
+c) Sie flohen vor dem Krieg aus ihrer Heimat. 
+d) Sie wurden beim Staudammprojekt Grand-Dixence als Arbeitskräfte benötigt. 
+Richtige Antwort: c 
  
 Wie kann man das Verhältnis der Schweiz zu den kriegführenden 
 Mächten im Zweiten Weltkrieg beschreiben? 
+a) Bündnispartner der Alliierten 
+b) Bündnispartner der Achsenmächte 
+c) neutral - politische und wirtschaftliche Beziehungen zu den kriegführenden 
+Mächten 
+d) neutral - keine Beziehungen zu den kriegführenden Mächten 
+Richtige Antwort: c 
  
- Bündnispartner der Alliierten 
- 
- Bündnispartner der Achsenmächte 
- 
-✔ neutral - politische und wirtschaftliche Beziehungen zu den kriegführenden Mächten 
- neutral - keine Beziehungen zu den kriegführenden Mächten 
- 
-In der Schweiz begann die Industrialisierung im frühen 19. Jahrhun-
+In der Schweiz begann die Industrialisierung im frühen 19. Jahrhun­
 dert. Was war dabei am wichtigsten? 
-✔ Textilindustrie 
+a) Textilindustrie 
+b) Stahlindustrie 
+c) Kohlenförderung 
+d) Autoindustrie 
+Richtige Antwort: a 
  
- Stahlindustrie 
  
- Kohlenförderung 
  
- Autoindustrie 
+
+ 
+ 
+ 
+ 
+ 
+Seite 50/78 
+ 
  
 Mann und Frau sind gleichberechtigt. Seit wann ist dieser Satz in der 
 Verfassung? 
+a) seit 1981 
+b) seit 1968 
+c) seit 1996 
+d) seit 1945 
+Richtige Antwort: a 
  
-✔ seit 1981  
- seit 1968 
- seit 1996 
- seit 1945 
- 
- 
- 
-
- 
- 
- 
- 
-Seite 42/65 
- 
- 
-Im 19. Jahrhundert wandelte sich die Schweiz ...  
- vom Bundesstaat zum Zentralstaat. 
- 
- zu einer europäischen Grossmacht. 
- 
- zu einer Kolonialmacht. 
- 
-✔ vom Agrarstaat zum Industriestaat. 
+Im 19. Jahrhundert wandelte sich die Schweiz ... 
+a) vom Bundesstaat zum Zentralstaat. 
+b) zu einer europäischen Grossmacht. 
+c) zu einer Kolonialmacht. 
+d) vom Agrarstaat zum Industriestaat. 
+Richtige Antwort: d 
  
 Wann stieg der Lebensstandard in der Schweiz für viele Menschen 
 deutlich an? 
+a) um 1900 
+b) in den 1930er-Jahren 
+c) in den 1960er-Jahren 
+d) in den 1990er-Jahren 
+Richtige Antwort: c 
  
- um 1900  
- in den 1930er-Jahren 
- 
-✔ in den 1960er-Jahren 
- 
- in den 1990er-Jahren 
- 
-Während der kolonialen Herrschaft Europas ...  
- hatte die Schweiz Kolonien in Asien und Afrika. 
- 
- waren Schweizer Söldner in Russland aktiv. 
- 
- exportierte die Schweiz Gewürze nach Nordamerika. 
- 
-✔ konnte sich die Schweiz dank Zugang zu Rohstoffen als Industrienation etablieren. 
+Während der kolonialen Herrschaft Europas ... 
+a) hatte die Schweiz Kolonien in Asien und Afrika. 
+b) waren Schweizer Söldner in Russland aktiv. 
+c) exportierte die Schweiz Gewürze nach Nordamerika. 
+d) konnte sich die Schweiz dank Zugang zu Rohstoffen als Industrienation etablie­
+ren. 
+Richtige Antwort: d 
  
 Welche Urkantone schlossen sich 1291 zu einem Bündnis zusammen? 
- St. Gallen, Thurgau, Schaffhausen 
+a) St. Gallen, Thurgau, Schaffhausen 
+b) Genf, Waadt, Freiburg 
+c) Bern, Zürich, Zug 
+d) Uri, Schwyz, Unterwalden 
+Richtige Antwort: d 
  
- Genf, Waadt, Freiburg 
+
  
- Bern, Zürich, Zug 
  
-✔ Uri, Schwyz, Unterwalden 
+ 
+ 
+ 
+Seite 51/78 
+ 
  
 Welches Volk lebte zur Zeit des alten Roms im Gebiet der heutigen 
-Schweiz?  
-✔ Helvetier  
- Eidgenossen 
- 
- Etrusker  
- Illyrier 
+Schweiz? 
+a) Helvetier 
+b) Eidgenossen 
+c) Etrusker 
+d) Illyrier 
+Richtige Antwort: a 
  
 Wer kämpfte im Sonderbundskrieg 1847 gegeneinander? 
+a) Adel und Bauern 
+b) Zürich und Bern 
+c) Katholiken und Liberale 
+d) Westschweiz und Tessin 
+Richtige Antwort: c 
  
- Adel und Bauern 
- 
- Zürich und Bern 
- 
-✔ Katholiken und Liberale 
- 
- Westschweiz und Tessin 
- 
-
- 
- 
- 
- 
-Seite 43/65 
- 
- 
-Von welcher antiken Herrschaft und Kultur stammt das hier abgebil-
+Von welcher antiken Herrschaft und Kultur stammt das hier abgebil­
 dete Amphitheater (in Avenches)? 
  
- 
- von den Galliern 
- 
-✔ von den Römern 
- 
- von den Wikingern 
- 
- von den Griechen 
- 
-Im Jahr 1515 verloren die Eidgenossen die Schlacht bei Marignano. 
-Welche Folgen hatte diese Niederlage?  
-✔ Die Eidgenossen verzichteten auf die Eroberung weiterer Gebiete. 
- 
- Die Schweiz schaffte ihre Armee ab. 
- 
- Die Bauern wehrten sich gegen die Regierungen in Bern, Zürich und Luzern.  
- Die Eidgenossen überfielen die Stadt Zürich. 
- 
-Welche neue Glaubensrichtung entstand mit der Reformation? 
- 
- das Judentum 
- 
- der Buddhismus 
- 
- der Islam 
-✔ der protestantische Glaube 
- 
-Was führte zur konfessionellen Spaltung der Schweiz? 
- 
- die Täuferbewegung 
- 
-✔ die Reformation 
- 
- der Generalstreik 
- 
- die Aufhebung der Klöster 
+a) von den Galliern 
+b) von den Römern 
+c) von den Wikingern 
+d) von den Griechen 
+Richtige Antwort: b 
  
  
  
@@ -2597,60 +2306,88 @@ Was führte zur konfessionellen Spaltung der Schweiz?
  
  
  
-Seite 44/65 
  
+Seite 52/78 
+ 
+ 
+Im Jahr 1515 verloren die Eidgenossen die Schlacht bei Marignano. 
+Welche Folgen hatte diese Niederlage? 
+a) Die Eidgenossen verzichteten auf die Eroberung weiterer Gebiete. 
+b) Die Schweiz schaffte ihre Armee ab. 
+c) Die Bauern wehrten sich gegen die Regierungen in Bern, Zürich und Luzern. 
+d) Die Eidgenossen überfielen die Stadt Zürich. 
+Richtige Antwort: a 
+ 
+Welche neue Glaubensrichtung entstand mit der Reformation? 
+a) das Judentum 
+b) der Buddhismus 
+c) der Islam 
+d) der protestantische Glaube 
+Richtige Antwort: d 
+ 
+Was führte zur konfessionellen Spaltung der Schweiz? 
+a) die Täuferbewegung 
+b) die Reformation 
+c) der Generalstreik 
+d) die Aufhebung der Klöster 
+Richtige Antwort: b 
  
 Was führte 1798 zur politischen Neuordnung der Eidgenossenschaft? 
- die Einführung der allgemeinen Schulpflicht 
- 
- die Revolution im Waadtland 
- 
-✔ der Einmarsch der Franzosen in die Schweiz 
- 
- die Gründung des Kantons Zürich 
+a) die Einführung der allgemeinen Schulpflicht 
+b) die Revolution im Waadtland 
+c) der Einmarsch der Franzosen in die Schweiz 
+d) die Gründung des Kantons Zürich 
+Richtige Antwort: c 
  
 Was haben die europäischen Mächte am Wiener Kongress 1815 für die 
 Schweiz festgelegt? 
+a) die Befolgung der Neutralität 
+b) die Aufhebung der Zölle an den Schweizer Grenzen 
+c) den Verzicht auf das Söldnerwesen 
+d) die Loslösung von Österreich 
+Richtige Antwort: a 
  
-✔ die Befolgung der Neutralität 
+
  
- die Aufhebung der Zölle an den Schweizer Grenzen 
  
- den Verzicht auf das Söldnerwesen 
  
- die Loslösung von Österreich 
+ 
+ 
+Seite 53/78 
+ 
  
 Wie wurde die Eidgenossenschaft in der Bundesverfassung von 1848 
 neu definiert? 
+a) als Volksrepublik 
+b) als föderalistischer Bundesstaat 
+c) als Zentralstaat 
+d) als parlamentarische Monarchie 
+Richtige Antwort: b 
  
- als Volksrepublik 
- 
-✔ als föderalistischer Bundesstaat 
- 
- als Zentralstaat 
- 
- als parlamentarische Monarchie 
- 
-Welche wichtige humanitäre Organisation wurde 1863 in Genf ge-
-gründet?  
- Amnesty International 
- 
- die Pro Juventute 
- 
-✔ das Internationale Komitee vom Roten Kreuz (IKRK) 
- 
- die Glückskette 
+Welche wichtige humanitäre Organisation wurde 1863 in Genf gegrün­
+det? 
+a) Amnesty International 
+b) die Pro Juventute 
+c) das Internationale Komitee vom Roten Kreuz (IKRK) 
+d) die Glückskette 
+Richtige Antwort: c 
  
 Welche Erfindung hat die Schweizer Industrie im 18. Jahrhundert 
 grundlegend verändert? 
+a) der Benzinmotor (Otto-Motor) 
+b) die Dampfmaschine 
+c) der Elektromotor 
+d) der Computer 
+Richtige Antwort: b 
  
- der Benzinmotor (Otto-Motor) 
- 
-✔ die Dampfmaschine 
- 
- der Elektromotor 
- 
- der Computer 
+Im Jahr 1877 hat man die Kinderarbeit in der Schweiz verboten. Wa­
+rum? 
+a) Kinder mussten zuhause auf den Bauernhöfen mithelfen. 
+b) Kinder konnten bei schweren und gefährlichen Arbeiten sowieso nicht einge­
+setzt werden. 
+c) Kinder konnten nicht zur Schule gehen, weil sie in Fabriken arbeiteten. 
+d) Kinder wurden zur Arbeit ausgeliehen. Sie verdienten dort aber zu wenig. 
+Richtige Antwort: c 
  
  
  
@@ -2659,108 +2396,87 @@ grundlegend verändert?
  
  
  
-Seite 45/65 
  
+Seite 54/78 
  
-Im Jahr 1877 hat man die Kinderarbeit in der Schweiz verboten. Wa-
-rum?  
- Kinder mussten zuhause auf den Bauernhöfen mithelfen.  
- Kinder konnten bei schweren und gefährlichen Arbeiten sowieso nicht eingesetzt 
-werden. 
-✔ Kinder konnten nicht zur Schule gehen, weil sie in Fabriken arbeiteten. 
- 
- Kinder wurden zur Arbeit ausgeliehen. Sie verdienten dort aber zu wenig. 
  
 Welche Versicherung wurde 1948 in der Schweiz eingeführt? 
- 
- die Haftpflichtversicherung für Motorfahrzeuge  
- die Feuerversicherung 
- 
-✔ die Alters- und Hinterlassenenversicherung (AHV)  
- die Lebensversicherung 
+a) die Haftpflichtversicherung für Motorfahrzeuge 
+b) die Feuerversicherung 
+c) die Alters- und Hinterlassenenversicherung (AHV)  
+d) die Lebensversicherung 
+Richtige Antwort: c 
  
 Seit wann dürfen Schweizer Bürgerinnen auf Bundesebene wählen 
 und abstimmen? 
+a) seit 1878 
+b) seit 1946 
+c) seit 1919 
+d) seit 1971 
+Richtige Antwort: d 
  
- seit 1878 
- seit 1946 
- seit 1919 
-✔ seit 1971 
- 
-Wer war die erste Frau im Schweizer Bundesrat?  
- Ruth Dreifuss 
- 
-✔ Elisabeth Kopp 
- 
- Ruth Metzler 
- 
- Micheline Calmy-Rey 
+Wer war die erste Frau im Schweizer Bundesrat? 
+a) Ruth Dreifuss 
+b) Elisabeth Kopp 
+c) Ruth Metzler 
+d) Micheline Calmy-Rey 
+Richtige Antwort: b 
  
 Mit was wurden die Grundlagen der heutigen Beziehungen der 
 Schweiz zur EU gelegt? 
+a) mit der Zustimmung des Stimmvolks zu den Bilateralen Verträgen I im Jahr 
+2000 
+b) mit der Ablehnung des EWR-Beitritts durch die Volksabstimmung im Jahr 1992 
+c) mit dem Rückzug des Gesuchs für einen EU-Beitritt der Schweiz im Jahr 2016 
+d) mit dem UNO-Beitritt der Schweiz im Jahr 2002 
+Richtige Antwort: a 
  
-✔ mit der Zustimmung des Stimmvolks zu den Bilateralen Verträgen I im Jahr 2000 
- mit der Ablehnung des EWR-Beitritts durch die Volksabstimmung im Jahr 1992 
- mit dem Rückzug des Gesuchs für einen EU-Beitritt der Schweiz im Jahr 2016  
- mit dem UNO-Beitritt der Schweiz im Jahr 2002 
- 
- 
+Wer war Wilhelm Tell? 
+a) ein eidgenössischer Söldner in fremden Diensten 
+b) eine Innerschweizer Sagenfigur, die gegen fremde Herrscher kämpfte 
+c) ein adliger Grundherr im Schweizer Mittelland  
+d) ein Anführer im Bauernkrieg 
+Richtige Antwort: b 
  
 
  
  
  
  
-Seite 46/65 
+ 
+Seite 55/78 
  
  
-Wer war Wilhelm Tell? 
- 
- ein eidgenössischer Söldner in fremden Diensten  
-✔ eine Innerschweizer Sagenfigur, die gegen fremde Herrscher kämpfte 
- 
- ein adliger Grundherr im Schweizer Mittelland  
- ein Anführer im Bauernkrieg 
- 
-Welche Organisation gründete Henry Dunant (1828-1910) in Genf?  
- den Christlichen Verein junger Männer 
- 
- die Pro Juventute 
- 
-✔ das Internationale Komitee vom Roten Kreuz (IKRK) 
- 
- den Weltpostverein 
+Welche Organisation gründete Henry Dunant (1828-1910) in Genf? 
+a) den Christlichen Verein junger Männer 
+b) die Pro Juventute 
+c) das Internationale Komitee vom Roten Kreuz (IKRK) 
+d) den Weltpostverein 
+Richtige Antwort: c 
  
 In welcher Wirtschaftsbranche ist die Schweiz seit Jahrhunderten 
 weltweit führend? 
+a) in der Textilindustrie 
+b) in der Uhrenindustrie 
+c) in der Autoindustrie 
+d) im Bergbau 
+Richtige Antwort: b 
  
- in der Textilindustrie 
- 
-✔ in der Uhrenindustrie 
- 
- in der Autoindustrie 
- 
- im Bergbau 
- 
-Weshalb wanderten viele Schweizerinnen und Schweizer im 19. Jahr-
+Weshalb wanderten viele Schweizerinnen und Schweizer im 19. Jahr­
 hundert aus? 
- 
- Weil sie in der Schweiz politisch verfolgt wurden. 
- 
- Weil sie Berufserfahrung sammeln wollten.  
-✔ Weil Hunger, Armut und Arbeitslosigkeit herrschte.  
- Weil sie Lust auf Abenteuer hatten. 
- 
- 
+a) Weil sie in der Schweiz politisch verfolgt wurden. 
+b) Weil sie Berufserfahrung sammeln wollten. 
+c) Weil Hunger, Armut und Arbeitslosigkeit herrschte. 
+d) Weil sie Lust auf Abenteuer hatten. 
+Richtige Antwort: c 
 3.2 
 Kanton 
 Für was wurde der Sechseläutenplatz im Zweiten Weltkrieg benutzt? 
- als Chilbi 
- als Sportplatz 
- 
- als Pferderennbahn 
- 
-✔ als Kartoffelfeld 
+a) als Chilbi 
+b) als Sportplatz 
+c) als Pferderennbahn 
+d) als Kartoffelfeld 
+Richtige Antwort: d 
  
  
  
@@ -2769,919 +2485,873 @@ Für was wurde der Sechseläutenplatz im Zweiten Weltkrieg benutzt?
  
  
  
-Seite 47/65 
+ 
+Seite 56/78 
  
  
 Zur Römerzeit war der Name der Stadt Zürich … 
- 
- Vitudurum 
- 
- Vindonissa 
- 
- Aquae Helveticae 
- 
-✔ Turicum 
+a) Vitudurum 
+b) Vindonissa 
+c) Aquae Helveticae 
+d) Turicum 
+Richtige Antwort: d 
  
 Was haben die Römer nach Zürich gebracht? 
+a) die Badekultur 
+b) Chinesisches Porzellan 
+c) das Alphorn 
  
-✔ die Badekultur 
- 
- Chinesisches Porzellan 
- 
- das Alphorn 
- 
- die Tropenhäuser des Botanischen Gartens 
+d) die Tropenhäuser des Botanischen Gartens 
+Richtige Antwort: a 
  
 Von 5000 bis 1000 vor Christus bauten die Menschen am Zürichsee … 
- Iglus. 
+a) Iglus. 
+b) Pfahlbauten. 
+c) Kirchen. 
+d) Höhlensysteme. 
+Richtige Antwort: b 
  
-✔ Pfahlbauten. 
- 
- Kirchen.  
- Höhlensysteme. 
- 
-An was starb zwischen 1611 und 1635 fast die Hälfte der Zürcher Be-
+An was starb zwischen 1611 und 1635 fast die Hälfte der Zürcher Be­
 völkerung? 
+a) an der Pest 
  
-✔ an der Pest 
+b) am Corona-Virus 
+c) an Krebs 
+d) an der Spanischen Grippe 
+Richtige Antwort: a 
  
- am Corona-Virus 
+Ulrich Zwingli (1484-1531) war ein bekannter . . . 
+a) Reformator in Zürich. 
+b) Unternehmer. 
+c) Naturwissenschaftler. 
+d) Musiker. 
+Richtige Antwort: a 
  
- an Krebs  
- an der Spanischen Grippe 
  
-Ulrich Zwingli (1484-1531) war ein bekannter . . .  
-✔ Reformator in Zürich. 
  
- Unternehmer. 
- 
- Naturwissenschaftler. 
- 
- Musiker. 
- 
-Den Kanton Zürich im modernen Sinn gibt es seit ... 
- 
- 1415  
- 1291  
-✔ 1803  
- 1798 
 
  
  
  
  
-Seite 48/65 
  
+Seite 57/78 
+ 
+ 
+Den Kanton Zürich im modernen Sinn gibt es seit ... 
+a) 1415 
+b) 1291 
+c) 1803 
+d) 1798 
+Richtige Antwort: c 
  
 Wer hat die Kirche in Zürich reformiert?  
- Jan Hus  
-✔ Ulrich Zwingli 
- 
- Martin Luther 
- 
- Jean Calvin 
+a) Jan Hus 
+b) Ulrich Zwingli 
+c) Martin Luther 
+d) Jean Calvin 
+Richtige Antwort: b 
  
 Wofür hat sich Emilie Lieberherr (1924-2011) eingesetzt? 
- 
- für eine freie Presse 
- 
-✔ für das Frauenstimmrecht 
- 
- gegen den Beitritt der Schweiz zur UNO (Vereinte Nationen) 
- 
- für die Beteiligung der Schweiz an der Raumfahrt 
+a) für eine freie Presse 
+b) für das Frauenstimmrecht 
+c) gegen den Beitritt der Schweiz zur UNO (Vereinte Nationen) 
+d) für die Beteiligung der Schweiz an der Raumfahrt 
+Richtige Antwort: b 
  
 Welche Fabriken gründeten Philippe Suchard (1797-1884) und Rudolph 
 Lindt (1855-1909) in der Schweiz? 
+a) Textilfabriken 
+b) Druckereien 
  
- Textilfabriken 
+c) Schokoladefabriken 
+d) Maschinenfabriken 
+Richtige Antwort: c 
  
- Druckereien 
  
-✔ Schokoladefabriken 
+
  
- Maschinenfabriken 
+ 
+ 
+ 
+ 
+Seite 58/78 
+ 
+ 
 4 
 Geografie 
 4.1 
 Bund 
-Was ist am Gotthard-Basis-Tunnel speziell?  
- Er war der erste Tunnel in Europa. 
- 
- Er ist der einzige Eisenbahntunnel Europas. 
- 
-✔ Er ist der längste Eisenbahntunnel der Welt. 
- 
- Er hat den grössten Tunneldurchmesser der Welt. 
+Was ist am Gotthard-Basis-Tunnel speziell? 
+a) Er war der erste Tunnel in Europa. 
+b) Er ist der einzige Eisenbahntunnel Europas. 
+c) Er ist der längste Eisenbahntunnel der Welt. 
+d) Er hat den grössten Tunneldurchmesser der Welt. 
+Richtige Antwort: c 
  
 Simplon, Gotthard, Grosser Sankt Bernhard sind Beispiele für ... 
- 
- Schweizer Käsesorten. 
- 
- Schweizer Hauptverkehrsachsen. 
- 
- Schweizer Naturreservate. 
- 
-✔ Schweizer Alpenpässe. 
- 
-
- 
- 
- 
- 
-Seite 49/65 
- 
+a) Schweizer Käsesorten. 
+b) Schweizer Hauptverkehrsachsen. 
+c) Schweizer Naturreservate. 
+d) Schweizer Alpenpässe. 
+Richtige Antwort: d 
  
 Wohin fliesst der Rhein? 
- 
-✔ in die Nordsee 
- 
- ins Schwarze Meer 
- 
- in den Pazifik 
- 
- ins Mittelmeer 
+a) in die Nordsee 
+b) ins Schwarze Meer 
+c) in den Pazifik 
+d) ins Mittelmeer 
+Richtige Antwort: a 
  
 Wohin fliesst die Rhone? 
+a) in die Ostsee 
+b) in den Atlantik 
+c) ins Mittelmeer 
+d) ins Schwarze Meer 
+Richtige Antwort: c 
  
- in die Ostsee 
+Rund zwei Drittel der ausländischen Bevölkerung der Schweiz ... 
+a) kommen aus einem EU-Land. 
+b) kommen aus Italien. 
+c) sprechen fliessend Englisch. 
+d) leben in der Ostschweiz. 
+Richtige Antwort: a 
+
  
- in den Atlantik 
  
-✔ ins Mittelmeer 
  
- ins Schwarze Meer 
  
-Rund zwei Drittel der ausländischen Bevölkerung der Schweiz ...  
-✔ kommen aus einem EU-Land. 
  
- kommen aus Italien. 
+Seite 59/78 
  
- sprechen fliessend Englisch. 
  
- leben in der Ostschweiz. 
+Aus geografischer Sicht ist die Schweiz ... 
+a) ein Binnenland. 
+b) eine Exklave. 
+c) ein Kontinent. 
+d) eine Insel. 
+Richtige Antwort: a 
  
-Aus geografischer Sicht ist die Schweiz ...  
-✔ ein Binnenland. 
- 
- eine Exklave. 
- 
- ein Kontinent. 
- 
- eine Insel. 
- 
-Über das Eisenbahnnetz der Schweiz sagt man, ...  
- es sei das schönste der Welt. 
- 
-✔ es sei das dichteste der Welt. 
- 
- es sei das längste der Welt. 
- 
- es sei das billigste der Welt. 
+Über das Eisenbahnnetz der Schweiz sagt man, ... 
+a) es sei das schönste der Welt. 
+b) es sei das dichteste der Welt. 
+c) es sei das längste der Welt. 
+d) es sei das billigste der Welt. 
+Richtige Antwort: b 
  
 Wer ist der wichtigste Handelspartner der Schweiz? 
- 
- USA  
-✔ EU 
- 
- China 
- 
- Brasilien 
- 
- 
-
- 
- 
- 
- 
-Seite 50/65 
- 
+a) USA 
+b) EU 
+c) China 
+d) Brasilien 
+Richtige Antwort: b 
  
 Die drei grossen geografischen Räume der Schweiz sind: 
- 
-✔ Jura, Mittelland, Alpen 
- 
- Rhonetal, Südtäler, Alpennordfuss 
- 
- Rheintal, Rhonetal, Aaretal 
- 
- Bündner Alpen, Innerschweizer Alpen, Berner Alpen 
+a) Jura, Mittelland, Alpen 
+b) Rhonetal, Südtäler, Alpennordfuss 
+c) Rheintal, Rhonetal, Aaretal 
+d) Bündner Alpen, Innerschweizer Alpen, Berner Alpen 
+Richtige Antwort: a 
  
 Die Ausdehnung der Schweiz von Norden nach Süden ist ... 
+a) 580 km. 
  
- 580 km.  
-✔ 220 km.  
- 130 km.  
- 760 km. 
+b) 220 km. 
  
-Die Ausdehnung der Schweiz von Osten nach Westen ist ... 
+c) 130 km. 
  
- 700 km.  
- 150 km.  
-✔ 350 km.  
- 900 km. 
+d) 760 km. 
+Richtige Antwort: b 
  
-Welcher Kanton ist ein Bergkanton?  
-✔ Wallis 
  
- Schaffhausen 
- 
- Zürich 
- 
- Aargau 
- 
-Wie heisst die höchste Bergspitze in der Schweiz? 
- Dom  
-✔ Dufourspitze 
- 
- Liskamm  
- Weisshorn 
- 
-Was ist eine wichtige Aufgabe der Raumplanung?  
-✔ Schutz von unverbauten Landschaften 
- 
- Unterhalt von Kanalisationen 
- 
- Bau von Einkaufszentren 
- 
- Finanzausgleich zwischen Gemeinden 
  
 
  
  
  
  
-Seite 51/65 
  
+Seite 60/78 
+ 
+ 
+Die Ausdehnung der Schweiz von Osten nach Westen ist ... 
+a) 700 km. 
+ 
+b) 150 km. 
+ 
+c) 350 km. 
+ 
+d) 900 km. 
+Richtige Antwort: c 
+ 
+Welcher Kanton ist ein Bergkanton? 
+a) Wallis 
+b) Schaffhausen 
+c) Zürich 
+d) Aargau 
+Richtige Antwort: a 
+ 
+Wie heisst die höchste Bergspitze in der Schweiz? 
+a) Dom 
+b) Dufourspitze 
+c) Liskamm 
+d) Weisshorn 
+Richtige Antwort: b 
+ 
+Was ist eine wichtige Aufgabe der Raumplanung? 
+a) Schutz von unverbauten Landschaften 
+b) Unterhalt von Kanalisationen 
+c) Bau von Einkaufszentren 
+d) Finanzausgleich zwischen Gemeinden 
+Richtige Antwort: a 
  
 Warum werden die Gletscher in der Schweiz kleiner? 
+a) wegen dem Klimawandel 
+b) wegen den vielen Touristen in den Bergen 
+c) wegen der Benutzung für die Ski-Rennen 
+d) wegen dem vielen Regen im Sommer 
+Richtige Antwort: a 
  
-✔ wegen dem Klimawandel 
  
- wegen den vielen Touristen in den Bergen  
- wegen der Benutzung für die Ski-Rennen  
- wegen dem vielen Regen im Sommer 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 61/78 
+ 
  
 Wie reagieren Förster auf den Anstieg der Temperaturen wegen des 
 Klimawandels? 
- 
- Sie holzen die Wälder ab. 
- 
-✔ Sie pflanzen andere Baumsorten. 
- 
- Sie besprühen die Wälder. 
- 
- Sie verweigern die Arbeit. 
+a) Sie holzen die Wälder ab. 
+b) Sie pflanzen andere Baumsorten. 
+c) Sie besprühen die Wälder. 
+d) Sie verweigern die Arbeit. 
+Richtige Antwort: b 
  
 Wie heisst ein trockener und warmer Südwind in der Schweiz? 
+a) Bise 
+b) Föhn 
+c) Brise 
+d) Führ 
+Richtige Antwort: b 
  
- Bise  
-✔ Föhn  
- Brise 
- Führ 
+Die Schweiz grenzt im Westen an … 
+a) Portugal. 
+b) Spanien. 
+c) Frankreich. 
+d) Deutschland. 
+Richtige Antwort: c 
  
-Die Schweiz grenzt im Westen an …  
- Portugal.  
- Spanien.  
-✔ Frankreich. 
+Das Nachbarland im Süden der Schweiz ist … 
+a) Spanien. 
+b) Kroatien. 
+c) Liechtenstein. 
+d) Italien. 
+Richtige Antwort: d 
  
- Deutschland. 
+Wie heisst die grösste Stadt der Schweiz? 
+a) Zürich 
+b) Basel 
+c) Bern 
+d) Genf 
+Richtige Antwort: a 
  
-Das Nachbarland im Süden der Schweiz ist …  
- Spanien.  
- Kroatien.  
- Liechtenstein. 
  
-✔ Italien. 
  
-Wie heisst die grösste Stadt der Schweiz?  
-✔ Zürich 
- 
- Basel 
- 
- Bern  
- Genf 
 
  
  
  
  
-Seite 52/65 
+ 
+Seite 62/78 
  
  
-Wo leben die meisten Menschen in der Schweiz?  
- in den Alpen 
- 
- im Westschweizer Jura 
- 
-✔ im Mittelland 
- 
- im Tessin 
+Wo leben die meisten Menschen in der Schweiz? 
+a) in den Alpen 
+b) im Westschweizer Jura 
+c) im Mittelland 
+d) im Tessin 
+Richtige Antwort: c 
  
 Wie viele Ausländerinnen und Ausländer leben in der Schweiz (Stand 
 2020)? 
  
- 3.5 Millionen 
- 
-✔ 2.1 Millionen 
- 
- 630'000  
- 1.1 Millionen 
+a) 3.5 Millionen 
+b) 2.1 Millionen 
+c) 630'000 
+d) 1.1 Millionen 
+Richtige Antwort: b 
  
 Wie heisst dieser Berg? 
  
- Finsteraarhorn 
- 
- Eiger 
- 
-✔ Matterhorn 
- 
- Mont Blanc 
+a) Finsteraarhorn 
+b) Eiger 
+c) Matterhorn 
+d) Mont Blanc 
+Richtige Antwort: c 
  
 Welcher Kanton hat die grösste Fläche? 
- Basel 
- 
-✔ Graubünden 
- 
- Zürich 
- 
- Glarus 
- 
- 
+a) Basel 
+b) Graubünden 
+c) Zürich 
+d) Glarus 
+Richtige Antwort: b 
  
 
  
  
  
  
-Seite 53/65 
+ 
+Seite 63/78 
  
  
 Wie viele Menschen leben in der Schweiz (Stand 2020)? 
- 
- 600’000  
- 12 Millionen 
- 
- 5 Millionen 
- 
-✔ 8.6 Millionen 
+a) 600’000 
+b) 12 Millionen 
+c) 5 Millionen 
+d) 8.6 Millionen 
+Richtige Antwort: d 
  
 Wie gross ist der Anteil der ausländischen Wohnbevölkerung in der 
 Schweiz (Stand 2020)? 
- 
- 10%  
- 60%  
-✔ 25%  
- 40% 
+a) 10% 
+b) 60% 
+c) 25% 
+d) 40% 
+Richtige Antwort: c 
  
 Was ist eine wichtige natürliche Ressource der Schweiz? 
- 
- grosse Goldvorkommen in der Zentralschweiz  
-✔ grosse Wasservorräte zum Betrieb von Wasserkraftwerken  
- wertvolle Bodenschätze (Erdöl, Kohle) 
- 
- grosser Bestand an Fischen 
+a) grosse Goldvorkommen in der Zentralschweiz  
+b) grosse Wasservorräte zum Betrieb von Wasserkraftwerken 
+c) wertvolle Bodenschätze (Erdöl, Kohle) 
+d) grosser Bestand an Fischen 
+Richtige Antwort: b 
  
 In welchem Kanton spricht man Französisch und Deutsch? 
- 
- St. Gallen 
- 
- Tessin 
- 
- Graubünden 
- 
-✔ Freiburg 
+a) St. Gallen 
+b) Tessin 
+c) Graubünden 
+d) Freiburg 
+Richtige Antwort: d 
  
 Welche Region in der Schweiz nennt man Welschland oder Romandie? 
- die Ostschweiz 
+a) die Ostschweiz 
+b) die französischsprachige Schweiz 
+c) die deutschsprachige Schweiz 
+d) das Tessin 
+Richtige Antwort: b 
  
-✔ die französischsprachige Schweiz 
  
- die deutschsprachige Schweiz 
  
- das Tessin 
- 
-Welche Sprache spricht man im Kanton Tessin? 
- 
- Rätoromanisch 
- 
- Französisch 
- 
-✔ Italienisch 
- 
- Deutsch 
 
  
  
  
  
-Seite 54/65 
+ 
+Seite 64/78 
  
  
-In welchem Kanton spricht man Rätoromanisch?  
- Freiburg  
- Appenzell 
+Welche Sprache spricht man im Kanton Tessin? 
+a) Rätoromanisch 
+b) Französisch 
+c) Italienisch 
+d) Deutsch 
+Richtige Antwort: c 
  
- Glarus 
- 
-✔ Graubünden 
+In welchem Kanton spricht man Rätoromanisch? 
+a) Freiburg 
+b) Appenzell 
+c) Glarus 
+d) Graubünden 
+Richtige Antwort: d 
  
 Was bedeutet das Wort Röstigraben?  
-✔ die kulturelle Grenze zwischen der deutschsprachigen und der französischsprachi-
-gen Schweiz 
+a) die kulturelle Grenze zwischen der deutschsprachigen und der französischspra­
+chigen Schweiz 
+b) das Rhonetal 
+c) die Aareschlucht 
+d) die Grenze zwischen der Schweiz und Deutschland 
+Richtige Antwort: a 
  
- das Rhonetal 
  
- die Aareschlucht 
+
  
- die Grenze zwischen der Schweiz und Deutschland 
+ 
+ 
+ 
+ 
+Seite 65/78 
+ 
+ 
 4.2 
 Kanton 
 Wo liegt der Kanton Zürich? 
  
- 
-       a) 
-                                               ✔ b) 
+      a)                                                b) 
  
  
-       c) 
-                                                 d) 
+      c) 
+                                                d) 
+ 
+Richtige Antwort: b 
+ 
 Karten: © BFS, Webseite Statistik Schweiz  
+Geografisch gehört der Kanton Zürich ...  
+a) zum Jura. 
+b) zur Seenplatte. 
+c) zum Mittelland. 
+d) zur Tössebene. 
+Richtige Antwort: c 
+ 
+ 
+ 
 
  
  
  
  
-Seite 55/65 
  
+Seite 66/78 
  
-Geografisch gehört der Kanton Zürich ...  
- zum Jura. 
- 
- zur Seenplatte. 
- 
-✔ zum Mittelland. 
- 
- zur Tössebene. 
  
 An wie viele Kantone grenzt der Kanton Zürich? 
- 10 
- 
- 2 
- 
-✔ 6  
- 8 
+a) 10 
+b) 2 
+c) 6 
+d) 8 
+Richtige Antwort: c 
  
 Wie heissen die drei grössten Städte des Kantons Zürich? 
- 
-✔ Zürich, Winterthur, Uster 
- 
- Zürich, Zug, Cham 
- 
- Zürich, Winterthur, Bülach 
- 
- Zürich, Baden, Wettingen 
+a) Zürich, Winterthur, Uster 
+b) Zürich, Zug, Cham 
+c) Zürich, Winterthur, Bülach 
+d) Zürich, Baden, Wettingen 
+Richtige Antwort: a 
  
 Welche Hügel umrahmen den Zürichsee? 
+a) Chli Aubrig, Hörnli, Randen 
+b) Randen, Hörnli, Albis 
+c) Lägeren, Stierenberg, Pfannenstiel 
+d) Uetliberg, Albis, Pfannenstiel 
+Richtige Antwort: d 
  
- Chli Aubrig, Hörnli, Randen 
+In welcher Gemeinde liegt der Flughafen Zürich? 
+a) Zürich 
+b) Winterthur 
+c) Kloten 
+d) Bülach 
+Richtige Antwort: c 
  
- Randen, Hörnli, Albis 
+Welcher See liegt im Kanton Zürich? 
+a) Hallwilersee 
+b) Pfäffikersee 
+c) Zugersee 
+d) Sempachersee 
+Richtige Antwort: b 
  
- Lägeren, Stierenberg, Pfannenstiel 
  
-✔ Uetliberg, Albis, Pfannenstiel 
- 
-In welcher Gemeinde liegt der Flughafen Zürich?  
- Zürich 
- 
- Winterthur 
- 
-✔ Kloten 
- 
- Bülach 
- 
-Welcher See liegt im Kanton Zürich?  
- Hallwilersee 
- 
-✔ Pfäffikersee 
- 
- Zugersee 
- 
- Sempachersee 
  
 
  
  
  
  
-Seite 56/65 
+ 
+Seite 67/78 
  
  
 Wie heisst der zweitgrösste See des Kantons Zürich? 
- 
- Walensee 
- 
- Zugersee 
- 
- Sihlsee  
-✔ Greifensee 
+a) Walensee 
+b) Zugersee 
+c) Sihlsee 
+d) Greifensee 
+Richtige Antwort: d 
  
 Welcher Fluss fliesst in der Stadt Zürich in die Limmat? 
- 
-✔ Sihl  
- Aare  
- Rhone 
- 
- Tessin 
+a) Sihl  
+b) Aare 
+c) Rhone 
+d) Tessin 
+Richtige Antwort: a 
  
 Welcher Fluss fliesst durch den Kanton Zürich? 
- 
- Rhone 
- 
- Inn  
- Aare  
-✔ Limmat 
+a) Rhone 
+b) Inn 
+c) Aare 
+d) Limmat 
+Richtige Antwort: d 
  
 Welcher Fluss fliesst durch Winterthur? 
-✔ Töss  
- Rhein 
- 
- Limmat  
- Sihl 
+a) Töss 
+b) Rhein 
+c) Limmat 
+d) Sihl 
+Richtige Antwort: a 
  
 Welches Schloss liegt im Kanton Zürich? 
+a) Schloss Kyburg 
+b) Château de Chillon 
+c) Schloss Hallwyl 
+d) Schloss Greyerz 
+Richtige Antwort: a 
  
-✔ Schloss Kyburg 
  
- Château de Chillon 
- 
- Schloss Hallwyl 
- 
- Schloss Greyerz 
- 
-Wie gross ist die Landwirtschaftsfläche im Kanton Zürich? 
- 
- 5%  
- 60%  
- 80%  
-✔ 41% 
  
 
  
  
  
  
-Seite 57/65 
  
+Seite 68/78 
+ 
+ 
+Wie gross ist die Landwirtschaftsfläche im Kanton Zürich? 
+a) 5% 
+b) 60% 
+c) 80% 
+d) 41% 
+Richtige Antwort: d 
  
 Wie viele Personen leben im Kanton Zürich (Stand 2020)? 
- 
-✔ 1.5 Millionen 
- 
- 360'000  
- 600'000  
- 3.1 Millionen 
+a) 1.5 Millionen 
+b) 360'000 
+c) 600'000 
+d) 3.1 Millionen 
+Richtige Antwort: a 
  
 Wie heisst die Hauptstadt des Kantons Zürich? 
- Uster 
- 
- Winterthur 
- 
- Wädenswil 
- 
-✔ Zürich 
+a) Uster 
+b) Winterthur 
+c) Wädenswil 
+d) Zürich 
+Richtige Antwort: d 
  
 Welcher Kanton grenzt an den Kanton Zürich?  
- Freiburg  
-✔ Thurgau  
- Luzern  
- Glarus 
+a) Freiburg 
+b) Thurgau 
+c) Luzern 
+d) Glarus 
+Richtige Antwort: b 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Seite 69/78 
+ 
+ 
 5 
 Kultur und Alltagskultur 
 5.1 
 Bund 
 Wie heisst das traditionelle Kartenspiel der Schweiz? 
- 
- Uno  
-✔ Jass  
- Poker 
- 
- Bridge 
+a) Uno 
+b) Jass 
+c) Poker 
+d) Bridge 
+Richtige Antwort: b 
  
 Wie heisst der grösste Schweizer Zirkus? 
- 
-✔ Zirkus Knie 
- 
- Zirkus Busch 
- 
- Zirkus Krone 
- 
- Zirkus Roncalli 
- 
-
- 
- 
- 
- 
-Seite 58/65 
- 
+a) Zirkus Knie 
+b) Zirkus Busch 
+c) Zirkus Krone 
+d) Zirkus Roncalli 
+Richtige Antwort: a 
  
 Die Basler Fasnacht wird mit dem «Morgestraich» an einem Montag 
 um 4 Uhr morgens angepfiffen. Was passiert dann? 
- 
- Alle Baslerinnen und Basler beginnen zu singen. 
- 
- Die Vorsitzenden der Fasnachtsgruppen halten Reden. 
-✔ Die Strassenlichter werden gelöscht und die Pfeiffer und Trommler beginnen zu 
+a) Alle Baslerinnen und Basler beginnen zu singen. 
+b) Die Vorsitzenden der Fasnachtsgruppen halten Reden. 
+c) Die Strassenlichter werden gelöscht und die Pfeifer und Trommler beginnen zu 
 spielen. 
- Brennende Besen werden durch die Stadt getragen. 
+d) Brennende Besen werden durch die Stadt getragen. 
+Richtige Antwort: c 
  
-Wie heisst eine traditionelle Schweizer Sportart?  
- Basketball 
+Wie heisst eine traditionelle Schweizer Sportart? 
+a) Basketball 
+b) Eishockey 
+c) Schwingen 
+d) Volleyball 
+Richtige Antwort: c 
  
- Eishockey 
  
-✔ Schwingen 
  
- Volleyball 
+
+ 
+ 
+ 
+ 
+ 
+Seite 70/78 
+ 
  
 Wann ist der Schweizer Nationalfeiertag? 
- 
- 14. Juli  
-✔ 1. August  
- 4. Juli 
- 
- 3. Oktober 
+a) 14. Juli 
+b) 1. August 
+c) 4. Juli 
+d) 3. Oktober 
+Richtige Antwort: b 
  
 Was bedeutet die Abkürzung SBB? 
- 
-✔ Schweizerische Bundesbahnen  
- 
- Gesellschaft der schweizerischen Börse 
- 
- Zusammenschluss des Bühnenpersonals in der Schweiz 
- 
- Schweizerische Gesellschaft für Bildungsforschung 
+a) Schweizerische Bundesbahnen  
+b) Gesellschaft der schweizerischen Börse 
+c) Zusammenschluss des Bühnenpersonals in der Schweiz 
+d) Schweizerische Gesellschaft für Bildungsforschung 
+Richtige Antwort: a 
  
 SBB, BLS, SOB, SZU sind Abkürzungen für Schweizer ... 
- 
- Gewerkschaften. 
- 
- Kulturvereine. 
- 
-✔ Eisenbahngesellschaften. 
- 
- Seilbahngesellschaften. 
+a) Gewerkschaften. 
+b) Kulturvereine. 
+c) Eisenbahngesellschaften. 
+d) Seilbahngesellschaften. 
+Richtige Antwort: c 
  
 Was soll man tun, wenn die Alarm-Sirenen im Ernstfall heulen? 
- nach Hause gehen 
- 
-✔ Radio hören 
- 
- den Fernseher abstellen 
- 
- zum zentralen Platz der Gemeinde gehen 
-
- 
- 
- 
- 
-Seite 59/65 
- 
+a) nach Hause gehen 
+b) Radio hören 
+c) den Fernseher abstellen 
+d) zum zentralen Platz der Gemeinde gehen 
+Richtige Antwort: b 
  
 Was wird im Landesmuseum Zürich gezeigt? 
+a) Werke des europäischen Impressionismus 
+b) die Geschichte der Schweiz 
+c) eine Insektensammlung 
+d) eine Sammlung von historischen Autos 
+Richtige Antwort: b 
  
- Werke des europäischen Impressionismus  
-✔ die Geschichte der Schweiz 
  
- eine Insektensammlung 
  
- eine Sammlung von historischen Autos 
+
  
-Für welche Industrie ist die Juraregion bekannt?  
-✔ Uhrenindustrie 
  
- Wurstproduktion 
  
- Schuhherstellung 
  
- Seidenmalerei 
+ 
+Seite 71/78 
+ 
+ 
+Für welche Industrie ist die Juraregion bekannt? 
+a) Uhrenindustrie 
+b) Wurstproduktion 
+c) Schuhherstellung 
+d) Seidenmalerei 
+Richtige Antwort: a 
  
 Was ist eine bäuerliche kulturelle Tradition der Schweiz? 
- 
- Didgeridoo spielen. 
- 
- Kastagnetten schlagen. 
- 
-✔ Jodeln. 
- 
- Bembé Trommel spielen. 
+a) Didgeridoo spielen. 
+b) Kastagnetten schlagen. 
+c) Jodeln. 
+d) Bembé Trommel spielen. 
+Richtige Antwort: c 
  
 Was braucht man zum Jodeln? 
- 
- Holzschuhe. 
- 
- eine kleine Pfeife. 
- 
- die Hände. 
- 
-✔ die Stimme. 
+a) Holzschuhe. 
+b) eine kleine Pfeife. 
+c) die Hände. 
+d) die Stimme. 
+Richtige Antwort: d 
  
 Wer entscheidet, welche Artikel in der Zeitung veröffentlicht werden? 
-✔ die Zeitungsredaktion 
- 
- der kantonale Verband der Journalistinnen und Journalisten 
- 
- die zentrale Medienstelle des Kantons 
- 
- die Medienpolizei 
+a) die Zeitungsredaktion 
+b) der kantonale Verband der Journalistinnen und Journalisten 
+c) die zentrale Medienstelle des Kantons 
+d) die Medienpolizei 
+Richtige Antwort: a 
  
 Was ist eine Schweizer Wochenzeitung (erscheint 1x pro Woche)? 
- Tages-Anzeiger 
+a) Tages-Anzeiger 
+b) Blick 
+c) Neue Zürcher Zeitung 
+d) Sonntagszeitung 
+Richtige Antwort: d 
  
- Blick  
- Neue Zürcher Zeitung 
  
-✔ Sonntagszeitung 
  
 
  
  
  
  
-Seite 60/65 
+ 
+Seite 72/78 
  
  
-Wie wird die Schweiz auch bezeichnet?  
- Freistaat Schweiz 
+Wie wird die Schweiz auch bezeichnet? 
+a) Freistaat Schweiz 
+b) Eidgenossenschaft 
+c) Bündnis Schweiz 
+d) Freie Alpenrepublik 
+Richtige Antwort: b 
  
-✔ Eidgenossenschaft 
- 
- Bündnis Schweiz 
- 
- Freie Alpenrepublik 
- 
-Roger Federer ist ein bekannter Schweizer …  
-✔ Tennisspieler. 
- 
- Fussballspieler. 
- 
- Skirennfahrer. 
- 
- Filmschauspieler. 
+Roger Federer ist ein bekannter Schweizer … 
+a) Tennisspieler. 
+b) Fussballspieler. 
+c) Skirennfahrer. 
+d) Filmschauspieler. 
+Richtige Antwort: a 
  
 An was erinnert das Rütli? 
+a) an eine prähistorische Kultstätte 
+b) an das Bündnis der Urkantone 
+c) an ein Schlachtfeld 
+d) an einen Friedensvertrag 
+Richtige Antwort: b 
  
- an eine prähistorische Kultstätte 
- 
-✔ an das Bündnis der Urkantone 
- 
- an ein Schlachtfeld 
- 
- an einen Friedensvertrag 
- 
-Wer ist auf der 2-Franken-Münze zu sehen?  
- die lächelnde Mona Lisa 
- 
-✔ die allegorische Frauenfigur Helvetia 
- 
- eine römische Siegerin 
- 
- eine antike Priesterin 
+Wer ist auf der 2-Franken-Münze zu sehen? 
+a) die lächelnde Mona Lisa 
+b) die allegorische Frauenfigur Helvetia 
+c) eine römische Siegerin 
+d) eine antike Priesterin 
+Richtige Antwort: b 
  
 Die Stadt Bern ist politisch wichtig. Warum? 
+a) Sie ist Sitz der FIFA. 
+b) Sie ist die Hauptstadt der Schweiz. 
+c) Sie ist der Sitz der UNO (Vereinte Nationen). 
+d) Sie ist der Sitz des Europarats. 
+Richtige Antwort: b 
  
- Sie ist Sitz der FIFA. 
  
-✔ Sie ist die Hauptstadt der Schweiz. 
- 
- Sie ist der Sitz der UNO (Vereinte Nationen).  
- Sie ist der Sitz des Europarats. 
- 
-Als was ist die Region Basel besonders bekannt?  
- als Weinland 
- 
-✔ als Standort grosser Pharmafirmen 
- 
- als Land der Burgen und Klöster 
- 
- als Standort verschiedener internationaler Organisationen (z.B. UNO) 
  
 
  
  
  
  
-Seite 61/65 
+ 
+Seite 73/78 
  
  
-Welcher Kanton hat am meisten Einwohnerinnen und Einwohner?  
- Waadt   
- Bern  
-✔ Zürich 
+Als was ist die Region Basel besonders bekannt? 
+a) als Weinland 
+b) als Standort grosser Pharmafirmen 
+c) als Land der Burgen und Klöster 
+d) als Standort verschiedener internationaler Organisationen (z.B. UNO) 
+Richtige Antwort: b 
  
- St. Gallen 
+Welcher Kanton hat am meisten Einwohnerinnen und Einwohner? 
+a) Waadt 
+b) Bern 
+c) Zürich 
+d) St. Gallen 
+Richtige Antwort: c 
  
 Wann feiert die Schweiz ihren Nationalfeiertag? 
- 
- am 4. Juli 
- 
- am 8. November 
- 
-✔ am 1. August 
- 
- am 1. Mai 
+a) am 4. Juli 
+b) am 8. November 
+c) am 1. August 
+d) am 1. Mai 
+Richtige Antwort: c 
  
 Was bedeutet die Abkürzung CH? 
+a) Confoederatio Helvetica 
+b) Schweizerisches Längenmass 
+c) Christlicher Verein 
+d) Cultura Habsburgiensia 
+Richtige Antwort: a 
  
-✔ Confoederatio Helvetica 
+Welchen Sport machen viele Menschen in der Schweiz im Winter? 
+a) Skifahren 
+b) Schwingen 
+c) Berg-Radfahren 
+d) Bergsee-Segeln 
+Richtige Antwort: a 
  
- Schweizerisches Längenmass 
  
- Christlicher Verein 
  
- Cultura Habsburgiensia 
- 
-Welchen Sport machen viele Menschen in der Schweiz im Winter?  
-✔ Skifahren  
- Schwingen 
- 
- Berg-Radfahren 
- 
- Bergsee-Segeln 
- 
-Welche Tradition ist in der Schweiz mit der Fasnacht verbunden?  
- Fahnenschwingen 
- 
-✔ Maskenumzüge 
- Jodeln 
- 
- Bergfeuer 
- 
-Welche berühmte Figur hat die Schriftstellerin Johanna Spyri erfun-
-den?  
- Ueli der Knecht 
- 
- Schellenursli 
- 
-✔ Heidi  
- Peter und der Wolf 
 
  
  
  
  
-Seite 62/65 
  
+Seite 74/78 
+ 
+ 
+Welche Tradition ist in der Schweiz mit der Fasnacht verbunden? 
+a) Fahnenschwingen 
+b) Maskenumzüge 
+c) Jodeln 
+d) Bergfeuer 
+Richtige Antwort: b 
+ 
+Welche berühmte Figur hat die Schriftstellerin Johanna Spyri erfun­
+den? 
+a) Ueli der Knecht 
+b) Schellenursli 
+c) Heidi 
+d) Peter und der Wolf 
+Richtige Antwort: c 
  
 Max Frisch (1911-1991) und Friedrich Dürrenmatt (1921-1990) waren 
 bekannte Schweizer ... 
- Komponisten. 
+a) Komponisten. 
+b) Schriftsteller. 
+c) Unternehmer. 
+d) Journalisten. 
+Richtige Antwort: b 
  
-✔ Schriftsteller. 
- 
- Unternehmer. 
- 
- Journalisten. 
- 
-Nicky Saint-Phalle, Sophie Täuber-Arp und Pipilotti Rist sind internati-
+Nicky Saint-Phalle, Sophie Täuber-Arp und Pipilotti Rist sind internati­
 onal berühmte Schweizer ... 
- Politikerinnen. 
+a) Politikerinnen. 
+b) Sportlerinnen. 
+c) Ingenieurinnen. 
+d) Künstlerinnen. 
+Richtige Antwort: d 
  
- Sportlerinnen. 
  
- Ingenieurinnen. 
  
-✔ Künstlerinnen. 
+
+ 
+ 
+ 
+ 
+ 
+Seite 75/78 
+ 
  
 Welche internationale Organisation hat ihren Hauptsitz in der 
 Schweiz?  
- der internationale Strafgerichtshof 
- 
- die Organisation für Sicherheit und Zusammenarbeit in Europa (OSZE) 
- 
- der Europarat 
- 
-✔ das Internationale Komitee vom Roten Kreuz (IKRK) 
+a) der internationale Strafgerichtshof 
+b) die Organisation für Sicherheit und Zusammenarbeit in Europa (OSZE) 
+c) der Europarat 
+d) das Internationale Komitee vom Roten Kreuz (IKRK) 
+Richtige Antwort: d 
  
 Bei welcher internationalen Organisation ist die Schweiz seit 2002 
 Mitglied?  
- der Europäischen Union (EU) 
+a) der Europäischen Union (EU) 
+b) dem Europäischen Wirtschaftsraum (EWR) 
+c) der Organisation der Vereinten Nationen (UNO) 
+d) dem Weltwährungsfonds (IWF) 
+Richtige Antwort: c 
  
- dem Europäischen Wirtschaftsraum (EWR) 
- 
-✔ der Organisation der Vereinten Nationen (UNO) 
- 
- dem Weltwährungsfonds (IWF) 
- 
-Die Schweiz ist Mitglied der Organisation für Sicherheit und Zusam-
+Die Schweiz ist Mitglied der Organisation für Sicherheit und Zusam­
 menarbeit in Europa (OSZE). Für was setzt sie sich dort besonders ein? 
-✔ für die Friedenssicherung in Osteuropa und Zentralasien 
+a) für die Friedenssicherung in Osteuropa und Zentralasien 
+b) für die wirtschaftliche Entwicklung Indiens  
+c) für die Förderung des Baus von Flusskraftwerken 
+d) für die Förderung des Tourismus in Europa 
+Richtige Antwort: a 
  
- für die wirtschaftliche Entwicklung Indiens  
- für die Förderung des Baus von Flusskraftwerken  
- für die Förderung des Tourismus in Europa 
+Wie ist das Verhältnis der Schweiz zur Europäischen Union (EU) gere­
+gelt? 
+a) Sie ist Mitglied der EU. 
+b) Sie hat mit der EU die Bilateralen Verträge abgeschlossen. 
+c) Sie hat mit allen EU-Mitgliedstaaten Einzelverträge abgeschlossen. 
+d) Sie ist gegenüber der EU vollständig unabhängig. 
+Richtige Antwort: b 
  
  
  
@@ -3690,165 +3360,131 @@ menarbeit in Europa (OSZE). Für was setzt sie sich dort besonders ein?
  
  
  
-Seite 63/65 
  
+Seite 76/78 
  
-Wie ist das Verhältnis der Schweiz zur Europäischen Union (EU) gere-
-gelt?  
- Sie ist Mitglied der EU. 
- 
-✔ Sie hat mit der EU die Bilateralen Verträge abgeschlossen.  
- Sie hat mit allen EU-Mitgliedstaaten Einzelverträge abgeschlossen. 
- 
- Sie ist gegenüber der EU vollständig unabhängig. 
  
 Welche wichtige internationale Veranstaltung findet regelmässig in 
 der Schweiz statt? 
- 
- der jährliche Umweltgipfel der UNO 
- 
- die olympischen Winterspiele 
- 
- das Skirennen der Mitglieder des EU-Parlaments  
-✔ das Weltwirtschaftsforum (WEF) in Davos 
+a) der jährliche Umweltgipfel der UNO 
+b) die olympischen Winterspiele 
+c) das Skirennen der Mitglieder des EU-Parlaments 
+d) das Weltwirtschaftsforum (WEF) in Davos 
+Richtige Antwort: d 
  
 In welcher Stadt hat die UNO-Menschenrechtskommission ihren Sitz? 
- Neuenburg 
- 
- St. Gallen 
- 
-✔ Genf  
- Bern 
+a) Neuenburg 
+b) St. Gallen 
+c) Genf 
+d) Bern 
+Richtige Antwort: c 
  
 Welcher internationale Sportverband hat seinen Sitz in Zürich? 
+a) Internationaler Golfverband (IGF) 
+b) Internationaler Skiverband (FIS) 
+c) Weltfussballverband (FIFA) 
+d) Internationaler Schwimmverband (FINA) 
+Richtige Antwort: c 
  
- Internationaler Golfverband (IGF) 
- Internationaler Skiverband (FIS) 
-✔ Weltfussballverband (FIFA) 
+Was kann man auf einer «Chilbi» erleben? 
+a) eine Fahrt mit der Achterbahn 
+b) eine Opernaufführung 
+c) einen Fussballmatch 
+d) einen Schwimmwettkampf 
+Richtige Antwort: a 
  
- Internationaler Schwimmverband (FINA) 
+Welchen Sport macht man in der Schweiz am häufigsten in einem Ver­
+ein? 
  
-Was kann man auf einer "Chilbi" erleben? 
+a) Schwimmen 
+b) Skifahren 
+c) Unihockey 
+d) Fussball 
+Richtige Antwort: d 
  
-✔ eine Fahrt mit der Achterbahn 
- 
- eine Opernaufführung 
- 
- einen Fussballmatch 
- 
- einen Schwimmwettkampf 
- 
-Welchen Sport macht man in der Schweiz am häufigsten in einem 
-Verein? 
- 
- Schwimmen 
- 
- Skifahren 
- 
- Unihockey 
- 
-✔ Fussball 
 
  
  
  
  
-Seite 64/65 
+ 
+Seite 77/78 
  
  
 5.2 
 Kanton 
-Man sagt: Je schneller am Sechseläuten der "Böögg" (Schneemann-
+Man sagt: Je schneller am Sechseläuten der «Böögg» (Schneemann-
 Puppe) auf dem Scheiterhaufen den Kopf verliert, desto ... 
+a) kälter wird der Zürichsee im Sommer. 
+b) schöner wird der nächste Sommer. 
+c) mehr Kinder wird es im kommenden Jahr geben. 
+d) besser wird die Wirtschaft im kommenden Jahr laufen. 
+Richtige Antwort: b 
  
- kälter wird der Zürichsee im Sommer. 
- 
-✔ schöner wird der nächste Sommer. 
- 
- mehr Kinder wird es im kommenden Jahr geben. 
- 
- besser wird die Wirtschaft im kommenden Jahr laufen. 
- 
-Wofür steht die Street Parade in Zürich?  
-✔ für Liebe, Friede, Freiheit, Grosszügigkeit und Toleranz  
- für Demokratie und Menschenrechte 
- 
- für Theater und Kunst der jungen Generation  
- für Volksmusik und Spektakel 
+Wofür steht die Street Parade in Zürich? 
+a) für Liebe, Friede, Freiheit, Grosszügigkeit und Toleranz 
+b) für Demokratie und Menschenrechte 
+c) für Theater und Kunst der jungen Generation 
+d) für Volksmusik und Spektakel 
+Richtige Antwort: a 
  
 Was bietet das Zürcher Theater Spektakel immer im August? 
- 
-✔ Theater, Tanz und Musik aus der ganzen Welt  
- Jassturniere für ältere Menschen 
- 
- ein Weinfest 
- 
- die Vorführung neuer Schweizer Filme 
+a) Theater, Tanz und Musik aus der ganzen Welt 
+b) Jassturniere für ältere Menschen 
+c) ein Weinfest 
+d) die Vorführung neuer Schweizer Filme 
+Richtige Antwort: a 
  
 Was ist ein Zürcher Sportevent? 
- 
-✔ Weltklasse Zürich 
- 
- Engadiner Skimarathon 
- Swiss Indoors 
- 
- Schweizer Frauenlauf 
+a) Weltklasse Zürich 
+b) Engadiner Skimarathon 
+c) Swiss Indoors 
+d) Schweizer Frauenlauf 
+Richtige Antwort: a 
  
 In diesem Museum kann man experimentieren. In welcher Stadt ist 
 das Technorama? 
- 
- Zürich 
- 
-✔ Winterthur 
- 
- Aarau 
- 
- Zug 
- 
- 
- 
+a) Zürich 
+b) Winterthur 
+c) Aarau 
+d) Zug 
+Richtige Antwort: b 
 
  
  
  
  
-Seite 65/65 
+ 
+Seite 78/78 
  
  
 In welchem Museum kann man alles berühren und experimentieren? 
- Sammlung Reinhart "Am Römerholz" 
- 
- Fotomuseum Winterthur 
- 
-✔ Technorama 
- 
- Villa Lindengut 
+a) Sammlung Reinhart «Am Römerholz» 
+b) Fotomuseum Winterthur 
+c) Technorama 
+d) Villa Lindengut 
+Richtige Antwort: c 
  
 Wo ist die Masoala-Halle mit einem Urwald aus Madagaskar? 
- 
-✔ im Zoo Zürich 
- 
- im China Garten von Zürich 
- 
- im alten botanischen Garten Zürich 
- 
- im Rieterpark in Zürich 
+a) im Zoo Zürich 
+b) im China Garten von Zürich 
+c) im alten botanischen Garten Zürich 
+d) im Rieterpark in Zürich 
+Richtige Antwort: a 
  
 Wer spielt eine wichtige Rolle am Zürcher Sechseläuten? 
+a) die Frauen 
  
- die Frauen 
+b) die Kirchen 
  
- die Kirchen 
- 
- die Gewerkschaften 
- 
-✔ die Zünfte 
+c) die Gewerkschaften 
+d) die Zünfte 
+Richtige Antwort: d 
  
 Gottfried Keller (1819-1890) war ein bekannter Zürcher ... 
+a) Erfinder. 
+b) Schriftsteller. 
+c) reformierter Pfarrer. 
+d) Fabrikant. 
+Richtige Antwort: b 
  
- Erfinder.  
-✔ Schriftsteller. 
- 
- reformierter Pfarrer. 
- 
- Fabrikant. 

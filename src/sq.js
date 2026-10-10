@@ -176,7 +176,7 @@ export const SQ_CONTENT = {
     172: {"q":"Çfarë mund të bëhet kur punëdhënësja paguan pagë shumë të vogël?","o":["Nuk ka asnjë mundësi juridike.","Mund të mos shkohet më në punë deri në mbarimin e kontratës.","Mund t'i drejtohesh gjykatës së punës.","Mund të bëhet kallëzim te policia."]},
     173: {"q":"Çfarë është një qendër e arsimit profesional?","o":["një zyrë ndërmjetësimi për punësim","një vendndodhje me oferta të ndryshme për arsimin profesional","një shkollë e lartë profesionale","një qendër kërkimore tekniko-pune"]},
     174: {"q":"Cila festë vlen sipas ligjit për të gjithë Zvicrën?","o":["1 gushti","Ngjitja e Krishtit","E premtja e Madhe","1 maji"]},
-    175: {"q":"Cila është mosha e zakonshme e pensionit në Zvicër?","o":["64 vjeç për gratë dhe burrat","65 vjeç për gratë dhe burrat","64 vjeç për gratë dhe 65 vjeç për burrat","63 vjeç për gratë dhe 64 vjeç për burrat"]},
+    175: {"q":"Cila është mosha e zakonshme e pensionit në Zvicër?","o":["63 vjeç për gratë dhe burrat","64 vjeç për gratë dhe burrat","65 vjeç për gratë dhe burrat","66 vjeç për gratë dhe burrat"]},
     176: {"q":"Kush nuk paguan prime për sigurimin e papunësisë?","o":["personat në formimin profesional","pensionistët","punëmarrëset dhe punëmarrësit","të gjithë personat nga 50 vjeç e lart"]},
     177: {"q":"Ku gjenden informacione për vendet e mësimit, profesionin dhe punën?","o":["te administrata tatimore","në Arkivin Federal","në Sekretariatin Shtetëror për Arsim, Kërkim dhe Inovacion","në qendrën e informimit profesional"]},
     178: {"q":"Kush është partneri më i rëndësishëm tregtar i Zvicrës (gjendja 2017)?","o":["BE-ja","SHBA-ja","Kina","Rusia"]},
